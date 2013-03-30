@@ -1,0 +1,1439 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{14E838DB-C1EE-4C67-AC9A-B877096C5CD4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>streetlamp.My.MyApplication</StartupObject>
+    <RootNamespace>streetlamp</RootNamespace>
+    <AssemblyName>streetlamp</AssemblyName>
+    <MyType>WindowsForms</MyType>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>streetlamp.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>streetlamp.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="adodb, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IrisSkin2, Version=2006.3.22.45, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>bin\Debug\IrisSkin2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.Office" />
+    <Import Include="Microsoft.Office.Core" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlarmTypeDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlarmTypeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigDataDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConfigDataDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConfigDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="contact_list.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>contact_list.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="control_box_state.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>control_box_state.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="control_box_state.vb">
+      <DependentUpon>control_box_state.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="control_list.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>control_list.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EditDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EditDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="gangwei.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>gangwei.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GPRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GPRS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="jiaoliu_list.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>jiaoliu_list.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="jiaoliu_list.vb">
+      <DependentUpon>jiaoliu_list.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kaiguanalarmDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kaiguanalarmDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kaiguanDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kaiguanDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kaiguanlistDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kaiguanlistDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kaiguanlistDataSet.vb">
+      <DependentUpon>kaiguanlistDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="lamp_level.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lamp_level.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="lamp_level_list.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lamp_level_list.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="operation_list.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>operation_list.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Problem_alarm.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Problem_alarm.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Rights.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rights.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="road_level.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>road_level.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ShiYaDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShiYaDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="state_list.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>state_list.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="state_list.vb">
+      <DependentUpon>state_list.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="streetlampDataSetpowermeter.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>streetlampDataSetpowermeter.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TypeListDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TypeListDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="公共函数\control_box.vb" />
+    <Compile Include="公共函数\light_control.vb" />
+    <Compile Include="公共函数\PCI8735.vb" />
+    <Compile Include="公共函数\RowMergeView.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="公共函数\SunTime.vb" />
+    <Compile Include="公共函数\全局变量.vb" />
+    <Compile Include="数据集\Box_inf.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Box_inf.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="数据集\color_view.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>color_view.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="公共函数\Com_inf.vb" />
+    <Compile Include="数据集\control_box.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>control_box.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="数据集\control_box.vb">
+      <DependentUpon>control_box.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="数据集\control_box_list.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>control_box_list.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="数据集\control_box_list1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>control_box_list1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="公共函数\control_lamp.vb" />
+    <Compile Include="公共函数\DBOperation.vb" />
+    <Compile Include="数据集\div_street.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>div_street.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="数据集\div_time.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>div_time.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="公共函数\div_time_class.vb" />
+    <Compile Include="数据集\handcontrol_list.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>handcontrol_list.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="数据集\hand_control.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hand_control.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="数据集\hand_record.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hand_record.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="数据集\hand_record.vb">
+      <DependentUpon>hand_record.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="数据集\lamp_record.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lamp_record.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="数据集\street_add.vb">
+      <DependentUpon>street_add.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\三遥\主控箱数据.Designer.vb">
+      <DependentUpon>主控箱数据.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\三遥\主控箱数据.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\三遥\主控箱状态查询.Designer.vb">
+      <DependentUpon>主控箱状态查询.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\三遥\主控箱状态查询.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\三遥\单灯召测.Designer.vb">
+      <DependentUpon>单灯召测.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\三遥\单灯召测.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\三遥\抄表.Designer.vb">
+      <DependentUpon>抄表.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\三遥\抄表.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\三遥\电控箱数据.designer.vb">
+      <DependentUpon>电控箱数据.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\三遥\电控箱数据.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\三遥\遥测窗口.Designer.vb">
+      <DependentUpon>遥测窗口.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\三遥\遥测窗口.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\三遥\配置数据.Designer.vb">
+      <DependentUpon>配置数据.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\三遥\配置数据.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\主控\LoginForm.designer.vb">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\主控\LoginForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="数据集\machine_street.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>machine_street.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="数据集\manager.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>manager.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="数据集\record_list.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>record_list.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="数据集\record_list.vb">
+      <DependentUpon>record_list.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="数据集\streetlampDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>streetlampDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="数据集\streetlampDataSet.vb">
+      <DependentUpon>streetlampDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="数据集\streetlampDataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>streetlampDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="数据集\streetlampDataSet3.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>streetlampDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="数据集\streetlampDataSet3.vb">
+      <DependentUpon>streetlampDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="数据集\street_add.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>street_add.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="数据集\street_position.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>street_position.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\主控\故障报警窗口.Designer.vb">
+      <DependentUpon>故障报警窗口.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\主控\故障报警窗口.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\主控\主控界面.Designer.vb">
+      <DependentUpon>主控界面.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\主控\主控界面.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\主控\主控界面_全局变量.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\主控\主控界面_暂时未用功能.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\主控\主控界面_地图操作.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\主控\主控界面_菜单操作.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\主控\单灯数据.Designer.vb">
+      <DependentUpon>单灯数据.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\主控\单灯数据.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\主控\服务器配置.Designer.vb">
+      <DependentUpon>服务器配置.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\主控\服务器配置.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\主控\经纬度.Designer.vb">
+      <DependentUpon>经纬度.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\主控\经纬度.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\帮助\关于.Designer.vb">
+      <DependentUpon>关于.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\帮助\关于.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\帮助\备忘录.Designer.vb">
+      <DependentUpon>备忘录.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\帮助\备忘录.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\帮助\监控软件使用说明书.Designer.vb">
+      <DependentUpon>监控软件使用说明书.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\帮助\监控软件使用说明书.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\手工设定\三回路组合命令.designer.vb">
+      <DependentUpon>三回路组合命令.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\手工设定\三回路组合命令.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\手工设定\二回路组合命令.Designer.vb">
+      <DependentUpon>二回路组合命令.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\手工设定\二回路组合命令.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\手工设定\手工控制面板.Designer.vb">
+      <DependentUpon>手工控制面板.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\手工设定\手工控制面板.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\时段设定\删除控制模式.Designer.vb">
+      <DependentUpon>删除控制模式.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\时段设定\删除控制模式.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\时段设定\单灯时段设定.designer.vb">
+      <DependentUpon>单灯时段设定.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\时段设定\单灯时段设定.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\时段设定\增加控制模式.Designer.vb">
+      <DependentUpon>增加控制模式.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\时段设定\增加控制模式.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\时段设定\增加特殊时段控制.Designer.vb">
+      <DependentUpon>增加特殊时段控制.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\时段设定\增加特殊时段控制.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\时段设定\删除特殊时段控制.Designer.vb">
+      <DependentUpon>删除特殊时段控制.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\时段设定\删除特殊时段控制.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\系统设置\edit_password.designer.vb">
+      <DependentUpon>edit_password.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\系统设置\edit_password.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\系统设置\m_manager.designer.vb">
+      <DependentUpon>m_manager.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\系统设置\m_manager.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\系统设置\主控箱.Designer.vb">
+      <DependentUpon>主控箱.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\系统设置\主控箱.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\系统设置\主控箱参数设置.Designer.vb">
+      <DependentUpon>主控箱参数设置.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\系统设置\主控箱参数设置.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\系统设置\交流接触器时段设置.Designer.vb">
+      <DependentUpon>交流接触器时段设置.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\系统设置\交流接触器时段设置.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\系统设置\删除交流接触器时段设置.Designer.vb">
+      <DependentUpon>删除交流接触器时段设置.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\系统设置\删除交流接触器时段设置.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\系统设置\删除地图.Designer.vb">
+      <DependentUpon>删除地图.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\系统设置\删除地图.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\系统设置\删除查询区域.Designer.vb">
+      <DependentUpon>删除查询区域.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\系统设置\删除查询区域.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\系统设置\删除节日模式.Designer.vb">
+      <DependentUpon>删除节日模式.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\系统设置\删除节日模式.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\系统设置\地图上传.designer.vb">
+      <DependentUpon>地图上传.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\系统设置\地图上传.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\系统设置\城区街设置.designer.vb">
+      <DependentUpon>城区街设置.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\系统设置\城区街设置.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\系统设置\增加查询街道.Designer.vb">
+      <DependentUpon>增加查询街道.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\系统设置\增加查询街道.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\系统设置\增加电控箱.Designer.vb">
+      <DependentUpon>增加电控箱.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\系统设置\增加电控箱.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\系统设置\增加路灯.Designer.vb">
+      <DependentUpon>增加路灯.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\系统设置\增加路灯.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\手工设定\手工控制记录.Designer.vb">
+      <DependentUpon>手工控制记录.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\手工设定\手工控制记录.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\故障处理\故障列表.Designer.vb">
+      <DependentUpon>故障列表.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\故障处理\故障列表.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\时段设定\时段划分.Designer.vb">
+      <DependentUpon>时段划分.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\时段设定\时段划分.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\系统设置\增加节日模式.Designer.vb">
+      <DependentUpon>增加节日模式.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\系统设置\增加节日模式.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\系统设置\岗位编辑.Designer.vb">
+      <DependentUpon>岗位编辑.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\系统设置\岗位编辑.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\系统设置\流量日志.Designer.vb">
+      <DependentUpon>流量日志.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\系统设置\流量日志.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\系统设置\用户岗位分配.Designer.vb">
+      <DependentUpon>用户岗位分配.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\系统设置\用户岗位分配.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\系统设置\维护数据表.Designer.vb">
+      <DependentUpon>维护数据表.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\系统设置\维护数据表.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\系统设置\编辑电控箱.Designer.vb">
+      <DependentUpon>编辑电控箱.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\系统设置\编辑电控箱.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\状态查询\路灯亮暗信息统计.Designer.vb">
+      <DependentUpon>路灯亮暗信息统计.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\状态查询\路灯亮暗信息统计.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\系统设置\编辑联系人.designer.vb">
+      <DependentUpon>编辑联系人.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\系统设置\编辑联系人.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\系统设置\路灯开关控制参数.Designer.vb">
+      <DependentUpon>路灯开关控制参数.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\系统设置\路灯开关控制参数.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\状态查询\路灯状态查询窗口.Designer.vb">
+      <DependentUpon>路灯状态查询窗口.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\状态查询\路灯状态查询窗口.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\系统设置\路灯颜色编辑窗口.Designer.vb">
+      <DependentUpon>路灯颜色编辑窗口.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\系统设置\路灯颜色编辑窗口.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\系统设置\选择报警类型.Designer.vb">
+      <DependentUpon>选择报警类型.vb</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\系统设置\选择报警类型.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="窗体\三遥\单灯召测.resx">
+      <DependentUpon>单灯召测.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\主控\LoginForm.resx">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\主控\故障报警窗口.resx">
+      <DependentUpon>故障报警窗口.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\主控\主控界面.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>主控界面.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\主控\单灯数据.resx">
+      <DependentUpon>单灯数据.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\手工设定\二回路组合命令.resx">
+      <DependentUpon>二回路组合命令.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\系统设置\增加路灯.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>增加路灯.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\故障处理\故障列表.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>故障列表.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\时段设定\时段划分.resx">
+      <DependentUpon>时段划分.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\状态查询\路灯状态查询窗口.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>路灯状态查询窗口.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\系统设置\路灯颜色编辑窗口.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>路灯颜色编辑窗口.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="数据集\streetlampDataSet.xsc">
+      <DependentUpon>streetlampDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="数据集\streetlampDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>streetlampDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="数据集\streetlampDataSet.xss">
+      <DependentUpon>streetlampDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="数据集\streetlampDataSet2.xsc">
+      <DependentUpon>streetlampDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="数据集\streetlampDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>streetlampDataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="数据集\streetlampDataSet2.xss">
+    </None>
+    <None Include="数据集\streetlampDataSet3.xsc">
+      <DependentUpon>streetlampDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="数据集\streetlampDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>streetlampDataSet3.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="数据集\streetlampDataSet3.xss">
+      <DependentUpon>streetlampDataSet3.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <None Include="Resources\无标题.png" />
+    <Content Include="图片\favicon.ico" />
+    <Content Include="图片\l_7_20_1.jpg" />
+    <Content Include="图片\l_7_20_2.jpg" />
+    <Content Include="图片\l_7_20_3.jpg" />
+    <Content Include="图片\l_7_20_4.jpg" />
+    <Content Include="图片\l_7_20_5.jpg" />
+    <EmbeddedResource Include="窗体\三遥\主控箱数据.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>主控箱数据.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\三遥\主控箱状态查询.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>主控箱状态查询.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\三遥\抄表.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>抄表.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\三遥\电控箱数据.resx">
+      <DependentUpon>电控箱数据.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\三遥\遥测窗口.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>遥测窗口.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\三遥\配置数据.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>配置数据.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\主控\服务器配置.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>服务器配置.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\主控\经纬度.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>经纬度.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\帮助\关于.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>关于.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\帮助\备忘录.resx">
+      <DependentUpon>备忘录.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\帮助\监控软件使用说明书.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>监控软件使用说明书.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\手工设定\三回路组合命令.resx">
+      <DependentUpon>三回路组合命令.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\手工设定\手工控制面板.resx">
+      <DependentUpon>手工控制面板.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\时段设定\删除控制模式.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>删除控制模式.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\时段设定\单灯时段设定.resx">
+      <DependentUpon>单灯时段设定.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\时段设定\增加控制模式.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>增加控制模式.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\时段设定\增加特殊时段控制.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>增加特殊时段控制.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\时段设定\删除特殊时段控制.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>删除特殊时段控制.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\系统设置\edit_password.resx">
+      <DependentUpon>edit_password.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\系统设置\m_manager.resx">
+      <DependentUpon>m_manager.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\系统设置\主控箱.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>主控箱.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\系统设置\主控箱参数设置.resx">
+      <DependentUpon>主控箱参数设置.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\系统设置\交流接触器时段设置.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>交流接触器时段设置.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\系统设置\删除交流接触器时段设置.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>删除交流接触器时段设置.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\系统设置\删除地图.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>删除地图.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\系统设置\删除查询区域.resx">
+      <DependentUpon>删除查询区域.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\系统设置\删除节日模式.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>删除节日模式.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\系统设置\地图上传.resx">
+      <DependentUpon>地图上传.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\系统设置\城区街设置.resx">
+      <DependentUpon>城区街设置.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\系统设置\增加查询街道.resx">
+      <DependentUpon>增加查询街道.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\系统设置\增加电控箱.resx">
+      <DependentUpon>增加电控箱.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\手工设定\手工控制记录.resx">
+      <DependentUpon>手工控制记录.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\系统设置\增加节日模式.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>增加节日模式.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\系统设置\岗位编辑.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>岗位编辑.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\系统设置\流量日志.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>流量日志.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\系统设置\用户岗位分配.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>用户岗位分配.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\系统设置\维护数据表.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>维护数据表.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\系统设置\编辑电控箱.resx">
+      <DependentUpon>编辑电控箱.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\状态查询\路灯亮暗信息统计.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>路灯亮暗信息统计.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\系统设置\编辑联系人.resx">
+      <DependentUpon>编辑联系人.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\系统设置\路灯开关控制参数.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>路灯开关控制参数.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\系统设置\选择报警类型.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>选择报警类型.vb</DependentUpon>
+    </EmbeddedResource>
+    <None Include="AlarmTypeDataSet.xsc">
+      <DependentUpon>AlarmTypeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AlarmTypeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AlarmTypeDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AlarmTypeDataSet.xss">
+      <DependentUpon>AlarmTypeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ClassDiagram2.cd" />
+    <None Include="ConfigDataDataSet.xsc">
+      <DependentUpon>ConfigDataDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ConfigDataDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ConfigDataDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ConfigDataDataSet.xss">
+      <DependentUpon>ConfigDataDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ConfigDataSet.xsc">
+      <DependentUpon>ConfigDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ConfigDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ConfigDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ConfigDataSet.xss">
+      <DependentUpon>ConfigDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="contact_list.xsc">
+      <DependentUpon>contact_list.xsd</DependentUpon>
+    </None>
+    <None Include="contact_list.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>contact_list.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="contact_list.xss">
+      <DependentUpon>contact_list.xsd</DependentUpon>
+    </None>
+    <None Include="control_box_state.xsc">
+      <DependentUpon>control_box_state.xsd</DependentUpon>
+    </None>
+    <None Include="control_box_state.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>control_box_state.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="control_box_state.xss">
+      <DependentUpon>control_box_state.xsd</DependentUpon>
+    </None>
+    <None Include="control_list.xsc">
+      <DependentUpon>control_list.xsd</DependentUpon>
+    </None>
+    <None Include="control_list.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>control_list.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="control_list.xss">
+      <DependentUpon>control_list.xsd</DependentUpon>
+    </None>
+    <None Include="EditDataSet.xsc">
+      <DependentUpon>EditDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EditDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EditDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EditDataSet.xss">
+      <DependentUpon>EditDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="gangwei.xsc">
+      <DependentUpon>gangwei.xsd</DependentUpon>
+    </None>
+    <None Include="gangwei.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>gangwei.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="gangwei.xss">
+      <DependentUpon>gangwei.xsd</DependentUpon>
+    </None>
+    <None Include="GPRS.xsc">
+      <DependentUpon>GPRS.xsd</DependentUpon>
+    </None>
+    <None Include="GPRS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GPRS.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GPRS.xss">
+      <DependentUpon>GPRS.xsd</DependentUpon>
+    </None>
+    <None Include="jiaoliu_list.xsc">
+      <DependentUpon>jiaoliu_list.xsd</DependentUpon>
+    </None>
+    <None Include="jiaoliu_list.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>jiaoliu_list.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="jiaoliu_list.xss">
+      <DependentUpon>jiaoliu_list.xsd</DependentUpon>
+    </None>
+    <None Include="kaiguanalarmDataSet.xsc">
+      <DependentUpon>kaiguanalarmDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="kaiguanalarmDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kaiguanalarmDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kaiguanalarmDataSet.xss">
+      <DependentUpon>kaiguanalarmDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="kaiguanDataSet.xsc">
+      <DependentUpon>kaiguanDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="kaiguanDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kaiguanDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="kaiguanDataSet.xss">
+      <DependentUpon>kaiguanDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="kaiguanlistDataSet.xsc">
+      <DependentUpon>kaiguanlistDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="kaiguanlistDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kaiguanlistDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kaiguanlistDataSet.xss">
+      <DependentUpon>kaiguanlistDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="lamp_level.xsc">
+      <DependentUpon>lamp_level.xsd</DependentUpon>
+    </None>
+    <None Include="lamp_level.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>lamp_level.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="lamp_level.xss">
+      <DependentUpon>lamp_level.xsd</DependentUpon>
+    </None>
+    <None Include="lamp_level_list.xsc">
+      <DependentUpon>lamp_level_list.xsd</DependentUpon>
+    </None>
+    <None Include="lamp_level_list.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>lamp_level_list.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="lamp_level_list.xss">
+      <DependentUpon>lamp_level_list.xsd</DependentUpon>
+    </None>
+    <None Include="operation_list.xsc">
+      <DependentUpon>operation_list.xsd</DependentUpon>
+    </None>
+    <None Include="operation_list.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>operation_list.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="operation_list.xss">
+      <DependentUpon>operation_list.xsd</DependentUpon>
+    </None>
+    <None Include="Problem_alarm.xsc">
+      <DependentUpon>Problem_alarm.xsd</DependentUpon>
+    </None>
+    <None Include="Problem_alarm.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Problem_alarm.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Problem_alarm.xss">
+      <DependentUpon>Problem_alarm.xsd</DependentUpon>
+    </None>
+    <None Include="Rights.xsc">
+      <DependentUpon>Rights.xsd</DependentUpon>
+    </None>
+    <None Include="Rights.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Rights.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Rights.xss">
+      <DependentUpon>Rights.xsd</DependentUpon>
+    </None>
+    <None Include="road_level.xsc">
+      <DependentUpon>road_level.xsd</DependentUpon>
+    </None>
+    <None Include="road_level.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>road_level.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="road_level.xss">
+      <DependentUpon>road_level.xsd</DependentUpon>
+    </None>
+    <None Include="ShiYaDataSet1.xsc">
+      <DependentUpon>ShiYaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ShiYaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShiYaDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ShiYaDataSet1.xss">
+      <DependentUpon>ShiYaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="state_list.xsc">
+      <DependentUpon>state_list.xsd</DependentUpon>
+    </None>
+    <None Include="state_list.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>state_list.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="state_list.xss">
+      <DependentUpon>state_list.xsd</DependentUpon>
+    </None>
+    <None Include="streetlampDataSetpowermeter.xsc">
+      <DependentUpon>streetlampDataSetpowermeter.xsd</DependentUpon>
+    </None>
+    <None Include="streetlampDataSetpowermeter.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>streetlampDataSetpowermeter.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="streetlampDataSetpowermeter.xss">
+      <DependentUpon>streetlampDataSetpowermeter.xsd</DependentUpon>
+    </None>
+    <None Include="TypeListDataSet.xsc">
+      <DependentUpon>TypeListDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TypeListDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TypeListDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TypeListDataSet.xss">
+      <DependentUpon>TypeListDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="数据集\Box_inf.xsc">
+      <DependentUpon>Box_inf.xsd</DependentUpon>
+    </None>
+    <None Include="数据集\Box_inf.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Box_inf.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="数据集\Box_inf.xss">
+      <DependentUpon>Box_inf.xsd</DependentUpon>
+    </None>
+    <None Include="数据集\color_view.xsc">
+      <DependentUpon>color_view.xsd</DependentUpon>
+    </None>
+    <None Include="数据集\color_view.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>color_view.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="数据集\color_view.xss">
+      <DependentUpon>color_view.xsd</DependentUpon>
+    </None>
+    <None Include="数据集\control_box.xsc">
+      <DependentUpon>control_box.xsd</DependentUpon>
+    </None>
+    <None Include="数据集\control_box.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>control_box.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="数据集\control_box.xss">
+      <DependentUpon>control_box.xsd</DependentUpon>
+    </None>
+    <None Include="数据集\control_box_list.xsc">
+      <DependentUpon>control_box_list.xsd</DependentUpon>
+    </None>
+    <None Include="数据集\control_box_list.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>control_box_list.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="数据集\control_box_list.xss">
+      <DependentUpon>control_box_list.xsd</DependentUpon>
+    </None>
+    <None Include="数据集\control_box_list1.xsc">
+      <DependentUpon>control_box_list1.xsd</DependentUpon>
+    </None>
+    <None Include="数据集\control_box_list1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>control_box_list1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="数据集\control_box_list1.xss">
+      <DependentUpon>control_box_list1.xsd</DependentUpon>
+    </None>
+    <None Include="数据集\div_time.xsc">
+      <DependentUpon>div_time.xsd</DependentUpon>
+    </None>
+    <None Include="数据集\div_time.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>div_time.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="数据集\div_time.xss">
+      <DependentUpon>div_time.xsd</DependentUpon>
+    </None>
+    <None Include="数据集\hand_control.xsc">
+      <DependentUpon>hand_control.xsd</DependentUpon>
+    </None>
+    <None Include="数据集\hand_control.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>hand_control.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="数据集\hand_control.xss">
+    </None>
+    <None Include="数据集\hand_record.xsc">
+      <DependentUpon>hand_record.xsd</DependentUpon>
+    </None>
+    <None Include="数据集\hand_record.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>hand_record.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="数据集\hand_record.xss">
+      <DependentUpon>hand_record.xsd</DependentUpon>
+    </None>
+    <None Include="数据集\lamp_record.xsc">
+      <DependentUpon>lamp_record.xsd</DependentUpon>
+    </None>
+    <None Include="数据集\lamp_record.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>lamp_record.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="数据集\lamp_record.xss">
+      <DependentUpon>lamp_record.xsd</DependentUpon>
+    </None>
+    <None Include="数据集\machine_street.xsc">
+      <DependentUpon>machine_street.xsd</DependentUpon>
+    </None>
+    <None Include="数据集\machine_street.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>machine_street.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="数据集\machine_street.xss">
+      <DependentUpon>machine_street.xsd</DependentUpon>
+    </None>
+    <None Include="数据集\manager.xsc">
+      <DependentUpon>manager.xsd</DependentUpon>
+    </None>
+    <None Include="数据集\manager.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>manager.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="数据集\manager.xss">
+      <DependentUpon>manager.xsd</DependentUpon>
+    </None>
+    <None Include="数据集\record_list.xsc">
+      <DependentUpon>record_list.xsd</DependentUpon>
+    </None>
+    <None Include="数据集\record_list.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>record_list.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="数据集\record_list.xss">
+      <DependentUpon>record_list.xsd</DependentUpon>
+    </None>
+    <None Include="数据集\street_add.xsc">
+      <DependentUpon>street_add.xsd</DependentUpon>
+    </None>
+    <None Include="数据集\street_add.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>street_add.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="数据集\street_add.xss">
+      <DependentUpon>street_add.xsd</DependentUpon>
+    </None>
+    <None Include="数据集\street_position.xsc">
+      <DependentUpon>street_position.xsd</DependentUpon>
+    </None>
+    <None Include="数据集\street_position.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>street_position.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="数据集\street_position.xss">
+      <DependentUpon>street_position.xsd</DependentUpon>
+    </None>
+    <None Include="图片\bg10.JPG" />
+    <None Include="数据集\div_street.xsc">
+      <DependentUpon>div_street.xsd</DependentUpon>
+    </None>
+    <None Include="数据集\div_street.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>div_street.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="数据集\div_street.xss">
+      <DependentUpon>div_street.xsd</DependentUpon>
+    </None>
+    <None Include="图片\bg11.jpg" />
+    <None Include="数据集\handcontrol_list.xsc">
+      <DependentUpon>handcontrol_list.xsd</DependentUpon>
+    </None>
+    <None Include="数据集\handcontrol_list.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>handcontrol_list.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="数据集\handcontrol_list.xss">
+      <DependentUpon>handcontrol_list.xsd</DependentUpon>
+    </None>
+    <None Include="图片\bg2.bmp" />
+    <None Include="图片\bg3.bmp" />
+    <None Include="图片\bg6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

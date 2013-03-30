@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<菜单列表>
+  <Item Category="系统设置">
+    <item category="城区街设置">
+      <option choice="增加"></option>
+      <option choice="修改"></option>
+      <option choice="删除"></option>
+    </item>
+    <item category="电控箱设置">
+      <option choice="增加"></option>
+      <option choice="修改"></option>
+      <option choice="删除"></option>
+    </item>
+    <item category="路灯设置">
+      <option choice="增加"></option>
+      <option choice="删除"></option>
+      <option choice="编辑路灯颜色"></option>
+    </item>
+
+    <item category="查询街道设置">
+      
+    </item>
+
+    <item category="系统参数设置">
+
+    </item>
+    <item category="窗体设置">
+
+    </item>
+   
+  </Item>
+</菜单列表>

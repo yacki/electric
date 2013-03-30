@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "streetlamp", "streetlamp\streetlamp.vbproj", "{14E838DB-C1EE-4C67-AC9A-B877096C5CD4}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DataBaseManage", "DataBaseManage\DataBaseManage.vbproj", "{E2EB3014-DFDA-463E-A926-D7D976399E94}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "照明管理软件", "streetlamp\bin\Debug\照明管理软件\照明管理软件.vdproj", "{29E0A877-D7E0-40D8-9844-24C74E98D241}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{14E838DB-C1EE-4C67-AC9A-B877096C5CD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14E838DB-C1EE-4C67-AC9A-B877096C5CD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14E838DB-C1EE-4C67-AC9A-B877096C5CD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14E838DB-C1EE-4C67-AC9A-B877096C5CD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2EB3014-DFDA-463E-A926-D7D976399E94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2EB3014-DFDA-463E-A926-D7D976399E94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2EB3014-DFDA-463E-A926-D7D976399E94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2EB3014-DFDA-463E-A926-D7D976399E94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29E0A877-D7E0-40D8-9844-24C74E98D241}.Debug|Any CPU.ActiveCfg = Debug
+		{29E0A877-D7E0-40D8-9844-24C74E98D241}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

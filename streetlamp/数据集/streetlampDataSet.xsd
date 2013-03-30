@@ -1,0 +1,618 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="streetlampDataSet" targetNamespace="http://tempuri.org/streetlampDataSet.xsd" xmlns:mstns="http://tempuri.org/streetlampDataSet.xsd" xmlns="http://tempuri.org/streetlampDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="streetlampConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="streetlampConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.streetlamp.My.MySettings.GlobalReference.Default.streetlampConnectionString" Provider="System.Data.SqlClient">
+          </Connection>
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="alarm_viewTableAdapter" GeneratorDataComponentClassName="alarm_viewTableAdapter" Name="alarm_view" UserDataComponentName="alarm_viewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="streetlampConnectionString (MySettings)" DbObjectName="streetlamp.dbo.Record_view" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT SUBSTRING(lamp_id, 7, 5) AS lamp_id_short, state, date, date_end, 
+      control_box_id, problem_inf, ID, control_box_name, server_state, city, area, street, 
+      type_string, lamp_id
+FROM Record_view
+ORDER BY date DESC</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="state" DataSetColumn="state" />
+              <Mapping SourceColumn="date" DataSetColumn="date" />
+              <Mapping SourceColumn="problem_inf" DataSetColumn="problem_inf" />
+              <Mapping SourceColumn="control_box_name" DataSetColumn="control_box_name" />
+              <Mapping SourceColumn="date_end" DataSetColumn="date_end" />
+              <Mapping SourceColumn="control_box_id" DataSetColumn="control_box_id" />
+              <Mapping SourceColumn="server_state" DataSetColumn="server_state" />
+              <Mapping SourceColumn="lamp_id_short" DataSetColumn="lamp_id_short" />
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="city" DataSetColumn="city" />
+              <Mapping SourceColumn="area" DataSetColumn="area" />
+              <Mapping SourceColumn="street" DataSetColumn="street" />
+              <Mapping SourceColumn="type_string" DataSetColumn="type_string" />
+              <Mapping SourceColumn="lamp_id" DataSetColumn="lamp_id" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="streetlampConnectionString (MySettings)" DbObjectName="streetlamp_3id.dbo.Record_view" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy_area" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataBy15" GeneratorSourceName="FillBy_area" GetMethodModifier="Public" GetMethodName="GetDataBy15" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy15" UserSourceName="FillBy_area">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT SUBSTRING(lamp_id, 7, 5) AS lamp_id_short, ID, area, city, control_box_id, 
+      control_box_name, date, date_end, lamp_id, problem_inf, server_state, state, street, 
+      type_string
+FROM Record_view
+WHERE (area = @Param2)
+ORDER BY date DESC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param2" ColumnName="area" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="nvarchar(10)" DbType="String" Direction="Input" ParameterName="@Param2" Precision="0" ProviderType="NVarChar" Scale="0" Size="10" SourceColumn="area" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="streetlampConnectionString (MySettings)" DbObjectName="streetlamp_3id.dbo.Record_view" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy_area_alarmok" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataBy17" GeneratorSourceName="FillBy_area_alarmok" GetMethodModifier="Public" GetMethodName="GetDataBy17" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy17" UserSourceName="FillBy_area_alarmok">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT SUBSTRING(lamp_id, 7, 5) AS lamp_id_short, ID, area, city, control_box_id, 
+      control_box_name, date, date_end, lamp_id, problem_inf, server_state, state, street, 
+      type_string
+FROM Record_view
+WHERE (area = @Param1) AND (server_state = @Param2 OR
+      server_state = @Param3)
+ORDER BY date DESC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param1" ColumnName="area" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="nvarchar(10)" DbType="String" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="NVarChar" Scale="0" Size="10" SourceColumn="area" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param2" ColumnName="server_state" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Param2" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="server_state" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param3" ColumnName="server_state" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Param3" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="server_state" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="streetlampConnectionString (MySettings)" DbObjectName="streetlamp_3id.dbo.Record_view" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy_area_date" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataBy20" GeneratorSourceName="FillBy_area_date" GetMethodModifier="Public" GetMethodName="GetDataBy20" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy20" UserSourceName="FillBy_area_date">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT SUBSTRING(lamp_id, 7, 5) AS lamp_id_short, ID, area, city, control_box_id, 
+      control_box_name, date, date_end, lamp_id, problem_inf, server_state, state, street, 
+      type_string
+FROM Record_view
+WHERE (date &gt;= @Param1) AND (date &lt;= @Param2) AND (area = @Param3)
+ORDER BY date DESC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param1" ColumnName="date" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="date" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param2" ColumnName="date" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@Param2" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="date" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param3" ColumnName="area" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="nvarchar(10)" DbType="String" Direction="Input" ParameterName="@Param3" Precision="0" ProviderType="NVarChar" Scale="0" Size="10" SourceColumn="area" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="streetlampConnectionString (MySettings)" DbObjectName="streetlamp_3id.dbo.Record_view" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy_area_date_alarmok" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataBy23" GeneratorSourceName="FillBy_area_date_alarmok" GetMethodModifier="Public" GetMethodName="GetDataBy23" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy23" UserSourceName="FillBy_area_date_alarmok">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT SUBSTRING(lamp_id, 7, 5) AS lamp_id_short, ID, area, city, control_box_id, 
+      control_box_name, date, date_end, lamp_id, problem_inf, server_state, state, street, 
+      type_string
+FROM Record_view
+WHERE (date &gt;= @Param1) AND (date &lt;= @Param2) AND (area = @Param3) AND (server_state = @Param4 OR server_state = @Param5)
+ORDER BY date DESC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param1" ColumnName="date" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="date" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param2" ColumnName="date" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@Param2" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="date" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param3" ColumnName="area" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="nvarchar(10)" DbType="String" Direction="Input" ParameterName="@Param3" Precision="0" ProviderType="NVarChar" Scale="0" Size="10" SourceColumn="area" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param4" ColumnName="server_state" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Param4" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="server_state" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param5" ColumnName="server_state" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Param5" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="server_state" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="streetlampConnectionString (MySettings)" DbObjectName="streetlamp_3id.dbo.Record_view" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy_chuli" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataBy9" GeneratorSourceName="FillBy_chuli" GetMethodModifier="Public" GetMethodName="GetDataBy9" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy9" UserSourceName="FillBy_chuli">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT ID, area, city, control_box_id, control_box_name, date, date_end, lamp_id, SUBSTRING(lamp_id, 7, 5) AS lamp_id_short, problem_inf, server_state, state, street, type_string FROM Record_view WHERE (server_state = 2) ORDER BY date DESC</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="streetlampConnectionString (MySettings)" DbObjectName="streetlamp_3id.dbo.Record_view" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy_city" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataBy10" GeneratorSourceName="FillBy_city" GetMethodModifier="Public" GetMethodName="GetDataBy10" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy10" UserSourceName="FillBy_city">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT ID, area, city, control_box_id, control_box_name, date, date_end, lamp_id, SUBSTRING(lamp_id, 7, 5) AS lamp_id_short, problem_inf, server_state, state, street, type_string FROM Record_view WHERE (city = @Param1) ORDER BY date DESC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param1" ColumnName="city" DataSourceName="streetlamp.dbo.Record_view" DataTypeServer="nvarchar(6)" DbType="String" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="NVarChar" Scale="0" Size="6" SourceColumn="city" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="streetlampConnectionString (MySettings)" DbObjectName="streetlamp_3id.dbo.Record_view" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy_city_alarmok" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataBy11" GeneratorSourceName="FillBy_city_alarmok" GetMethodModifier="Public" GetMethodName="GetDataBy11" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy11" UserSourceName="FillBy_city_alarmok">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT ID, area, city, control_box_id, control_box_name, date, date_end, lamp_id, SUBSTRING(lamp_id, 7, 5) AS lamp_id_short, problem_inf, server_state, state, street, type_string FROM Record_view WHERE (city = @Param1) AND (server_state = @Param2 OR server_state = @Param3) ORDER BY date DESC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param1" ColumnName="city" DataSourceName="streetlamp.dbo.Record_view" DataTypeServer="nvarchar(6)" DbType="String" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="NVarChar" Scale="0" Size="6" SourceColumn="city" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param2" ColumnName="server_state" DataSourceName="streetlamp.dbo.Record_view" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Param2" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="server_state" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param3" ColumnName="server_state" DataSourceName="streetlamp.dbo.Record_view" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Param3" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="server_state" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="streetlampConnectionString (MySettings)" DbObjectName="streetlamp_3id.dbo.Record_view" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy_city_date" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataBy12" GeneratorSourceName="FillBy_city_date" GetMethodModifier="Public" GetMethodName="GetDataBy12" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy12" UserSourceName="FillBy_city_date">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT ID, area, city, control_box_id, control_box_name, date, date_end, lamp_id, SUBSTRING(lamp_id, 7, 5) AS lamp_id_short, problem_inf, server_state, state, street, type_string FROM Record_view WHERE (date &gt;= @Param1) AND (date &lt;= @Param2) AND (city = @Param3) ORDER BY date DESC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param1" ColumnName="date" DataSourceName="streetlamp.dbo.Record_view" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="date" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param2" ColumnName="date" DataSourceName="streetlamp.dbo.Record_view" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@Param2" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="date" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param3" ColumnName="city" DataSourceName="streetlamp.dbo.Record_view" DataTypeServer="nvarchar(6)" DbType="String" Direction="Input" ParameterName="@Param3" Precision="0" ProviderType="NVarChar" Scale="0" Size="6" SourceColumn="city" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="streetlampConnectionString (MySettings)" DbObjectName="streetlamp_3id.dbo.Record_view" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy_city_date_alarmok" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataBy13" GeneratorSourceName="FillBy_city_date_alarmok" GetMethodModifier="Public" GetMethodName="GetDataBy13" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy13" UserSourceName="FillBy_city_date_alarmok">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT ID, area, city, control_box_id, control_box_name, date, date_end, lamp_id, SUBSTRING(lamp_id, 7, 5) AS lamp_id_short, problem_inf, server_state, state, street, type_string FROM Record_view WHERE (date &gt;= @Param1) AND (date &lt;= @Param2) AND (city = @Param3) AND (server_state = @Param4 OR server_state = @Param5) ORDER BY date DESC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param1" ColumnName="date" DataSourceName="streetlamp.dbo.Record_view" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="date" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param2" ColumnName="date" DataSourceName="streetlamp.dbo.Record_view" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@Param2" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="date" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param3" ColumnName="city" DataSourceName="streetlamp.dbo.Record_view" DataTypeServer="nvarchar(6)" DbType="String" Direction="Input" ParameterName="@Param3" Precision="0" ProviderType="NVarChar" Scale="0" Size="6" SourceColumn="city" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param4" ColumnName="server_state" DataSourceName="streetlamp.dbo.Record_view" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Param4" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="server_state" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param5" ColumnName="server_state" DataSourceName="streetlamp.dbo.Record_view" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Param5" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="server_state" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="streetlampConnectionString (MySettings)" DbObjectName="streetlamp_3id.dbo.Record_view" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy_control_box" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataBy3" GeneratorSourceName="FillBy_control_box" GetMethodModifier="Public" GetMethodName="GetDataBy3" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy3" UserSourceName="FillBy_control_box">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT SUBSTRING(lamp_id, 7, 5) AS lamp_id_short, ID, area, city, control_box_id, 
+      control_box_name, date, date_end, lamp_id, problem_inf, server_state, state, street, 
+      type_string
+FROM Record_view
+WHERE (control_box_name = @Param1)
+ORDER BY date DESC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param1" ColumnName="control_box_name" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="nchar(10)" DbType="String" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="NChar" Scale="0" Size="10" SourceColumn="control_box_name" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="streetlampConnectionString (MySettings)" DbObjectName="streetlamp_3id.dbo.Record_view" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy_control_box_alarmok" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy_control_box_alarmok" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy" UserSourceName="FillBy_control_box_alarmok">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT SUBSTRING(lamp_id, 7, 5) AS lamp_id_short, ID, area, city, control_box_id, 
+      control_box_name, date, date_end, lamp_id, problem_inf, server_state, state, street, 
+      type_string
+FROM Record_view
+WHERE  (control_box_name = @Param1) AND (server_state = @Param2 OR
+      server_state = @Param3)
+ORDER BY date DESC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param1" ColumnName="control_box_name" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="nchar(10)" DbType="String" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="NChar" Scale="0" Size="10" SourceColumn="control_box_name" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param2" ColumnName="server_state" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Param2" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="server_state" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param3" ColumnName="server_state" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Param3" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="server_state" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="streetlampConnectionString (MySettings)" DbObjectName="streetlamp_3id.dbo.Record_view" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy_control_box_date" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataBy5" GeneratorSourceName="FillBy_control_box_date" GetMethodModifier="Public" GetMethodName="GetDataBy5" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy5" UserSourceName="FillBy_control_box_date">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT SUBSTRING(lamp_id, 7, 5) AS lamp_id_short, ID, area, city, control_box_id, 
+      control_box_name, date, date_end, lamp_id, problem_inf, server_state, state, street, 
+      type_string
+FROM Record_view
+WHERE (date &gt;= @Param1) AND (date &lt;= @Param2) AND (control_box_name = @Param3)
+ORDER BY date DESC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param1" ColumnName="date" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="date" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param2" ColumnName="date" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@Param2" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="date" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param3" ColumnName="control_box_name" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="nchar(10)" DbType="String" Direction="Input" ParameterName="@Param3" Precision="0" ProviderType="NChar" Scale="0" Size="10" SourceColumn="control_box_name" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="streetlampConnectionString (MySettings)" DbObjectName="streetlamp_3id.dbo.Record_view" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy_control_box_date_alarmok" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataBy1" GeneratorSourceName="FillBy_control_box_date_alarmok" GetMethodModifier="Public" GetMethodName="GetDataBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy1" UserSourceName="FillBy_control_box_date_alarmok">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT SUBSTRING(lamp_id, 7, 5) AS lamp_id_short, ID, area, city, control_box_id, 
+      control_box_name, date, date_end, lamp_id, problem_inf, server_state, state, street, 
+      type_string
+FROM Record_view
+WHERE (date &gt;= @Param1) AND (date &lt;= @Param2) AND (control_box_name = @Param3) AND 
+      (server_state = @Param4 OR
+      server_state = @Param5)
+ORDER BY date DESC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param1" ColumnName="date" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="date" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param2" ColumnName="date" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@Param2" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="date" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param3" ColumnName="control_box_name" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="nchar(10)" DbType="String" Direction="Input" ParameterName="@Param3" Precision="0" ProviderType="NChar" Scale="0" Size="10" SourceColumn="control_box_name" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param4" ColumnName="server_state" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Param4" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="server_state" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param5" ColumnName="server_state" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Param5" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="server_state" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="streetlampConnectionString (MySettings)" DbObjectName="streetlamp_3id.dbo.Record_view" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy_lampid" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataBy7" GeneratorSourceName="FillBy_lampid" GetMethodModifier="Public" GetMethodName="GetDataBy7" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy7" UserSourceName="FillBy_lampid">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT ID, area, city, control_box_id, control_box_name, date, date_end, lamp_id, SUBSTRING(lamp_id, 7, 5) AS lamp_id_short, problem_inf, server_state, state, street, type_string FROM Record_view WHERE (control_box_name = @Param3) AND (type_string = @Param2) AND (lamp_id = @Param1) ORDER BY date DESC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param3" ColumnName="control_box_name" DataSourceName="streetlamp.dbo.Record_view" DataTypeServer="nchar(10)" DbType="String" Direction="Input" ParameterName="@Param3" Precision="0" ProviderType="NChar" Scale="0" Size="10" SourceColumn="control_box_name" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param2" ColumnName="type_string" DataSourceName="streetlamp.dbo.Record_view" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@Param2" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="type_string" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param1" ColumnName="lamp_id" DataSourceName="streetlamp.dbo.Record_view" DataTypeServer="nvarchar(15)" DbType="String" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="NVarChar" Scale="0" Size="15" SourceColumn="lamp_id" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="streetlampConnectionString (MySettings)" DbObjectName="streetlamp_3id.dbo.Record_view" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy_lampid_alarmok" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataBy4" GeneratorSourceName="FillBy_lampid_alarmok" GetMethodModifier="Public" GetMethodName="GetDataBy4" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy4" UserSourceName="FillBy_lampid_alarmok">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT ID, area, city, control_box_id, control_box_name, date, date_end, lamp_id, SUBSTRING(lamp_id, 7, 5) AS lamp_id_short, problem_inf, server_state, state, street, type_string FROM Record_view WHERE (control_box_name = @Param3) AND (type_string = @Param2) AND (lamp_id = @Param1) AND (server_state = @Param4 OR server_state = @Param5) ORDER BY date DESC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param3" ColumnName="control_box_name" DataSourceName="streetlamp.dbo.Record_view" DataTypeServer="nchar(10)" DbType="String" Direction="Input" ParameterName="@Param3" Precision="0" ProviderType="NChar" Scale="0" Size="10" SourceColumn="control_box_name" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param2" ColumnName="type_string" DataSourceName="streetlamp.dbo.Record_view" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@Param2" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="type_string" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param1" ColumnName="lamp_id" DataSourceName="streetlamp.dbo.Record_view" DataTypeServer="nvarchar(15)" DbType="String" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="NVarChar" Scale="0" Size="15" SourceColumn="lamp_id" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param4" ColumnName="server_state" DataSourceName="streetlamp.dbo.Record_view" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Param4" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="server_state" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param5" ColumnName="server_state" DataSourceName="streetlamp.dbo.Record_view" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Param5" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="server_state" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="streetlampConnectionString (MySettings)" DbObjectName="streetlamp_3id.dbo.Record_view" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy_lampid_date" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataBy2" GeneratorSourceName="FillBy_lampid_date" GetMethodModifier="Public" GetMethodName="GetDataBy2" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy2" UserSourceName="FillBy_lampid_date">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT ID, area, city, control_box_id, control_box_name, date, date_end, lamp_id, SUBSTRING(lamp_id, 7, 5) AS lamp_id_short, problem_inf, server_state, state, street, type_string FROM Record_view WHERE (control_box_name = @Param1) AND (type_string = @Param2) AND (lamp_id = @Param3) AND (date &gt;= @Param4) AND (date &lt;= @Param5) ORDER BY date DESC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param1" ColumnName="control_box_name" DataSourceName="streetlamp.dbo.Record_view" DataTypeServer="nchar(10)" DbType="String" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="NChar" Scale="0" Size="10" SourceColumn="control_box_name" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param2" ColumnName="type_string" DataSourceName="streetlamp.dbo.Record_view" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@Param2" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="type_string" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param3" ColumnName="lamp_id" DataSourceName="streetlamp.dbo.Record_view" DataTypeServer="nvarchar(15)" DbType="String" Direction="Input" ParameterName="@Param3" Precision="0" ProviderType="NVarChar" Scale="0" Size="15" SourceColumn="lamp_id" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param4" ColumnName="date" DataSourceName="streetlamp.dbo.Record_view" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@Param4" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="date" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param5" ColumnName="date" DataSourceName="streetlamp.dbo.Record_view" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@Param5" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="date" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="streetlampConnectionString (MySettings)" DbObjectName="streetlamp_3id.dbo.Record_view" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy_lampid_date_alarmok" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataBy6" GeneratorSourceName="FillBy_lampid_date_alarmok" GetMethodModifier="Public" GetMethodName="GetDataBy6" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy6" UserSourceName="FillBy_lampid_date_alarmok">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT ID, area, city, control_box_id, control_box_name, date, date_end, lamp_id, SUBSTRING(lamp_id, 7, 5) AS lamp_id_short, problem_inf, server_state, state, street, type_string FROM Record_view WHERE (control_box_name = @Param1) AND (type_string = @Param2) AND (lamp_id = @Param3) AND (date &gt;= @Param4) AND (date &lt;= @Param5) AND (server_state = @Param6 OR server_state = @Param7) ORDER BY date DESC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param1" ColumnName="control_box_name" DataSourceName="streetlamp.dbo.Record_view" DataTypeServer="nchar(10)" DbType="String" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="NChar" Scale="0" Size="10" SourceColumn="control_box_name" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param2" ColumnName="type_string" DataSourceName="streetlamp.dbo.Record_view" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@Param2" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="type_string" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param3" ColumnName="lamp_id" DataSourceName="streetlamp.dbo.Record_view" DataTypeServer="nvarchar(15)" DbType="String" Direction="Input" ParameterName="@Param3" Precision="0" ProviderType="NVarChar" Scale="0" Size="15" SourceColumn="lamp_id" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param4" ColumnName="date" DataSourceName="streetlamp.dbo.Record_view" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@Param4" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="date" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param5" ColumnName="date" DataSourceName="streetlamp.dbo.Record_view" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@Param5" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="date" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param6" ColumnName="server_state" DataSourceName="streetlamp.dbo.Record_view" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Param6" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="server_state" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param7" ColumnName="server_state" DataSourceName="streetlamp.dbo.Record_view" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Param7" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="server_state" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="streetlampConnectionString (MySettings)" DbObjectName="streetlamp_3id.dbo.Record_view" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy_notend" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataBy8" GeneratorSourceName="FillBy_notend" GetMethodModifier="Public" GetMethodName="GetDataBy8" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy8" UserSourceName="FillBy_notend">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT ID, area, city, control_box_id, control_box_name, date, date_end, lamp_id, SUBSTRING(lamp_id, 7, 5) AS lamp_id_short, problem_inf, server_state, state, street, type_string FROM Record_view WHERE (server_state = 0) AND (total_num &gt; 1) ORDER BY date DESC</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="streetlampConnectionString (MySettings)" DbObjectName="streetlamp_3id.dbo.Record_view" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy_street" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataBy14" GeneratorSourceName="FillBy_street" GetMethodModifier="Public" GetMethodName="GetDataBy14" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy14" UserSourceName="FillBy_street">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT SUBSTRING(lamp_id, 7, 5) AS lamp_id_short, ID, area, city, control_box_id, 
+      control_box_name, date, date_end, lamp_id, problem_inf, server_state, state, street, 
+      type_string
+FROM Record_view
+WHERE  (street = @Param1)
+ORDER BY date DESC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param1" ColumnName="street" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="nchar(10)" DbType="String" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="NChar" Scale="0" Size="10" SourceColumn="street" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="streetlampConnectionString (MySettings)" DbObjectName="streetlamp_3id.dbo.Record_view" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy_street_alarmok" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataBy18" GeneratorSourceName="FillBy_street_alarmok" GetMethodModifier="Public" GetMethodName="GetDataBy18" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy18" UserSourceName="FillBy_street_alarmok">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT SUBSTRING(lamp_id, 7, 5) AS lamp_id_short, ID, area, city, control_box_id, 
+      control_box_name, date, date_end, lamp_id, problem_inf, server_state, state, street, 
+      type_string
+FROM Record_view
+WHERE (street = @Param1) AND (server_state = @Param2 OR server_state = @Param3)
+ORDER BY date DESC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param1" ColumnName="street" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="nchar(10)" DbType="String" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="NChar" Scale="0" Size="10" SourceColumn="street" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param2" ColumnName="server_state" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Param2" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="server_state" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param3" ColumnName="server_state" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Param3" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="server_state" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="streetlampConnectionString (MySettings)" DbObjectName="streetlamp_3id.dbo.Record_view" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy_street_date" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataBy21" GeneratorSourceName="FillBy_street_date" GetMethodModifier="Public" GetMethodName="GetDataBy21" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy21" UserSourceName="FillBy_street_date">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT SUBSTRING(lamp_id, 7, 5) AS lamp_id_short, ID, area, city, control_box_id, 
+      control_box_name, date, date_end, lamp_id, problem_inf, server_state, state, street, 
+      type_string
+FROM Record_view
+WHERE (date &gt;= @Param1) AND (date &lt;= @Param2) AND (street = @Param3)
+ORDER BY date DESC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param1" ColumnName="date" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="date" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param2" ColumnName="date" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@Param2" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="date" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param3" ColumnName="street" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="nchar(10)" DbType="String" Direction="Input" ParameterName="@Param3" Precision="0" ProviderType="NChar" Scale="0" Size="10" SourceColumn="street" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="streetlampConnectionString (MySettings)" DbObjectName="streetlamp_3id.dbo.Record_view" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy_street_date_alarmok" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataBy24" GeneratorSourceName="FillBy_street_date_alarmok" GetMethodModifier="Public" GetMethodName="GetDataBy24" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy24" UserSourceName="FillBy_street_date_alarmok">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT ID, area, city, control_box_id, control_box_name, date, date_end, lamp_id, SUBSTRING(lamp_id, 7, 5) AS lamp_id_short, problem_inf, server_state, state, street, type_string FROM Record_view WHERE (date &gt;= @Param1) AND (date &lt;= @Param2) AND (street = @Param3) AND (server_state = @Param4 OR server_state = @Param5) ORDER BY date DESC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param1" ColumnName="date" DataSourceName="streetlamp.dbo.Record_view" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="date" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param2" ColumnName="date" DataSourceName="streetlamp.dbo.Record_view" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@Param2" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="date" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param3" ColumnName="street" DataSourceName="streetlamp.dbo.Record_view" DataTypeServer="nchar(10)" DbType="String" Direction="Input" ParameterName="@Param3" Precision="0" ProviderType="NChar" Scale="0" Size="10" SourceColumn="street" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param4" ColumnName="server_state" DataSourceName="streetlamp.dbo.Record_view" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Param4" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="server_state" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param5" ColumnName="server_state" DataSourceName="streetlamp.dbo.Record_view" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Param5" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="server_state" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="streetlampConnectionString (MySettings)" DbObjectName="streetlamp_3id.dbo.Record_view" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy_type" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataBy16" GeneratorSourceName="FillBy_type" GetMethodModifier="Public" GetMethodName="GetDataBy16" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy16" UserSourceName="FillBy_type">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT SUBSTRING(lamp_id, 7, 5) AS lamp_id_short, ID, area, city, control_box_id, 
+      control_box_name, date, date_end, lamp_id, problem_inf, server_state, state, street, 
+      type_string
+FROM Record_view
+WHERE (control_box_name = @Param2) AND (type_string = @Param1)
+ORDER BY date DESC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param2" ColumnName="control_box_name" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="nchar(10)" DbType="String" Direction="Input" ParameterName="@Param2" Precision="0" ProviderType="NChar" Scale="0" Size="10" SourceColumn="control_box_name" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param1" ColumnName="type_string" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="type_string" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="streetlampConnectionString (MySettings)" DbObjectName="streetlamp_3id.dbo.Record_view" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy_type_alarmok" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataBy19" GeneratorSourceName="FillBy_type_alarmok" GetMethodModifier="Public" GetMethodName="GetDataBy19" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy19" UserSourceName="FillBy_type_alarmok">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT SUBSTRING(lamp_id, 7, 5) AS lamp_id_short, ID, area, city, control_box_id, 
+      control_box_name, date, date_end, lamp_id, problem_inf, server_state, state, street, 
+      type_string
+FROM Record_view
+WHERE (control_box_id = @Param4) AND (type_string = @Param1) AND 
+      (server_state = @Param2 OR
+      server_state = @Param3)
+ORDER BY date DESC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param4" ColumnName="control_box_id" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="nchar(4)" DbType="String" Direction="Input" ParameterName="@Param4" Precision="0" ProviderType="NChar" Scale="0" Size="4" SourceColumn="control_box_id" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param1" ColumnName="type_string" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="type_string" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param2" ColumnName="server_state" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Param2" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="server_state" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param3" ColumnName="server_state" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Param3" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="server_state" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="streetlampConnectionString (MySettings)" DbObjectName="streetlamp_3id.dbo.Record_view" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy_type_date" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataBy22" GeneratorSourceName="FillBy_type_date" GetMethodModifier="Public" GetMethodName="GetDataBy22" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy22" UserSourceName="FillBy_type_date">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT SUBSTRING(lamp_id, 7, 5) AS lamp_id_short, ID, area, city, control_box_id, 
+      control_box_name, date, date_end, lamp_id, problem_inf, server_state, state, street, 
+      type_string
+FROM Record_view
+WHERE (date &gt;= @Param1) AND (date &lt;= @Param2) AND (control_box_name = @Param4) AND 
+      (type_string = @Param3)
+ORDER BY date DESC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param1" ColumnName="date" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="date" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param2" ColumnName="date" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@Param2" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="date" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param4" ColumnName="control_box_name" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="nchar(10)" DbType="String" Direction="Input" ParameterName="@Param4" Precision="0" ProviderType="NChar" Scale="0" Size="10" SourceColumn="control_box_name" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param3" ColumnName="type_string" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@Param3" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="type_string" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="streetlampConnectionString (MySettings)" DbObjectName="streetlamp_3id.dbo.Record_view" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy_type_date_alarmok" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataBy25" GeneratorSourceName="FillBy_type_date_alarmok" GetMethodModifier="Public" GetMethodName="GetDataBy25" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy25" UserSourceName="FillBy_type_date_alarmok">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT SUBSTRING(lamp_id, 7, 5) AS lamp_id_short, ID, area, city, control_box_id, 
+      control_box_name, date, date_end, lamp_id, problem_inf, server_state, state, street, 
+      type_string
+FROM Record_view
+WHERE (date &gt;= @Param1) AND (date &lt;= @Param2) AND (control_box_name = @Param6) 
+      AND (type_string = @Param3) AND (server_state = @Param4 OR
+      server_state = @Param5)
+ORDER BY date DESC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param1" ColumnName="date" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="date" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param2" ColumnName="date" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@Param2" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="date" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param6" ColumnName="control_box_name" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="nchar(10)" DbType="String" Direction="Input" ParameterName="@Param6" Precision="0" ProviderType="NChar" Scale="0" Size="10" SourceColumn="control_box_name" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param3" ColumnName="type_string" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@Param3" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="type_string" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param4" ColumnName="server_state" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Param4" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="server_state" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param5" ColumnName="server_state" DataSourceName="streetlamp_3id.dbo.Record_view" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Param5" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="server_state" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="streetlampDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="streetlampDataSet" msprop:Generator_DataSetName="streetlampDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="alarm_view" msprop:Generator_UserTableName="alarm_view" msprop:Generator_RowDeletedName="alarm_viewRowDeleted" msprop:Generator_RowChangedName="alarm_viewRowChanged" msprop:Generator_RowClassName="alarm_viewRow" msprop:Generator_RowChangingName="alarm_viewRowChanging" msprop:Generator_RowEvArgName="alarm_viewRowChangeEvent" msprop:Generator_RowEvHandlerName="alarm_viewRowChangeEventHandler" msprop:Generator_TableClassName="alarm_viewDataTable" msprop:Generator_TableVarName="tablealarm_view" msprop:Generator_RowDeletingName="alarm_viewRowDeleting" msprop:Generator_TablePropName="alarm_view">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="state" msprop:Generator_UserColumnName="state" msprop:Generator_ColumnPropNameInRow="state" msprop:Generator_ColumnVarNameInTable="columnstate" msprop:Generator_ColumnPropNameInTable="stateColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="date" msprop:Generator_UserColumnName="date" msprop:Generator_ColumnPropNameInRow="_date" msprop:Generator_ColumnVarNameInTable="columndate" msprop:Generator_ColumnPropNameInTable="dateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="problem_inf" msprop:Generator_UserColumnName="problem_inf" msprop:Generator_ColumnPropNameInRow="problem_inf" msprop:Generator_ColumnVarNameInTable="columnproblem_inf" msprop:Generator_ColumnPropNameInTable="problem_infColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="control_box_name" msprop:Generator_UserColumnName="control_box_name" msprop:Generator_ColumnVarNameInTable="columncontrol_box_name" msprop:Generator_ColumnPropNameInRow="control_box_name" msprop:Generator_ColumnPropNameInTable="control_box_nameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="date_end" msprop:Generator_UserColumnName="date_end" msprop:Generator_ColumnVarNameInTable="columndate_end" msprop:Generator_ColumnPropNameInRow="date_end" msprop:Generator_ColumnPropNameInTable="date_endColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="control_box_id" msprop:Generator_UserColumnName="control_box_id" msprop:Generator_ColumnVarNameInTable="columncontrol_box_id" msprop:Generator_ColumnPropNameInRow="control_box_id" msprop:Generator_ColumnPropNameInTable="control_box_idColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="server_state" msprop:Generator_UserColumnName="server_state" msprop:Generator_ColumnVarNameInTable="columnserver_state" msprop:Generator_ColumnPropNameInRow="server_state" msprop:Generator_ColumnPropNameInTable="server_stateColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="lamp_id_short" msdata:ReadOnly="true" msprop:Generator_UserColumnName="lamp_id_short" msprop:Generator_ColumnPropNameInRow="lamp_id_short" msprop:Generator_ColumnVarNameInTable="columnlamp_id_short" msprop:Generator_ColumnPropNameInTable="lamp_id_shortColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ID" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:int" />
+              <xs:element name="city" msprop:Generator_UserColumnName="city" msprop:Generator_ColumnVarNameInTable="columncity" msprop:Generator_ColumnPropNameInRow="city" msprop:Generator_ColumnPropNameInTable="cityColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="area" msprop:Generator_UserColumnName="area" msprop:Generator_ColumnVarNameInTable="columnarea" msprop:Generator_ColumnPropNameInRow="area" msprop:Generator_ColumnPropNameInTable="areaColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="street" msprop:Generator_UserColumnName="street" msprop:Generator_ColumnVarNameInTable="columnstreet" msprop:Generator_ColumnPropNameInRow="street" msprop:Generator_ColumnPropNameInTable="streetColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="type_string" msprop:Generator_UserColumnName="type_string" msprop:Generator_ColumnPropNameInRow="type_string" msprop:Generator_ColumnVarNameInTable="columntype_string" msprop:Generator_ColumnPropNameInTable="type_stringColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="lamp_id" msprop:Generator_UserColumnName="lamp_id" msprop:Generator_ColumnPropNameInRow="lamp_id" msprop:Generator_ColumnVarNameInTable="columnlamp_id" msprop:Generator_ColumnPropNameInTable="lamp_idColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

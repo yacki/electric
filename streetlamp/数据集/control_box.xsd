@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="control_box" targetNamespace="http://tempuri.org/control_box.xsd" xmlns:mstns="http://tempuri.org/control_box.xsd" xmlns="http://tempuri.org/control_box.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="streetlampConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="streetlampConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.streetlamp.My.MySettings.GlobalReference.Default.streetlampConnectionString" Provider="System.Data.SqlClient">
+          </Connection>
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="control_infTableAdapter" GeneratorDataComponentClassName="control_infTableAdapter" Name="control_inf" UserDataComponentName="control_infTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="streetlampConnectionString (MySettings)" DbObjectName="streetlamp.dbo.Box_IMEI" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT DISTINCT control_box_name, IMEI, Information, control_box_id,pos_x,pos_y,huilu_num, kaiguanliang_num,board_num,control_box_type
+FROM Box_IMEI
+order by control_box_id</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IMEI" DataSetColumn="IMEI" />
+              <Mapping SourceColumn="Information" DataSetColumn="Information" />
+              <Mapping SourceColumn="control_box_name" DataSetColumn="control_box_name" />
+              <Mapping SourceColumn="control_box_id" DataSetColumn="control_box_id" />
+              <Mapping SourceColumn="pos_x" DataSetColumn="pos_x" />
+              <Mapping SourceColumn="pos_y" DataSetColumn="pos_y" />
+              <Mapping SourceColumn="huilu_num" DataSetColumn="huilu_num" />
+              <Mapping SourceColumn="kaiguanliang_num" DataSetColumn="kaiguanliang_num" />
+              <Mapping SourceColumn="board_num" DataSetColumn="board_num" />
+              <Mapping SourceColumn="control_box_type" DataSetColumn="control_box_type" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="control_box" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="control_box" msprop:Generator_DataSetName="control_box">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="control_inf" msprop:Generator_UserTableName="control_inf" msprop:Generator_RowDeletedName="control_infRowDeleted" msprop:Generator_RowChangedName="control_infRowChanged" msprop:Generator_RowClassName="control_infRow" msprop:Generator_RowChangingName="control_infRowChanging" msprop:Generator_RowEvArgName="control_infRowChangeEvent" msprop:Generator_RowEvHandlerName="control_infRowChangeEventHandler" msprop:Generator_TableClassName="control_infDataTable" msprop:Generator_TableVarName="tablecontrol_inf" msprop:Generator_RowDeletingName="control_infRowDeleting" msprop:Generator_TablePropName="control_inf">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IMEI" msprop:Generator_UserColumnName="IMEI" msprop:Generator_ColumnVarNameInTable="columnIMEI" msprop:Generator_ColumnPropNameInRow="IMEI" msprop:Generator_ColumnPropNameInTable="IMEIColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Information" msprop:Generator_UserColumnName="Information" msprop:Generator_ColumnVarNameInTable="columnInformation" msprop:Generator_ColumnPropNameInRow="Information" msprop:Generator_ColumnPropNameInTable="InformationColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="control_box_name" msprop:Generator_UserColumnName="control_box_name" msprop:Generator_ColumnVarNameInTable="columncontrol_box_name" msprop:Generator_ColumnPropNameInRow="control_box_name" msprop:Generator_ColumnPropNameInTable="control_box_nameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="control_box_id" msprop:Generator_UserColumnName="control_box_id" msprop:Generator_ColumnPropNameInRow="control_box_id" msprop:Generator_ColumnVarNameInTable="columncontrol_box_id" msprop:Generator_ColumnPropNameInTable="control_box_idColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pos_x" msprop:Generator_UserColumnName="pos_x" msprop:Generator_ColumnVarNameInTable="columnpos_x" msprop:Generator_ColumnPropNameInRow="pos_x" msprop:Generator_ColumnPropNameInTable="pos_xColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="pos_y" msprop:Generator_UserColumnName="pos_y" msprop:Generator_ColumnVarNameInTable="columnpos_y" msprop:Generator_ColumnPropNameInRow="pos_y" msprop:Generator_ColumnPropNameInTable="pos_yColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="huilu_num" msprop:Generator_UserColumnName="huilu_num" msprop:Generator_ColumnPropNameInRow="huilu_num" msprop:Generator_ColumnVarNameInTable="columnhuilu_num" msprop:Generator_ColumnPropNameInTable="huilu_numColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="kaiguanliang_num" msprop:Generator_UserColumnName="kaiguanliang_num" msprop:Generator_ColumnVarNameInTable="columnkaiguanliang_num" msprop:Generator_ColumnPropNameInRow="kaiguanliang_num" msprop:Generator_ColumnPropNameInTable="kaiguanliang_numColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="board_num" msprop:Generator_UserColumnName="board_num" msprop:Generator_ColumnPropNameInRow="board_num" msprop:Generator_ColumnVarNameInTable="columnboard_num" msprop:Generator_ColumnPropNameInTable="board_numColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="control_box_type" msprop:Generator_UserColumnName="control_box_type" msprop:Generator_ColumnVarNameInTable="columncontrol_box_type" msprop:Generator_ColumnPropNameInRow="control_box_type" msprop:Generator_ColumnPropNameInTable="control_box_typeColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

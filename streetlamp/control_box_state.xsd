@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="control_box_state" targetNamespace="http://tempuri.org/control_box_state.xsd" xmlns:mstns="http://tempuri.org/control_box_state.xsd" xmlns="http://tempuri.org/control_box_state.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="streetlampConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="streetlampConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.streetlamp.My.MySettings.GlobalReference.Default.streetlampConnectionString" Provider="System.Data.SqlClient">
+          </Connection>
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="control_boxTableAdapter" GeneratorDataComponentClassName="control_boxTableAdapter" Name="control_box" UserDataComponentName="control_boxTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="streetlampConnectionString (MySettings)" DbObjectName="SELECT name, gzxx, time FROM dbo.GetExceptionResult() UNION SELECT control_box_name AS name, StatusContent AS gzxx, Createtime AS time FROM Control_box_state WHERE (kaiguan_string = '通信') AND (StatusContent = '未连接') AND (state = 0 OR state = 2) UNION SELECT control_box_name AS name, alarm_string AS gzxx, createtime AS time FROM kaiguan_alarm_list WHERE (alarm_tag = 2) UNION SELECT control_box_name AS name, CASE StatusContent WHEN '电池' THEN '失压' END AS gzxx, Createtime AS time FROM Control_box_state AS Control_box_state_1 WHERE (kaiguan_string = '供电') AND (state = 0) AND (StatusContent = '电池')" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>/*-获得返回的结果*/
+SELECT name, gzxx, time
+FROM (SELECT name, gzxx, time
+        FROM dbo.GetExceptionResult() 
+        UNION
+        SELECT control_box_name AS name, StatusContent AS gzxx, 
+              Createtime AS time
+        FROM Control_box_state
+        WHERE (kaiguan_string = '通信') AND (StatusContent = '未连接') AND 
+              (state = 0 OR
+              state = 2)
+        UNION
+        SELECT control_box_name AS name, alarm_string AS gzxx, 
+              createtime AS time
+        FROM kaiguan_alarm_list
+        WHERE (alarm_tag = 2)
+        UNION
+        SELECT control_box_name AS name, 
+              CASE StatusContent WHEN '电池' THEN '失压' END AS gzxx, 
+              Createtime AS time
+        FROM Control_box_state AS Control_box_state_1
+        WHERE (kaiguan_string = '供电') AND (state = 0) AND (StatusContent = '电池')) AS A
+order by time desc</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="name" DataSetColumn="name" />
+              <Mapping SourceColumn="gzxx" DataSetColumn="gzxx" />
+              <Mapping SourceColumn="time" DataSetColumn="time" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="control_box_state" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="control_box_state" msprop:Generator_DataSetName="control_box_state">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="control_box" msprop:Generator_UserTableName="control_box" msprop:Generator_RowDeletedName="control_boxRowDeleted" msprop:Generator_RowChangedName="control_boxRowChanged" msprop:Generator_RowClassName="control_boxRow" msprop:Generator_RowChangingName="control_boxRowChanging" msprop:Generator_RowEvArgName="control_boxRowChangeEvent" msprop:Generator_RowEvHandlerName="control_boxRowChangeEventHandler" msprop:Generator_TableClassName="control_boxDataTable" msprop:Generator_TableVarName="tablecontrol_box" msprop:Generator_RowDeletingName="control_boxRowDeleting" msprop:Generator_TablePropName="control_box">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="name" msdata:ReadOnly="true" msprop:Generator_UserColumnName="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="gzxx" msdata:ReadOnly="true" msprop:Generator_UserColumnName="gzxx" msprop:Generator_ColumnVarNameInTable="columngzxx" msprop:Generator_ColumnPropNameInRow="gzxx" msprop:Generator_ColumnPropNameInTable="gzxxColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="800" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="time" msdata:ReadOnly="true" msprop:Generator_UserColumnName="time" msprop:Generator_ColumnVarNameInTable="columntime" msprop:Generator_ColumnPropNameInRow="time" msprop:Generator_ColumnPropNameInTable="timeColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

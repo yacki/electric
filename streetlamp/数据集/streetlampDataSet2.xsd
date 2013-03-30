@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="streetlampDataSet2" targetNamespace="http://tempuri.org/streetlampDataSet2.xsd" xmlns:mstns="http://tempuri.org/streetlampDataSet2.xsd" xmlns="http://tempuri.org/streetlampDataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="streetlampConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="streetlampConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.streetlamp.My.MySettings.GlobalReference.Default.streetlampConnectionString" Provider="System.Data.SqlClient">
+          </Connection>
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="lamp_streetTableAdapter" GeneratorDataComponentClassName="lamp_streetTableAdapter" Name="lamp_street" UserDataComponentName="lamp_streetTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="streetlampConnectionString (MySettings)" DbObjectName="streetlamp.dbo.lamp_street" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>SELECT lamp_id, area, street, state, div_time_id FROM dbo.lamp_street</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="lamp_id" DataSetColumn="lamp_id" />
+              <Mapping SourceColumn="area" DataSetColumn="area" />
+              <Mapping SourceColumn="street" DataSetColumn="street" />
+              <Mapping SourceColumn="state" DataSetColumn="state" />
+              <Mapping SourceColumn="div_time_id" DataSetColumn="div_time_id" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="streetlampDataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="streetlampDataSet2" msprop:Generator_DataSetName="streetlampDataSet2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="lamp_street" msprop:Generator_UserTableName="lamp_street" msprop:Generator_RowDeletedName="lamp_streetRowDeleted" msprop:Generator_TableClassName="lamp_streetDataTable" msprop:Generator_RowChangedName="lamp_streetRowChanged" msprop:Generator_RowClassName="lamp_streetRow" msprop:Generator_RowChangingName="lamp_streetRowChanging" msprop:Generator_RowEvArgName="lamp_streetRowChangeEvent" msprop:Generator_RowEvHandlerName="lamp_streetRowChangeEventHandler" msprop:Generator_TablePropName="lamp_street" msprop:Generator_TableVarName="tablelamp_street" msprop:Generator_RowDeletingName="lamp_streetRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="lamp_id" msprop:Generator_UserColumnName="lamp_id" msprop:Generator_ColumnPropNameInRow="lamp_id" msprop:Generator_ColumnVarNameInTable="columnlamp_id" msprop:Generator_ColumnPropNameInTable="lamp_idColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="area" msprop:Generator_UserColumnName="area" msprop:Generator_ColumnPropNameInRow="area" msprop:Generator_ColumnVarNameInTable="columnarea" msprop:Generator_ColumnPropNameInTable="areaColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="street" msprop:Generator_UserColumnName="street" msprop:Generator_ColumnPropNameInRow="street" msprop:Generator_ColumnVarNameInTable="columnstreet" msprop:Generator_ColumnPropNameInTable="streetColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="state" msprop:Generator_UserColumnName="state" msprop:Generator_ColumnPropNameInRow="state" msprop:Generator_ColumnVarNameInTable="columnstate" msprop:Generator_ColumnPropNameInTable="stateColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="div_time_id" msprop:Generator_UserColumnName="div_time_id" msprop:Generator_ColumnPropNameInRow="div_time_id" msprop:Generator_ColumnVarNameInTable="columndiv_time_id" msprop:Generator_ColumnPropNameInTable="div_time_idColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:lamp_street" />
+      <xs:field xpath="mstns:lamp_id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
