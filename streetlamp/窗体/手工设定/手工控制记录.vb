@@ -237,7 +237,7 @@ Public Class 手工控制记录
         m_streetname = Trim(cb_street_name.Text) '街道
         m_controlboxname = Trim(cb_control_box_name.Text)  '电控箱名称
         m_lamptype = Trim(cb_lamp_type.Text) '景观灯类型
-        m_lampid = Trim(cb_lamp_id.Text)  '路灯编号
+        m_lampid = Trim(cb_lamp_id.Text)  '终端编号
 
 
         If rb_date_condition_find.Checked = True Then  '按日期查询

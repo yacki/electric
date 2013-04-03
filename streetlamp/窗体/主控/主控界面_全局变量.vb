@@ -1,9 +1,9 @@
 ﻿Partial Public Class welcome_win
     '主控窗体的全局变量及初始化部分
 #Region "变量"
-    '****************************绘制路灯的变量***************************************
+    '****************************绘制终端的变量***************************************
 
-    Private m_lamp As New Bitmap(3000, 565)   '绘制路灯的bmp图
+    Private m_lamp As New Bitmap(3000, 565)   '绘制终端的bmp图
     ' Private m_fullcolor, m_partcolor, m_closecolor, m_problemcolor, m_noreturncolor As System.Drawing.Color   '状态颜色分别是全功率，半功率，无返回状态，关，故障
     Private m_lvlighton, m_lvlightoff, m_lvlightproblem, m_lvnoreturn As Double  '开灯，关灯,故障，无返回值概率
     Private m_controllampobj As New control_lamp  'control_lamp_obj的实例化对象
@@ -15,7 +15,7 @@
     Private m_findtag As Integer  '判断是否有状态返回的查询标志
     Private m_controlboxnamestring, m_typestring, m_lampidstring As String   '区域名称，类型，景观灯编号
     Private m_holidaytitle As String  '节日模式标题
-    Private m_addlampobj As 增加路灯 '增加路灯
+    Private m_addlampobj As 增加终端 '增加终端
     Private m_checkcondition As Integer  '查询的条件，0表示查询所有，1表示查询某一个区域
     Private m_checkvalue As String  '按区域查询的区域名称
     Private m_rightbuttonpos As System.Drawing.Point  '单击右键时鼠标的坐标
@@ -94,7 +94,7 @@
     Delegate Sub SetMapSize(ByVal picbox As Windows.Forms.PictureBox)                 '设置地图的大小
     Delegate Sub SetControlBoxList(ByVal Lamp_State As Windows.Forms.DataGridView, ByVal find_condition As Integer)
 
-   
+
 
 #End Region
 
@@ -107,7 +107,7 @@
             Me.Invoke(stateobj, New Object() {Lamp_State, find_condition})
 
         Else
-            '右边的路灯统计信息
+            '右边的终端统计信息
             Dim probleminf As String = ""
             Dim lampkind As String = ""
             Dim lampstate As String = ""  '灯的开关情况，div_time_id列>=8为开，<8的为关
@@ -153,68 +153,68 @@
                     lamp_pointinfor = ""
                 End If
                 Me.dgv_lamp_state_list.Rows(row).Cells("lamp_id_part").Value = Val(Mid(Me.dgv_lamp_state_list.Rows(row).Cells("lamp_id").Value, 1, 4)).ToString & "-" & Val(Mid(Me.dgv_lamp_state_list.Rows(row).Cells("lamp_id").Value, 5, 2)).ToString & "-" & Val(Mid(Me.dgv_lamp_state_list.Rows(row).Cells("lamp_id").Value, 7, 5)).ToString
-                    If lampkind = "3" Then
-                        probleminf = m_controllampobj.get_probleminf(Me.dgv_lamp_state_list.Rows(row).Cells("state").Value)
-                        If Me.dgv_lamp_state_list.Rows(row).Cells("div_time_id").Value = "0" Then
-                            '表示关闭
-                            Me.dgv_lamp_state_list.Rows(row).Cells("open_close").Value = "关闭"
-                        Else
-                            If Me.dgv_lamp_state_list.Rows(row).Cells("div_time_id").Value = "1" Then
-                                '表示打开
-                                Me.dgv_lamp_state_list.Rows(row).Cells("open_close").Value = "打开"
-                            Else
-                                '表示初始状态
-                                Me.dgv_lamp_state_list.Rows(row).Cells("open_close").Value = "-"
-
-                            End If
-
-                        End If
-
-                        Me.dgv_lamp_state_list.Rows(row).Cells("state_content").Value = probleminf
-
-
+                If lampkind = "3" Then
+                    probleminf = m_controllampobj.get_probleminf(Me.dgv_lamp_state_list.Rows(row).Cells("state").Value)
+                    If Me.dgv_lamp_state_list.Rows(row).Cells("div_time_id").Value = "0" Then
+                        '表示关闭
+                        Me.dgv_lamp_state_list.Rows(row).Cells("open_close").Value = "关闭"
                     Else
-                        If Me.dgv_lamp_state_list.Rows(row).Cells("div_time_id").Value = 0 Then
-                            '表示关闭
-                            Me.dgv_lamp_state_list.Rows(row).Cells("open_close").Value = "关闭"
+                        If Me.dgv_lamp_state_list.Rows(row).Cells("div_time_id").Value = "1" Then
+                            '表示打开
+                            Me.dgv_lamp_state_list.Rows(row).Cells("open_close").Value = "打开"
                         Else
-                            If Me.dgv_lamp_state_list.Rows(row).Cells("div_time_id").Value = 1 Then
-                                '表示打开
-                                Me.dgv_lamp_state_list.Rows(row).Cells("open_close").Value = "打开"
-                            Else
-                                '表示初始状态
-                                Me.dgv_lamp_state_list.Rows(row).Cells("open_close").Value = "-"
-
-                            End If
+                            '表示初始状态
+                            Me.dgv_lamp_state_list.Rows(row).Cells("open_close").Value = "-"
 
                         End If
-                        If Me.dgv_lamp_state_list.Rows(row).Cells("result").Value = 0 Then
-                            If Me.dgv_lamp_state_list.Rows(row).Cells("state").Value = 1 Or Me.dgv_lamp_state_list.Rows(row).Cells("state").Value = 4 Then
-                                Me.dgv_lamp_state_list.Rows(row).Cells("state_content").Value = LAMP_STATE_ON
-                            Else
-                                Me.dgv_lamp_state_list.Rows(row).Cells("state_content").Value = LAMP_STATE_OFF
-                            End If
-                        Else
-                            If Me.dgv_lamp_state_list.Rows(row).Cells("result").Value = 1 Then
-                                Me.dgv_lamp_state_list.Rows(row).Cells("state_content").Value = LAMP_STATE_PROBLEM_ON
 
-                            Else
-                                If Me.dgv_lamp_state_list.Rows(row).Cells("result").Value = 2 Then
-                                    Me.dgv_lamp_state_list.Rows(row).Cells("state_content").Value = LAMP_STATE_PROBLEM_OFF
-
-                                Else
-                                    If Me.dgv_lamp_state_list.Rows(row).Cells("result").Value = 3 Then
-                                        Me.dgv_lamp_state_list.Rows(row).Cells("state_content").Value = LAMP_STATE_NORETURN
-                                    Else
-                                        Me.dgv_lamp_state_list.Rows(row).Cells("state_content").Value = LAMP_STATE_CONTROL
-                                    End If
-                                End If
-
-                            End If
-                        End If
                     End If
 
-                    row += 1
+                    Me.dgv_lamp_state_list.Rows(row).Cells("state_content").Value = probleminf
+
+
+                Else
+                    If Me.dgv_lamp_state_list.Rows(row).Cells("div_time_id").Value = 0 Then
+                        '表示关闭
+                        Me.dgv_lamp_state_list.Rows(row).Cells("open_close").Value = "关闭"
+                    Else
+                        If Me.dgv_lamp_state_list.Rows(row).Cells("div_time_id").Value = 1 Then
+                            '表示打开
+                            Me.dgv_lamp_state_list.Rows(row).Cells("open_close").Value = "打开"
+                        Else
+                            '表示初始状态
+                            Me.dgv_lamp_state_list.Rows(row).Cells("open_close").Value = "-"
+
+                        End If
+
+                    End If
+                    If Me.dgv_lamp_state_list.Rows(row).Cells("result").Value = 0 Then
+                        If Me.dgv_lamp_state_list.Rows(row).Cells("state").Value = 1 Or Me.dgv_lamp_state_list.Rows(row).Cells("state").Value = 4 Then
+                            Me.dgv_lamp_state_list.Rows(row).Cells("state_content").Value = LAMP_STATE_ON
+                        Else
+                            Me.dgv_lamp_state_list.Rows(row).Cells("state_content").Value = LAMP_STATE_OFF
+                        End If
+                    Else
+                        If Me.dgv_lamp_state_list.Rows(row).Cells("result").Value = 1 Then
+                            Me.dgv_lamp_state_list.Rows(row).Cells("state_content").Value = LAMP_STATE_PROBLEM_ON
+
+                        Else
+                            If Me.dgv_lamp_state_list.Rows(row).Cells("result").Value = 2 Then
+                                Me.dgv_lamp_state_list.Rows(row).Cells("state_content").Value = LAMP_STATE_PROBLEM_OFF
+
+                            Else
+                                If Me.dgv_lamp_state_list.Rows(row).Cells("result").Value = 3 Then
+                                    Me.dgv_lamp_state_list.Rows(row).Cells("state_content").Value = LAMP_STATE_NORETURN
+                                Else
+                                    Me.dgv_lamp_state_list.Rows(row).Cells("state_content").Value = LAMP_STATE_CONTROL
+                                End If
+                            End If
+
+                        End If
+                    End If
+                End If
+
+                row += 1
 
             End While
             If Me.dgv_lamp_state_list.RowCount > 0 Then
@@ -229,7 +229,7 @@
         End If
     End Sub
 
-   
+
     ''' <summary>
     ''' 设置地图的大小，进行缩放操作
     ''' </summary>
@@ -246,7 +246,7 @@
             Dim percent_x, percent_y As Double  '纵横百分比
             ' map_size_value = map.Size '地图的尺寸
             'g_mapsizevalue = map.Size '地图的尺寸
-            
+
             If picbox.Width = 0 Or picbox.Height = 0 Then
                 Exit Sub
             End If
@@ -529,12 +529,12 @@
         g_lampmap = Graphics.FromImage(m_lamp)  '载入灯的图片
         'm_waittime = 15  '检测通信是否正常时等待时间
         m_checkcondition = 0  '初始化时查询所有
-        m_checkvalue = ""  '右侧路灯状态列表查询的值
+        m_checkvalue = ""  '右侧终端状态列表查询的值
         m_alarmopenorclose = True   '初始化打开报警声音
         m_jiankongopenorclose = False  '初始化关闭监控面板
         m_gongnengopenorclose = False   '初始化关闭功能栏
         m_tongjiopenorclose = False   '初始化关闭统计
-        m_index = 0  '初始化当前选中的行号为0（路灯）防止频闪
+        m_index = 0  '初始化当前选中的行号为0（终端）防止频闪
         m_indexbox = 0 '初始化当前选中的行号为0（主控箱）防止频闪
         m_zhishitime = 0 '指示初始化为0
         g_changemapvalue = MAP_MID_SIZE  '地图的大小
@@ -651,7 +651,7 @@
         '召测间隔时间
         type_string = "召测间隔时间"
         g_ycjgtime = 2  '默认等待2分钟
-      
+
         sql = "select * from sysconfig where type='" & type_string & "'"
         rs = DBOperation.SelectSQL(conn, sql, msg)
         If rs Is Nothing Then
@@ -775,7 +775,7 @@
         conn = Nothing
     End Sub
 
- 
+
 
     Public Sub init_special_div_list()
         '初始化模式名称

@@ -320,9 +320,9 @@ Partial Class welcome_win
         Me.退出系统ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.设备ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.主控箱设备ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.路灯设备ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.编辑路灯ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.编辑路灯颜色ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.终端设备ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.编辑终端ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.编辑终端颜色ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.控制模式ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.时钟下放ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.手工控制面板ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -338,7 +338,7 @@ Partial Class welcome_win
         Me.报警类型选择ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.故障报警窗口ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.状态查询ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.路灯亮暗信息统计ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.终端亮暗信息统计ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.论询状态ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.停止ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.开始ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -1402,7 +1402,7 @@ Partial Class welcome_win
         Me.lamp_id_all_start.Name = "lamp_id_all_start"
         Me.lamp_id_all_start.Size = New System.Drawing.Size(113, 12)
         Me.lamp_id_all_start.TabIndex = 132
-        Me.lamp_id_all_start.Text = "路灯编号的前半部分"
+        Me.lamp_id_all_start.Text = "终端编号的前半部分"
         '
         'lamp_id_all
         '
@@ -1421,7 +1421,7 @@ Partial Class welcome_win
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(82, 14)
         Me.Label20.TabIndex = 130
-        Me.Label20.Text = "路灯编号："
+        Me.Label20.Text = "终端编号："
         '
         'diangan
         '
@@ -1611,7 +1611,7 @@ Partial Class welcome_win
         Me.lamp_id_control.Size = New System.Drawing.Size(85, 18)
         Me.lamp_id_control.TabIndex = 19
         Me.lamp_id_control.TabStop = True
-        Me.lamp_id_control.Text = "路灯编号"
+        Me.lamp_id_control.Text = "终端编号"
         Me.lamp_id_control.UseVisualStyleBackColor = True
         '
         'box_control
@@ -3008,7 +3008,7 @@ Partial Class welcome_win
         'DataGridViewTextBoxColumn6
         '
         Me.DataGridViewTextBoxColumn6.DataPropertyName = "lamp_id_short"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "路灯编号"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "终端编号"
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
         Me.DataGridViewTextBoxColumn6.ReadOnly = True
         '
@@ -3037,7 +3037,7 @@ Partial Class welcome_win
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.系统设置ToolStripMenuItem, Me.设备ToolStripMenuItem, Me.报警ToolStripMenuItem, Me.状态查询ToolStripMenuItem, Me.故障处理ToolStripMenuItem, Me.ToolStripMenuItem1, Me.日志ToolStripMenuItem, Me.手工设定ToolStripMenuItem, Me.地图ToolStripMenuItem, Me.权限ToolStripMenuItem, Me.关于ToolStripMenuItem, Me.窗体ToolStripMenuItem, Me.帮助ToolStripMenuItem, Me.节日模式ToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1073, 25)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1073, 24)
         Me.MenuStrip1.TabIndex = 4
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -3046,7 +3046,7 @@ Partial Class welcome_win
         Me.系统设置ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.城区街设置ToolStripMenuItem, Me.系统参数设置ToolStripMenuItem, Me.用户自定义模式设定ToolStripMenuItem, Me.查询街道设置ToolStripMenuItem, Me.三回路控制命令设置ToolStripMenuItem, Me.地图上传ToolStripMenuItem, Me.清空数据库ToolStripMenuItem, Me.退出系统ToolStripMenuItem1})
         Me.系统设置ToolStripMenuItem.Font = New System.Drawing.Font("宋体", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.系统设置ToolStripMenuItem.Name = "系统设置ToolStripMenuItem"
-        Me.系统设置ToolStripMenuItem.Size = New System.Drawing.Size(41, 21)
+        Me.系统设置ToolStripMenuItem.Size = New System.Drawing.Size(41, 20)
         Me.系统设置ToolStripMenuItem.Text = "系统"
         '
         '城区街设置ToolStripMenuItem
@@ -3153,10 +3153,10 @@ Partial Class welcome_win
         '
         '设备ToolStripMenuItem
         '
-        Me.设备ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.主控箱设备ToolStripMenuItem, Me.路灯设备ToolStripMenuItem, Me.控制模式ToolStripMenuItem, Me.时钟下放ToolStripMenuItem, Me.手工控制面板ToolStripMenuItem, Me.控制模式开关ToolStripMenuItem, Me.刷新当日模式ToolStripMenuItem})
+        Me.设备ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.主控箱设备ToolStripMenuItem, Me.终端设备ToolStripMenuItem, Me.控制模式ToolStripMenuItem, Me.时钟下放ToolStripMenuItem, Me.手工控制面板ToolStripMenuItem, Me.控制模式开关ToolStripMenuItem, Me.刷新当日模式ToolStripMenuItem})
         Me.设备ToolStripMenuItem.Font = New System.Drawing.Font("宋体", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.设备ToolStripMenuItem.Name = "设备ToolStripMenuItem"
-        Me.设备ToolStripMenuItem.Size = New System.Drawing.Size(41, 21)
+        Me.设备ToolStripMenuItem.Size = New System.Drawing.Size(41, 20)
         Me.设备ToolStripMenuItem.Text = "配置"
         '
         '主控箱设备ToolStripMenuItem
@@ -3165,24 +3165,24 @@ Partial Class welcome_win
         Me.主控箱设备ToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
         Me.主控箱设备ToolStripMenuItem.Text = "网关设置"
         '
-        '路灯设备ToolStripMenuItem
+        '终端设备ToolStripMenuItem
         '
-        Me.路灯设备ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.编辑路灯ToolStripMenuItem, Me.编辑路灯颜色ToolStripMenuItem1})
-        Me.路灯设备ToolStripMenuItem.Name = "路灯设备ToolStripMenuItem"
-        Me.路灯设备ToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
-        Me.路灯设备ToolStripMenuItem.Text = "终端设备"
+        Me.终端设备ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.编辑终端ToolStripMenuItem, Me.编辑终端颜色ToolStripMenuItem1})
+        Me.终端设备ToolStripMenuItem.Name = "终端设备ToolStripMenuItem"
+        Me.终端设备ToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
+        Me.终端设备ToolStripMenuItem.Text = "终端设备"
         '
-        '编辑路灯ToolStripMenuItem
+        '编辑终端ToolStripMenuItem
         '
-        Me.编辑路灯ToolStripMenuItem.Name = "编辑路灯ToolStripMenuItem"
-        Me.编辑路灯ToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
-        Me.编辑路灯ToolStripMenuItem.Text = "编辑终端设备"
+        Me.编辑终端ToolStripMenuItem.Name = "编辑终端ToolStripMenuItem"
+        Me.编辑终端ToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
+        Me.编辑终端ToolStripMenuItem.Text = "编辑终端设备"
         '
-        '编辑路灯颜色ToolStripMenuItem1
+        '编辑终端颜色ToolStripMenuItem1
         '
-        Me.编辑路灯颜色ToolStripMenuItem1.Name = "编辑路灯颜色ToolStripMenuItem1"
-        Me.编辑路灯颜色ToolStripMenuItem1.Size = New System.Drawing.Size(142, 22)
-        Me.编辑路灯颜色ToolStripMenuItem1.Text = "编辑状态颜色"
+        Me.编辑终端颜色ToolStripMenuItem1.Name = "编辑终端颜色ToolStripMenuItem1"
+        Me.编辑终端颜色ToolStripMenuItem1.Size = New System.Drawing.Size(142, 22)
+        Me.编辑终端颜色ToolStripMenuItem1.Text = "编辑状态颜色"
         '
         '控制模式ToolStripMenuItem
         '
@@ -3236,7 +3236,7 @@ Partial Class welcome_win
         Me.报警ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.报警历史ToolStripMenuItem, Me.短信报警ToolStripMenuItem, Me.声音报警ToolStripMenuItem, Me.报警类型选择ToolStripMenuItem, Me.故障报警窗口ToolStripMenuItem})
         Me.报警ToolStripMenuItem.Font = New System.Drawing.Font("宋体", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.报警ToolStripMenuItem.Name = "报警ToolStripMenuItem"
-        Me.报警ToolStripMenuItem.Size = New System.Drawing.Size(41, 21)
+        Me.报警ToolStripMenuItem.Size = New System.Drawing.Size(41, 20)
         Me.报警ToolStripMenuItem.Text = "报警"
         '
         '报警历史ToolStripMenuItem
@@ -3281,18 +3281,18 @@ Partial Class welcome_win
         '
         '状态查询ToolStripMenuItem
         '
-        Me.状态查询ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.路灯亮暗信息统计ToolStripMenuItem, Me.论询状态ToolStripMenuItem, Me.主控箱状态查询ToolStripMenuItem1, Me.主控箱状态统计ToolStripMenuItem, Me.召测数据ToolStripMenuItem, Me.抄表功能ToolStripMenuItem, Me.配置参数查询ToolStripMenuItem, Me.自动抄表ToolStripMenuItem, Me.单灯召测ToolStripMenuItem})
+        Me.状态查询ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.终端亮暗信息统计ToolStripMenuItem, Me.论询状态ToolStripMenuItem, Me.主控箱状态查询ToolStripMenuItem1, Me.主控箱状态统计ToolStripMenuItem, Me.召测数据ToolStripMenuItem, Me.抄表功能ToolStripMenuItem, Me.配置参数查询ToolStripMenuItem, Me.自动抄表ToolStripMenuItem, Me.单灯召测ToolStripMenuItem})
         Me.状态查询ToolStripMenuItem.Font = New System.Drawing.Font("宋体", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.状态查询ToolStripMenuItem.Name = "状态查询ToolStripMenuItem"
-        Me.状态查询ToolStripMenuItem.Size = New System.Drawing.Size(41, 21)
+        Me.状态查询ToolStripMenuItem.Size = New System.Drawing.Size(41, 20)
         Me.状态查询ToolStripMenuItem.Text = "数据"
         '
-        '路灯亮暗信息统计ToolStripMenuItem
+        '终端亮暗信息统计ToolStripMenuItem
         '
-        Me.路灯亮暗信息统计ToolStripMenuItem.Name = "路灯亮暗信息统计ToolStripMenuItem"
-        Me.路灯亮暗信息统计ToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
-        Me.路灯亮暗信息统计ToolStripMenuItem.Text = "设备状态统计"
-        Me.路灯亮暗信息统计ToolStripMenuItem.Visible = False
+        Me.终端亮暗信息统计ToolStripMenuItem.Name = "终端亮暗信息统计ToolStripMenuItem"
+        Me.终端亮暗信息统计ToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
+        Me.终端亮暗信息统计ToolStripMenuItem.Text = "设备状态统计"
+        Me.终端亮暗信息统计ToolStripMenuItem.Visible = False
         '
         '论询状态ToolStripMenuItem
         '
@@ -3391,7 +3391,7 @@ Partial Class welcome_win
         Me.日志ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.系统日志ToolStripMenuItem, Me.设备日志ToolStripMenuItem, Me.流量日志ToolStripMenuItem, Me.故障日志ToolStripMenuItem})
         Me.日志ToolStripMenuItem.Font = New System.Drawing.Font("宋体", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.日志ToolStripMenuItem.Name = "日志ToolStripMenuItem"
-        Me.日志ToolStripMenuItem.Size = New System.Drawing.Size(41, 21)
+        Me.日志ToolStripMenuItem.Size = New System.Drawing.Size(41, 20)
         Me.日志ToolStripMenuItem.Text = "日志"
         '
         '系统日志ToolStripMenuItem
@@ -3417,7 +3417,7 @@ Partial Class welcome_win
         '
         Me.故障日志ToolStripMenuItem.Name = "故障日志ToolStripMenuItem"
         Me.故障日志ToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
-        Me.故障日志ToolStripMenuItem.Text = "路灯故障日志"
+        Me.故障日志ToolStripMenuItem.Text = "终端故障日志"
         Me.故障日志ToolStripMenuItem.Visible = False
         '
         '手工设定ToolStripMenuItem
@@ -3425,7 +3425,7 @@ Partial Class welcome_win
         Me.手工设定ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.手工控制ToolStripMenuItem, Me.手工控制记录ToolStripMenuItem, Me.关闭手工控制ToolStripMenuItem})
         Me.手工设定ToolStripMenuItem.Font = New System.Drawing.Font("宋体", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.手工设定ToolStripMenuItem.Name = "手工设定ToolStripMenuItem"
-        Me.手工设定ToolStripMenuItem.Size = New System.Drawing.Size(65, 21)
+        Me.手工设定ToolStripMenuItem.Size = New System.Drawing.Size(65, 20)
         Me.手工设定ToolStripMenuItem.Text = "手工设定"
         Me.手工设定ToolStripMenuItem.Visible = False
         '
@@ -3452,7 +3452,7 @@ Partial Class welcome_win
         '
         Me.地图ToolStripMenuItem.Font = New System.Drawing.Font("宋体", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.地图ToolStripMenuItem.Name = "地图ToolStripMenuItem"
-        Me.地图ToolStripMenuItem.Size = New System.Drawing.Size(41, 21)
+        Me.地图ToolStripMenuItem.Size = New System.Drawing.Size(41, 20)
         Me.地图ToolStripMenuItem.Text = "地图"
         '
         '权限ToolStripMenuItem
@@ -3460,7 +3460,7 @@ Partial Class welcome_win
         Me.权限ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.用户管理ToolStripMenuItem2, Me.修改密码ToolStripMenuItem1, Me.岗位ToolStripMenuItem})
         Me.权限ToolStripMenuItem.Font = New System.Drawing.Font("宋体", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.权限ToolStripMenuItem.Name = "权限ToolStripMenuItem"
-        Me.权限ToolStripMenuItem.Size = New System.Drawing.Size(41, 21)
+        Me.权限ToolStripMenuItem.Size = New System.Drawing.Size(41, 20)
         Me.权限ToolStripMenuItem.Text = "权限"
         '
         '用户管理ToolStripMenuItem2
@@ -3500,7 +3500,7 @@ Partial Class welcome_win
         Me.关于ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.关于ToolStripMenuItem1, Me.备注ToolStripMenuItem})
         Me.关于ToolStripMenuItem.Font = New System.Drawing.Font("宋体", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem"
-        Me.关于ToolStripMenuItem.Size = New System.Drawing.Size(41, 21)
+        Me.关于ToolStripMenuItem.Size = New System.Drawing.Size(41, 20)
         Me.关于ToolStripMenuItem.Text = "帮助"
         Me.关于ToolStripMenuItem.Visible = False
         '
@@ -3521,7 +3521,7 @@ Partial Class welcome_win
         Me.窗体ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.监控面板ToolStripMenuItem, Me.实时数据统计ToolStripMenuItem, Me.功能提示ToolStripMenuItem})
         Me.窗体ToolStripMenuItem.Font = New System.Drawing.Font("宋体", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.窗体ToolStripMenuItem.Name = "窗体ToolStripMenuItem"
-        Me.窗体ToolStripMenuItem.Size = New System.Drawing.Size(41, 21)
+        Me.窗体ToolStripMenuItem.Size = New System.Drawing.Size(41, 20)
         Me.窗体ToolStripMenuItem.Text = "窗体"
         '
         '监控面板ToolStripMenuItem
@@ -3547,7 +3547,7 @@ Partial Class welcome_win
         Me.帮助ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.监控软件使用说明书ToolStripMenuItem})
         Me.帮助ToolStripMenuItem.Font = New System.Drawing.Font("宋体", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.帮助ToolStripMenuItem.Name = "帮助ToolStripMenuItem"
-        Me.帮助ToolStripMenuItem.Size = New System.Drawing.Size(41, 21)
+        Me.帮助ToolStripMenuItem.Size = New System.Drawing.Size(41, 20)
         Me.帮助ToolStripMenuItem.Text = "帮助"
         '
         '监控软件使用说明书ToolStripMenuItem
@@ -3561,7 +3561,7 @@ Partial Class welcome_win
         '
         Me.节日模式ToolStripMenuItem.Font = New System.Drawing.Font("宋体", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.节日模式ToolStripMenuItem.Name = "节日模式ToolStripMenuItem"
-        Me.节日模式ToolStripMenuItem.Size = New System.Drawing.Size(101, 21)
+        Me.节日模式ToolStripMenuItem.Size = New System.Drawing.Size(101, 20)
         Me.节日模式ToolStripMenuItem.Text = "用户自定义模式"
         Me.节日模式ToolStripMenuItem.Visible = False
         '
@@ -3626,7 +3626,7 @@ Partial Class welcome_win
         Me.ToolStrip1.BackColor = System.Drawing.Color.LightSteelBlue
         Me.ToolStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton_systemset, Me.ToolStripSeparator1, Me.ToolStripButton_boxset, Me.ToolStripSeparator2, Me.ToolStripButton_setlamp, Me.ToolStripSeparator9, Me.ToolStripButton_control, Me.ToolStripSeparator12, Me.ToolStripButtonControlSet, Me.ToolStripSeparator3, Me.ToolStripButton_zhaoce, Me.ToolStripSeparator4, Me.ToolStripButton_boxinf, Me.ToolStripSeparator6, Me.ToolStripButton_light, Me.ToolStripSeparator7, Me.ToolStripButton_alarm, Me.ToolStripSeparator10, Me.ToolStripButton_choosealarm, Me.ToolStripSeparator11, Me.Lightvalue, Me.ToolStripSeparator13, Me.ToolStripLabel1, Me.ToolStripSeparator5})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 25)
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 24)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(1073, 54)
         Me.ToolStrip1.TabIndex = 5
@@ -4288,9 +4288,9 @@ Partial Class welcome_win
     Friend WithEvents AlarmviewBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents Alarm_viewTableAdapter As streetlamp.streetlampDataSetTableAdapters.alarm_viewTableAdapter
     Friend WithEvents 设备ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents 路灯设备ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents 编辑路灯ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents 编辑路灯颜色ToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents 终端设备ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents 编辑终端ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents 编辑终端颜色ToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents 控制模式ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents 权限ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents 用户管理ToolStripMenuItem2 As System.Windows.Forms.ToolStripMenuItem
@@ -4406,7 +4406,7 @@ Partial Class welcome_win
     Friend WithEvents 刷新当日模式ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents 状态查询ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents 路灯亮暗信息统计ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents 终端亮暗信息统计ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents 论询状态ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents 停止ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents 开始ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem

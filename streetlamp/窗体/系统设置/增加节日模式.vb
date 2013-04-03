@@ -390,7 +390,7 @@ Public Class 增加节日模式
 
         cb_next_time.SelectedIndex = 0
 
-        lb_lamp_id_start.Visible = False   '路灯编号的前半部分
+        lb_lamp_id_start.Visible = False   '终端编号的前半部分
         lb_lamp_type_id.Visible = False
     End Sub
 

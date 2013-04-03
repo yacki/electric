@@ -8,15 +8,15 @@ Public Class control_lamp
     Private m_operationstring As String  '记录当前操作的位置
     Private m_dianzuad, m_currentad As Integer
     Private m_typeid As Integer  '景观灯编号
-    Public m_lampwide, m_lampheight As Integer   '路灯的宽度，高度
+    Public m_lampwide, m_lampheight As Integer   '终端的宽度，高度
     Public m_alarmlinetag As Integer  '进行故障灯的报警,故障灯大小闪烁变化的标志
     Public m_handcontrollist As New ArrayList  '记录一次手工控制的各条信息
 
-   
+
 
     Sub New()  '构造函数
-        m_lampwide = LAMP_WIDE '绘制路灯高度
-        m_lampheight = LAMP_HEIGHT '绘制路灯宽度
+        m_lampwide = LAMP_WIDE '绘制终端高度
+        m_lampheight = LAMP_HEIGHT '绘制终端宽度
         m_alarmlinetag = 0  '故障报警的标志
 
     End Sub
@@ -53,7 +53,7 @@ Public Class control_lamp
         Dim time As Date
         Dim rs As New ADODB.Recordset
         Dim flag As Integer = 1 '命令标志位
-      '  Dim feed_back_tag As Integer '控制命令返回值0表示失败，1表示成功，2表示超时
+        '  Dim feed_back_tag As Integer '控制命令返回值0表示失败，1表示成功，2表示超时
 
         Dim conn As New ADODB.Connection
         If DBOperation.OpenConn(conn) = False Then
@@ -182,7 +182,7 @@ Public Class control_lamp
         conn.Close()
         conn = Nothing
     End Sub
-    
+
     ''' <summary>
     ''' 获取单灯控制命令的回复,0表示失败，1表示成功，2表示无返回
     ''' </summary>
@@ -349,12 +349,12 @@ finish:
     End Function
 
     ''' <summary>
-    ''' 输入电感型路灯的控制方法，返回控制编号
+    ''' 输入电感型终端的控制方法，返回控制编号
     ''' </summary>
     ''' <param name="diangan_string">电感控制方法，如全夜灯</param>
     ''' <returns>控制编号，如11</returns>
     ''' <remarks></remarks>
-    Public Function Find_diangan_id(ByVal diangan_string As String) As String   '返回电感型路灯编号
+    Public Function Find_diangan_id(ByVal diangan_string As String) As String   '返回电感型终端编号
         Dim rs As New ADODB.Recordset
         Dim sql As String
         Dim msg As String
@@ -366,7 +366,7 @@ finish:
 
         msg = ""
         sql = "select * from inductance where control_inf='" & diangan_string & "'"
-        rs = DBOperation.SelectSQL(conn, sql, msg)    '电感型路灯的控制方法
+        rs = DBOperation.SelectSQL(conn, sql, msg)    '电感型终端的控制方法
 
         If rs.RecordCount > 0 Then
             Find_diangan_id = Trim(rs.Fields("control_id").Value)
@@ -382,7 +382,7 @@ finish:
     End Function
 
     ''' <summary>
-    ''' 修改lamp_inf表中的路灯状态参数, 将lamp_inf 表中的状态修改为当前手工控制状态
+    ''' 修改lamp_inf表中的终端状态参数, 将lamp_inf 表中的状态修改为当前手工控制状态
     ''' </summary>
     ''' <param name="control_box_id">区域编号</param>
     ''' <param name="lamp_type_id">类型编号</param>
@@ -443,31 +443,31 @@ finish:
 
             If control_method = "奇开" Then
                 If Val(Mid(Trim(rs_lamp.Fields("lamp_id").Value), 7, LAMP_ID_LEN)) Mod 2 <> 0 Then
-                    sate_tag = 4  '奇数的路灯设为控制状态开状态
+                    sate_tag = 4  '奇数的终端设为控制状态开状态
                 Else
-                    sate_tag = 3  '偶数的路灯设为控制状态闭状态
+                    sate_tag = 3  '偶数的终端设为控制状态闭状态
                 End If
 
             End If
 
             If control_method = "奇闭" Then
                 If Val(Mid(Trim(rs_lamp.Fields("lamp_id").Value), 7, LAMP_ID_LEN)) Mod 2 <> 0 Then
-                    sate_tag = 3  '奇数的路灯设为控制状态闭状态
+                    sate_tag = 3  '奇数的终端设为控制状态闭状态
                 End If
 
             End If
             If control_method = "偶开" Then
                 If Val(Mid(Trim(rs_lamp.Fields("lamp_id").Value), 7, LAMP_ID_LEN)) Mod 2 = 0 Then
-                    sate_tag = 4  '偶数的路灯设为控制状态开状态
+                    sate_tag = 4  '偶数的终端设为控制状态开状态
                 Else
-                    sate_tag = 3  '奇数的路灯设为控制状态闭状态
+                    sate_tag = 3  '奇数的终端设为控制状态闭状态
                 End If
 
             End If
 
             If control_method = "偶闭" Then
                 If Val(Mid(Trim(rs_lamp.Fields("lamp_id").Value), 7, LAMP_ID_LEN)) Mod 2 = 0 Then
-                    sate_tag = 3   '偶数路灯设为控制状态闭状态
+                    sate_tag = 3   '偶数终端设为控制状态闭状态
                 End If
 
             End If
@@ -487,14 +487,14 @@ finish:
 
             If control_method = "类型奇开" Then
                 If Val(Mid(Trim(rs_lamp.Fields("lamp_id").Value), 7, LAMP_ID_LEN)) Mod 2 <> 0 Then
-                    sate_tag = 4  '奇数的路灯设为控制状态开状态
+                    sate_tag = 4  '奇数的终端设为控制状态开状态
                     'If lamp_type_id = 31 Then
                     '    sql = "update lamp_inf set state=4,result=4 where jiechuqi_id='" & Trim(rs_lamp.Fields("lamp_id").Value) & "'"
                     '    DBOperation.ExecuteSQL(conn, sql, msg)
 
                     'End If
                 Else
-                    sate_tag = 3  '偶数的路灯设为控制状态闭状态
+                    sate_tag = 3  '偶数的终端设为控制状态闭状态
                     'If lamp_type_id = 31 Then
                     '    sql = "update lamp_inf set state=3,result=4 where jiechuqi_id='" & Trim(rs_lamp.Fields("lamp_id").Value) & "'"
                     '    DBOperation.ExecuteSQL(conn, sql, msg)
@@ -506,7 +506,7 @@ finish:
 
             If control_method = "类型奇闭" Then
                 If Val(Mid(Trim(rs_lamp.Fields("lamp_id").Value), 7, LAMP_ID_LEN)) Mod 2 <> 0 Then
-                    sate_tag = 3  '奇数的路灯设为控制状态闭状态
+                    sate_tag = 3  '奇数的终端设为控制状态闭状态
                     'If lamp_type_id = 31 Then
                     '    sql = "update lamp_inf set state=3,result=4 where jiechuqi_id='" & Trim(rs_lamp.Fields("lamp_id").Value) & "'"
                     '    DBOperation.ExecuteSQL(conn, sql, msg)
@@ -517,14 +517,14 @@ finish:
             End If
             If control_method = "类型偶开" Then
                 If Val(Mid(Trim(rs_lamp.Fields("lamp_id").Value), 7, LAMP_ID_LEN)) Mod 2 = 0 Then
-                    sate_tag = 4  '偶数的路灯设为控制状态开状态
+                    sate_tag = 4  '偶数的终端设为控制状态开状态
                     'If lamp_type_id = 31 Then
                     '    sql = "update lamp_inf set state=4,result=4 where jiechuqi_id='" & Trim(rs_lamp.Fields("lamp_id").Value) & "'"
                     '    DBOperation.ExecuteSQL(conn, sql, msg)
 
                     'End If
                 Else
-                    sate_tag = 3  '奇数的路灯设为控制状态闭状态
+                    sate_tag = 3  '奇数的终端设为控制状态闭状态
                     'If lamp_type_id = 31 Then
                     '    sql = "update lamp_inf set state=3,result=4 where jiechuqi_id='" & Trim(rs_lamp.Fields("lamp_id").Value) & "'"
                     '    DBOperation.ExecuteSQL(conn, sql, msg)
@@ -536,7 +536,7 @@ finish:
 
             If control_method = "类型偶闭" Then
                 If Val(Mid(Trim(rs_lamp.Fields("lamp_id").Value), 7, LAMP_ID_LEN)) Mod 2 = 0 Then
-                    sate_tag = 3   '偶数路灯设为控制状态闭状态
+                    sate_tag = 3   '偶数终端设为控制状态闭状态
                     'If lamp_type_id = 31 Then
                     '    sql = "update lamp_inf set state=3,result=4 where jiechuqi_id='" & Trim(rs_lamp.Fields("lamp_id").Value) & "'"
                     '    DBOperation.ExecuteSQL(conn, sql, msg)
@@ -554,7 +554,7 @@ finish:
                     '    DBOperation.ExecuteSQL(conn, sql, msg)
                     '    GoTo next1
                     'End If
-                    sate_tag = 4   '1/3处路灯设为控制状态开状态
+                    sate_tag = 4   '1/3处终端设为控制状态开状态
                 Else
 
                     'If Trim(rs_lamp.Fields("lamp_type_id").Value) = 31 Then
@@ -562,7 +562,7 @@ finish:
                     '    DBOperation.ExecuteSQL(conn, sql, msg)
                     '    GoTo next1
                     'End If
-                    sate_tag = 3   '非1/3处路灯设为控制状态闭状态
+                    sate_tag = 3   '非1/3处终端设为控制状态闭状态
                 End If
 
             End If
@@ -640,11 +640,11 @@ next1:
     ''' 执行控制命令
     ''' </summary>
     ''' <param name="lamp_type">类型</param>
-    ''' <param name="condition">控制条件：电控箱，类型，路灯</param>
+    ''' <param name="condition">控制条件：电控箱，类型，终端</param>
     ''' <param name="condition_name">相应的区域名称</param>
     ''' <param name="control_method">控制方法：全开，全闭，奇开，奇闭，1/3开，1/3闭，1/4开，1/4闭</param>
     ''' <param name="open">0关，1开</param>
-    ''' <param name="diangan">电感型路灯</param>
+    ''' <param name="diangan">电感型终端</param>
     ''' <param name="power">功率</param>
     ''' <param name="hand_type" >实际的控制范围</param>
     ''' <param name="row_id" >大于0是表示手工控制需要返回，-1表示不是手工控制不需要返回</param>
@@ -662,9 +662,9 @@ next1:
         Dim control_string As String  '控制字符串
         Dim conn As New ADODB.Connection
         Dim find_tag As Integer
-        '获取路灯的编号包括类型
-        Dim lamp_id_bin As String  '路灯编号的十六位二进制
-        Dim lamp_id_hex As String  '路灯编号的十六进制四位
+        '获取终端的编号包括类型
+        Dim lamp_id_bin As String  '终端编号的十六位二进制
+        Dim lamp_id_hex As String  '终端编号的十六进制四位
         Dim ox_str As String  '字符串
         Dim box_id_hex As String  '电控箱的16进制编号
         Dim order_descreption As String = "" '对控制命令的描述
@@ -729,7 +729,7 @@ next1:
                         Exit Function
                     End If
                     diangan_id = Find_diangan_id(diangan)
-                    '电感型路灯标志
+                    '电感型终端标志
 
                     If diangan_id = "" Then
                         MsgBox("没有电感控制方法", , PROJECT_TITLE_STRING)
@@ -748,11 +748,11 @@ next1:
                     '根据版本来判断电控箱是一个字节还是双字节的
                     If SYSTEM_VISION = 1 Then
                         box_id_hex = Com_inf.Dec_to_Hex(Trim(rs_type.Fields("control_box_id").Value), 2)  '将电控箱编号转换成两位的十六进制数
-                        control_string = box_id_hex & " " & Mid(lamp_id_hex, 1, 2) & " " & Mid(lamp_id_hex, 3, 2) & " " & control_method_id & " " & diangan_id & " " & ox_str '控制命令中的两位电控箱号，四位路灯编号（起始为00 01），控制方法编号
+                        control_string = box_id_hex & " " & Mid(lamp_id_hex, 1, 2) & " " & Mid(lamp_id_hex, 3, 2) & " " & control_method_id & " " & diangan_id & " " & ox_str '控制命令中的两位电控箱号，四位终端编号（起始为00 01），控制方法编号
 
                     Else
                         box_id_hex = Com_inf.Dec_to_Hex(Trim(rs_type.Fields("control_box_id").Value), 4)  '将电控箱编号转换成四位的十六进制数
-                        control_string = Mid(box_id_hex, 3, 2) & " " & Mid(lamp_id_hex, 1, 2) & " " & Mid(lamp_id_hex, 3, 2) & " " & control_method_id & " " & diangan_id & " " & ox_str & " " & Mid(box_id_hex, 1, 2) '控制命令中的两位电控箱号，四位路灯编号（起始为00 01），控制方法编号
+                        control_string = Mid(box_id_hex, 3, 2) & " " & Mid(lamp_id_hex, 1, 2) & " " & Mid(lamp_id_hex, 3, 2) & " " & control_method_id & " " & diangan_id & " " & ox_str & " " & Mid(box_id_hex, 1, 2) '控制命令中的两位电控箱号，四位终端编号（起始为00 01），控制方法编号
 
                     End If
                     Input_control_inf = Input_db_control(control_string, Trim(rs_type.Fields("control_box_id").Value), order_descreption, 1, row_id)   '将命令写入到控制命令数据库中
@@ -810,7 +810,7 @@ next1:
             'lamp_id_bin = Mid(lamp_id_bin, 1, 5)
             lamp_id_hex = Com_inf.BIN_to_HEX(lamp_id_bin)
 
-            diangan_id = Find_diangan_id(diangan)     '电感型路灯标志
+            diangan_id = Find_diangan_id(diangan)     '电感型终端标志
 
             If diangan_id = "" Then
                 MsgBox("没有电感控制方法", , PROJECT_TITLE_STRING)
@@ -830,11 +830,11 @@ next1:
             '根据版本来判断电控箱是一个字节还是双字节的
             If SYSTEM_VISION = 1 Then
                 box_id_hex = Com_inf.Dec_to_Hex(Trim(rs_type.Fields("control_box_id").Value), 2)  '将电控箱编号转换成两位的十六进制数
-                control_string = box_id_hex & " " & Mid(lamp_id_hex, 1, 2) & " " & Mid(lamp_id_hex, 3, 2) & " " & control_method_id & " " & diangan_id & " " & ox_str '控制命令中的两位电控箱号，四位路灯编号（起始为00 01），控制方法编号
+                control_string = box_id_hex & " " & Mid(lamp_id_hex, 1, 2) & " " & Mid(lamp_id_hex, 3, 2) & " " & control_method_id & " " & diangan_id & " " & ox_str '控制命令中的两位电控箱号，四位终端编号（起始为00 01），控制方法编号
 
             Else
                 box_id_hex = Com_inf.Dec_to_Hex(Trim(rs_type.Fields("control_box_id").Value), 4)  '将电控箱编号转换成四位的十六进制数
-                control_string = Mid(box_id_hex, 3, 2) & " " & Mid(lamp_id_hex, 1, 2) & " " & Mid(lamp_id_hex, 3, 2) & " " & control_method_id & " " & diangan_id & " " & ox_str & " " & Mid(box_id_hex, 1, 2) '控制命令中的两位电控箱号，四位路灯编号（起始为00 01），控制方法编号
+                control_string = Mid(box_id_hex, 3, 2) & " " & Mid(lamp_id_hex, 1, 2) & " " & Mid(lamp_id_hex, 3, 2) & " " & control_method_id & " " & diangan_id & " " & ox_str & " " & Mid(box_id_hex, 1, 2) '控制命令中的两位电控箱号，四位终端编号（起始为00 01），控制方法编号
 
             End If
 
@@ -947,7 +947,7 @@ finish:
         rs_hand = DBOperation.SelectSQL(conn, sql, msg)
 
         If rs_hand.RecordCount > 0 Then  '修改手工控制参数
-            If rs_hand.Fields("lamp_kind").Value = 0 Then  '电感型路灯
+            If rs_hand.Fields("lamp_kind").Value = 0 Then  '电感型终端
                 If diangan = "全功率" Then  '全夜灯功率为100%
                     rs_hand.Fields("power").Value = 0
                 Else
@@ -958,7 +958,7 @@ finish:
                     End If
                 End If
             Else
-                If power <> "" Then  '电子型路灯功率
+                If power <> "" Then  '电子型终端功率
                     rs_hand.Fields("power").Value = 0
                 Else
                     rs_hand.Fields("power").Value = 0
@@ -1040,7 +1040,7 @@ finish:
 
 
         lamp_id_hex = Com_inf.BIN_to_HEX(lamp_id_bin)
-        '  ox_str = Com_inf.Dec_to_ox(Mid(lamp_id, 6, 4), 4)  '将路灯编号转变城4位16进制数
+        '  ox_str = Com_inf.Dec_to_ox(Mid(lamp_id, 6, 4), 4)  '将终端编号转变城4位16进制数
 
         control_string = Mid(lamp_id_hex, 1, 2) & " " & Mid(lamp_id_hex, 3, 2) & " "  '控制命令字符串
 
@@ -1054,7 +1054,7 @@ finish:
         If rs_method.RecordCount > 0 Then
             control_string &= Trim(rs_method.Fields("control_id").Value) & " "  '控制命令字符串
         Else
-            MsgBox("没有电感型路灯的控制方法，请重新选择！", , PROJECT_TITLE_STRING)
+            MsgBox("没有电感型终端的控制方法，请重新选择！", , PROJECT_TITLE_STRING)
             rs_method.Close()
             rs_method = Nothing
             conn.Close()
@@ -1087,7 +1087,7 @@ finish:
 
         If rs_hand.RecordCount > 0 Then  '修改手工控制参数
             ' rs_hand.Fields("state").Value = 1
-            If rs_hand.Fields("lamp_kind").Value = 0 Then   '如果是电感型路灯
+            If rs_hand.Fields("lamp_kind").Value = 0 Then   '如果是电感型终端
                 If diangan = "全功率" Then  '全夜灯，功率100%
                     rs_hand.Fields("power").Value = 0
                 Else
@@ -1097,7 +1097,7 @@ finish:
                         rs_hand.Fields("power").Value = 0
                     End If
                 End If
-            Else  '电子型路灯
+            Else  '电子型终端
                 If power <> "" Then
                     rs_hand.Fields("power").Value = 0
                 Else
@@ -1113,7 +1113,7 @@ finish:
         End If
 
         'If Mid(Trim(lamp_id), 5, 2) = 31 Then
-        '    '控制的为回路，开一条回路，则发送整个电控箱的路灯类型的全开命令，这样，接触器断开的回路不受影响，影响的只是有电的回路上，之前设置的开灯关灯的操作
+        '    '控制的为回路，开一条回路，则发送整个电控箱的终端类型的全开命令，这样，接触器断开的回路不受影响，影响的只是有电的回路上，之前设置的开灯关灯的操作
         '    sql = "update lamp_inf set state=4,result=4,date='" & Now & "' where jiechuqi_id='" & lamp_id & "'"
         '    DBOperation.ExecuteSQL(conn, sql, msg)
         'End If
@@ -1259,7 +1259,7 @@ finish:
         msg = ""
         state_inf = ""
         GetCompareState_AD6 = "E"
-        '有返回的路灯状态数据,将 其与路灯状态表中的状态对比，A,暗；B,亮；C，该亮非亮；D该暗非暗
+        '有返回的终端状态数据,将 其与终端状态表中的状态对比，A,暗；B,亮；C，该亮非亮；D该暗非暗
         sql = "select state,result,total_num,control_box_id,lamp_id,div_time_id from lamp_inf where lamp_id='" & g_lampidstring & "'"
         rs_lamp = DBOperation.SelectSQL(conn, sql, msg)
         If rs_lamp.RecordCount > 0 Then
@@ -1294,17 +1294,17 @@ finish:
 
                 End If
             End If
-            '更改路灯的实时状态时间
+            '更改终端的实时状态时间
             'sql = "update lamp_inf set date='" & Now & "' where lamp_id='" & g_lampidstring & "'"
             'DBOperation.ExecuteSQL(conn, sql, msg)
             '如果获取的状态时正常的，并且之前的状态为故障，则表示故障维修完毕，标志lamp_inf表中的total_num位为0
             '      If (GetCompareState_AD2 = "A" Or GetCompareState_AD2 = "B_part" Or GetCompareState_AD2 = "B_all") And (rs_lamp.Fields("result").Value = 1 Or rs_lamp.Fields("result").Value = 2) Then
             If (GetCompareState_AD6 = "A" Or GetCompareState_AD6 = "B") And (rs_lamp.Fields("result").Value <> 0) Then
 
-                '路灯的实时状态表
+                '终端的实时状态表
                 sql = "update lamp_inf set total_num=0 where lamp_id='" & g_lampidstring & "'"
                 DBOperation.ExecuteSQL(conn, sql, msg)
-                '路灯的故障表
+                '终端的故障表
                 sql = "update lamp_inf_record set server_state=1, date_end='" & Now & "' where lamp_id='" & g_lampidstring & "' and server_state=0"
                 DBOperation.ExecuteSQL(conn, sql, msg)
             End If
@@ -1432,7 +1432,7 @@ next1:
     End Function
 
     ''' <summary>
-    ''' 获取单灯状态与数据库中的操作状态对比，得到路灯的实际状态，是否故障,2011年5月19日，增加电流AD为2个字节
+    ''' 获取单灯状态与数据库中的操作状态对比，得到终端的实际状态，是否故障,2011年5月19日，增加电流AD为2个字节
     ''' </summary>
     ''' <param name="state_string">状态表中的状态字符串</param>
     ''' <param name="state_id">状态表中的id</param>
@@ -1453,8 +1453,8 @@ next1:
         Dim orig_state, orig_result As Integer '原来的状态
         msg = ""
         state_inf = ""
-       
-        '有返回的路灯状态数据,将 其与路灯状态表中的状态对比，A,暗；B,亮；C，该亮非亮；D该暗非暗
+
+        '有返回的终端状态数据,将 其与终端状态表中的状态对比，A,暗；B,亮；C，该亮非亮；D该暗非暗
         sql = "select state,result,total_num,control_box_id,lamp_id from lamp_inf where lamp_id='" & g_lampidstring & "'"
         rs_lamp = DBOperation.SelectSQL(conn, sql, msg)
         GetCompareState_AD2 = "E"  '标志状态默认值
@@ -1494,17 +1494,17 @@ next1:
                 '比对成功，灯是暗的
                 GetCompareState_AD2 = "A"
             End If
-            '更改路灯的实时状态时间
+            '更改终端的实时状态时间
             'sql = "update lamp_inf set date='" & Now & "' where lamp_id='" & g_lampidstring & "'"
             'DBOperation.ExecuteSQL(conn, sql, msg)
             '如果获取的状态时正常的，并且之前的状态为故障，则表示故障维修完毕，标志lamp_inf表中的total_num位为0
             '      If (GetCompareState_AD2 = "A" Or GetCompareState_AD2 = "B_part" Or GetCompareState_AD2 = "B_all") And (rs_lamp.Fields("result").Value = 1 Or rs_lamp.Fields("result").Value = 2) Then
             If (GetCompareState_AD2 = "A" Or GetCompareState_AD2 = "B_part" Or GetCompareState_AD2 = "B_all") And (rs_lamp.Fields("result").Value <> 0) Then
 
-                '路灯的实时状态表
+                '终端的实时状态表
                 sql = "update lamp_inf set total_num=0 where lamp_id='" & g_lampidstring & "'"
                 DBOperation.ExecuteSQL(conn, sql, msg)
-                '路灯的故障表
+                '终端的故障表
                 sql = "update lamp_inf_record set server_state=1, date_end='" & Now & "' where lamp_id='" & g_lampidstring & "' and server_state=0"
                 DBOperation.ExecuteSQL(conn, sql, msg)
             End If
@@ -1559,7 +1559,7 @@ next1:
                     state_inf = LAMP_STATE_ON
                     Add_state_record(g_lampidstring, state_inf, g_presurevalue, g_currentvalue, 0, 0)
                 Case "C"
-                    '判断故障列表中是否存在该路灯的该故障，该亮非亮
+                    '判断故障列表中是否存在该终端的该故障，该亮非亮
                     If rs_lamp.Fields("total_num").Value = 2 Then '表示累计2次故障则发过短信
                         '发送短信
                         Send_Msg(rs_lamp.Fields("control_box_id").Value, rs_lamp.Fields("lamp_id").Value, LAMP_STATE_PROBLEM_ON)
@@ -1584,7 +1584,7 @@ next1:
                         DBOperation.ExecuteSQL(conn, sql, msg)
                     End If
                 Case "D_part"
-                    ''判断故障列表中是否存在该路灯的该故障，该暗非暗
+                    ''判断故障列表中是否存在该终端的该故障，该暗非暗
                     If rs_lamp.Fields("total_num").Value = 2 Then '表示累计2次故障则发过短信
                         '发送短信
                         Send_Msg(rs_lamp.Fields("control_box_id").Value, rs_lamp.Fields("lamp_id").Value, LAMP_STATE_PROBLEM_OFF)
@@ -1611,7 +1611,7 @@ next1:
                         DBOperation.ExecuteSQL(conn, sql, msg)
                     End If
                 Case "D_all"
-                    ''判断故障列表中是否存在该路灯的该故障，该暗非暗
+                    ''判断故障列表中是否存在该终端的该故障，该暗非暗
                     If rs_lamp.Fields("total_num").Value = 2 Then '表示累计2次故障则发过短信
                         '发送短信
                         Send_Msg(rs_lamp.Fields("control_box_id").Value, rs_lamp.Fields("lamp_id").Value, LAMP_STATE_PROBLEM_OFF)
@@ -1651,7 +1651,7 @@ next1:
 
 
     ''' <summary>
-    ''' 获取单灯状态与数据库中的操作状态对比，得到路灯的实际状态，是否故障
+    ''' 获取单灯状态与数据库中的操作状态对比，得到终端的实际状态，是否故障
     ''' </summary>
     ''' <param name="state_string">状态表中的状态字符串</param>
     ''' <param name="state_id">状态表中的id</param>
@@ -1678,7 +1678,7 @@ next1:
             m_currentad = 0   '电流AD值
             GoTo next1
         End If
-        '有返回的路灯状态数据,将 其与路灯状态表中的状态对比，A,暗；B,亮；C，该亮非亮；D该暗非暗
+        '有返回的终端状态数据,将 其与终端状态表中的状态对比，A,暗；B,亮；C，该亮非亮；D该暗非暗
 
         sql = "select state,result,total_num,control_box_id,lamp_id from lamp_inf where lamp_id='" & g_lampidstring & "'"
         rs_lamp = DBOperation.SelectSQL(conn, sql, msg)
@@ -1726,7 +1726,7 @@ next1:
 
             End If
 
-            '更改路灯的实时状态时间
+            '更改终端的实时状态时间
             sql = "update lamp_inf set date='" & Now & "' where lamp_id='" & g_lampidstring & "'"
             DBOperation.ExecuteSQL(conn, sql, msg)
 
@@ -1734,10 +1734,10 @@ next1:
             ' If (GetCompareState = "A" Or GetCompareState = "B_part" Or GetCompareState = "B_all") And (rs_lamp.Fields("result").Value = 1 Or rs_lamp.Fields("result").Value = 2) Then
             If (GetCompareState = "A" Or GetCompareState = "B_part" Or GetCompareState = "B_all") And (rs_lamp.Fields("result").Value <> 0) Then
 
-                '路灯的实时状态表
+                '终端的实时状态表
                 sql = "update lamp_inf set total_num=0 where lamp_id='" & g_lampidstring & "'"
                 DBOperation.ExecuteSQL(conn, sql, msg)
-                '路灯的故障表
+                '终端的故障表
                 sql = "update lamp_inf_record set server_state=1, date_end='" & Now & "' where lamp_id='" & g_lampidstring & "' and server_state=0"
                 DBOperation.ExecuteSQL(conn, sql, msg)
 
@@ -1782,7 +1782,7 @@ next1:
                     Add_state_record(g_lampidstring, state_inf, g_presurevalue, g_currentvalue, 0, 0)
 
                 Case "C"
-                    '判断故障列表中是否存在该路灯的该故障，该亮非亮
+                    '判断故障列表中是否存在该终端的该故障，该亮非亮
 
 
                     If rs_lamp.Fields("total_num").Value = 4 Then '表示累计4次故障则发过短信
@@ -1807,7 +1807,7 @@ next1:
 
 
                 Case "D_part"
-                    ''判断故障列表中是否存在该路灯的该故障，该暗非暗
+                    ''判断故障列表中是否存在该终端的该故障，该暗非暗
 
 
 
@@ -1836,7 +1836,7 @@ next1:
 
 
                 Case "D_all"
-                    ''判断故障列表中是否存在该路灯的该故障，该暗非暗
+                    ''判断故障列表中是否存在该终端的该故障，该暗非暗
 
 
                     If rs_lamp.Fields("total_num").Value = 4 Then '表示累计4次故障则发过短信
@@ -1956,7 +1956,7 @@ next1:
         Exit Sub
     End Sub
     ''' <summary>
-    ''' 获取单灯状态与数据库中的操作状态对比，得到路灯的实际状态，是否故障
+    ''' 获取单灯状态与数据库中的操作状态对比，得到终端的实际状态，是否故障
     ''' </summary>
     ''' <param name="lamp_id_tag">灯的编号</param>
     ''' <param name="find_tag">1，批量查询，2单灯查询</param>
@@ -1987,14 +1987,14 @@ next1:
         msg = ""
         '将灯的两位类型编号转换成5位长度的二进制，三位长度的类型下灯的编号转换成11位长度二进制
         ox_str = Com_inf.Dec_to_Bin(Mid(lamp_id_tag, 5, 2), 5) & Com_inf.Dec_to_Bin(Mid(lamp_id_tag, 7, LAMP_ID_LEN), 11)
-        ox_str = Com_inf.BIN_to_HEX(ox_str)   '控制命令中的路灯编号16位二进制转换成四位十六进制
+        ox_str = Com_inf.BIN_to_HEX(ox_str)   '控制命令中的终端编号16位二进制转换成四位十六进制
         If SYSTEM_VISION = 1 Then
             control_box_ox = Com_inf.Dec_to_Hex(Mid(lamp_id_tag, 1, 4), 2) '将四位十进制电控箱编号转换成2位的十六进制
-            lamp_id_ox = control_box_ox & " " & Mid(ox_str, 1, 2) & " " & Mid(ox_str, 3, 2) '路灯编号的16进制位数 4位
+            lamp_id_ox = control_box_ox & " " & Mid(ox_str, 1, 2) & " " & Mid(ox_str, 3, 2) '终端编号的16进制位数 4位
 
         Else
             control_box_ox = Com_inf.Dec_to_Hex(Mid(lamp_id_tag, 1, 4), 4) '将四位十进制电控箱编号转换成2位的十六进制
-            lamp_id_ox = Mid(control_box_ox, 3, 2) & " " & Mid(ox_str, 1, 2) & " " & Mid(ox_str, 3, 2) & " " & Mid(control_box_ox, 1, 2) '路灯编号的16进制位数 4位
+            lamp_id_ox = Mid(control_box_ox, 3, 2) & " " & Mid(ox_str, 1, 2) & " " & Mid(ox_str, 3, 2) & " " & Mid(control_box_ox, 1, 2) '终端编号的16进制位数 4位
 
         End If
 
@@ -2039,7 +2039,7 @@ next1:
                 Continue While
                 'Exit While
             End If
-            '有返回的路灯状态数据,将 其与路灯状态表中的状态对比，A,暗；B,亮；C，该亮非亮；D该暗非暗
+            '有返回的终端状态数据,将 其与终端状态表中的状态对比，A,暗；B,亮；C，该亮非亮；D该暗非暗
 
             sql = "select * from lamp_inf where lamp_id='" & lamp_id_tag & "'"
             rs_lamp = DBOperation.SelectSQL(conn, sql, msg)
@@ -2054,7 +2054,7 @@ next1:
 
 
 
-                control_value_ad_part = g_controlvaluepart  '判断路灯亮暗的控制值，即电阻值或电流值
+                control_value_ad_part = g_controlvaluepart  '判断终端亮暗的控制值，即电阻值或电流值
                 control_value_ad_all = g_controlvalueall '全功率的判断值              
 
                 ''***********************************************
@@ -2269,7 +2269,7 @@ next1:
         Dim msg As String
         Dim sql As String
         Dim control_box_ox As String  '十六进制的电控箱编号
-        Dim lamp_id_ox As String  '十六进制的路灯编号
+        Dim lamp_id_ox As String  '十六进制的终端编号
         Dim ox_str As String  '十六进制字符串
         Dim bin_str As String '十六位长度的二进制，包括5位的类型和11位的灯的独立编号
         Dim conn As New ADODB.Connection
@@ -2294,7 +2294,7 @@ next1:
         If rs.RecordCount > 0 Then
             bin_str = Com_inf.Dec_to_Bin(Val(Mid(Trim(rs.Fields("lamp_id").Value), 5, 2)), 5) & Com_inf.Dec_to_Bin(Val(Mid(Trim(rs.Fields("lamp_id").Value), 7, LAMP_ID_LEN)), 11)
             ox_str = Com_inf.BIN_to_HEX(bin_str) '16位的二进制转变成四位的十六进制
-            lamp_id_ox = Mid(ox_str, 1, 2) & " " & Mid(ox_str, 3, 2)  '路灯编号的16进制位数 4位
+            lamp_id_ox = Mid(ox_str, 1, 2) & " " & Mid(ox_str, 3, 2)  '终端编号的16进制位数 4位
             If SYSTEM_VISION = 1 Then
                 control_box_ox = Com_inf.Dec_to_Hex(Trim(rs.Fields("control_box_id").Value), 2)  '十进制数转换成2位的十六进制的数
                 Set_control_inf = control_box_ox & " " & lamp_id_ox & " 20 13 00"   '轮询的控制命令设置
@@ -2305,7 +2305,7 @@ next1:
 
             End If
         Else
-            MsgBox("路灯" & lamp_id & "信息不存在！", , PROJECT_TITLE_STRING)
+            MsgBox("终端" & lamp_id & "信息不存在！", , PROJECT_TITLE_STRING)
             Set_control_inf = ""
 
         End If
@@ -2317,9 +2317,9 @@ next1:
     End Function
 
     ''' <summary>
-    ''' 获取路灯或回路的信息，与电控箱区分
+    ''' 获取终端或回路的信息，与电控箱区分
     ''' </summary>
-    ''' <param name="lamp_tag">路灯编号</param>
+    ''' <param name="lamp_tag">终端编号</param>
     ''' <remarks></remarks>
     Public Function get_lampinf_tip(ByVal lamp_tag As String) As String
         Dim rs As New ADODB.Recordset
@@ -2346,7 +2346,7 @@ next1:
 
         If rs.RecordCount > 0 Then
             If Mid(lamp_tag, 5, 2) = "31" Then  '交流接触器
-                state_inf_tag = rs.Fields("state").Value  '根据故障编号，查找路灯的故障信息
+                state_inf_tag = rs.Fields("state").Value  '根据故障编号，查找终端的故障信息
                 lamp_num = Val(Mid(Trim(rs.Fields("lamp_id").Value), 7, LAMP_ID_LEN))
                 lamp_id_string = Val(Mid(Trim(rs.Fields("lamp_id").Value), 1, 4)) & "-" & Val(Mid(Trim(rs.Fields("lamp_id").Value), 5, 2)) & "-" & Val(Mid(Trim(rs.Fields("lamp_id").Value), 7, LAMP_ID_LEN))
                 Dim control_string As String
@@ -2360,7 +2360,7 @@ next1:
                 End If
 
             Else '灯的编号
-                state_inf_tag = rs.Fields("result").Value  '根据故障编号，查找路灯的故障信息
+                state_inf_tag = rs.Fields("result").Value  '根据故障编号，查找终端的故障信息
                 If IsDBNull(rs.Fields("lamp_pointinfor").Value) = False Then
                     lamp_pointinfor = rs.Fields("lamp_pointinfor").Value
                     If Trim(lamp_pointinfor) <> "" Then
@@ -2441,7 +2441,7 @@ next1:
 
                     End If '故障
                 End If  '控制状态
-                End If '正常
+            End If '正常
 
 
         End If
@@ -2453,17 +2453,17 @@ next1:
     End Function
 
     ''' <summary>
-    ''' 获取路灯的实时状态，用不同的颜色标识不同的状态，并且统计故障率，亮灯率的信息
+    ''' 获取终端的实时状态，用不同的颜色标识不同的状态，并且统计故障率，亮灯率的信息
     ''' </summary>
     ''' <remarks></remarks>
     Public Sub get_lamp_information()
-        '获取路灯的状况信息
+        '获取终端的状况信息
         Dim rs_lamp As New ADODB.Recordset
-        Dim lamp_on, lamp_on_total As Integer   '每条路亮的路灯数量，及总的亮灯数量
-        Dim lamp_off, lamp_off_total As Integer  '每条路暗的路灯数量
-        Dim lamp_problem, lamp_problem_total As Integer '每条路的故障路灯数量，及总的故障数量
-        Dim lamp_no_return_value, lamp_no_return_value_total As Integer  '每条路的无返回状态路灯数量，总的无返回状态灯数量
-        Dim lamp_total_num, lamp_total_num_total As Integer   '每条路的路灯总数，及所有路灯的总数
+        Dim lamp_on, lamp_on_total As Integer   '每条路亮的终端数量，及总的亮灯数量
+        Dim lamp_off, lamp_off_total As Integer  '每条路暗的终端数量
+        Dim lamp_problem, lamp_problem_total As Integer '每条路的故障终端数量，及总的故障数量
+        Dim lamp_no_return_value, lamp_no_return_value_total As Integer  '每条路的无返回状态终端数量，总的无返回状态灯数量
+        Dim lamp_total_num, lamp_total_num_total As Integer   '每条路的终端总数，及所有终端的总数
         Dim lamp_on_lv, lamp_on_lv_total As Double  '每条路的亮的灯率,总的亮灯率
         Dim lamp_off_lv, lamp_off_lv_total As Double  '暗的灯率,总的暗灯率
         Dim lamp_problem_lv, lamp_problem_lv_total As Double  '故障率,总的故障率
@@ -2473,7 +2473,7 @@ next1:
         Dim sql As String   'sql语句
         Dim msg As String  '提示sql语句的执行结果
         Dim control_box_problem_lv As Double   '一个电控箱下的故障率
-        Dim pos_lamp As New System.Drawing.Point  '绘制路灯
+        Dim pos_lamp As New System.Drawing.Point  '绘制终端
         Dim lamp_kind As Integer  '单灯的类型 3类型表示新的五个字节状态：电压，电流，功率
         'Dim row As Integer   '区域状态的行数
 
@@ -2517,7 +2517,7 @@ next1:
             conn = Nothing
             Exit Sub
         End If
-        If rs_lamp.RecordCount <= 0 Then  '该地图所控制的范围内没有路灯信息
+        If rs_lamp.RecordCount <= 0 Then  '该地图所控制的范围内没有终端信息
             rs_lamp.Close()
             rs_lamp = Nothing
             conn.Close()
@@ -2537,15 +2537,15 @@ next1:
             If control_box_string = Trim(rs_lamp.Fields("control_box_name").Value) And type_string = Trim(rs_lamp.Fields("type_string").Value) Then
                 '表示同一个电控箱下的同一种类型的景观灯
 
-                pos_lamp.X = rs_lamp.Fields("pos_x").Value  '路灯的X坐标
-                pos_lamp.Y = rs_lamp.Fields("pos_y").Value  '路灯的Y坐标
+                pos_lamp.X = rs_lamp.Fields("pos_x").Value  '终端的X坐标
+                pos_lamp.Y = rs_lamp.Fields("pos_y").Value  '终端的Y坐标
 
                 If lamp_kind = 3 Then
                     '六个字节的状态
                     If rs_lamp.Fields("result").Value = 0 And rs_lamp.Fields("state").Value = 0 Then
                         '表示状态正常,暗
-                        lamp_off += 1   '暗的路灯数量加1
-                        lamp_total_num += 1   '路灯总量加1
+                        lamp_off += 1   '暗的终端数量加1
+                        lamp_total_num += 1   '终端总量加1
                         DrawLamp(g_closecolor, m_lampwide, m_lampheight, pos_lamp.X, pos_lamp.Y, Trim(rs_lamp.Fields("lamp_id").Value), False)
                         GoTo nextstp
 
@@ -2553,36 +2553,36 @@ next1:
 
                     If rs_lamp.Fields("result").Value = 0 And (rs_lamp.Fields("state").Value = 8 Or rs_lamp.Fields("state").Value = 12) Then
                         '表示状态正常，亮
-                        lamp_on += 1   '亮的路灯数量加1，全功率
-                        lamp_total_num += 1   '路灯总量加1
+                        lamp_on += 1   '亮的终端数量加1，全功率
+                        lamp_total_num += 1   '终端总量加1
                         DrawLamp(g_fullcolor, m_lampwide, m_lampheight, pos_lamp.X, pos_lamp.Y, Trim(rs_lamp.Fields("lamp_id").Value), False)
                         GoTo nextstp
                     End If
 
                     If rs_lamp.Fields("result").Value = 1 Then
                         '表示故障
-                        lamp_problem += 1   '故障路灯
-                        lamp_total_num += 1   '路灯总量加1
+                        lamp_problem += 1   '故障终端
+                        lamp_total_num += 1   '终端总量加1
                         DrawLamp(g_problemcolor, m_lampwide, m_lampheight, pos_lamp.X, pos_lamp.Y, Trim(rs_lamp.Fields("lamp_id").Value), True)
                         GoTo nextstp
                     End If
                     If rs_lamp.Fields("result").Value = 3 Then
                         lamp_no_return_value += 1  '无返回状态的数量加1
-                        lamp_total_num += 1   '路灯总量加1
+                        lamp_total_num += 1   '终端总量加1
                         DrawLamp(g_noreturncolor, m_lampwide, m_lampheight, pos_lamp.X, pos_lamp.Y, Trim(rs_lamp.Fields("lamp_id").Value), False)
                         GoTo nextstp
                     End If
                     If rs_lamp.Fields("result").Value = 4 And rs_lamp.Fields("state").Value = 4 Then
                         '控制状态等待状态返回
-                        lamp_on += 1   '亮的路灯数量加1
-                        lamp_total_num += 1   '路灯总量加1
+                        lamp_on += 1   '亮的终端数量加1
+                        lamp_total_num += 1   '终端总量加1
                         DrawLamp(g_fullcolor, m_lampwide, m_lampheight, pos_lamp.X, pos_lamp.Y, Trim(rs_lamp.Fields("lamp_id").Value), False)
                         GoTo nextstp
                     End If
                     If rs_lamp.Fields("result").Value = 4 And rs_lamp.Fields("state").Value = 3 Then
                         '控制状态等待状态返回
-                        lamp_off += 1   '暗的路灯数量加1
-                        lamp_total_num += 1   '路灯总量加1
+                        lamp_off += 1   '暗的终端数量加1
+                        lamp_total_num += 1   '终端总量加1
                         DrawLamp(g_closecolor, m_lampwide, m_lampheight, pos_lamp.X, pos_lamp.Y, Trim(rs_lamp.Fields("lamp_id").Value), False)
                         GoTo nextstp
                     End If
@@ -2590,48 +2590,48 @@ next1:
                 Else
 
                     If rs_lamp.Fields("state").Value = 1 And rs_lamp.Fields("result").Value = 0 Then
-                        lamp_on += 1   '亮的路灯数量加1，全功率
-                        lamp_total_num += 1   '路灯总量加1
+                        lamp_on += 1   '亮的终端数量加1，全功率
+                        lamp_total_num += 1   '终端总量加1
                         DrawLamp(g_fullcolor, m_lampwide, m_lampheight, pos_lamp.X, pos_lamp.Y, Trim(rs_lamp.Fields("lamp_id").Value), False)
                         GoTo nextstp
 
                     End If
                     'If rs_lamp.Fields("state").Value = 1 And rs_lamp.Fields("result").Value = 0 And rs_lamp.Fields("power").Value = 50 Then
-                    '    lamp_on += 1   '亮的路灯数量加1,半功率
-                    '    lamp_total_num += 1   '路灯总量加1
+                    '    lamp_on += 1   '亮的终端数量加1,半功率
+                    '    lamp_total_num += 1   '终端总量加1
                     '    DrawLamp(g_partcolor, m_lampwide, m_lampheight, pos_lamp.X, pos_lamp.Y, Trim(rs_lamp.Fields("lamp_id").Value), False)
                     '    GoTo nextstp
                     'End If
                     If rs_lamp.Fields("state").Value = 0 And rs_lamp.Fields("result").Value = 0 Then
-                        lamp_off += 1   '暗的路灯数量加1
-                        lamp_total_num += 1   '路灯总量加1
+                        lamp_off += 1   '暗的终端数量加1
+                        lamp_total_num += 1   '终端总量加1
                         DrawLamp(g_closecolor, m_lampwide, m_lampheight, pos_lamp.X, pos_lamp.Y, Trim(rs_lamp.Fields("lamp_id").Value), False)
                         GoTo nextstp
                     End If
                     If (rs_lamp.Fields("result").Value = 1 Or rs_lamp.Fields("result").Value = 2) And rs_lamp.Fields("total_num").Value > 1 Then
-                        lamp_problem += 1   '故障路灯:该亮非亮或该暗非暗
-                        lamp_total_num += 1   '路灯总量加1
+                        lamp_problem += 1   '故障终端:该亮非亮或该暗非暗
+                        lamp_total_num += 1   '终端总量加1
                         DrawLamp(g_problemcolor, m_lampwide, m_lampheight, pos_lamp.X, pos_lamp.Y, Trim(rs_lamp.Fields("lamp_id").Value), True)
                         GoTo nextstp
                     End If
 
                     If rs_lamp.Fields("result").Value = 3 Then
                         lamp_no_return_value += 1  '无返回状态的数量加1
-                        lamp_total_num += 1   '路灯总量加1
+                        lamp_total_num += 1   '终端总量加1
                         DrawLamp(g_noreturncolor, m_lampwide, m_lampheight, pos_lamp.X, pos_lamp.Y, Trim(rs_lamp.Fields("lamp_id").Value), False)
                         GoTo nextstp
                     End If
                     If rs_lamp.Fields("result").Value = 4 And rs_lamp.Fields("state").Value = 3 Then
                         '控制状态等待状态返回
-                        lamp_off += 1   '暗的路灯数量加1
-                        lamp_total_num += 1   '路灯总量加1
+                        lamp_off += 1   '暗的终端数量加1
+                        lamp_total_num += 1   '终端总量加1
                         DrawLamp(g_closecolor, m_lampwide, m_lampheight, pos_lamp.X, pos_lamp.Y, Trim(rs_lamp.Fields("lamp_id").Value), False)
                         GoTo nextstp
                     End If
                     If rs_lamp.Fields("result").Value = 4 And rs_lamp.Fields("state").Value = 4 Then
                         '控制状态等待状态返回
-                        lamp_on += 1   '亮的路灯数量加1
-                        lamp_total_num += 1   '路灯总量加1
+                        lamp_on += 1   '亮的终端数量加1
+                        lamp_total_num += 1   '终端总量加1
                         DrawLamp(g_fullcolor, m_lampwide, m_lampheight, pos_lamp.X, pos_lamp.Y, Trim(rs_lamp.Fields("lamp_id").Value), False)
                         GoTo nextstp
                     End If
@@ -2653,16 +2653,16 @@ nextstp:
                 lamp_problem_total += lamp_problem
                 lamp_no_return_value_total += lamp_no_return_value
 
-                If lamp_total_num <> 0 Then  '如果路灯总数不为0
+                If lamp_total_num <> 0 Then  '如果终端总数不为0
                     lamp_on_lv = Format(lamp_on / lamp_total_num * 100, "00.00")  '亮灯率
                     lamp_off_lv = Format(lamp_off / lamp_total_num * 100, "00.00") '暗灯率
                     lamp_problem_lv = Format(lamp_problem / lamp_total_num * 100, "00.00")  '故障率
                     lamp_no_return_lv = 100 - lamp_on_lv - lamp_off_lv - lamp_problem_lv
                 Else
-                    lamp_on_lv = 0   '路灯总数为0，亮灯率为0
+                    lamp_on_lv = 0   '终端总数为0，亮灯率为0
                     lamp_off_lv = 0 '灯的总数为0 ，暗灯率为0
-                    lamp_problem_lv = 0  '路灯总数为0，故障率为0
-                    lamp_no_return_lv = 0  '路灯总数为0，无返回状态率为0
+                    lamp_problem_lv = 0  '终端总数为0，故障率为0
+                    lamp_no_return_lv = 0  '终端总数为0，无返回状态率为0
 
                 End If
 
@@ -2672,16 +2672,16 @@ nextstp:
                 lamp_no_return_value = 0
                 lamp_total_num = 0
 
-                pos_lamp.X = rs_lamp.Fields("pos_x").Value  '路灯的X坐标
-                pos_lamp.Y = rs_lamp.Fields("pos_y").Value  '路灯的Y坐标
+                pos_lamp.X = rs_lamp.Fields("pos_x").Value  '终端的X坐标
+                pos_lamp.Y = rs_lamp.Fields("pos_y").Value  '终端的Y坐标
 
                 If lamp_kind = 3 Then
 
                     '六个字节的状态
                     If rs_lamp.Fields("result").Value = 0 And rs_lamp.Fields("state").Value = 0 Then
                         '表示状态正常,暗
-                        lamp_off += 1   '暗的路灯数量加1
-                        lamp_total_num += 1   '路灯总量加1
+                        lamp_off += 1   '暗的终端数量加1
+                        lamp_total_num += 1   '终端总量加1
                         DrawLamp(g_closecolor, m_lampwide, m_lampheight, pos_lamp.X, pos_lamp.Y, Trim(rs_lamp.Fields("lamp_id").Value), False)
                         GoTo nextstp2
 
@@ -2689,36 +2689,36 @@ nextstp:
 
                     If rs_lamp.Fields("result").Value = 0 And rs_lamp.Fields("state").Value = 8 Then
                         '表示状态正常，亮
-                        lamp_on += 1   '亮的路灯数量加1，全功率
-                        lamp_total_num += 1   '路灯总量加1
+                        lamp_on += 1   '亮的终端数量加1，全功率
+                        lamp_total_num += 1   '终端总量加1
                         DrawLamp(g_fullcolor, m_lampwide, m_lampheight, pos_lamp.X, pos_lamp.Y, Trim(rs_lamp.Fields("lamp_id").Value), False)
                         GoTo nextstp2
                     End If
 
                     If rs_lamp.Fields("result").Value = 1 Then
                         '表示故障
-                        lamp_problem += 1   '故障路灯
-                        lamp_total_num += 1   '路灯总量加1
+                        lamp_problem += 1   '故障终端
+                        lamp_total_num += 1   '终端总量加1
                         DrawLamp(g_problemcolor, m_lampwide, m_lampheight, pos_lamp.X, pos_lamp.Y, Trim(rs_lamp.Fields("lamp_id").Value), True)
                         GoTo nextstp2
                     End If
                     If rs_lamp.Fields("result").Value = 3 Then
                         lamp_no_return_value += 1  '无返回状态的数量加1
-                        lamp_total_num += 1   '路灯总量加1
+                        lamp_total_num += 1   '终端总量加1
                         DrawLamp(g_noreturncolor, m_lampwide, m_lampheight, pos_lamp.X, pos_lamp.Y, Trim(rs_lamp.Fields("lamp_id").Value), False)
                         GoTo nextstp2
                     End If
                     If rs_lamp.Fields("result").Value = 4 And rs_lamp.Fields("state").Value = 4 Then
                         '控制状态等待状态返回
-                        lamp_on += 1   '亮的路灯数量加1
-                        lamp_total_num += 1   '路灯总量加1
+                        lamp_on += 1   '亮的终端数量加1
+                        lamp_total_num += 1   '终端总量加1
                         DrawLamp(g_fullcolor, m_lampwide, m_lampheight, pos_lamp.X, pos_lamp.Y, Trim(rs_lamp.Fields("lamp_id").Value), False)
                         GoTo nextstp2
                     End If
                     If rs_lamp.Fields("result").Value = 4 And rs_lamp.Fields("state").Value = 3 Then
                         '控制状态等待状态返回
-                        lamp_off += 1   '暗的路灯数量加1
-                        lamp_total_num += 1   '路灯总量加1
+                        lamp_off += 1   '暗的终端数量加1
+                        lamp_total_num += 1   '终端总量加1
                         DrawLamp(g_closecolor, m_lampwide, m_lampheight, pos_lamp.X, pos_lamp.Y, Trim(rs_lamp.Fields("lamp_id").Value), False)
                         GoTo nextstp2
                     End If
@@ -2726,48 +2726,48 @@ nextstp:
                 Else
 
                     If rs_lamp.Fields("state").Value = 1 And rs_lamp.Fields("result").Value = 0 Then
-                        lamp_on += 1   '亮的路灯数量加1，全功率
-                        lamp_total_num += 1   '路灯总量加1
+                        lamp_on += 1   '亮的终端数量加1，全功率
+                        lamp_total_num += 1   '终端总量加1
                         DrawLamp(g_fullcolor, m_lampwide, m_lampheight, pos_lamp.X, pos_lamp.Y, Trim(rs_lamp.Fields("lamp_id").Value), False)
                         GoTo nextstp2
 
                     End If
                     'If rs_lamp.Fields("state").Value = 1 And rs_lamp.Fields("result").Value = 0 And rs_lamp.Fields("power").Value = 50 Then
-                    '    lamp_on += 1   '亮的路灯数量加1,半功率
-                    '    lamp_total_num += 1   '路灯总量加1
+                    '    lamp_on += 1   '亮的终端数量加1,半功率
+                    '    lamp_total_num += 1   '终端总量加1
                     '    DrawLamp(g_partcolor, m_lampwide, m_lampheight, pos_lamp.X, pos_lamp.Y, Trim(rs_lamp.Fields("lamp_id").Value), False)
                     '    GoTo nextstp
                     'End If
                     If rs_lamp.Fields("state").Value = 0 And rs_lamp.Fields("result").Value = 0 Then
-                        lamp_off += 1   '暗的路灯数量加1
-                        lamp_total_num += 1   '路灯总量加1
+                        lamp_off += 1   '暗的终端数量加1
+                        lamp_total_num += 1   '终端总量加1
                         DrawLamp(g_closecolor, m_lampwide, m_lampheight, pos_lamp.X, pos_lamp.Y, Trim(rs_lamp.Fields("lamp_id").Value), False)
                         GoTo nextstp2
                     End If
                     If (rs_lamp.Fields("result").Value = 1 Or rs_lamp.Fields("result").Value = 2) And rs_lamp.Fields("total_num").Value > 1 Then
-                        lamp_problem += 1   '故障路灯:该亮非亮或该暗非暗
-                        lamp_total_num += 1   '路灯总量加1
+                        lamp_problem += 1   '故障终端:该亮非亮或该暗非暗
+                        lamp_total_num += 1   '终端总量加1
                         DrawLamp(g_problemcolor, m_lampwide, m_lampheight, pos_lamp.X, pos_lamp.Y, Trim(rs_lamp.Fields("lamp_id").Value), True)
                         GoTo nextstp2
                     End If
 
                     If rs_lamp.Fields("result").Value = 3 Then
                         lamp_no_return_value += 1  '无返回状态的数量加1
-                        lamp_total_num += 1   '路灯总量加1
+                        lamp_total_num += 1   '终端总量加1
                         DrawLamp(g_noreturncolor, m_lampwide, m_lampheight, pos_lamp.X, pos_lamp.Y, Trim(rs_lamp.Fields("lamp_id").Value), False)
                         GoTo nextstp2
                     End If
                     If rs_lamp.Fields("result").Value = 4 And rs_lamp.Fields("state").Value = 3 Then
                         '控制状态等待状态返回
-                        lamp_off += 1   '暗的路灯数量加1
-                        lamp_total_num += 1   '路灯总量加1
+                        lamp_off += 1   '暗的终端数量加1
+                        lamp_total_num += 1   '终端总量加1
                         DrawLamp(g_closecolor, m_lampwide, m_lampheight, pos_lamp.X, pos_lamp.Y, Trim(rs_lamp.Fields("lamp_id").Value), False)
                         GoTo nextstp2
                     End If
                     If rs_lamp.Fields("result").Value = 4 And rs_lamp.Fields("state").Value = 4 Then
                         '控制状态等待状态返回
-                        lamp_on += 1   '亮的路灯数量加1
-                        lamp_total_num += 1   '路灯总量加1
+                        lamp_on += 1   '亮的终端数量加1
+                        lamp_total_num += 1   '终端总量加1
                         DrawLamp(g_fullcolor, m_lampwide, m_lampheight, pos_lamp.X, pos_lamp.Y, Trim(rs_lamp.Fields("lamp_id").Value), False)
                         GoTo nextstp2
                     End If
@@ -2794,23 +2794,23 @@ nextstp2:
         lamp_problem_total += lamp_problem
         lamp_no_return_value_total += lamp_no_return_value
 
-        If lamp_total_num <> 0 Then  '如果路灯总数不为0
+        If lamp_total_num <> 0 Then  '如果终端总数不为0
             lamp_on_lv = Format(lamp_on / lamp_total_num * 100, "00.00")  '亮灯率
             lamp_off_lv = Format(lamp_off / lamp_total_num * 100, "00.00") '暗灯率
             lamp_problem_lv = Format(lamp_problem / lamp_total_num * 100, "00.00")  '故障率
             lamp_no_return_lv = 100 - lamp_on_lv - lamp_off_lv - lamp_problem_lv
 
         Else
-            lamp_on_lv = 0   '路灯总数为0，亮灯率为0
+            lamp_on_lv = 0   '终端总数为0，亮灯率为0
             lamp_off_lv = 0 '灯的总数为0 ，暗灯率为0
-            lamp_problem_lv = 0  '路灯总数为0，故障率为0
-            lamp_no_return_lv = 0  '路灯总数为0，无返回状态率为0
+            lamp_problem_lv = 0  '终端总数为0，故障率为0
+            lamp_no_return_lv = 0  '终端总数为0，无返回状态率为0
 
         End If
         control_box_problem_lv = lamp_problem_lv
         control_box_problem_lv = 0
 
-        If lamp_total_num <> 0 Then  '如果路灯总数不为0
+        If lamp_total_num <> 0 Then  '如果终端总数不为0
             lamp_on_lv = lamp_on / lamp_total_num * 100  '亮灯率
             lamp_off_lv = lamp_off / lamp_total_num * 100 '暗灯率
             lamp_problem_lv = lamp_problem / lamp_total_num * 100  '故障率
@@ -2852,7 +2852,7 @@ nextstp2:
     End Sub
 
     ''' <summary>
-    ''' 绘制路灯
+    ''' 绘制终端
     ''' </summary>
     ''' <param name="color">灯的颜色</param>
     ''' <param name="wide">灯的宽度</param>
@@ -2974,14 +2974,14 @@ nextstp2:
 
         rs.Close()
         rs = Nothing
-        lamp_id_bin = Com_inf.Dec_to_Bin(type_id, 5) & Com_inf.Dec_to_Bin(Mid(lamp_id, 7, LAMP_ID_LEN), 11) '十六位长度的路灯编号二进制
+        lamp_id_bin = Com_inf.Dec_to_Bin(type_id, 5) & Com_inf.Dec_to_Bin(Mid(lamp_id, 7, LAMP_ID_LEN), 11) '十六位长度的终端编号二进制
         If open_close = 1 Then  '单灯开
 
-            '打开路灯操作
+            '打开终端操作
             open_light_single(control_box_id, lamp_id_bin, lamp_id, diangan, power_string, control_time, row_id)
         End If
         If open_close = 0 Then
-            '关闭路灯
+            '关闭终端
             close_light_single(control_box_id, lamp_id_bin, lamp_id, diangan, "0", control_time, row_id)
         End If
 
@@ -2992,7 +2992,7 @@ nextstp2:
     End Sub
 
     ''' <summary>
-    ''' 根据回路的编号将某一个电控箱下面的回路灯全部设置为开
+    ''' 根据回路的编号将某一个电控箱下面的回终端全部设置为开
     ''' </summary>
     ''' <param name="lamp_num">灯杆上的灯的编号1，2，3号</param>
     ''' <param name="control_box_id">电控箱编号</param>
@@ -3153,7 +3153,7 @@ nextstp2:
 
             '解析出需要设置关灯的状态的灯的编号
             auto_changelampstate(order_string)
-          
+
             '删除关闭灯的命令
             sql = "delete TimeControl where ID=" & rs.Fields("ID").Value
             DBOperation.ExecuteSQL(conn, sql, msg)
@@ -3194,7 +3194,7 @@ nextstp2:
             control_box_id = "0" & control_box_id '电控箱编号不足4位用0补充
         End While
 
-        lamp_id = control_box_id & Control_Hex_to_Dec(inf_list(1) & inf_list(2))   '第2和3个字节转换成2+LAMP_ID_LEN长度的路灯编号
+        lamp_id = control_box_id & Control_Hex_to_Dec(inf_list(1) & inf_list(2))   '第2和3个字节转换成2+LAMP_ID_LEN长度的终端编号
         type_id = Val(Mid(lamp_id, 5, 2))
 
         If inf_list(3) = "1C" Then
@@ -3285,7 +3285,7 @@ nextstp2:
                                         conn = Nothing
                                     End If
                                     If rs_return.RecordCount > 0 Then
-                                        g_welcomewinobj.SetTextLabelDelegate("获取路灯数据.....", g_welcomewinobj.Tool, "circle_string")
+                                        g_welcomewinobj.SetTextLabelDelegate("获取终端数据.....", g_welcomewinobj.Tool, "circle_string")
                                         '查找当前数据库的所有灯的记录，按上传数据进行数据分析
                                         While rs_return.EOF = False
                                             If g_welcomewinobj.BackgroundWorkergetlampdata.CancellationPending = True Then
@@ -3311,7 +3311,7 @@ nextstp2:
                                                     GoTo finish
                                                 End If
                                                 Com_inf.Explain_State_String(state)  '解析状态字符串的各个含义
-                                                GetCompareState(Trim(rs_return.Fields("StatusContent").Value), rs_return.Fields("id").Value)  '获取路灯的运行状态
+                                                GetCompareState(Trim(rs_return.Fields("StatusContent").Value), rs_return.Fields("id").Value)  '获取终端的运行状态
                                             Else
                                                 If lamp_protocle_type = "2" Then
                                                     If state.Length <> 7 Then
@@ -3321,7 +3321,7 @@ nextstp2:
                                                         GoTo finish
                                                     End If
                                                     Com_inf.Explain_State_String_AD2(state)  '解析状态字符串的各个含义
-                                                    GetCompareState_AD2(Trim(rs_return.Fields("StatusContent").Value), rs_return.Fields("id").Value)  '获取路灯的运行状态
+                                                    GetCompareState_AD2(Trim(rs_return.Fields("StatusContent").Value), rs_return.Fields("id").Value)  '获取终端的运行状态
                                                 Else
                                                     If state.Length <> 10 Then
                                                         '上传的状态长度与单灯的类型不符合
@@ -3333,7 +3333,7 @@ nextstp2:
 
                                                         '2012年5月24日增加五字节的单灯协议,单灯的格式为两字节路段号，两字节节点号，六个字节的单灯状态
                                                         Com_inf.Explain_State_String_AD6(state, j) '解析状态字符串的各个含义
-                                                        Alarm_GetCompareState_AD6(Trim(rs_return.Fields("StatusContent").Value), rs_return.Fields("id").Value)  '获取路灯的运行状态
+                                                        Alarm_GetCompareState_AD6(Trim(rs_return.Fields("StatusContent").Value), rs_return.Fields("id").Value)  '获取终端的运行状态
                                                         j += 1
                                                         short_id = Mid(g_lampidstring, 7, LAMP_ID_LEN) + 1
 
@@ -3424,7 +3424,7 @@ finish:
         msg = ""
         state_inf = ""
         Alarm_GetCompareState_AD6 = "E"
-        '有返回的路灯状态数据,将 其与路灯状态表中的状态对比，A,暗；B,亮；C，该亮非亮；D该暗非暗
+        '有返回的终端状态数据,将 其与终端状态表中的状态对比，A,暗；B,亮；C，该亮非亮；D该暗非暗
         sql = "select state,result,total_num,control_box_id,lamp_id,div_time_id from lamp_inf where lamp_id='" & g_lampidstring & "'"
         rs_lamp = DBOperation.SelectSQL(conn, sql, msg)
         If rs_lamp.RecordCount > 0 Then
@@ -3445,21 +3445,21 @@ finish:
                     End If
                 End If
             End If
-            '更改路灯的实时状态时间
+            '更改终端的实时状态时间
             'sql = "update lamp_inf set date='" & Now & "' where lamp_id='" & g_lampidstring & "'"
             'DBOperation.ExecuteSQL(conn, sql, msg)
             '如果获取的状态时正常的，并且之前的状态为故障，则表示故障维修完毕，标志lamp_inf表中的total_num位为0
             'If (GetCompareState_AD2 = "A" Or GetCompareState_AD2 = "B_part" Or GetCompareState_AD2 = "B_all") And (rs_lamp.Fields("result").Value = 1 Or rs_lamp.Fields("result").Value = 2) Then
             pro_num = rs_lamp.Fields("total_num").Value
             If (Alarm_GetCompareState_AD6 = "A" Or Alarm_GetCompareState_AD6 = "B") And (rs_lamp.Fields("result").Value <> 0) Then
-                '路灯的实时状态表
+                '终端的实时状态表
                 sql = "update lamp_inf set total_num=0 where lamp_id='" & g_lampidstring & "'"
                 DBOperation.ExecuteSQL(conn, sql, msg)
-                '路灯的故障表
+                '终端的故障表
                 sql = "update lamp_inf_record set server_state=1, date_end='" & Now & "' where lamp_id='" & g_lampidstring & "' and server_state=0"
                 DBOperation.ExecuteSQL(conn, sql, msg)
                 'Else
-                '    '路灯的实时出现故障时
+                '    '终端的实时出现故障时
                 '    sql = "update lamp_inf set total_num=" & pro_num + 1 & " where lamp_id='" & g_lampidstring & "'"
                 '    DBOperation.ExecuteSQL(conn, sql, msg)
             End If

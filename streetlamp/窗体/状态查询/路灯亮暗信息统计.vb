@@ -2,7 +2,7 @@
 ''' 统计一个时间区间内灯的运行状态
 ''' </summary>
 ''' <remarks></remarks>
-Public Class 路灯亮暗信息统计
+Public Class 终端亮暗信息统计
 
     Private m_timestart, m_timeend As System.DateTime  '查询时间段的开始与结束时间
     Private m_statictag As Integer  '查询的级别城市，区域，街道等
@@ -20,7 +20,7 @@ Public Class 路灯亮暗信息统计
     Private m_xlSheet As Microsoft.Office.Interop.Excel.Worksheet
     Private m_row As Integer  '行数
     Private m_stringtag As Integer   '提示信息只出现一次
-    Private m_lampidnum As Integer  '记录的查询路灯的个数
+    Private m_lampidnum As Integer  '记录的查询终端的个数
     Private m_checktime As Integer '查询进度参数
     Private m_id As Integer   '编号
     Private m_exceltag As Integer  '标志做哪些操作 m_exceltag=0查询设备状态日志， =1查询设备配置日志
@@ -74,7 +74,7 @@ Public Class 路灯亮暗信息统计
             datalist.Rows(row).Cells("state").Value = state
             datalist.Rows(row).Cells("start_time").Value = time_start
             datalist.Rows(row).Cells("end_time").Value = time_end
-            End If
+        End If
     End Sub
     ''' <summary>
     ''' 选择区域名称
@@ -84,7 +84,7 @@ Public Class 路灯亮暗信息统计
     ''' <remarks></remarks>
     Private Sub static_control_box_name_DropDown(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles static_control_box_name.DropDown
         Com_inf.Select_box_name_level(Me.static_city, Me.static_area, Me.static_street, Me.static_control_box_name)
-        
+
     End Sub
 
     ''' <summary>
@@ -111,7 +111,7 @@ Public Class 路灯亮暗信息统计
 
 
     ''' <summary>
-    ''' 查询路灯的亮暗记录
+    ''' 查询终端的亮暗记录
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
@@ -381,7 +381,7 @@ Public Class 路灯亮暗信息统计
     End Sub
 
     ''' <summary>
-    ''' 按路灯编号进行路灯状态查询
+    ''' 按终端编号进行终端状态查询
     ''' </summary>
     ''' <param name="find_tag"></param>
     ''' <remarks></remarks>
@@ -397,7 +397,7 @@ Public Class 路灯亮暗信息统计
         Dim lamp_type As String  '查询的灯的类型
         Dim lampvision As Integer '灯的型号
 
-        lamp_state = 1  '路灯初始化为正常
+        lamp_state = 1  '终端初始化为正常
 
         DBOperation.OpenConn(conn)
         Select Case find_tag
@@ -443,8 +443,8 @@ Public Class 路灯亮暗信息统计
             conn = Nothing
             Exit Sub
         Else
-            '在各个需要查询的时间点上对路灯的运行状态进行进行统计
-            m_lampidnum = rs.RecordCount  '记录查询路灯的个数，为查询的进度做参数
+            '在各个需要查询的时间点上对终端的运行状态进行进行统计
+            m_lampidnum = rs.RecordCount  '记录查询终端的个数，为查询的进度做参数
             While rs.EOF = False
                 If Me.BackgroundWorker_on_off.CancellationPending = True Then
                     rs.Close()
@@ -459,7 +459,7 @@ Public Class 路灯亮暗信息统计
                     Exit Sub
                 End If
 
-                '判断每一盏路灯在此时间区间内容是否工作正常
+                '判断每一盏终端在此时间区间内容是否工作正常
 
                 control_box_name = Trim(rs.Fields("control_box_name").Value)
                 lamp_type = Trim(rs.Fields("type_string").Value)
@@ -489,7 +489,7 @@ Public Class 路灯亮暗信息统计
     End Sub
 
     ''' <summary>
-    ''' 查询路灯的亮暗状态
+    ''' 查询终端的亮暗状态
     ''' </summary>
     ''' <param name="lamp_id_tag"></param>
     ''' <param name="check_time_start"></param>
@@ -919,14 +919,14 @@ Finish:
         End If
         If Me.m_exceltag = 0 Then
             If m_exceltable = 0 And m_stringtag = 0 Then
-                g_welcomewinobj.circle_string.Text = "查询路灯运行状态统计信息"
-                record_num.Text = "查询路灯运行状态统计信息"
+                g_welcomewinobj.circle_string.Text = "查询终端运行状态统计信息"
+                record_num.Text = "查询终端运行状态统计信息"
                 m_stringtag = 1
 
             Else
                 If m_stringtag = 0 And m_exceltable = 1 Then
-                    g_welcomewinobj.circle_string.Text = "导出路灯运行状态统计的EXCEL表"
-                    record_num.Text = "导出路灯运行状态统计的EXCEL表"
+                    g_welcomewinobj.circle_string.Text = "导出终端运行状态统计的EXCEL表"
+                    record_num.Text = "导出终端运行状态统计的EXCEL表"
                     m_stringtag = 1
 
                 End If
@@ -948,7 +948,7 @@ Finish:
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     ''' <remarks></remarks>
-    Private Sub 路灯亮暗信息统计_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    Private Sub 终端亮暗信息统计_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'TODO: 这行代码将数据加载到表“ConfigDataSet.config_state_list”中。您可以根据需要移动或移除它。
         Me.Config_state_listTableAdapter.FillBy_nodate_all(Me.ConfigDataSet.config_state_list)
         Date_start.CustomFormat = "yyyy-MM-dd HH:mm:ss  "  '查询条件中开始日期的格式
@@ -967,7 +967,7 @@ Finish:
         static_lamp_id_start.Visible = False
         lamp_type_id.Visible = False
         m_id = 1
- 
+
         '开始日期默认为当前日期的前一天
         Date_start.Value = DateAdd(DateInterval.Day, -1, Now)
         DateTimePickerStart.Value = DateAdd(DateInterval.Day, -1, Now)
@@ -989,16 +989,16 @@ Finish:
             If m_exceltable = 1 Then
                 m_xlApp.Visible = True
                 System.Windows.Forms.Cursor.Current = System.Windows.Forms.Cursors.Default
-                ' Me.SetTextControl("路灯运行状态统计EXCEL表导出完毕" & vbCrLf, Me.area_control_list)
+                ' Me.SetTextControl("终端运行状态统计EXCEL表导出完毕" & vbCrLf, Me.area_control_list)
 
             Else
                 If m_exceltable = 2 Then
                     m_xlApp.Visible = True
                     System.Windows.Forms.Cursor.Current = System.Windows.Forms.Cursors.Default
-                    '  Me.SetTextControl("路灯故障统计导出完毕" & vbCrLf, Me.area_control_list)
+                    '  Me.SetTextControl("终端故障统计导出完毕" & vbCrLf, Me.area_control_list)
 
                 Else
-                    '   Me.SetTextControl("路灯运行状态统计完毕" & vbCrLf, Me.area_control_list)
+                    '   Me.SetTextControl("终端运行状态统计完毕" & vbCrLf, Me.area_control_list)
                 End If
 
             End If
@@ -1023,7 +1023,7 @@ Finish:
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub static_excel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles static_excel.Click
-        '查询路灯的亮暗记录
+        '查询终端的亮暗记录
         m_exceltag = 0  '导出状态日志
 
         If Date_start.Text = "" Then  '开始日期为空
@@ -1239,7 +1239,7 @@ Finish:
 
             m_xlBook = m_xlApp.Workbooks().Add
             m_xlSheet = m_xlBook.Worksheets("sheet1")
-            m_xlApp.Cells(1, 1) = "路灯运行状态统计"
+            m_xlApp.Cells(1, 1) = "终端运行状态统计"
             m_xlApp.Rows(1).RowHeight = 50
             m_xlApp.Rows(1).Font.Size = 18
             m_xlApp.Rows(1).Font.Bold = True
@@ -1259,7 +1259,7 @@ Finish:
             m_xlApp.Rows(2).Font.Size = 12
 
             m_xlApp.Cells(3, 1) = "编号"
-            m_xlApp.Cells(3, 2) = "路灯编号"
+            m_xlApp.Cells(3, 2) = "终端编号"
             m_xlApp.Cells(3, 3) = "运行状态"
             m_xlApp.Cells(3, 4) = "电流(A)"
             m_xlApp.Cells(3, 5) = "电压(V)"
@@ -1356,14 +1356,14 @@ Finish:
                 With m_xlSheet
                     .Range(.Cells(1, 1), .Cells(1, 5)).Merge()
                     .Range(.Cells(2, 1), .Cells(2, 5)).Merge()
-                 
+
 
                     .Range(.Cells(3, 1), .Cells(3, 1)).ColumnWidth = 5
                     .Range(.Cells(3, 2), .Cells(3, 2)).ColumnWidth = 10
                     .Range(.Cells(3, 3), .Cells(3, 3)).ColumnWidth = 15
                     .Range(.Cells(3, 4), .Cells(3, 4)).ColumnWidth = 20
                     .Range(.Cells(3, 5), .Cells(3, 5)).ColumnWidth = 30
-                  
+
                     .Range(.Cells(3, 1), .Cells(m_row - 1, 5)).RowHeight = 20
 
                     .Range(.Cells(1, 1), .Cells(1, 5)).HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter
@@ -1508,9 +1508,9 @@ Finish:
         conn = Nothing
 
     End Sub
-   
+
     ''' <summary>
-    '''   '查询路灯的亮暗记录(文本框显示)
+    '''   '查询终端的亮暗记录(文本框显示)
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
@@ -1591,7 +1591,7 @@ Finish:
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     ''' <remarks></remarks>
-    Private Sub 路灯亮暗信息统计_FormClosing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
+    Private Sub 终端亮暗信息统计_FormClosing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
         If Me.BackgroundWorker_on_off.IsBusy = True Then
             Me.BackgroundWorker_on_off.CancelAsync()
         End If
@@ -1904,7 +1904,7 @@ Finish:
             i += 1
 
         End While
-     
+
         If Me.BackgroundWorker_on_off.IsBusy = False Then
             Me.BackgroundWorker_on_off.RunWorkerAsync()
         Else

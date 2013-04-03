@@ -147,7 +147,7 @@ Public Class 设备控制面板
                             type_string = Trim(rs_type.Fields("type_name").Value)
                             tv_control_list.Nodes(i1).Nodes(i2).Nodes(i3).Nodes(i4).Nodes.Add(type_string & " (共计：" & rs_type.Fields("lamp_num").Value.ToString & "个控制节点)")
 
-                            '路灯
+                            '终端
                             sql = "select lamp_id,type_id,lamp_pointinfor from lamp_street where city='" & city_string & "' and area='" & area_string & "' and street='" & street_string & "' and control_box_name='" & box_string & "' and type_string='" & type_string & "' order by lamp_id"
                             rs_lamp = DBOperation.SelectSQL(conn, sql, msg)
                             If rs_lamp Is Nothing Then
@@ -391,21 +391,21 @@ finish:
         Get_controlobj()
         If rb_open_all.Checked = True Then
             m_control_type = "开灯"
-            'open_all_lamp(m_controlobjlist(i).obj_name, m_controlobjlist(i).level, j)   '路灯全开
+            'open_all_lamp(m_controlobjlist(i).obj_name, m_controlobjlist(i).level, j)   '终端全开
         End If
         If rb_close_all.Checked = True Then
             m_control_type = "关灯"
-            'close_all_lamp(m_controlobjlist(i).obj_name, m_controlobjlist(i).level, j)   '路灯全闭
+            'close_all_lamp(m_controlobjlist(i).obj_name, m_controlobjlist(i).level, j)   '终端全闭
         End If
         If rb_single_open.Checked = True Then
             m_control_type = "单号开"
 
-            ' single_open_control(1, 1, m_controlobjlist(i).obj_name, m_controlobjlist(i).level, j)  '路灯奇开
+            ' single_open_control(1, 1, m_controlobjlist(i).obj_name, m_controlobjlist(i).level, j)  '终端奇开
         End If
         If rb_double_open.Checked = True Then
             m_control_type = "双号开"
 
-            ' single_open_control(1, 2, m_controlobjlist(i).obj_name, m_controlobjlist(i).level, j)  '路灯奇开
+            ' single_open_control(1, 2, m_controlobjlist(i).obj_name, m_controlobjlist(i).level, j)  '终端奇开
         End If
 
         If rb_normal.Checked = True Then
@@ -446,7 +446,7 @@ finish:
             m_control_type = "隔两盏开"
             g_startid = Val(Trim(lb_start_id.Text))
 
-            ' single_open_control(1, 3, m_controlobjlist(i).obj_name, m_controlobjlist(i).level, j)  '路灯奇开
+            ' single_open_control(1, 3, m_controlobjlist(i).obj_name, m_controlobjlist(i).level, j)  '终端奇开
 
         End If
         If rb_denggan1_1.Checked = True Then
@@ -510,7 +510,7 @@ finish:
 
         msg = ""
 
-     
+
 
         hand_type = ""
         If open = 1 And single_double = 1 Then
@@ -560,18 +560,18 @@ finish:
                 'control_type 是回路的控制类型
                 m_result = m_control_lamp_obj.Input_control_inf(m_huilu, "类型", Trim(rs.Fields("control_box_name").Value), "类型奇开", 0, m_dianganvalue, m_powervalue, hand_type, row_id)
                 'control_lamp_obj.Input_control_inf(m_lamp, "类型", Trim(rs.Fields("control_box_name").Value), "类型全开", 0, Trim(diangan.Text), power_string, hand_type)
-                m_control_lamp_obj.open_close_huilulamp(1, 1, Trim(rs.Fields("control_box_id").Value)) '1回路灯打开
-                m_control_lamp_obj.open_close_huilulamp(0, 2, Trim(rs.Fields("control_box_id").Value)) '2回路灯关闭
-                m_control_lamp_obj.open_close_huilulamp(1, 3, Trim(rs.Fields("control_box_id").Value)) '2回路灯关闭
+                m_control_lamp_obj.open_close_huilulamp(1, 1, Trim(rs.Fields("control_box_id").Value)) '1回终端打开
+                m_control_lamp_obj.open_close_huilulamp(0, 2, Trim(rs.Fields("control_box_id").Value)) '2回终端关闭
+                m_control_lamp_obj.open_close_huilulamp(1, 3, Trim(rs.Fields("control_box_id").Value)) '2回终端关闭
 
             End If
             '偶开回路
             If open = 1 And single_double = 2 Then  '偶开
                 m_result = m_control_lamp_obj.Input_control_inf(m_huilu, "类型", Trim(rs.Fields("control_box_name").Value), "类型偶开", 0, m_dianganvalue, m_powervalue, hand_type, row_id)
                 ' control_lamp_obj.Input_control_inf(m_lamp, "类型", Trim(rs.Fields("control_box_name").Value), "类型全开", 0, Trim(diangan.Text), power_string, hand_type)
-                m_control_lamp_obj.open_close_huilulamp(0, 1, Trim(rs.Fields("control_box_id").Value)) '1回路灯打开
-                m_control_lamp_obj.open_close_huilulamp(1, 2, Trim(rs.Fields("control_box_id").Value)) '2回路灯关闭
-                m_control_lamp_obj.open_close_huilulamp(0, 3, Trim(rs.Fields("control_box_id").Value)) '2回路灯关闭
+                m_control_lamp_obj.open_close_huilulamp(0, 1, Trim(rs.Fields("control_box_id").Value)) '1回终端打开
+                m_control_lamp_obj.open_close_huilulamp(1, 2, Trim(rs.Fields("control_box_id").Value)) '2回终端关闭
+                m_control_lamp_obj.open_close_huilulamp(0, 3, Trim(rs.Fields("control_box_id").Value)) '2回终端关闭
 
             End If
             '1/3开回路
@@ -605,18 +605,18 @@ next1:
                 If open = 1 And single_double = 1 Then  '奇开
                     m_result = m_control_lamp_obj.Input_control_inf(m_huilu, "类型", control_name, "类型奇开", 0, m_dianganvalue, m_powervalue, hand_type, row_id)
                     'control_lamp_obj.Input_control_inf(m_lamp, "类型", control_name, "类型全开", 0, Trim(diangan.Text), power_string, hand_type)
-                    m_control_lamp_obj.open_close_huilulamp(1, 1, Trim(rs.Fields("control_box_id").Value)) '1回路灯打开
-                    m_control_lamp_obj.open_close_huilulamp(0, 2, Trim(rs.Fields("control_box_id").Value)) '2回路灯关闭
-                    m_control_lamp_obj.open_close_huilulamp(1, 3, Trim(rs.Fields("control_box_id").Value)) '2回路灯关闭
+                    m_control_lamp_obj.open_close_huilulamp(1, 1, Trim(rs.Fields("control_box_id").Value)) '1回终端打开
+                    m_control_lamp_obj.open_close_huilulamp(0, 2, Trim(rs.Fields("control_box_id").Value)) '2回终端关闭
+                    m_control_lamp_obj.open_close_huilulamp(1, 3, Trim(rs.Fields("control_box_id").Value)) '2回终端关闭
 
                 End If
                 '偶开回路
                 If open = 1 And single_double = 2 Then  '偶开
                     m_result = m_control_lamp_obj.Input_control_inf(m_huilu, "类型", control_name, "类型偶开", 0, m_dianganvalue, m_powervalue, hand_type, row_id)
                     'control_lamp_obj.Input_control_inf(m_lamp, "类型", control_name, "类型全开", 0, Trim(diangan.Text), power_string, hand_type)
-                    m_control_lamp_obj.open_close_huilulamp(0, 1, Trim(rs.Fields("control_box_id").Value)) '1回路灯打开
-                    m_control_lamp_obj.open_close_huilulamp(1, 2, Trim(rs.Fields("control_box_id").Value)) '2回路灯关闭
-                    m_control_lamp_obj.open_close_huilulamp(0, 3, Trim(rs.Fields("control_box_id").Value)) '2回路灯关闭
+                    m_control_lamp_obj.open_close_huilulamp(0, 1, Trim(rs.Fields("control_box_id").Value)) '1回终端打开
+                    m_control_lamp_obj.open_close_huilulamp(1, 2, Trim(rs.Fields("control_box_id").Value)) '2回终端关闭
+                    m_control_lamp_obj.open_close_huilulamp(0, 3, Trim(rs.Fields("control_box_id").Value)) '2回终端关闭
 
                 End If
                 '1/3开回路
@@ -645,9 +645,9 @@ next1:
                     m_result = m_control_lamp_obj.Input_control_inf(type(1), "类型", type(0), "类型奇开", 1, m_dianganvalue, m_powervalue, hand_type, row_id)
                     If type(1) = m_huilu Then
                         'control_lamp_obj.Input_control_inf(m_lamp, "类型", type(0), "类型全开", 0, Trim(diangan.Text), power_string, hand_type)
-                        m_control_lamp_obj.open_close_huilulamp(1, 1, Trim(rs.Fields("control_box_id").Value)) '1回路灯打开
-                        m_control_lamp_obj.open_close_huilulamp(0, 2, Trim(rs.Fields("control_box_id").Value)) '2回路灯关闭
-                        m_control_lamp_obj.open_close_huilulamp(1, 3, Trim(rs.Fields("control_box_id").Value)) '2回路灯关闭
+                        m_control_lamp_obj.open_close_huilulamp(1, 1, Trim(rs.Fields("control_box_id").Value)) '1回终端打开
+                        m_control_lamp_obj.open_close_huilulamp(0, 2, Trim(rs.Fields("control_box_id").Value)) '2回终端关闭
+                        m_control_lamp_obj.open_close_huilulamp(1, 3, Trim(rs.Fields("control_box_id").Value)) '2回终端关闭
 
                     End If
                 End If
@@ -657,9 +657,9 @@ next1:
 
                     If type(1) = m_huilu Then
                         'control_lamp_obj.Input_control_inf(m_lamp, "类型", type(0), "类型全开", 0, Trim(diangan.Text), power_string, hand_type)
-                        m_control_lamp_obj.open_close_huilulamp(0, 1, Trim(rs.Fields("control_box_id").Value)) '1回路灯打开
-                        m_control_lamp_obj.open_close_huilulamp(1, 2, Trim(rs.Fields("control_box_id").Value)) '2回路灯关闭
-                        m_control_lamp_obj.open_close_huilulamp(0, 3, Trim(rs.Fields("control_box_id").Value)) '2回路灯关闭
+                        m_control_lamp_obj.open_close_huilulamp(0, 1, Trim(rs.Fields("control_box_id").Value)) '1回终端打开
+                        m_control_lamp_obj.open_close_huilulamp(1, 2, Trim(rs.Fields("control_box_id").Value)) '2回终端关闭
+                        m_control_lamp_obj.open_close_huilulamp(0, 3, Trim(rs.Fields("control_box_id").Value)) '2回终端关闭
 
                     End If
                 End If
@@ -710,11 +710,11 @@ next2:
     End Sub
 
     ''' <summary>
-    ''' 关闭所有的路灯，按区域、类型和单灯三个级别
+    ''' 关闭所有的终端，按区域、类型和单灯三个级别
     ''' </summary>
     ''' <remarks></remarks>
 
-    Private Sub close_all_lamp(ByVal control_name As String, ByVal level As String, ByVal control_time As Integer, ByVal row_id As Integer)   '关闭所有路灯
+    Private Sub close_all_lamp(ByVal control_name As String, ByVal level As String, ByVal control_time As Integer, ByVal row_id As Integer)   '关闭所有终端
 
         '  Dim power_string As String
         'Dim control_lamp_obj As New control_lamp
@@ -731,7 +731,7 @@ next2:
         DBOperation.OpenConn(conn)
 
         msg = ""
-     
+
         hand_type = ""
 
         If level = 0 Then
@@ -812,7 +812,7 @@ next1:
 
             m_result = open_close_single_lamp(lamp(0) & lamp(1) & lamp(2), 0, control_time, row_id)
 
-            '将该回路下所有的路灯全部关闭
+            '将该回路下所有的终端全部关闭
             If lamp(1) = "31" Then
                 m_control_lamp_obj.open_close_huilulamp(0, Val(lamp(2)), lamp(0))
 
@@ -844,7 +844,7 @@ next3:
     ''' <param name="level"></param>
     ''' <param name="control_time"></param>
     ''' <remarks></remarks>
-    Private Sub group_control(ByVal control_name As String, ByVal level As String, ByVal control_time As Integer, ByVal row_id As Integer)   '打开所有路灯
+    Private Sub group_control(ByVal control_name As String, ByVal level As String, ByVal control_time As Integer, ByVal row_id As Integer)   '打开所有终端
         Dim power_string As String
         '   Dim control_lamp_obj As New control_lamp
         Dim conn As New ADODB.Connection
@@ -904,7 +904,7 @@ next3:
                         hand_type = "主控箱"
                         sql = "select control_box_id from control_box where control_box_name='" & control_name & "'"
                     Else
-                        MsgBox("三回路组合控制只针对主控箱以上级别的路灯类型进行控制，对于其他控制范围无效", , PROJECT_TITLE_STRING)
+                        MsgBox("三回路组合控制只针对主控箱以上级别的终端类型进行控制，对于其他控制范围无效", , PROJECT_TITLE_STRING)
                         GoTo finish
 
                     End If
@@ -956,10 +956,10 @@ finish:
     End Sub
 
     ''' <summary>
-    ''' 打开所有的路灯，按区域、类型和单灯三个级别
+    ''' 打开所有的终端，按区域、类型和单灯三个级别
     ''' </summary>
     ''' <remarks></remarks>
-    Private Sub open_all_lamp(ByVal control_name As String, ByVal level As String, ByVal control_time As Integer, ByVal row_id As Integer)   '打开所有路灯
+    Private Sub open_all_lamp(ByVal control_name As String, ByVal level As String, ByVal control_time As Integer, ByVal row_id As Integer)   '打开所有终端
 
         Dim conn As New ADODB.Connection
         Dim rs As New ADODB.Recordset
@@ -1055,7 +1055,7 @@ next1:
             m_result = open_close_single_lamp(lamp(0) & lamp(1) & lamp(2), 1, control_time, row_id)
 
             If lamp(1) = "31" Then
-                '将该回路下所有的路灯全部打开
+                '将该回路下所有的终端全部打开
                 m_control_lamp_obj.open_close_huilulamp(1, Val(lamp(2)), lamp(0))
 
                 'sql = "select control_box_name from control_box where control_box_id='" & lamp(0) & "'"
@@ -1119,18 +1119,18 @@ next3:
 
         type_id = Val(Mid(lamp_id, 5, 2))
         control_box_id = Mid(lamp_id, 1, 4)
-        lamp_id_bin = Com_inf.Get_lampid_bin(type_id, Val(Mid(lamp_id, 7, LAMP_ID_LEN))) '十六位长度的路灯编号二进制
+        lamp_id_bin = Com_inf.Get_lampid_bin(type_id, Val(Mid(lamp_id, 7, LAMP_ID_LEN))) '十六位长度的终端编号二进制
         If lamp_id_bin = "" Then
             GoTo finish
         End If
-        'lamp_id_bin = Com_inf.Dec_to_Bin(type_id, 5) & Com_inf.Dec_to_Bin(Mid(lamp_id, 7, LAMP_ID_LEN), 11) '十六位长度的路灯编号二进制
+        'lamp_id_bin = Com_inf.Dec_to_Bin(type_id, 5) & Com_inf.Dec_to_Bin(Mid(lamp_id, 7, LAMP_ID_LEN), 11) '十六位长度的终端编号二进制
         If open_close = 1 Then  '单灯开
 
-            '打开路灯操作
+            '打开终端操作
             open_close_single_lamp = m_control_lamp_obj.open_light_single(control_box_id, lamp_id_bin, lamp_id, m_dianganvalue, m_powervalue, control_time, row_id)
         End If
         If open_close = 0 Then
-            '关闭路灯
+            '关闭终端
             open_close_single_lamp = m_control_lamp_obj.close_light_single(control_box_id, lamp_id_bin, lamp_id, "关闭灯", "0", control_time, row_id)
         End If
 
@@ -1318,20 +1318,20 @@ finish:
 
                 '处理增加了的对象
                 If m_control_type = "开灯" Then
-                    open_all_lamp(m_controlobjlist(i).obj_name, m_controlobjlist(i).level, j, m_controlobjlist(i).row_id)   '路灯全开
+                    open_all_lamp(m_controlobjlist(i).obj_name, m_controlobjlist(i).level, j, m_controlobjlist(i).row_id)   '终端全开
                 End If
                 If m_control_type = "关灯" Then
-                    close_all_lamp(m_controlobjlist(i).obj_name, m_controlobjlist(i).level, j, m_controlobjlist(i).row_id)   '路灯全闭
+                    close_all_lamp(m_controlobjlist(i).obj_name, m_controlobjlist(i).level, j, m_controlobjlist(i).row_id)   '终端全闭
                 End If
                 If m_control_type = "单号开" Then
-                    single_open_control(1, 1, m_controlobjlist(i).obj_name, m_controlobjlist(i).level, j, m_controlobjlist(i).row_id)  '路灯奇开
+                    single_open_control(1, 1, m_controlobjlist(i).obj_name, m_controlobjlist(i).level, j, m_controlobjlist(i).row_id)  '终端奇开
                 End If
                 If m_control_type = "双号开" Then
-                    single_open_control(1, 2, m_controlobjlist(i).obj_name, m_controlobjlist(i).level, j, m_controlobjlist(i).row_id)  '路灯奇开
+                    single_open_control(1, 2, m_controlobjlist(i).obj_name, m_controlobjlist(i).level, j, m_controlobjlist(i).row_id)  '终端奇开
                 End If
                 If m_control_type = "隔两盏开" Then
 
-                    single_open_control(1, 3, m_controlobjlist(i).obj_name, m_controlobjlist(i).level, j, m_controlobjlist(i).row_id)  '路灯奇开
+                    single_open_control(1, 3, m_controlobjlist(i).obj_name, m_controlobjlist(i).level, j, m_controlobjlist(i).row_id)  '终端奇开
 
                 End If
                 If m_control_type = "三回路组合控制" Then
@@ -1548,7 +1548,7 @@ finish:
         Dim power_string As String
         Dim hand_type As String
         Dim control_box_id As String '电控箱编号
-        Dim lamp_num As Integer '共有多少盏路灯
+        Dim lamp_num As Integer '共有多少盏终端
         Dim order_string As String  '发送的关灯命令
         Dim order_descreption As String = "" '命令描述
 

@@ -7,7 +7,7 @@
     End Sub
 
     Public Sub SetControlBoxListDelegate(ByVal control_box_name As String)
-        '右边的路灯统计信息
+        '右边的终端统计信息
         g_control_box_name = control_box_name
         Dim probleminf As String = ""
         Dim lampkind As String = ""

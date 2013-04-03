@@ -72,7 +72,7 @@ Public Class 电控箱数据统计
     End Sub
 
     ''' <summary>
-    ''' 查询路灯的亮暗记录
+    ''' 查询终端的亮暗记录
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
@@ -252,7 +252,7 @@ Public Class 电控箱数据统计
         Dim controlboxname As String
         Dim i As Integer = 0
 
-      
+
         If m_checktype = 1 Then
             '查询三遥数据 
             m_statestring = "全部"
@@ -262,7 +262,7 @@ Public Class 电控箱数据统计
                     sanyao_state(m_statestring, controlboxname)  '查询
                     i += 1
                 End While
-               
+
             Else
                 If m_exceltable = 1 Then
                     sanyao_date_excel()   'excel表
@@ -894,7 +894,7 @@ finish:
 
 
     ''' <summary>
-    '''   '按电控箱进行路灯状态查询
+    '''   '按电控箱进行终端状态查询
     ''' </summary>
     ''' <remarks></remarks>
     Private Sub sanyao_state(ByVal check_state As String, ByVal controlboxname As String)
@@ -908,7 +908,7 @@ finish:
         Dim state As String
         Dim controlboxobj As New control_box
         Dim statetype As String = "数据"
-       
+
 
         Dim recData(20) As String '接收的数据
         Dim box_type As Integer '电控箱类型
@@ -1126,7 +1126,7 @@ finish:
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     ''' <remarks></remarks>
-    Private Sub 路灯亮暗信息统计_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    Private Sub 终端亮暗信息统计_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Me.Icon = New Icon("图片\favicon.ico", 32, 32)
         dtp_date_start.CustomFormat = "yyyy-MM-dd HH:mm:ss  "  '查询条件中开始日期的格式
         dtp_date_end.CustomFormat = "yyyy-MM-dd HH:mm:ss" '查询条件中结束日期的格式
@@ -1735,7 +1735,7 @@ finish:
                     i += 12
                 End While
             End If
-         
+
             .Range(.Cells(3, 1), .Cells(3, 1)).ColumnWidth = 5
             .Range(.Cells(3, 2), .Cells(3, 2)).ColumnWidth = 20
             .Range(.Cells(3, 3), .Cells(3, 5)).ColumnWidth = 10
@@ -1769,7 +1769,7 @@ finish:
     End Sub
 
     '''' <summary>
-    '''' 查询路灯的亮暗记录(文本框显示)
+    '''' 查询终端的亮暗记录(文本框显示)
     '''' </summary>
     '''' <param name="sender"></param>
     '''' <param name="e"></param>
@@ -1829,11 +1829,11 @@ finish:
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     ''' <remarks></remarks>
-    Private Sub 路灯亮暗信息统计_FormClosing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
+    Private Sub 终端亮暗信息统计_FormClosing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
         If Me.BackgroundWorker_on_off.IsBusy = True Then
             Me.BackgroundWorker_on_off.CancelAsync()
         End If
-      ProcessKill(m_xlApp, m_xlBook, m_xlSheet)
+        ProcessKill(m_xlApp, m_xlBook, m_xlSheet)
         '  CloseProcess(m_xlApp, m_xlBook, m_xlSheet)
     End Sub
 

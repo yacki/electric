@@ -17,7 +17,7 @@
     Public Const LAMP_STATE_CONTROL As String = "控制状态"
     Public Const COMPANY_NAME As String = ""  '各种报表中的单位名称
     Public Const SYSTEM_VISION As Integer = 2 '软件版本，1为主控箱编号1字节，主控箱编号2为2字节
-    Public Const LAMP_ID_LEN As Integer = 5  '3  路灯编号中，灯的独立编号长度,扩展后为5位长度
+    Public Const LAMP_ID_LEN As Integer = 5  '3  终端编号中，灯的独立编号长度,扩展后为5位长度
     Public Const LAMP_ID_MAX As Integer = 20000  '999 灯的独立编号最大为20000 十六进制为4E20 1-10类型停止使用，类型号使用11-31类型
     Public Const TYPE_ID_MIN As Integer = 1 '除了0类型的最小的类型编号
     Public Const ALARMTYPE_OK As String = "吸合"  '开关量报警标志0
@@ -44,12 +44,12 @@
     Public g_mapname As String  '地图名称
 
 
-    '******************绘制路灯*********************************************
-    Public g_fullcolor, g_closecolor, g_problemcolor, g_noreturncolor, g_partcolor As System.Drawing.Color  '路灯系统的颜色
-    Public g_lampmap As Graphics    '绘制路灯
+    '******************绘制终端*********************************************
+    Public g_fullcolor, g_closecolor, g_problemcolor, g_noreturncolor, g_partcolor As System.Drawing.Color  '终端系统的颜色
+    Public g_lampmap As Graphics    '绘制终端
     Public g_lampdrawtag As Boolean = False   '使用graphic 的共享变量
 
-    '******控制条件，即以电阻还是电流来判断路灯开关的状态*******************
+    '******控制条件，即以电阻还是电流来判断终端开关的状态*******************
     Public g_controlcondition As String  '控制条件
     Public g_controlvaluepart, g_controlvalueall As Integer '控制值
     Public g_startid As Integer = 1   '1/3开的起始编号
@@ -74,8 +74,8 @@
 
     '*********************公共函数****************************************
     Public g_controlboxid As String  '电控箱编号
-    Public g_lampidstring As String  '路灯编号
-    Public g_shortlampid As String  '路灯的三位独立编号
+    Public g_lampidstring As String  '终端编号
+    Public g_shortlampid As String  '终端的三位独立编号
     Public g_dianzuad, g_currentad, g_information, g_presuread, g_powerad As Integer   '十六进制转换为十进制后三位字段,电阻，电流，备注
     Public g_controlboxname, g_lamptype '电控箱名称，景观灯类型，景观灯编号
     Public g_currentvalue, g_presurevalue, g_powervalue, g_yinshuvalue As Double '电流值及电压值,功率，功率因数

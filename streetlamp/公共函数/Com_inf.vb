@@ -120,7 +120,7 @@ Module Com_inf
 
     End Sub
     ''' <summary>
-    '''   读取路灯状态颜色文件
+    '''   读取终端状态颜色文件
     ''' </summary>
     ''' <remarks></remarks>
     Public Sub Read_file()
@@ -291,10 +291,10 @@ Module Com_inf
     End Function
 
     ''' <summary>
-    ''' '控制命令中的十六进制转换成十进制的两位的灯类型和三位的路灯编号
+    ''' '控制命令中的十六进制转换成十进制的两位的灯类型和三位的终端编号
     ''' </summary>
     ''' <param name="str">控制命令字符串</param>
-    ''' <returns>返回五位长度的十进制数，两位灯的类型和三位路灯编号</returns>
+    ''' <returns>返回五位长度的十进制数，两位灯的类型和三位终端编号</returns>
     ''' <remarks></remarks>
     Public Function Control_Hex_to_Dec(ByVal str As String) As String
         Dim str_bin, str_id As String
@@ -308,7 +308,7 @@ Module Com_inf
         'lamp_id = Value_Bin(Mid(str_bin, 6, 11)).ToString  '灯的编号
 
 
-        'If lamp_type_num.ToString.Length = 1 Then  '两位的十进制路灯编号
+        'If lamp_type_num.ToString.Length = 1 Then  '两位的十进制终端编号
         '    str_id = "0" & lamp_type_num.ToString
         'Else
         '    str_id = lamp_type_num.ToString
@@ -320,7 +320,7 @@ Module Com_inf
         'End While
         'str_id &= id_str
 
-        'Control_Hex_to_Dec = str_id '返回七位长度的十进制数，两位灯的类型和五位路灯编号
+        'Control_Hex_to_Dec = str_id '返回七位长度的十进制数，两位灯的类型和五位终端编号
         '********************2011年3月7日将灯的编号扩展为5位时修改*******************
         str_bin = HEX_to_BIN(str)  '将四位的十六进制灯的编号转换成16位二进制
 
@@ -335,7 +335,7 @@ Module Com_inf
         End If
 
 
-        If lamp_type_num.ToString.Length = 1 Then  '两位的十进制路灯编号
+        If lamp_type_num.ToString.Length = 1 Then  '两位的十进制终端编号
             str_id = "0" & lamp_type_num.ToString
         Else
             str_id = lamp_type_num.ToString
@@ -347,7 +347,7 @@ Module Com_inf
         End While
         str_id &= id_str
 
-        Control_Hex_to_Dec = str_id '返回2+LAMP_ID_LEN位长度的十进制数，两位灯的类型和LAMP_ID_LEN位路灯编号
+        Control_Hex_to_Dec = str_id '返回2+LAMP_ID_LEN位长度的十进制数，两位灯的类型和LAMP_ID_LEN位终端编号
 
 
     End Function
@@ -421,7 +421,7 @@ Module Com_inf
         '    short_str = "0" & short_str '电控箱编号不足4位用0补充
         'End While
         'g_controlboxid = short_str
-        'g_lampidstring = g_controlboxid & Control_Hex_to_Dec(inf_list(1) & inf_list(2))   '第2和3个字节转换成2+LAMP_ID_LEN长度的路灯编号
+        'g_lampidstring = g_controlboxid & Control_Hex_to_Dec(inf_list(1) & inf_list(2))   '第2和3个字节转换成2+LAMP_ID_LEN长度的终端编号
         g_dianzuad = System.Convert.ToInt32(inf_list(3), 16).ToString   '第4个字节作为判断开关的标志
         g_currentad = System.Convert.ToInt32(inf_list(3) & inf_list(4), 16).ToString  '第4，5个字节转换为2位电流
         g_information = System.Convert.ToInt32(inf_list(5), 16).ToString  '第6个字节转换为2位的预留
@@ -440,7 +440,7 @@ Module Com_inf
         '    short_str = "0" & short_str '电控箱编号不足4位用0补充
         'End While
         'g_controlboxid = short_str
-        'g_lampidstring = g_controlboxid & Control_Hex_to_Dec(inf_list(1) & inf_list(2))   '第2和3个字节转换成2+LAMP_ID_LEN长度的路灯编号
+        'g_lampidstring = g_controlboxid & Control_Hex_to_Dec(inf_list(1) & inf_list(2))   '第2和3个字节转换成2+LAMP_ID_LEN长度的终端编号
         g_dianzuad = System.Convert.ToInt32(inf_list(3), 16).ToString   '第4个字节转换为2位电阻
         g_currentad = System.Convert.ToInt32(inf_list(4), 16).ToString  '第5个字节转换为2位电流
         g_information = System.Convert.ToInt32(inf_list(5), 16).ToString  '第6个字节转换为2位的预留
@@ -466,7 +466,7 @@ Module Com_inf
                 lamp_id = "0" & lamp_id
 
             End While
-            g_lampidstring = g_controlboxid & lamp_kind & lamp_id  '第2和3个字节转换成2+LAMP_ID_LEN长度的路灯编号
+            g_lampidstring = g_controlboxid & lamp_kind & lamp_id  '第2和3个字节转换成2+LAMP_ID_LEN长度的终端编号
 
         Else
             g_controlboxid = System.Convert.ToInt32(inf_list(9) & inf_list(0), 16)
@@ -483,7 +483,7 @@ Module Com_inf
                 lamp_id = "0" & lamp_id
 
             End While
-            g_lampidstring = g_controlboxid & lamp_kind & lamp_id  '第2和3个字节转换成2+LAMP_ID_LEN长度的路灯编号
+            g_lampidstring = g_controlboxid & lamp_kind & lamp_id  '第2和3个字节转换成2+LAMP_ID_LEN长度的终端编号
 
         End If
 
@@ -789,7 +789,7 @@ Module Com_inf
             Exit Sub
         End If
         msg = ""
-        lamp_id_combox.Items.Clear()  '将路灯编号下拉框内容清空
+        lamp_id_combox.Items.Clear()  '将终端编号下拉框内容清空
         sql = "select * from lamp_street where control_box_name='" & Trim(box_id_combox.Text) & "' and type_string='" & Trim(lamp_type_combox.Text) & "' order by lamp_id"
 
         rs = DBOperation.SelectSQL(conn, sql, msg)
@@ -803,7 +803,7 @@ Module Com_inf
         If rs.RecordCount > 0 Then
             lamp_id_start.Text = Mid(Trim(rs.Fields("lamp_id").Value), 1, 6)
             While rs.EOF = False
-                lamp_id_combox.Items.Add(Mid(Trim(rs.Fields("lamp_id").Value), 7, LAMP_ID_LEN))  '增加路灯编号下拉框中的内容
+                lamp_id_combox.Items.Add(Mid(Trim(rs.Fields("lamp_id").Value), 7, LAMP_ID_LEN))  '增加终端编号下拉框中的内容
                 rs.MoveNext()
             End While
         End If
@@ -846,12 +846,12 @@ Module Com_inf
 
 
         msg = ""
-        lamp_id_combox.Items.Clear()  '将路灯编号下拉框内容清空
+        lamp_id_combox.Items.Clear()  '将终端编号下拉框内容清空
 
-        If lamp_all = 0 Then  '如果选择的路灯有范围控制
+        If lamp_all = 0 Then  '如果选择的终端有范围控制
             sql = "select * from lamp_inf where control_box_id='" & Trim(box_id_combox.Text) & "'"
 
-        Else  '路灯编号无范围控制，选择所有
+        Else  '终端编号无范围控制，选择所有
             sql = "select * from lamp_inf where control_box_id='" & Trim(box_id_combox.Text) & "'"
 
         End If
@@ -859,7 +859,7 @@ Module Com_inf
 
         If rs.RecordCount > 0 Then
             While rs.EOF = False
-                lamp_id_combox.Items.Add(Trim(rs.Fields("lamp_id").Value))  '增加路灯编号下拉框中的内容
+                lamp_id_combox.Items.Add(Trim(rs.Fields("lamp_id").Value))  '增加终端编号下拉框中的内容
                 rs.MoveNext()
             End While
         End If
@@ -912,7 +912,7 @@ Module Com_inf
     End Sub
 
     ''' <summary>
-    ''' 将电控箱编号，景观灯种类和灯的独立编号组合成一个完整的路灯编号
+    ''' 将电控箱编号，景观灯种类和灯的独立编号组合成一个完整的终端编号
     ''' </summary>
     ''' <param name="control_box_name">电控箱名称</param>
     ''' <param name="lamp_type">类型</param>
@@ -972,7 +972,7 @@ Module Com_inf
     End Function
 
     ''' <summary>
-    ''' 将原始的路灯编号，转换成电控箱名称+景观灯类型+景观灯编号
+    ''' 将原始的终端编号，转换成电控箱名称+景观灯类型+景观灯编号
     ''' </summary>
     ''' <param name="lamp_id">灯的编号</param>
     ''' <remarks></remarks>
@@ -1145,7 +1145,7 @@ finish2:
     ''' <summary>
     ''' 由灯的编号获取灯杆号
     ''' </summary>
-    ''' <param name="lamp_id">路灯编号</param>
+    ''' <param name="lamp_id">终端编号</param>
     ''' <remarks></remarks>
     Public Sub Get_DengGan(ByVal lamp_id As String)
         g_dengzhuid = (System.Convert.ToInt32(Mid(lamp_id, 7, LAMP_ID_LEN)) - 1) \ g_lampnum + 1

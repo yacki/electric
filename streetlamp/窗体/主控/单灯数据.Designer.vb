@@ -165,7 +165,7 @@ Partial Class 单灯数据
         'lamp_pointinfor
         '
         Me.lamp_pointinfor.DataPropertyName = "lamp_pointinfor"
-        Me.lamp_pointinfor.HeaderText = "节点备注"
+        Me.lamp_pointinfor.HeaderText = "联系电话"
         Me.lamp_pointinfor.Name = "lamp_pointinfor"
         '
         'type_string

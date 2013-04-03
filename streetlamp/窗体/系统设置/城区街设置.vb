@@ -259,7 +259,7 @@
             i = 0
             While i < control_box_id_num
                 sql = "delete from RoadIDAndIMEI where RoadID='" & Val(control_box_id_list(i)) & "'"
-                DBOperation.ExecuteSQL(conn, sql, msg)  '删除RoadIDAndIMEI中的路灯信息
+                DBOperation.ExecuteSQL(conn, sql, msg)  '删除RoadIDAndIMEI中的终端信息
                 i += 1
             End While
 
@@ -267,7 +267,7 @@
             i = 0
             While i < control_box_id_num
                 sql = "delete from box_lamptype where control_box_id='" & control_box_id_list(i) & "'"
-                DBOperation.ExecuteSQL(conn, sql, msg)  '删除RoadIDAndIMEI中的路灯信息
+                DBOperation.ExecuteSQL(conn, sql, msg)  '删除RoadIDAndIMEI中的终端信息
                 i += 1
             End While
             '第七步删除lamp_inf表中的数据
@@ -275,7 +275,7 @@
             i = 0
             While i < control_box_id_num
                 sql = "delete from lamp_inf where control_box_id='" & control_box_id_list(i) & "'"
-                DBOperation.ExecuteSQL(conn, sql, msg)  '删除lamp_inf表中的路灯信息
+                DBOperation.ExecuteSQL(conn, sql, msg)  '删除lamp_inf表中的终端信息
                 i += 1
             End While
             cb_city_delete.Text = ""
@@ -385,7 +385,7 @@
             i = 0
             While i < control_box_id_num
                 sql = "delete from RoadIDAndIMEI where RoadID='" & Val(control_box_id_list(i)) & "'"
-                DBOperation.ExecuteSQL(conn, sql, msg)  '删除RoadIDAndIMEI中的路灯信息
+                DBOperation.ExecuteSQL(conn, sql, msg)  '删除RoadIDAndIMEI中的终端信息
                 i += 1
             End While
 
@@ -393,7 +393,7 @@
             i = 0
             While i < control_box_id_num
                 sql = "delete from box_lamptype where control_box_id='" & control_box_id_list(i) & "'"
-                DBOperation.ExecuteSQL(conn, sql, msg)  '删除RoadIDAndIMEI中的路灯信息
+                DBOperation.ExecuteSQL(conn, sql, msg)  '删除RoadIDAndIMEI中的终端信息
                 i += 1
             End While
             '第六步删除lamp_inf表中的数据
@@ -401,7 +401,7 @@
             i = 0
             While i < control_box_id_num
                 sql = "delete from lamp_inf where control_box_id='" & control_box_id_list(i) & "'"
-                DBOperation.ExecuteSQL(conn, sql, msg)  '删除lamp_inf中的路灯信息
+                DBOperation.ExecuteSQL(conn, sql, msg)  '删除lamp_inf中的终端信息
                 i += 1
             End While
             cb_area_delete.Text = ""
@@ -490,7 +490,7 @@
             i = 0
             While i < control_box_id_num
                 sql = "delete from RoadIDAndIMEI where RoadID='" & Val(control_box_id_list(i)) & "'"
-                DBOperation.ExecuteSQL(conn, sql, msg)  '删除RoadIDAndIMEI中的路灯信息
+                DBOperation.ExecuteSQL(conn, sql, msg)  '删除RoadIDAndIMEI中的终端信息
                 i += 1
             End While
 
@@ -498,14 +498,14 @@
             i = 0
             While i < control_box_id_num
                 sql = "delete from box_lamptype where control_box_id='" & control_box_id_list(i) & "'"
-                DBOperation.ExecuteSQL(conn, sql, msg)  '删除RoadIDAndIMEI中的路灯信息
+                DBOperation.ExecuteSQL(conn, sql, msg)  '删除RoadIDAndIMEI中的终端信息
                 i += 1
             End While
             '第五步删除lamp_inf表中的数据
             i = 0
             While i < control_box_id_num
                 sql = "delete from lamp_inf where control_box_id='" & control_box_id_list(i) & "'"
-                DBOperation.ExecuteSQL(conn, sql, msg) '删除lamp_inf表中的路灯信息
+                DBOperation.ExecuteSQL(conn, sql, msg) '删除lamp_inf表中的终端信息
                 i += 1
             End While
             cb_street_delete.Text = ""
@@ -555,7 +555,7 @@
 
         'End If
 
-        g_lampmap.Clear(Color.Empty)  '清空路灯图片
+        g_lampmap.Clear(Color.Empty)  '清空终端图片
         '刷新右侧列表
         g_welcomewinobj.SetControlBoxListDelegate(g_welcomewinobj.dgv_lamp_state_list, 0)
 

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class 路灯状态查询窗口
+Partial Class 终端状态查询窗口
     Inherits System.Windows.Forms.Form
 
     'Form 重写 Dispose，以清理组件列表。
@@ -19,7 +19,7 @@ Partial Class 路灯状态查询窗口
     '不要使用代码编辑器修改它。
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(路灯状态查询窗口))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(终端状态查询窗口))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
@@ -90,7 +90,7 @@ Partial Class 路灯状态查询窗口
         Me.lamp_string.Name = "lamp_string"
         Me.lamp_string.Size = New System.Drawing.Size(65, 12)
         Me.lamp_string.TabIndex = 91
-        Me.lamp_string.Text = "路灯编号："
+        Me.lamp_string.Text = "终端编号："
         '
         'MenuStrip1
         '
@@ -115,7 +115,7 @@ Partial Class 路灯状态查询窗口
         '
         Me.finding.Name = "finding"
         Me.finding.Size = New System.Drawing.Size(101, 17)
-        Me.finding.Text = "路灯状态查询窗口"
+        Me.finding.Text = "终端状态查询窗口"
         '
         'ToolStripProgressBar_check_communication
         '
@@ -179,12 +179,12 @@ Partial Class 路灯状态查询窗口
         '
         'datagridview_lamp_type
         '
-        Me.datagridview_lamp_type.HeaderText = "路灯类型"
+        Me.datagridview_lamp_type.HeaderText = "终端类型"
         Me.datagridview_lamp_type.Name = "datagridview_lamp_type"
         '
         'datagridview_lamp_id
         '
-        Me.datagridview_lamp_id.HeaderText = "路灯编号"
+        Me.datagridview_lamp_id.HeaderText = "终端编号"
         Me.datagridview_lamp_id.Name = "datagridview_lamp_id"
         '
         'datagridview_dianzu
@@ -236,7 +236,7 @@ Partial Class 路灯状态查询窗口
         Me.lamp_id_control.Size = New System.Drawing.Size(71, 16)
         Me.lamp_id_control.TabIndex = 100
         Me.lamp_id_control.TabStop = True
-        Me.lamp_id_control.Text = "路灯编号"
+        Me.lamp_id_control.Text = "终端编号"
         Me.lamp_id_control.UseVisualStyleBackColor = False
         '
         'GroupBox1
@@ -277,7 +277,7 @@ Partial Class 路灯状态查询窗口
         Me.lamp_type.Name = "lamp_type"
         Me.lamp_type.Size = New System.Drawing.Size(44, 20)
         Me.lamp_type.TabIndex = 92
-        Me.lamp_type.Text = "(0)路灯"
+        Me.lamp_type.Text = "(0)终端"
         Me.lamp_type.Visible = False
         '
         'lamp_id_start
@@ -299,7 +299,7 @@ Partial Class 路灯状态查询窗口
         Me.lamp_type_id.TabIndex = 169
         Me.lamp_type_id.Text = "灯的类型"
         '
-        '路灯状态查询窗口
+        '终端状态查询窗口
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -318,8 +318,8 @@ Partial Class 路灯状态查询窗口
         Me.Controls.Add(Me.MenuStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Name = "路灯状态查询窗口"
-        Me.Text = "路灯状态查询窗口"
+        Me.Name = "终端状态查询窗口"
+        Me.Text = "终端状态查询窗口"
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
         CType(Me.state_list, System.ComponentModel.ISupportInitialize).EndInit()

@@ -136,7 +136,7 @@ Partial Class 增加节日模式
         Me.rb_lamp_id_control.Size = New System.Drawing.Size(71, 16)
         Me.rb_lamp_id_control.TabIndex = 19
         Me.rb_lamp_id_control.TabStop = True
-        Me.rb_lamp_id_control.Text = "路灯编号"
+        Me.rb_lamp_id_control.Text = "终端编号"
         Me.rb_lamp_id_control.UseVisualStyleBackColor = True
         '
         'rb_box_control
@@ -286,7 +286,7 @@ Partial Class 增加节日模式
         Me.lb_lamp_id_start.Name = "lb_lamp_id_start"
         Me.lb_lamp_id_start.Size = New System.Drawing.Size(113, 12)
         Me.lb_lamp_id_start.TabIndex = 115
-        Me.lb_lamp_id_start.Text = "路灯编号的前半部分"
+        Me.lb_lamp_id_start.Text = "终端编号的前半部分"
         '
         'cb_lamp_id
         '
@@ -305,7 +305,7 @@ Partial Class 增加节日模式
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(65, 12)
         Me.Label2.TabIndex = 114
-        Me.Label2.Text = "路灯编号："
+        Me.Label2.Text = "终端编号："
         '
         'GroupBox4
         '

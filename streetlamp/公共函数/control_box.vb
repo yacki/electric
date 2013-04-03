@@ -3467,7 +3467,7 @@ finish:
     End Function
 
     ''' <summary>
-    ''' 设置路灯的电流报警上下限下放字符串
+    ''' 设置终端的电流报警上下限下放字符串
     ''' </summary>
     ''' <param name="control_box_name"></param>
     ''' <returns></returns>

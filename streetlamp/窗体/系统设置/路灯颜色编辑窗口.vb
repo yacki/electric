@@ -1,8 +1,8 @@
 ﻿''' <summary>
-''' 编辑表示路灯各种状态的颜色值，记录得到lamp_color.txt文件中
+''' 编辑表示终端各种状态的颜色值，记录得到lamp_color.txt文件中
 ''' </summary>
 ''' <remarks></remarks>
-Public Class 路灯颜色编辑窗口
+Public Class 终端颜色编辑窗口
 
     ''' <summary>
     ''' 双击打开状态颜色框
@@ -43,7 +43,7 @@ Public Class 路灯颜色编辑窗口
             write.WriteLine(Trim(pb_close_color.BackColor.ToArgb))  '1
             write.WriteLine(Trim(pb_problem_color.BackColor.ToArgb))  '4
             write.Close()
-            '刷新窗口中的路灯颜色信息
+            '刷新窗口中的终端颜色信息
             g_fullcolor = pb_full_color.BackColor  '主控界面中的全功率颜色变量
             g_problemcolor = pb_problem_color.BackColor  '主控界面中的故障颜色变量
             g_closecolor = pb_close_color.BackColor  '主控界面中的关闭灯颜色变量
@@ -58,7 +58,7 @@ Public Class 路灯颜色编辑窗口
             MsgBox("颜色编辑成功！", , PROJECT_TITLE_STRING)
 
             '增加操作记录
-            Com_inf.Insert_Operation("编辑路灯状态颜色")
+            Com_inf.Insert_Operation("编辑终端状态颜色")
 
         Catch ex As Exception
             MsgBox(ex.Message, , PROJECT_TITLE_STRING)
@@ -74,15 +74,15 @@ Public Class 路灯颜色编辑窗口
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     ''' <remarks></remarks>
-    Private Sub 路灯颜色编辑窗口_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    Private Sub 终端颜色编辑窗口_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         '设置各个窗体的图标
         Me.Icon = New Icon("图片\favicon.ico", 32, 32)
 
-        Com_inf.Read_file()  '读取系统默认的路灯标识颜色
+        Com_inf.Read_file()  '读取系统默认的终端标识颜色
 
-        pb_full_color.BackColor = g_fullcolor  '全功率路灯标识颜色
+        pb_full_color.BackColor = g_fullcolor  '全功率终端标识颜色
         pb_problem_color.BackColor = g_problemcolor '故障灯标志颜色
-        pb_close_color.BackColor = g_closecolor  '关闭路灯标识颜色
+        pb_close_color.BackColor = g_closecolor  '关闭终端标识颜色
         pb_part_color.BackColor = g_noreturncolor '无返回值标志颜色
         pb_par_color.BackColor = g_partcolor '半功率标志颜色
 
@@ -124,7 +124,7 @@ Public Class 路灯颜色编辑窗口
         pb_par_color.Refresh()
     End Sub
 
-    Private Sub 路灯颜色编辑窗口_FormClosing(sender As System.Object, e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
+    Private Sub 终端颜色编辑窗口_FormClosing(sender As System.Object, e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
         g_windowclose = 1
     End Sub
 End Class

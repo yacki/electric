@@ -199,7 +199,7 @@
         Dim msg As String
         Dim conn As New ADODB.Connection
         Dim street_id As String
-        Dim pos_add As System.Drawing.Point  '新增一串路灯的起点和终点坐标
+        Dim pos_add As System.Drawing.Point  '新增一串终端的起点和终点坐标
         Dim box_id As String  '电控箱编号！
         Dim imei_string, box_name_string As String
         Dim huilunum As Integer  '模拟量
@@ -239,7 +239,7 @@
             Exit Sub
         End If
 
-        '屏幕中的路灯起点坐标转换城地图中的相对坐标
+        '屏幕中的终端起点坐标转换城地图中的相对坐标
         pos_add.X = Val(tb_start_pos_x.Text - g_welcomewinobj.GroupBox1.Location.X - g_welcomewinobj.DesktopLocation.X - (Me.Width - Me.ClientSize.Width) - g_welcomewinobj.pb_map.Location.X - g_welcomewinobj.SplitContainer3.Panel1.Width)
         pos_add.Y = Val(tb_start_pos_y.Text - g_welcomewinobj.GroupBox1.Location.Y - g_welcomewinobj.DesktopLocation.Y - (Me.Height - Me.ClientSize.Height) - g_welcomewinobj.pb_map.Location.Y)
 
@@ -303,7 +303,7 @@
                 DBOperation.ExecuteSQL(conn, sql, msg)
 
             End If
-            '增加该电控箱下的路灯类型
+            '增加该电控箱下的终端类型
             sql = "insert into box_lamptype(control_box_id,lamp_type_id) values('" & box_id & "','0')"
             DBOperation.ExecuteSQL(conn, sql, msg)
 
@@ -357,7 +357,7 @@
 
 
 
-      
+
 finish:
         rs_control_box.Close()
         rs_control_box = Nothing
@@ -374,7 +374,7 @@ finish:
     ''' <param name="box_id"></param>
     ''' <remarks></remarks>
     Private Sub add_controlbox_inf(ByVal box_id As String)
-       
+
         If Trim(Me.tb_phonenum_add.TextLength > 20) Then
             MsgBox("电话号码长度大于20，请重新输入", , PROJECT_TITLE_STRING)
             tb_phonenum_add.Focus()
@@ -1234,12 +1234,12 @@ finish:
 
         If g_addboxtag = 2 Then
             '表示坐标被更新过
-            '屏幕中的路灯起点坐标转换城地图中的相对坐标
+            '屏幕中的终端起点坐标转换城地图中的相对坐标
             pos_add.X = Val(tb_start_x.Text - g_welcomewinobj.GroupBox1.Location.X - g_welcomewinobj.DesktopLocation.X - (Me.Width - Me.ClientSize.Width) - g_welcomewinobj.pb_map.Location.X - g_welcomewinobj.SplitContainer3.Panel1.Width)
             pos_add.Y = Val(tb_start_y.Text - g_welcomewinobj.GroupBox1.Location.Y - g_welcomewinobj.DesktopLocation.Y - (Me.Height - Me.ClientSize.Height) - g_welcomewinobj.pb_map.Location.Y)
 
         Else
-            '屏幕中的路灯起点坐标转换城地图中的相对坐标
+            '屏幕中的终端起点坐标转换城地图中的相对坐标
             pos_add.X = Val(tb_start_x.Text)
             pos_add.Y = Val(tb_start_y.Text)
 
@@ -1527,7 +1527,7 @@ finish:
             sql = "delete from box_lamptype where control_box_id='" & m_editboxid & "'"
             DBOperation.ExecuteSQL(conn, sql, msg)
 
-            '删除lamp_inf该电控箱编号的路灯信息
+            '删除lamp_inf该电控箱编号的终端信息
             sql = "delete from lamp_inf where control_box_id='" & m_editboxid & "'"
             DBOperation.ExecuteSQL(conn, sql, msg)
 

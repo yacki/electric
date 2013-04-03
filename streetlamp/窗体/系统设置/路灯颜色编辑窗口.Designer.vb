@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class 路灯颜色编辑窗口
+Partial Class 终端颜色编辑窗口
     Inherits System.Windows.Forms.Form
 
     'Form 重写 Dispose，以清理组件列表。
@@ -20,7 +20,7 @@ Partial Class 路灯颜色编辑窗口
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(路灯颜色编辑窗口))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(终端颜色编辑窗口))
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
         Me.full_color_string = New System.Windows.Forms.Label()
         Me.pb_full_color = New System.Windows.Forms.PictureBox()
@@ -45,11 +45,11 @@ Partial Class 路灯颜色编辑窗口
         '
         Me.full_color_string.AutoSize = True
         Me.full_color_string.BackColor = System.Drawing.Color.Transparent
-        Me.full_color_string.Location = New System.Drawing.Point(79, 30)
+        Me.full_color_string.Location = New System.Drawing.Point(67, 33)
         Me.full_color_string.Name = "full_color_string"
-        Me.full_color_string.Size = New System.Drawing.Size(65, 12)
+        Me.full_color_string.Size = New System.Drawing.Size(77, 12)
         Me.full_color_string.TabIndex = 0
-        Me.full_color_string.Text = "亮灯标记："
+        Me.full_color_string.Text = "无故障标记："
         '
         'pb_full_color
         '
@@ -73,7 +73,7 @@ Partial Class 路灯颜色编辑窗口
         '
         Me.problem_color_string.AutoSize = True
         Me.problem_color_string.BackColor = System.Drawing.Color.Transparent
-        Me.problem_color_string.Location = New System.Drawing.Point(237, 30)
+        Me.problem_color_string.Location = New System.Drawing.Point(238, 33)
         Me.problem_color_string.Name = "problem_color_string"
         Me.problem_color_string.Size = New System.Drawing.Size(65, 12)
         Me.problem_color_string.TabIndex = 6
@@ -101,11 +101,11 @@ Partial Class 路灯颜色编辑窗口
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Location = New System.Drawing.Point(238, 77)
+        Me.Label1.Location = New System.Drawing.Point(190, 73)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(65, 12)
+        Me.Label1.Size = New System.Drawing.Size(113, 12)
         Me.Label1.TabIndex = 9
-        Me.Label1.Text = "关灯标记："
+        Me.Label1.Text = "网络连接异常标记："
         '
         'pb_part_color
         '
@@ -120,11 +120,11 @@ Partial Class 路灯颜色编辑窗口
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Location = New System.Drawing.Point(55, 77)
+        Me.Label2.Location = New System.Drawing.Point(43, 73)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(89, 12)
+        Me.Label2.Size = New System.Drawing.Size(101, 12)
         Me.Label2.TabIndex = 11
-        Me.Label2.Text = "无返回值标记："
+        Me.Label2.Text = "无信息返回标记："
         '
         'pb_par_color
         '
@@ -147,7 +147,7 @@ Partial Class 路灯颜色编辑窗口
         Me.Label3.Text = "亮灯标记(半功率)："
         Me.Label3.Visible = False
         '
-        '路灯颜色编辑窗口
+        '终端颜色编辑窗口
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -166,8 +166,8 @@ Partial Class 路灯颜色编辑窗口
         Me.Controls.Add(Me.full_color_string)
         Me.Font = New System.Drawing.Font("宋体", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "路灯颜色编辑窗口"
-        Me.Text = "路灯状态颜色编辑窗口"
+        Me.Name = "终端颜色编辑窗口"
+        Me.Text = "状态颜色编辑窗口"
         CType(Me.pb_full_color, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pb_problem_color, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pb_close_color, System.ComponentModel.ISupportInitialize).EndInit()

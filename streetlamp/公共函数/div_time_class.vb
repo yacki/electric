@@ -414,7 +414,7 @@ Public Class div_time_class
         End If
 
         clock_string = Format(Now(), "yyyy-MM-dd HH:mm:ss").ToString   '当前时间
-        ''刷新路灯状况
+        ''刷新终端状况
         control_string = ""
         Dim time_s1 As DateTime  '记录当前时间
         state_tag = 0
@@ -500,7 +500,7 @@ Public Class div_time_class
                                 sql = "update lamp_inf set div_time_id=0, state=3, result=4 ,current_l=0,presure_l=0,power=0,presure_end=0,date='" & Now & "' where control_box_id='" & box_id & "' and lamp_type_id='" & type_id & "'"
                                 DBOperation.ExecuteSQL(conn, sql, msg)
 
-                                '如果控制的是回路，则将回路中的路灯全部设置为关
+                                '如果控制的是回路，则将回路中的终端全部设置为关
                                 If Mid(lamp_id_string, 5, 2) = "31" Then
                                     i = 1
                                     While i <= g_lampnum
@@ -518,7 +518,7 @@ Public Class div_time_class
                                 DBOperation.ExecuteSQL(conn, sql, msg)
 
 
-                                '如果控制的是回路，则将回路中的路灯全部设置为关
+                                '如果控制的是回路，则将回路中的终端全部设置为关
                                 If Mid(lamp_id_string, 5, 2) = "31" Then
                                     i = 1
                                     While i <= g_lampnum
@@ -540,7 +540,7 @@ Public Class div_time_class
                                 DBOperation.ExecuteSQL(conn, sql, msg)
 
 
-                                '如果控制的是回路，则将回路中的路灯全部设置为关
+                                '如果控制的是回路，则将回路中的终端全部设置为关
                                 If Mid(lamp_id_string, 5, 2) = "31" Then
                                     i = 1
                                     While i <= g_lampnum
@@ -561,7 +561,7 @@ Public Class div_time_class
                                 sql = "update lamp_inf set div_time_id=0, state=3, result=4,current_l=0,presure_l=0,power=0,presure_end=0 where CAST(SUBSTRING(lamp_id, 7, " & LAMP_ID_LEN & ") AS int) % 2 =1 and control_box_id='" & box_id & "' and lamp_type_id='" & type_id & "'"
                                 DBOperation.ExecuteSQL(conn, sql, msg)
 
-                                '如果控制的是回路，则将回路中的路灯全部设置为关
+                                '如果控制的是回路，则将回路中的终端全部设置为关
                                 If Mid(lamp_id_string, 5, 2) = "31" Then
                                     i = 1
                                     While i <= g_lampnum
@@ -583,7 +583,7 @@ Public Class div_time_class
                                 sql = "update lamp_inf set div_time_id=1, state=4, result=4 where CAST(SUBSTRING(lamp_id, 7, " & LAMP_ID_LEN & ") AS int) % 2 =0 and control_box_id='" & box_id & "' and lamp_type_id='" & type_id & "'"
                                 DBOperation.ExecuteSQL(conn, sql, msg)
 
-                                '如果控制的是回路，则将回路中的路灯全部设置为关
+                                '如果控制的是回路，则将回路中的终端全部设置为关
                                 If Mid(lamp_id_string, 5, 2) = "31" Then
                                     i = 1
                                     While i <= g_lampnum
@@ -605,7 +605,7 @@ Public Class div_time_class
                                 sql = "update lamp_inf set div_time_id=0, state=3, result=4,current_l=0,presure_l=0,power=0,presure_end=0 where CAST(SUBSTRING(lamp_id, 7, " & LAMP_ID_LEN & ") AS int) % 2 =0 and control_box_id='" & box_id & "' and lamp_type_id='" & type_id & "'"
                                 DBOperation.ExecuteSQL(conn, sql, msg)
 
-                                '如果控制的是回路，则将回路中的路灯全部设置为关
+                                '如果控制的是回路，则将回路中的终端全部设置为关
                                 If Mid(lamp_id_string, 5, 2) = "31" Then
                                     i = 1
                                     While i <= g_lampnum
@@ -670,7 +670,7 @@ Public Class div_time_class
                     'rs_lamp.Close()
                     'rs_lamp = Nothing
                     If control_string <> "" Then
-                        diangan_id = control_lamp_obj.Find_diangan_id(diangan)     '电感型路灯标志
+                        diangan_id = control_lamp_obj.Find_diangan_id(diangan)     '电感型终端标志
                         control_string &= diangan_id
                         control_string &= " " & "64 " & Mid(box_id_ox, 1, 2)
 huilu_next:
@@ -702,18 +702,18 @@ huilu_next:
 
                     'If single_tag = True Then
                     '    If mod_string = "回路开" Then
-                    '        '开一条回路，后将该电控箱下面所有的路灯都打开
+                    '        '开一条回路，后将该电控箱下面所有的终端都打开
 
-                    '        control_lamp_obj.Input_control_inf("(0)路灯", "类型", box_string, "类型全开", 1, "全功率", "100", hand_type)
+                    '        control_lamp_obj.Input_control_inf("(0)终端", "类型", box_string, "类型全开", 1, "全功率", "100", hand_type)
 
 
                     '    End If
                     'Else
 
-                    '    '对于针对整体的回路控制，需要将路灯类型的数据都置为开的状态
+                    '    '对于针对整体的回路控制，需要将终端类型的数据都置为开的状态
                     '    If type_id = 31 Then
 
-                    '        control_lamp_obj.Input_control_inf("(0)路灯", "类型", box_string, "类型全开", 1, "全功率", "100", hand_type)
+                    '        control_lamp_obj.Input_control_inf("(0)终端", "类型", box_string, "类型全开", 1, "全功率", "100", hand_type)
 
                     '    End If
                     'End If
@@ -787,7 +787,7 @@ huilu_next:
         End If
 
         clock_string = Format(Now(), "yyyy-MM-dd HH:mm:ss").ToString   '当前时间
-        ''刷新路灯状况
+        ''刷新终端状况
         control_string = ""
         Dim time_s1, time_s2 As String
         state_tag = 0
@@ -877,7 +877,7 @@ huilu_next:
                                 sql = "update lamp_inf set div_time_id=0, state=3, result=4 , date='" & Now & "' where control_box_id='" & box_id & "' and lamp_type_id='" & type_id & "'"
                                 DBOperation.ExecuteSQL(conn, sql, msg)
 
-                                '如果控制的是回路，则将回路中的路灯全部设置为关
+                                '如果控制的是回路，则将回路中的终端全部设置为关
                                 If Mid(lamp_id_string, 5, 2) = "31" Then
                                     i = 1
                                     While i <= g_lampnum
@@ -895,7 +895,7 @@ huilu_next:
                                 DBOperation.ExecuteSQL(conn, sql, msg)
 
 
-                                '如果控制的是回路，则将回路中的路灯全部设置为关
+                                '如果控制的是回路，则将回路中的终端全部设置为关
                                 If Mid(lamp_id_string, 5, 2) = "31" Then
                                     i = 1
                                     While i <= g_lampnum
@@ -917,7 +917,7 @@ huilu_next:
                                 DBOperation.ExecuteSQL(conn, sql, msg)
 
 
-                                '如果控制的是回路，则将回路中的路灯全部设置为关
+                                '如果控制的是回路，则将回路中的终端全部设置为关
                                 If Mid(lamp_id_string, 5, 2) = "31" Then
                                     i = 1
                                     While i <= g_lampnum
@@ -938,7 +938,7 @@ huilu_next:
                                 sql = "update lamp_inf set div_time_id=0, state=3, result=4 where CAST(SUBSTRING(lamp_id, 7, " & LAMP_ID_LEN & ") AS int) % 2 =1 and control_box_id='" & box_id & "' and lamp_type_id='" & type_id & "'"
                                 DBOperation.ExecuteSQL(conn, sql, msg)
 
-                                '如果控制的是回路，则将回路中的路灯全部设置为关
+                                '如果控制的是回路，则将回路中的终端全部设置为关
                                 If Mid(lamp_id_string, 5, 2) = "31" Then
                                     i = 1
                                     While i <= g_lampnum
@@ -960,7 +960,7 @@ huilu_next:
                                 sql = "update lamp_inf set div_time_id=1, state=4, result=4 where CAST(SUBSTRING(lamp_id, 7, " & LAMP_ID_LEN & ") AS int) % 2 =0 and control_box_id='" & box_id & "' and lamp_type_id='" & type_id & "'"
                                 DBOperation.ExecuteSQL(conn, sql, msg)
 
-                                '如果控制的是回路，则将回路中的路灯全部设置为关
+                                '如果控制的是回路，则将回路中的终端全部设置为关
                                 If Mid(lamp_id_string, 5, 2) = "31" Then
                                     i = 1
                                     While i <= g_lampnum
@@ -983,7 +983,7 @@ huilu_next:
                                 sql = "update lamp_inf set div_time_id=0, state=3, result=4 where CAST(SUBSTRING(lamp_id, 7, " & LAMP_ID_LEN & ") AS int) % 2 =0 and control_box_id='" & box_id & "' and lamp_type_id='" & type_id & "'"
                                 DBOperation.ExecuteSQL(conn, sql, msg)
 
-                                '如果控制的是回路，则将回路中的路灯全部设置为关
+                                '如果控制的是回路，则将回路中的终端全部设置为关
                                 If Mid(lamp_id_string, 5, 2) = "31" Then
                                     i = 1
                                     While i <= g_lampnum
@@ -1050,7 +1050,7 @@ huilu_next:
                     'rs_lamp.Close()
                     'rs_lamp = Nothing
                     If control_string <> "" Then
-                        diangan_id = control_lamp_obj.Find_diangan_id(diangan)     '电感型路灯标志
+                        diangan_id = control_lamp_obj.Find_diangan_id(diangan)     '电感型终端标志
                         control_string &= diangan_id
                         control_string &= " " & "64 " & Mid(box_id_ox, 1, 2)
 huilu_next:
@@ -1075,7 +1075,7 @@ huilu_next:
                             DBOperation.ExecuteSQL(conn, sql, msg)
 
                         End If
-                      
+
                     End If
 
                     rs.MoveNext()
@@ -1178,7 +1178,7 @@ huilu_next:
         Dim level_content As String
         Dim node1, node2 As TreeNode
         msg = ""
-      
+
         DBOperation.OpenConn(conn)
         i = 0
         level1_num = g_divname.Length   '平时控制模式的个数
@@ -1420,9 +1420,9 @@ huilu_next:
                 If rs_lamp.RecordCount > 0 Then
                     If state = "关" And (rs_lamp.Fields("state").Value = 1 Or rs_lamp.Fields("state").Value = 4) Then
                         '时段该关，但目前灯被打开，则必须关闭该灯
-                        lamp_id_bin = Com_inf.Dec_to_Bin(Mid(lamp_id, 5, 2), 5) & Com_inf.Dec_to_Bin(Mid(lamp_id, 7, 3), 11) '十六位长度的路灯编号二进制
+                        lamp_id_bin = Com_inf.Dec_to_Bin(Mid(lamp_id, 5, 2), 5) & Com_inf.Dec_to_Bin(Mid(lamp_id, 7, 3), 11) '十六位长度的终端编号二进制
                         lamp_id_hex = Com_inf.BIN_to_HEX(lamp_id_bin)
-                        '  ox_str = Com_inf.Dec_to_ox(Mid(lamp_id, 6, 4), 4)  '将路灯编号转变城4位16进制数
+                        '  ox_str = Com_inf.Dec_to_ox(Mid(lamp_id, 6, 4), 4)  '将终端编号转变城4位16进制数
 
                         control_string = Mid(lamp_id_hex, 1, 2) & " " & Mid(lamp_id_hex, 3, 2) & " 1C 13 FF"  '控制命令字符串
                         If SYSTEM_VISION = 1 Then
@@ -1439,10 +1439,10 @@ huilu_next:
 
                     If state = "开" And (rs_lamp.Fields("state").Value = 0 Or rs_lamp.Fields("state").Value = 3) Then
                         '时段该开，但目前灯被关闭，则必须打开该灯
-                        lamp_id_bin = Com_inf.Dec_to_Bin(Mid(lamp_id, 5, 2), 5) & Com_inf.Dec_to_Bin(Mid(lamp_id, 7, 3), 11) '十六位长度的路灯编号二进制
+                        lamp_id_bin = Com_inf.Dec_to_Bin(Mid(lamp_id, 5, 2), 5) & Com_inf.Dec_to_Bin(Mid(lamp_id, 7, 3), 11) '十六位长度的终端编号二进制
 
                         lamp_id_hex = Com_inf.BIN_to_HEX(lamp_id_bin)
-                        '  ox_str = Com_inf.Dec_to_ox(Mid(lamp_id, 6, 4), 4)  '将路灯编号转变城4位16进制数
+                        '  ox_str = Com_inf.Dec_to_ox(Mid(lamp_id, 6, 4), 4)  '将终端编号转变城4位16进制数
 
                         control_string = Mid(lamp_id_hex, 1, 2) & " " & Mid(lamp_id_hex, 3, 2) & " 1B 11 FF"  '控制命令字符串
                         If SYSTEM_VISION = 1 Then

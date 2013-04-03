@@ -125,7 +125,7 @@ Partial Class 故障报警窗口
         '
         'alarm_information
         '
-        Me.alarm_information.HeaderText = "节点备注"
+        Me.alarm_information.HeaderText = "联系电话"
         Me.alarm_information.Name = "alarm_information"
         Me.alarm_information.Visible = False
         '

@@ -252,7 +252,7 @@ Public Class welcome_win
     End Sub
 
     ''' <summary>
-    ''' 显示右边关于路灯状态信息的列表
+    ''' 显示右边关于终端状态信息的列表
     ''' </summary>
     ''' <param name="find_condition"></param>
     ''' <remarks></remarks>
@@ -283,7 +283,7 @@ Public Class welcome_win
             Me.BackgroundWorkerSendMsg.CancelAsync()
         End If
         If m_lamp IsNot Nothing Then
-            m_lamp.Dispose()  '释放路灯图片
+            m_lamp.Dispose()  '释放终端图片
         End If
         Application.Exit()
     End Sub
@@ -373,7 +373,7 @@ Public Class welcome_win
     ''' <remarks></remarks>
     Public Sub control_center_inf()
         Try
-            m_controllampobj.get_lamp_information()    '路灯统计信息
+            m_controllampobj.get_lamp_information()    '终端统计信息
         Catch ex As Exception
             SetTextDelegate("单灯" & Now.ToString & vbCrLf & "********************" & vbCrLf & vbCrLf, False, rtb_info_list)
             System.Threading.Thread.Sleep(2000)
@@ -1140,7 +1140,7 @@ finish:
     '        If rs_find_state.RecordCount <= 0 Then  '没有数据则返回
     '            GoTo finish
     '        End If
-    '        SetTextLabelDelegate("获取路灯数据.....", Tool, "circle_string")
+    '        SetTextLabelDelegate("获取终端数据.....", Tool, "circle_string")
 
     '        '*************************有数据*********************
     '        Try
@@ -1158,7 +1158,7 @@ finish:
     '            End If
     '            Com_inf.Explain_State_String_AD2(Trim(rs_find_state.Fields("StatusContent").Value))  '解析状态字符串的各个含义
 
-    '            m_controllampobj.GetCompareState_AD2(Trim(rs_find_state.Fields("StatusContent").Value), rs_find_state.Fields("id").Value)  '获取路灯的运行状态
+    '            m_controllampobj.GetCompareState_AD2(Trim(rs_find_state.Fields("StatusContent").Value), rs_find_state.Fields("id").Value)  '获取终端的运行状态
 
 
     '            rs_find_state.MoveNext()
@@ -1216,7 +1216,7 @@ finish:
         If rs_find_state.RecordCount <= 0 Then  '没有数据则返回
             GoTo finish
         End If
-        SetTextLabelDelegate("获取路灯数据.....", Tool, "circle_string")
+        SetTextLabelDelegate("获取终端数据.....", Tool, "circle_string")
         '*************************有数据*********************
         'Try
         '    Count_GPRS()  '计算流量
@@ -1237,17 +1237,17 @@ finish:
 
             '    Com_inf.Explain_State_String(Trim(rs_find_state.Fields("StatusContent").Value))  '解析状态字符串的各个含义
 
-            '    m_controllampobj.GetCompareState(Trim(rs_find_state.Fields("StatusContent").Value), rs_find_state.Fields("id").Value)  '获取路灯的运行状态
+            '    m_controllampobj.GetCompareState(Trim(rs_find_state.Fields("StatusContent").Value), rs_find_state.Fields("id").Value)  '获取终端的运行状态
             'Else
             '    Com_inf.Explain_State_String_AD2(Trim(rs_find_state.Fields("StatusContent").Value))  '解析状态字符串的各个含义
 
-            '    m_controllampobj.GetCompareState_AD2(Trim(rs_find_state.Fields("StatusContent").Value), rs_find_state.Fields("id").Value)  '获取路灯的运行状态
+            '    m_controllampobj.GetCompareState_AD2(Trim(rs_find_state.Fields("StatusContent").Value), rs_find_state.Fields("id").Value)  '获取终端的运行状态
 
             'End If
             '2011年9月13日修改为只用一个字节的单灯协议
             'Com_inf.Explain_State_String(Trim(rs_find_state.Fields("StatusContent").Value))  '解析状态字符串的各个含义
 
-            'm_controllampobj.GetCompareState(Trim(rs_find_state.Fields("StatusContent").Value), rs_find_state.Fields("id").Value)  '获取路灯的运行状态
+            'm_controllampobj.GetCompareState(Trim(rs_find_state.Fields("StatusContent").Value), rs_find_state.Fields("id").Value)  '获取终端的运行状态
 
             '2011年10月17日将单灯分为不同的协议类型
             state = Trim(rs_find_state.Fields("StatusContent").Value).Split(" ")
@@ -1271,7 +1271,7 @@ finish:
                     GoTo finish
                 End If
                 Com_inf.Explain_State_String(state)  '解析状态字符串的各个含义
-                m_controllampobj.GetCompareState(Trim(rs_find_state.Fields("StatusContent").Value), rs_find_state.Fields("id").Value)  '获取路灯的运行状态
+                m_controllampobj.GetCompareState(Trim(rs_find_state.Fields("StatusContent").Value), rs_find_state.Fields("id").Value)  '获取终端的运行状态
             Else
                 If lamp_protocle_type = "2" Then
                     If state.Length <> 7 Then
@@ -1281,7 +1281,7 @@ finish:
                         GoTo finish
                     End If
                     Com_inf.Explain_State_String_AD2(state)  '解析状态字符串的各个含义
-                    m_controllampobj.GetCompareState_AD2(Trim(rs_find_state.Fields("StatusContent").Value), rs_find_state.Fields("id").Value)  '获取路灯的运行状态
+                    m_controllampobj.GetCompareState_AD2(Trim(rs_find_state.Fields("StatusContent").Value), rs_find_state.Fields("id").Value)  '获取终端的运行状态
                 Else
                     If state.Length <> 10 Then
                         '上传的状态长度与单灯的类型不符合
@@ -1293,7 +1293,7 @@ finish:
 
                         '2012年5月24日增加五字节的单灯协议,单灯的格式为两字节路段号，两字节节点号，六个字节的单灯状态
                         Com_inf.Explain_State_String_AD6(state, i) '解析状态字符串的各个含义
-                        m_controllampobj.GetCompareState_AD6(Trim(rs_find_state.Fields("StatusContent").Value), rs_find_state.Fields("id").Value)  '获取路灯的运行状态
+                        m_controllampobj.GetCompareState_AD6(Trim(rs_find_state.Fields("StatusContent").Value), rs_find_state.Fields("id").Value)  '获取终端的运行状态
                         i += 1
                         short_id = Mid(g_lampidstring, 7, LAMP_ID_LEN) + 1
 
@@ -1554,7 +1554,7 @@ finish:
         If DBOperation.OpenConn(conn) = False Then
             Exit Sub
         End If
-        '第一步骤，将该电控箱下单灯的状态置为无返回值,只刷新路灯的，不刷新接触器的
+        '第一步骤，将该电控箱下单灯的状态置为无返回值,只刷新终端的，不刷新接触器的
 
         sql = "update lamp_inf set current_l=0, presure_l=0,power=0,presure_end=0, result=3 where control_box_id='" & control_box_id & "' and lamp_type_id=0"
         DBOperation.ExecuteSQL(conn, sql, msg)
@@ -1867,10 +1867,10 @@ next1:
         '等待回复信息
 
         While i < m_waittime
-            find_state(Mid(control_string, 1, 8), control_time, i)  '查找标志路灯的状态返回
+            find_state(Mid(control_string, 1, 8), control_time, i)  '查找标志终端的状态返回
             System.Threading.Thread.Sleep(1000)  '线程休眠1秒
 
-            If m_findtag = 1 Then    '如果找到了当前路灯的返回值
+            If m_findtag = 1 Then    '如果找到了当前终端的返回值
                 Exit While
 
             End If
@@ -1909,7 +1909,7 @@ next1:
         End If
 
         msg = ""
-        '对比路灯状态返回值与操作值 
+        '对比终端状态返回值与操作值 
         sql = "select * from RoadLightStatus where StatusContent like '" & lamp_id_tag & "%' and HandlerFlag<>" & 1 & " and Createtime>'" & control_time & "' order by Createtime "
 
         rs = DBOperation.SelectSQL(conn, sql, msg)
@@ -1966,27 +1966,27 @@ next1:
         'If m_findtag = 1 Then
         '    '发现返回状态则发送控制命令
         '    If all_open.Checked = True Then
-        '        open_all_lamp()   '路灯全开
+        '        open_all_lamp()   '终端全开
         '    End If
         '    If all_close.Checked = True Then
 
-        '        close_all_lamp()   '路灯全闭
+        '        close_all_lamp()   '终端全闭
         '    End If
         '    If single_all_open.Checked = True Then
 
-        '        single_open_control(1, 1)  '路灯奇开
+        '        single_open_control(1, 1)  '终端奇开
         '    End If
         '    If single_all_close.Checked = True Then
 
-        '        single_open_control(0, 1)   '路灯奇关
+        '        single_open_control(0, 1)   '终端奇关
         '    End If
         '    If double_all_open.Checked = True Then
 
-        '        single_open_control(1, 0)  '路灯偶开
+        '        single_open_control(1, 0)  '终端偶开
         '    End If
         '    If double_all_close.Checked = True Then
 
-        '        single_open_control(0, 0)   '路灯偶关
+        '        single_open_control(0, 0)   '终端偶关
         '    End If
 
         '    If open_1_3.Checked = True Then
@@ -1999,10 +1999,10 @@ next1:
     End Sub
 
     '''' <summary>
-    '''' 打开所有的路灯，按区域、类型和单灯三个级别
+    '''' 打开所有的终端，按区域、类型和单灯三个级别
     '''' </summary>
     '''' <remarks></remarks>
-    'Private Sub open_all_lamp()   '打开所有路灯
+    'Private Sub open_all_lamp()   '打开所有终端
     '    If box_control.Checked = False And lamp_id_control.Checked = False And type_control.Checked = False Then
     '        MsgBox("请选择控制类型！", , PROJECT_TITLE_STRING)  '如果没有选择控制类型，提示选择控制类型后再进行下一步操作
     '        Exit Sub
@@ -2019,7 +2019,7 @@ next1:
     '            Exit Sub
     '        End If
     '        '判断是否输入控制命令
-    '        If MsgBox("通信正常，是否打开区域: " & Trim(box_all.Text) & "的所有路灯?", MsgBoxStyle.YesNo, PROJECT_TITLE_STRING) = MsgBoxResult.No Then
+    '        If MsgBox("通信正常，是否打开区域: " & Trim(box_all.Text) & "的所有终端?", MsgBoxStyle.YesNo, PROJECT_TITLE_STRING) = MsgBoxResult.No Then
     '            Exit Sub
     '        End If
 
@@ -2077,7 +2077,7 @@ next1:
     'End Sub
 
     '''' <summary>
-    '''' 隔两盏的方式打开路灯，分为区域、类型、单灯三个级别
+    '''' 隔两盏的方式打开终端，分为区域、类型、单灯三个级别
     '''' </summary>
     '''' <remarks></remarks>
     'Private Sub open_1_3_control()
@@ -2124,7 +2124,7 @@ next1:
     '        Exit Sub
     '    End If
 
-    '    If open = 1 Then  'open=1表示单/双号路灯开
+    '    If open = 1 Then  'open=1表示单/双号终端开
     '        If power.Text = "" Then  '如果没输入功率，则提示输入功率后再进行下一步操作
     '            MsgBox("请输入功率！", , PROJECT_TITLE_STRING)
     '            power.Focus()  '光标定位在功率文本框
@@ -2164,20 +2164,20 @@ next1:
     '            Exit Sub
     '        End If
 
-    '        If open = 1 And single_double = 1 Then '单号路灯开
+    '        If open = 1 And single_double = 1 Then '单号终端开
     '            If MsgBox("通信正常，是否打开区域: " & Trim(box_all.Text) & "中所有单号" & Trim(lamp_type_all.Text) & "?", MsgBoxStyle.YesNo, PROJECT_TITLE_STRING) = MsgBoxResult.No Then
     '                Exit Sub
     '            End If
     '            m_controllampobj.Input_control_inf(Trim(lamp_type_all.Text), "类型", Trim(box_all.Text), "类型奇开", 1, Trim(diangan.Text), Trim(power.Text), "类型")
 
     '        Else
-    '            If open = 0 And single_double = 1 Then  '单号路灯关
+    '            If open = 0 And single_double = 1 Then  '单号终端关
     '                If MsgBox("通信正常，是否关闭区域: " & Trim(box_all.Text) & "中所有单号" & Trim(lamp_type_all.Text) & "?", MsgBoxStyle.YesNo, PROJECT_TITLE_STRING) = MsgBoxResult.No Then
     '                    Exit Sub
     '                End If
     '                m_controllampobj.Input_control_inf(Trim(lamp_type_all.Text), "类型", Trim(box_all.Text), "类型奇闭", 0, "关闭灯", "0", "类型")
     '            Else
-    '                If open = 1 And single_double = 0 Then  '双号路灯开
+    '                If open = 1 And single_double = 0 Then  '双号终端开
     '                    If MsgBox("通信正常，是否打开区域: " & Trim(box_all.Text) & "中所有双号" & Trim(lamp_type_all.Text) & "?", MsgBoxStyle.YesNo, PROJECT_TITLE_STRING) = MsgBoxResult.No Then
     '                        Exit Sub
     '                    End If
@@ -2185,7 +2185,7 @@ next1:
 
     '                Else
 
-    '                    If open = 0 And single_double = 0 Then  '双号路灯关
+    '                    If open = 0 And single_double = 0 Then  '双号终端关
     '                        If MsgBox("通信正常，是否关闭区域: " & Trim(box_all.Text) & "中所有双号" & Trim(lamp_type_all.Text) & "?", MsgBoxStyle.YesNo, PROJECT_TITLE_STRING) = MsgBoxResult.No Then
     '                            Exit Sub
     '                        End If
@@ -2210,10 +2210,10 @@ next1:
     '    End If
 
     '    If box_control.Checked = True Then  '按电控箱控制
-    '        If single_double = 1 Then  '显示单号路灯开关信息
+    '        If single_double = 1 Then  '显示单号终端开关信息
     '            MsgBox(Trim(box_all.Text) & " 号区域单号灯" & open_close, , PROJECT_TITLE_STRING)
     '            circle_string.Text = Trim(box_all.Text) & " 号区域单号灯" & open_close
-    '        Else  '显示双号路灯开关信息
+    '        Else  '显示双号终端开关信息
     '            MsgBox(Trim(box_all.Text) & " 号区域双号灯" & open_close, , PROJECT_TITLE_STRING)
     '            circle_string.Text = Trim(box_all.Text) & " 号区域双号灯" & open_close
     '        End If
@@ -2223,7 +2223,7 @@ next1:
     'End Sub
 
     '''' <summary>
-    '''' 关闭所有的路灯,按区域、类型和单灯范围进行控制
+    '''' 关闭所有的终端,按区域、类型和单灯范围进行控制
     '''' </summary>
     '''' <remarks></remarks> 
     'Private Sub close_all_lamp()
@@ -2780,7 +2780,7 @@ next1:
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub 打开ToolStripMenuItem2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles 打开ToolStripMenuItem2.Click
-        '单击右键后，可打开所点击的路灯
+        '单击右键后，可打开所点击的终端
         Dim rs As New ADODB.Recordset
         Dim msg As String
         Dim sql As String
@@ -2830,8 +2830,8 @@ next1:
                 MsgBox("操作执行完毕", , PROJECT_TITLE_STRING)
                 'End If
             Else
-                '没有选择路灯进行操作
-                MsgBox("请选择路灯后，点击右键", , PROJECT_TITLE_STRING)
+                '没有选择终端进行操作
+                MsgBox("请选择终端后，点击右键", , PROJECT_TITLE_STRING)
             End If
         End If
         If rs.State = 1 Then
@@ -2881,27 +2881,27 @@ next1:
             End If
         End If
         control_box_id = Mid(lamp_id, 1, 4)
-        lamp_id_bin = Com_inf.Get_lampid_bin(type_id, Val(Mid(lamp_id, 7, LAMP_ID_LEN))) '十六位长度的路灯编号二进制
+        lamp_id_bin = Com_inf.Get_lampid_bin(type_id, Val(Mid(lamp_id, 7, LAMP_ID_LEN))) '十六位长度的终端编号二进制
         If lamp_id_bin = "" Then
             GoTo finish
         End If
         controlname = Val(control_box_id).ToString & "-" & type_id.ToString & "-" & Val(Mid(lamp_id, 7, LAMP_ID_LEN))
-        'lamp_id_bin = Com_inf.Dec_to_Bin(type_id, 5) & Com_inf.Dec_to_Bin(Mid(lamp_id, 7, LAMP_ID_LEN), 11) '十六位长度的路灯编号二进制
+        'lamp_id_bin = Com_inf.Dec_to_Bin(type_id, 5) & Com_inf.Dec_to_Bin(Mid(lamp_id, 7, LAMP_ID_LEN), 11) '十六位长度的终端编号二进制
         If open_close = 1 Then  '单灯开
-            '打开路灯操作
+            '打开终端操作
             open_close_single_lamp = m_controllampobj.open_light_single(control_box_id, lamp_id_bin, lamp_id, "全功率", "100", control_time, row_id)
             sql = "insert into hand_control_record(control_content,content_name,control_method,diangan,power,control_time,user_name) values('" & controlcontent & "','" & controlname & "','" & controlmethod & "','全功率','100','" & Now() & "','" & g_username & "')"
             DBOperation.ExecuteSQL(conn, sql, msg)
         End If
         If open_close = 0 Then
-            '关闭路灯
+            '关闭终端
             open_close_single_lamp = m_controllampobj.close_light_single(control_box_id, lamp_id_bin, lamp_id, "关闭灯", "0", control_time, row_id)
             sql = "insert into hand_control_record(control_content,content_name,control_method,diangan,power,control_time,user_name) values('" & controlcontent & "','" & controlname & "','" & controlmethod & "','关闭灯','0','" & Now() & "','" & g_username & "')"
             DBOperation.ExecuteSQL(conn, sql, msg)
         End If
 
         If type_id = 31 Then
-            '将该回路下所有的路灯全部打开
+            '将该回路下所有的终端全部打开
 
             m_controllampobj.open_close_huilulamp(open_close, Val(Mid(lamp_id, 7, LAMP_ID_LEN)), control_box_id)
 
@@ -2937,10 +2937,10 @@ finish:
             Exit Sub
         Else
             If rs.RecordCount > 0 Then
-                m_lamptip = m_controllampobj.get_lampinf_tip(Trim(rs.Fields("lamp_id").Value))   '标签显示路灯的信息
+                m_lamptip = m_controllampobj.get_lampinf_tip(Trim(rs.Fields("lamp_id").Value))   '标签显示终端的信息
             Else
                 ToolTip_lamp.RemoveAll()
-                MsgBox("请选择路灯后，点击右键", , PROJECT_TITLE_STRING)
+                MsgBox("请选择终端后，点击右键", , PROJECT_TITLE_STRING)
             End If
         End If
         rs.Close()
@@ -2972,7 +2972,7 @@ finish:
     End Sub
 
     ''' <summary>
-    ''' 单击右键后，可关闭所点击的路灯
+    ''' 单击右键后，可关闭所点击的终端
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
@@ -3017,8 +3017,8 @@ finish:
                 'End If
 
             Else
-                '没有选择路灯进行操作
-                MsgBox("请选择路灯后，点击右键", , PROJECT_TITLE_STRING)
+                '没有选择终端进行操作
+                MsgBox("请选择终端后，点击右键", , PROJECT_TITLE_STRING)
             End If
         End If
         If rs.State = 1 Then
@@ -3310,7 +3310,7 @@ finish:
     '                pb_map.Width = System.Drawing.Image.FromFile(map_path).Width  '设置map的宽
     '                pb_map.Height = System.Drawing.Image.FromFile(map_path).Height '设置map的高
 
-    '                m_lamp = New Bitmap(pb_map.Width, pb_map.Height)   '绘制路灯的bmp图
+    '                m_lamp = New Bitmap(pb_map.Width, pb_map.Height)   '绘制终端的bmp图
 
     '                g_lampmap.Clear(Color.Empty)
     '                g_lampmap = Graphics.FromImage(m_lamp)  '载入灯的图片
@@ -3345,7 +3345,7 @@ finish:
     'End Sub
 
     ''' <summary>
-    ''' 鼠标移动显示路灯状态标签信息
+    ''' 鼠标移动显示终端状态标签信息
     ''' </summary>
     ''' <remarks></remarks>
     Private Sub show_lamp_state()
@@ -3374,7 +3374,7 @@ finish:
             Exit Sub
         Else
             If rs.RecordCount > 0 Then
-                m_lamptip = m_controllampobj.get_lampinf_tip(Trim(rs.Fields("lamp_id").Value)) '标签显示路灯的信息
+                m_lamptip = m_controllampobj.get_lampinf_tip(Trim(rs.Fields("lamp_id").Value)) '标签显示终端的信息
             Else
                 ToolTip_lamp.RemoveAll()
             End If
@@ -3422,11 +3422,11 @@ finish:
         If rs_box.RecordCount > 0 Then
             controlboxtype = rs_box.Fields("control_box_type").Value
             If controlboxtype < 4 Then
-                m_lamptip = m_controlboxobj.Get_controlbox_tip(Trim(rs_box.Fields("control_box_id").Value), rs_box.Fields("board_num").Value)   '标签显示路灯的信息
+                m_lamptip = m_controlboxobj.Get_controlbox_tip(Trim(rs_box.Fields("control_box_id").Value), rs_box.Fields("board_num").Value)   '标签显示终端的信息
             Else
-                m_lamptip = m_controlboxobj.Get_controlbox_tipABC(Trim(rs_box.Fields("control_box_id").Value), rs_box.Fields("board_num").Value)   '标签显示路灯的信息
+                m_lamptip = m_controlboxobj.Get_controlbox_tipABC(Trim(rs_box.Fields("control_box_id").Value), rs_box.Fields("board_num").Value)   '标签显示终端的信息
             End If
-            ' m_lamptip = m_controlboxobj.Get_controlbox_tip(Trim(rs_box.Fields("control_box_id").Value), rs_box.Fields("board_num").Value)   '标签显示路灯的信息
+            ' m_lamptip = m_controlboxobj.Get_controlbox_tip(Trim(rs_box.Fields("control_box_id").Value), rs_box.Fields("board_num").Value)   '标签显示终端的信息
         Else
             ToolTip_box.RemoveAll()
         End If
@@ -3440,7 +3440,7 @@ finish:
     End Sub
 
     ''' <summary>
-    ''' 鼠标移到路灯位置，工具条显示路灯实时信息
+    ''' 鼠标移到终端位置，工具条显示终端实时信息
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
@@ -3454,7 +3454,7 @@ finish:
     End Sub
 
     ''' <summary>
-    ''' 鼠标双击地图，取得地图上的坐标，为添加路灯和定位区域取坐标
+    ''' 鼠标双击地图，取得地图上的坐标，为添加终端和定位区域取坐标
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
@@ -3462,7 +3462,7 @@ finish:
     Private Sub pb_map_MouseDoubleClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles pb_map.MouseDoubleClick
         g_movepictag = 0
 
-        If m_addlampobj IsNot Nothing Then  '增加路灯坐标
+        If m_addlampobj IsNot Nothing Then  '增加终端坐标
             If tb_map_size.Value <> MAP_MID_SIZE Then
                 g_changemapvalue = MAP_MID_SIZE
                 tb_map_size.Value = g_changemapvalue
@@ -3471,15 +3471,15 @@ finish:
                 Exit Sub
             End If
 
-            If m_addlampobj.m_addtag = 2 Then  '第一次双击地图后增加新增路灯的起始路灯坐标
+            If m_addlampobj.m_addtag = 2 Then  '第一次双击地图后增加新增终端的起始终端坐标
                 m_addlampobj.tb_start_pos_x.Text = Control.MousePosition.X
                 m_addlampobj.tb_start_pos_y.Text = Control.MousePosition.Y
-                m_addlampobj.m_addtag = 3  '标志为取新增路灯的终点路灯坐标
+                m_addlampobj.m_addtag = 3  '标志为取新增终端的终点终端坐标
             Else
-                If m_addlampobj.m_addtag = 3 Then  '第二此双击地图后增加新增路灯的终点路灯坐标
+                If m_addlampobj.m_addtag = 3 Then  '第二此双击地图后增加新增终端的终点终端坐标
                     m_addlampobj.tb_end_pos_x.Text = Control.MousePosition.X
                     m_addlampobj.tb_end_pos_y.Text = Control.MousePosition.Y
-                    m_addlampobj.m_addtag = 2  '标志为取新增路灯的起点坐标
+                    m_addlampobj.m_addtag = 2  '标志为取新增终端的起点坐标
                 End If
             End If
         End If
@@ -4048,7 +4048,7 @@ finish:
                             str2 &= " " & Mid(roadID, 1, 2) & " " & Mid(roadID, 3, 2) & " " & Mid(lamp_id_hex, 1, 2) & " " & Mid(lamp_id_hex, 3, 2) & " " & control_id & " " '共3个控制时段，每个时段的格式为：hour+min+second+mod
                         Else
                             str1 = Trim(rs.Fields("lamp_id").Value)
-                            lamp_id_bin = Com_inf.Dec_to_Bin(Mid(Trim(rs.Fields("lamp_id").Value), 5, 2), 5) & Com_inf.Dec_to_Bin(Mid(Trim(rs.Fields("lamp_id").Value), 7, LAMP_ID_LEN), 11) '十六位长度的路灯编号二进制
+                            lamp_id_bin = Com_inf.Dec_to_Bin(Mid(Trim(rs.Fields("lamp_id").Value), 5, 2), 5) & Com_inf.Dec_to_Bin(Mid(Trim(rs.Fields("lamp_id").Value), 7, LAMP_ID_LEN), 11) '十六位长度的终端编号二进制
                             str = Com_inf.BIN_to_HEX(lamp_id_bin)
                             While str.Length < 4
                                 str = "0" & str
@@ -4396,7 +4396,7 @@ finish:
                 pb_small_map.BackgroundImage = System.Drawing.Image.FromFile(smallmap_path) '载入鹰眼地图
                 pb_map.Width = System.Drawing.Image.FromFile(map_path).Width  '设置map的宽
                 pb_map.Height = System.Drawing.Image.FromFile(map_path).Height '设置map的高
-                m_lamp = New Bitmap(pb_map.Width, pb_map.Height)   '绘制路灯的bmp图
+                m_lamp = New Bitmap(pb_map.Width, pb_map.Height)   '绘制终端的bmp图
                 g_lampmap.Clear(Color.Empty)
                 g_lampmap = Graphics.FromImage(m_lamp)  '载入灯的图片
                 g_mapsizevalue = pb_map.Size '地图的尺寸
@@ -5374,7 +5374,7 @@ next2:
                                     str2 &= " " & str1 & " " & Mid(lamp_id_hex, 1, 2) & " " & Mid(lamp_id_hex, 3, 2) & " " & control_id & " " '共3个控制时段，每个时段的格式为：hour+min+second+mod
                                 Else
                                     '  str1 = Trim(rs.Fields("lamp_id").Value)
-                                    lamp_id_bin = Com_inf.Dec_to_Bin(Mid(Trim(rs.Fields("lamp_id").Value), 5, 2), 5) & Com_inf.Dec_to_Bin(Mid(Trim(rs.Fields("lamp_id").Value), 7, LAMP_ID_LEN), 11) '十六位长度的路灯编号二进制
+                                    lamp_id_bin = Com_inf.Dec_to_Bin(Mid(Trim(rs.Fields("lamp_id").Value), 5, 2), 5) & Com_inf.Dec_to_Bin(Mid(Trim(rs.Fields("lamp_id").Value), 7, LAMP_ID_LEN), 11) '十六位长度的终端编号二进制
                                     lamp_id_hex = Com_inf.BIN_to_HEX(lamp_id_bin)
                                     While lamp_id_hex.Length < 4
                                         lamp_id_hex = "0" & lamp_id_hex
@@ -5512,7 +5512,7 @@ next1:
                                         str2 &= " " & Mid(lamp_id_hex, 1, 2) & " " & Mid(lamp_id_hex, 3, 2) & " " & control_id & " " '共3个控制时段，每个时段的格式为：hour+min+second+mod
                                     Else
 
-                                        lamp_id_bin = Com_inf.Dec_to_Bin(Mid(Trim(rs.Fields("lamp_id").Value), 5, 2), 5) & Com_inf.Dec_to_Bin(Mid(Trim(rs.Fields("lamp_id").Value), 7, LAMP_ID_LEN), 11) '十六位长度的路灯编号二进制
+                                        lamp_id_bin = Com_inf.Dec_to_Bin(Mid(Trim(rs.Fields("lamp_id").Value), 5, 2), 5) & Com_inf.Dec_to_Bin(Mid(Trim(rs.Fields("lamp_id").Value), 7, LAMP_ID_LEN), 11) '十六位长度的终端编号二进制
                                         lamp_id_hex = Com_inf.BIN_to_HEX(lamp_id_bin)
                                         While lamp_id_hex.Length < 4
                                             lamp_id_hex = "0" & lamp_id_hex
@@ -6264,7 +6264,7 @@ next2:
         sql = "select * from control_box where control_box_name ='" & control_box_name & "'"
         rs = DBOperation.SelectSQL(conn, sql, msg)
         If rs.RecordCount > 0 Then
-            rtb_control_box_inf.Text = "主控箱名称：" & control_box_name & vbCrLf
+            rtb_control_box_inf.Text = "网关名称：" & control_box_name & vbCrLf
             box_type = rs.Fields("control_box_type").Value
             board_num = rs.Fields("board_num").Value
             problem_string = Trim(rs.Fields("state").Value)
@@ -7472,7 +7472,7 @@ finish:
             Else
                 str_len = jiechuqi_id.Length
                 jiechuqi_id = Mid(jiechuqi_id, 2, str_len - 1)
-                lamp_id_bin = Com_inf.Get_lampid_bin("31", Val(jiechuqi_id)) '十六位长度的路灯编号二进制
+                lamp_id_bin = Com_inf.Get_lampid_bin("31", Val(jiechuqi_id)) '十六位长度的终端编号二进制
                 lamp_type_string = Com_inf.Get_Type_String(31)
 
                 While control_box_id.Length < 4
@@ -7484,9 +7484,9 @@ finish:
                 End While
                 lamp_id_string = control_box_id & "31" & jiechuqi_id
                 If control_method.Trim() = "开#" Then
-                    '打开路灯操作
+                    '打开终端操作
                     control_lamp_obj.open_light_single(control_box_id, lamp_id_bin, lamp_id_string, "全功率", "100", 0, -1)
-                    '打开的是回路，将该回路下所有的路灯全部打开
+                    '打开的是回路，将该回路下所有的终端全部打开
                     control_lamp_obj.open_close_huilulamp(1, Val(jiechuqi_id), control_box_id)
                     '命令执行完毕，返回确认短信
                     'sendMsg(phone_num, "命令发送成功！")
@@ -7495,9 +7495,9 @@ finish:
                     GoTo next1
                 End If
                 If control_method.Trim() = "闭#" Then
-                    '关闭路灯
+                    '关闭终端
                     control_lamp_obj.close_light_single(control_box_id, lamp_id_bin, lamp_id_string, "关闭灯", "0", 0, -1)
-                    '打开的是回路，将该回路下所有的路灯全部打开
+                    '打开的是回路，将该回路下所有的终端全部打开
                     control_lamp_obj.open_close_huilulamp(0, Val(jiechuqi_id), control_box_id)
                     '命令执行完毕，返回确认短信
                     'sendMsg(phone_num, "命令发送成功！")
@@ -7566,7 +7566,7 @@ finish:
 
             power_string = "100"
 
-            lamp_id_bin = Com_inf.Get_lampid_bin(lamp_type_id, Val(lamp_short_id)) '十六位长度的路灯编号二进制
+            lamp_id_bin = Com_inf.Get_lampid_bin(lamp_type_id, Val(lamp_short_id)) '十六位长度的终端编号二进制
             lamp_type_string = Com_inf.Get_Type_String(Val(lamp_type_id))
 
             While control_box_id.Length < 4
@@ -7582,10 +7582,10 @@ finish:
 
 
             If control_method.Trim() = "单开#" Then  '开
-                '打开路灯操作
+                '打开终端操作
                 control_lamp_obj.open_light_single(control_box_id, lamp_id_bin, lamp_id_string, "全功率", power_string, 0, -1)
                 If lamp_type_id = "31" Then
-                    '如果打开的是回路，将该回路下所有的路灯全部打开
+                    '如果打开的是回路，将该回路下所有的终端全部打开
                     control_lamp_obj.open_close_huilulamp(1, Val(lamp_short_id), control_box_id)
                 End If
                 '命令执行完毕，返回确认短信
@@ -7595,10 +7595,10 @@ finish:
 
 
             If control_method.Trim() = "单闭#" Then
-                '关闭路灯
+                '关闭终端
                 control_lamp_obj.close_light_single(control_box_id, lamp_id_bin, lamp_id_string, "关闭灯", "0", 0, -1)
                 If lamp_type_id = "31" Then
-                    '如果打开的是回路，将该回路下所有的路灯全部打开
+                    '如果打开的是回路，将该回路下所有的终端全部打开
                     control_lamp_obj.open_close_huilulamp(1, Val(lamp_short_id), control_box_id)
                 End If
                 '命令执行完毕，返回确认短信
@@ -8056,7 +8056,7 @@ next1:
 
     Private Sub 终端参数设置ToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles 终端参数设置ToolStripMenuItem.Click
         Dim control_box_name As String = Trim(tv_box_inf_list.SelectedNode.Text).Split(" ")(0)
-        Dim zhaoceobj As New 增加路灯
+        Dim zhaoceobj As New 增加终端
         Dim rs As New ADODB.Recordset
         Dim conn As New ADODB.Connection
         Dim msg As String = ""
@@ -8104,7 +8104,7 @@ next1:
 
     Private Sub 历史数据查询ToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles 历史数据查询ToolStripMenuItem.Click
         Dim control_box_name As String = Trim(tv_box_inf_list.SelectedNode.Text).Split(" ")(0)
-        Dim zhaoceobj As New 路灯亮暗信息统计
+        Dim zhaoceobj As New 终端亮暗信息统计
         Dim rs As New ADODB.Recordset
         Dim conn As New ADODB.Connection
         Dim msg As String = ""
@@ -8809,7 +8809,7 @@ next1:
 
     Private Sub 终端参数设置ToolStripMenuItem19_Click(sender As System.Object, e As System.EventArgs) Handles 终端参数设置ToolStripMenuItem19.Click
         Dim control_box_name As String
-        Dim zhaoceobj As New 增加路灯
+        Dim zhaoceobj As New 增加终端
         Dim msg As String = ""
         Dim sql As String = ""
         Dim box_id As String = ""
@@ -8892,7 +8892,7 @@ next1:
 
     Private Sub 终端历史数据ToolStripMenuItem22_Click(sender As System.Object, e As System.EventArgs) Handles 终端历史数据ToolStripMenuItem22.Click
         Dim control_box_name As String
-        Dim zhaoceobj As New 路灯亮暗信息统计
+        Dim zhaoceobj As New 终端亮暗信息统计
         Dim msg As String = ""
         Dim sql As String = ""
         Dim box_id As String = ""

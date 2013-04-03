@@ -128,7 +128,7 @@ Error_Renamed:
         pb_login.Value = pb_login.Value + pb_login.Maximum / 10
         If pb_login.Value = pb_login.Maximum Then
             Timer1.Enabled = False
-            '加载入路灯状态颜色
+            '加载入终端状态颜色
 
             g_welcomewinobj.Show()
 

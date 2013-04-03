@@ -834,7 +834,7 @@ finish:
     End Sub
 
     ''' <summary>
-    '''   '按电控箱进行路灯状态查询
+    '''   '按电控箱进行终端状态查询
     ''' </summary>
     ''' <param name="check_state"></param>
     ''' <param name="controlboxname"></param>
@@ -852,7 +852,7 @@ finish:
         Dim statetype1 As String = "数据"
         Dim statetype2 As String = "时段"
         Dim timestart, timeend As Date
-  
+
         Dim recData(20) As String '接收的数据
         Dim box_type As Integer '电控箱类型
         Dim state_kind As String '为不同的状态类型分类，通信，供电，状态
@@ -942,7 +942,7 @@ finish:
     End Sub
 
     ''' <summary>
-    '''   '按电控箱进行路灯状态查询
+    '''   '按电控箱进行终端状态查询
     ''' </summary>
     ''' <param name="check_state"></param>
     ''' <param name="controlboxname"></param>
@@ -1042,7 +1042,7 @@ finish:
                 m_xlApp.Cells(m_row, 3) = statestring
                 m_xlApp.Cells(m_row, 4) = "'" & timestart
                 m_xlApp.Cells(m_row, 5) = "'" & timeend
-              
+
                 m_row += 1
 
                 m_id += 1
@@ -1063,7 +1063,7 @@ finish:
 
 
     ''' <summary>
-    '''   '按电控箱进行路灯状态查询
+    '''   '按电控箱进行终端状态查询
     ''' </summary>
     ''' <param name="check_state"></param>
     ''' <param name="controlboxname"></param>

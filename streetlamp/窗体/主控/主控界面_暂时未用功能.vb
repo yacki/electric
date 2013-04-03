@@ -19,13 +19,13 @@
     '    'On Error GoTo createErr
 
     '    '  Dim Table As New DataTable
-    '    xlApp.Cells(1, 1) = "路灯统计报表"
+    '    xlApp.Cells(1, 1) = "终端统计报表"
     '    xlApp.Rows(1).RowHeight = 50
     '    xlApp.Rows(1).Font.Size = 18
     '    xlApp.Rows(1).Font.Bold = True
 
     '    xlApp.Cells(2, 1) = "编号"
-    '    xlApp.Cells(2, 2) = "路灯编号"
+    '    xlApp.Cells(2, 2) = "终端编号"
     '    xlApp.Cells(2, 3) = "电流"
     '    xlApp.Cells(2, 4) = "时间"
     '    xlApp.Cells(2, 5) = "备注"
@@ -297,7 +297,7 @@
     '    ''' <remarks></remarks>
     '    '''
     '    Private Sub BackgroundWorker_check_problem_DoWork(ByVal sender As System.Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker_check_problem.DoWork
-    '        '发现故障发二次确认故障,故障确认只确认路灯一块，三遥部分另处理
+    '        '发现故障发二次确认故障,故障确认只确认终端一块，三遥部分另处理
     '        Dim rs, rs_lamp As New ADODB.Recordset
     '        Dim conn As New ADODB.Connection
     '        Dim sql As String
@@ -347,13 +347,13 @@
     '                End If
     '                If rs_lampnow.RecordCount > 0 Then
     '                    If (rs_lampnow.Fields("state").Value = 1 Or rs_lampnow.Fields("state").Value = 4) And Trim(rs.Fields("state").Value) = LAMP_STATE_PROBLEM_OFF Then
-    '                        '该暗非暗的故障，然后路灯被发了开的命令，则此故障不处理
+    '                        '该暗非暗的故障，然后终端被发了开的命令，则此故障不处理
     '                        sql = "update lamp_state_list set end_tag=5 where ID='" & rs.Fields("ID").Value & "'"
     '                        DBOperation.ExecuteSQL(conn, sql, msg)
     '                        GoTo finish2
     '                    End If
     '                    If (rs_lampnow.Fields("state").Value = 0 Or rs_lampnow.Fields("state").Value = 3) And Trim(rs.Fields("state").Value) = LAMP_STATE_PROBLEM_ON Then
-    '                        '该亮非亮的故障，然后路灯被发了关的命令，则此故障不处理
+    '                        '该亮非亮的故障，然后终端被发了关的命令，则此故障不处理
     '                        sql = "update lamp_state_list set end_tag=5 where ID='" & rs.Fields("ID").Value & "'"
     '                        DBOperation.ExecuteSQL(conn, sql, msg)
     '                        GoTo finish2
@@ -422,7 +422,7 @@
 
     '                find_time = 0
     '                While find_time < 10
-    '                    state_string = m_controllampobj.Get_actual_state(lamp_id_string, 2, time)  '获取路灯的运行状态
+    '                    state_string = m_controllampobj.Get_actual_state(lamp_id_string, 2, time)  '获取终端的运行状态
     '                    If state_string <> "" Then
     '                        Exit While
     '                    End If
@@ -708,11 +708,11 @@
     '#End Region
 
     '''' <summary>
-    '''' 打开所有的路灯，按区域、类型和单灯三个级别
+    '''' 打开所有的终端，按区域、类型和单灯三个级别
     '''' </summary>
     '''' <remarks></remarks>
 
-    'Private Sub open_all_lamp()   '打开所有路灯
+    'Private Sub open_all_lamp()   '打开所有终端
     '    If box_control.Checked = False And type_control.Checked = False And lamp_id_control.Checked = False Then
     '        MsgBox("请选择控制类型！", , msg_box_title)  '如果没有选择控制类型，提示选择控制类型后再进行下一步操作
     '        Exit Sub
@@ -792,11 +792,11 @@
     'End Sub
 
     '''' <summary>
-    '''' 隔两盏的方式打开路灯，分为区域、类型、单灯三个级别
+    '''' 隔两盏的方式打开终端，分为区域、类型、单灯三个级别
     '''' </summary>
     '''' <remarks></remarks>
     'Private Sub open_1_3_control()
-    '    '打开1/3路灯
+    '    '打开1/3终端
     '    ' Dim control_lamp_obj As New control_lamp
     '    Dim power_string As String
 
@@ -845,7 +845,7 @@
     '        Exit Sub
     '    End If
 
-    '    If open = 1 Then  'open=1表示单/双号路灯开
+    '    If open = 1 Then  'open=1表示单/双号终端开
     '        If power.Text = "" Then  '如果没输入功率，则提示输入功率后再进行下一步操作
     '            MsgBox("请输入功率！", , msg_box_title)
     '            power.Focus()  '光标定位在功率文本框
@@ -885,14 +885,14 @@
     '            Exit Sub
     '        End If
 
-    '        If open = 1 And single_double = 1 Then '单号路灯开
+    '        If open = 1 And single_double = 1 Then '单号终端开
     '            If MsgBox("通信正常，是否打开区域: " & Trim(box_all.Text) & "中所有单号" & Trim(lamp_type_all.Text) & "?", MsgBoxStyle.YesNo, msg_box_title) = MsgBoxResult.No Then
     '                Exit Sub
     '            End If
     '            control_lamp_obj.Input_control_inf(Trim(lamp_type_all.Text), "类型", Trim(box_all.Text), "类型奇开", 1, Trim(diangan.Text), Trim(power.Text))
 
     '        Else
-    '            If open = 0 And single_double = 1 Then  '单号路灯关
+    '            If open = 0 And single_double = 1 Then  '单号终端关
     '                If MsgBox("通信正常，是否关闭区域: " & Trim(box_all.Text) & "中所有单号" & Trim(lamp_type_all.Text) & "?", MsgBoxStyle.YesNo, msg_box_title) = MsgBoxResult.No Then
     '                    Exit Sub
     '                End If
@@ -901,7 +901,7 @@
 
     '                ' control_lamp_obj.Input_control_inf(lamp_start, lamp_end, "电控箱", Trim(box_all.Text), "奇闭", 0, Trim(diangan.Text), Trim(power.Text))
     '            Else
-    '                If open = 1 And single_double = 0 Then  '双号路灯开
+    '                If open = 1 And single_double = 0 Then  '双号终端开
     '                    If MsgBox("通信正常，是否打开区域: " & Trim(box_all.Text) & "中所有双号" & Trim(lamp_type_all.Text) & "?", MsgBoxStyle.YesNo, msg_box_title) = MsgBoxResult.No Then
     '                        Exit Sub
     '                    End If
@@ -909,7 +909,7 @@
 
     '                Else
 
-    '                    If open = 0 And single_double = 0 Then  '双号路灯关
+    '                    If open = 0 And single_double = 0 Then  '双号终端关
     '                        If MsgBox("通信正常，是否关闭区域: " & Trim(box_all.Text) & "中所有双号" & Trim(lamp_type_all.Text) & "?", MsgBoxStyle.YesNo, msg_box_title) = MsgBoxResult.No Then
     '                            Exit Sub
     '                        End If
@@ -937,11 +937,11 @@
     '    End If
 
     '    If box_control.Checked = True Then  '按电控箱控制
-    '        If single_double = 1 Then  '显示单号路灯开关信息
+    '        If single_double = 1 Then  '显示单号终端开关信息
     '            MsgBox(Trim(box_all.Text) & " 号区域单号灯" & open_close, , msg_box_title)
     '            ' Doing_now_text.AppendText(area_title & Trim(box_all.Text) & " 号电控箱单号灯" & open_close & Format(Now(), "yyyy-MM-dd HH:mm:ss") & vbCrLf)
     '            circle_string.Text = Trim(box_all.Text) & " 号区域单号灯" & open_close
-    '        Else  '显示双号路灯开关信息
+    '        Else  '显示双号终端开关信息
     '            MsgBox(Trim(box_all.Text) & " 号区域双号灯" & open_close, , msg_box_title)
     '            'Doing_now_text.AppendText(area_title & Trim(box_all.Text) & " 号电控箱双号灯" & open_close & Format(Now(), "yyyy-MM-dd HH:mm:ss") & vbCrLf)
     '            circle_string.Text = Trim(box_all.Text) & " 号区域双号灯" & open_close
@@ -967,7 +967,7 @@
     'End Sub
 
     '''' <summary>
-    '''' 关闭所有的路灯,按区域、类型和单灯范围进行控制
+    '''' 关闭所有的终端,按区域、类型和单灯范围进行控制
     '''' </summary>
     '''' <remarks></remarks>
     '''' 
@@ -1137,9 +1137,9 @@
     '    delete_street_find_obj.Show()
     'End Sub
 
-    'Private Sub 路灯状态统计ToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-    '    '用户可以查询特定范围内路灯的统计信息
-    '    Dim static_lamp As New 路灯运行状态统计
+    'Private Sub 终端状态统计ToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    '    '用户可以查询特定范围内终端的统计信息
+    '    Dim static_lamp As New 终端运行状态统计
     '    static_lamp.Show()
     'End Sub
 
@@ -1299,7 +1299,7 @@
     '    ' Dim node, node_type, node_inf As New TreeNode
     '    Dim type_index As Integer  '标志取景观灯类型
     '    Dim sum As Integer  '统计灯的总的个数
-    '    Dim lv_light_on_num, lv_light_off_num, lv_light_problem_num, lv_no_return_num As Integer  '路灯数量
+    '    Dim lv_light_on_num, lv_light_off_num, lv_light_problem_num, lv_no_return_num As Integer  '终端数量
     '    Dim type_index_num As Integer  '景观灯类型的个数
     '    Dim result_tag, state_tag, power_tag As Integer   '灯的状态和结果,电功率
     '    Dim lamp_id_tag As String  '灯的编号
@@ -1381,7 +1381,7 @@
     '                    'Me.AddTreeViewDelegate(lamp_id_tag & " 打开", Me.TreeView_lampinf, 2, type_index_num - 1, 6, level2_num, level3_num)
     '                End If
 
-    '                If result_tag = 3 Then  '无返回状态，只统计不在路灯的颜色上标志出来
+    '                If result_tag = 3 Then  '无返回状态，只统计不在终端的颜色上标志出来
     '                    'node.Nodes(type_index_num - 1).Nodes.Add(lamp_id_tag & " 无返回值")
     '                    ' level3_num += 1  '第3级别的节点数加1
     '                    ' Me.AddTreeViewDelegate(lamp_id_tag & " 无返回值", Me.TreeView_lampinf, 2, type_index_num - 1, 5, level2_num, level3_num)
@@ -1516,13 +1516,13 @@
     '    conn = Nothing
     'End Sub
 
-    '主控界面中的路灯信息线程
-    'Private lamp_road_string As String   '路灯状态提示栏的字符串
+    '主控界面中的终端信息线程
+    'Private lamp_road_string As String   '终端状态提示栏的字符串
     'Private alarm_string As String  '报警信息提示栏的字符串
 
     ''轮询线程变量
     'Private time_wait1, time_wait2, time_wait3 As Integer    '等待计时
-    'Private set_tag As Integer '标志路灯起始参数
+    'Private set_tag As Integer '标志终端起始参数
     'Private StatusStrip_boxname1, StatusStrip_typestring1, StatusStrip_control_box1, StatusStrip_lamp_id1 As String  '状态栏上的提示信息
     'Private StatusStrip_boxname2, StatusStrip_typestring2, StatusStrip_control_box2, StatusStrip_lamp_id2 As String  '状态栏上的提示信息
     'Private StatusStrip_boxname3, StatusStrip_typestring3, StatusStrip_control_box3, StatusStrip_lamp_id3 As String  '状态栏上的提示信息
@@ -1668,7 +1668,7 @@
     '        conn = Nothing
     '    End Sub
 
-    '#Region "轮询路灯的当前状态"
+    '#Region "轮询终端的当前状态"
 
     '    Private Sub state_read_fun(ByVal id As Integer)
     '        '轮询景观灯的当前状态
@@ -1721,11 +1721,11 @@
     '                conn = Nothing
     '                Exit Sub
     '            End If
-    '            lamp_id_tag = Trim(rs.Fields("lamp_id").Value)  '标记需要查询的路灯编号
+    '            lamp_id_tag = Trim(rs.Fields("lamp_id").Value)  '标记需要查询的终端编号
     '            control_string = control_lamp_obj.Set_control_inf(lamp_id_tag)  '设置控制命令
     '            control_lamp_obj.Input_db_control(control_string)   '发送控制命令
 
-    '            '获取当前的路灯信息
+    '            '获取当前的终端信息
     '            If id = 1 Then
     '                StatusStrip_boxname1 = Trim(rs.Fields("control_box_name").Value) '电控箱名称
     '                StatusStrip_typestring1 = Trim(rs.Fields("type_string").Value) '景观灯类型
@@ -1776,10 +1776,10 @@
     '                        Exit While
     '                    End If
 
-    '                    find_state(lamp_id_tag, control_time, id)  '查找标志路灯的状态返回
+    '                    find_state(lamp_id_tag, control_time, id)  '查找标志终端的状态返回
     '                    System.Threading.Thread.Sleep(1000)  '线程休眠1秒
     '                    i1 += 1
-    '                    If find_tag1 = 1 Then    '如果找到了当前路灯的返回值
+    '                    If find_tag1 = 1 Then    '如果找到了当前终端的返回值
     '                        'System.Threading.Thread.Sleep(1000)
     '                        '将编号在其后的10盏赋同样的状态
 
@@ -1816,10 +1816,10 @@
     '                        Exit While
     '                    End If
 
-    '                    find_state(lamp_id_tag, control_time, id)  '查找标志路灯的状态返回
+    '                    find_state(lamp_id_tag, control_time, id)  '查找标志终端的状态返回
     '                    System.Threading.Thread.Sleep(1000)  '线程休眠1秒
     '                    i2 += 1
-    '                    If find_tag2 = 1 Then    '如果找到了当前路灯的返回值
+    '                    If find_tag2 = 1 Then    '如果找到了当前终端的返回值
     '                        'System.Threading.Thread.Sleep(1000)
     '                        Exit While
     '                    Else
@@ -1855,10 +1855,10 @@
     '                        Exit While
     '                    End If
 
-    '                    find_state(lamp_id_tag, control_time, id)  '查找标志路灯的状态返回
+    '                    find_state(lamp_id_tag, control_time, id)  '查找标志终端的状态返回
     '                    System.Threading.Thread.Sleep(1000)  '线程休眠1秒
     '                    i3 += 1
-    '                    If find_tag3 = 1 Then    '如果找到了当前路灯的返回值
+    '                    If find_tag3 = 1 Then    '如果找到了当前终端的返回值
     '                        'System.Threading.Thread.Sleep(1000)
     '                        Exit While
     '                    Else
@@ -1943,11 +1943,11 @@
     '                msg = ""
     '                sql = "select * from lamp_inf where lamp_id='" & lamp_id_tag & "'"
 
-    '                rs_lamp = DBOperation.SelectSQL(conn, sql, msg)  '在路灯的表中找到当前需要查询的路灯的信息
+    '                rs_lamp = DBOperation.SelectSQL(conn, sql, msg)  '在终端的表中找到当前需要查询的终端的信息
 
-    '                If rs_lamp.RecordCount > 0 Then  '如果存在该路灯
+    '                If rs_lamp.RecordCount > 0 Then  '如果存在该终端
     '                    lamp_state = rs_lamp.Fields("state").Value   '记录灯的状态
-    '                    rs_lamp.Fields("result").Value = 3    '无状态返回，将路灯的信息表中标志故障
+    '                    rs_lamp.Fields("result").Value = 3    '无状态返回，将终端的信息表中标志故障
     '                    rs_lamp.Update()
 
     '                End If
@@ -1958,7 +1958,7 @@
     '                rs_lamp = Nothing
 
     '                '将超时信息输入到故障表中
-    '                '判断故障列表中是否存在该路灯的该故障
+    '                '判断故障列表中是否存在该终端的该故障
 
     '                control_lamp_obj.Input_problem(3, lamp_id_tag, lamp_state)  '写入故障列表
     '                time_wait1 = 0  '轮询的等待时间置为0
@@ -1975,11 +1975,11 @@
     '                msg = ""
     '                sql = "select * from lamp_inf where lamp_id='" & lamp_id_tag & "'"
 
-    '                rs_lamp = DBOperation.SelectSQL(conn, sql, msg)  '在路灯的表中找到当前需要查询的路灯的信息
+    '                rs_lamp = DBOperation.SelectSQL(conn, sql, msg)  '在终端的表中找到当前需要查询的终端的信息
 
-    '                If rs_lamp.RecordCount > 0 Then  '如果存在该路灯
+    '                If rs_lamp.RecordCount > 0 Then  '如果存在该终端
     '                    lamp_state = rs_lamp.Fields("state").Value   '记录灯的状态
-    '                    rs_lamp.Fields("result").Value = 3    '无状态返回，将路灯的信息表中标志故障
+    '                    rs_lamp.Fields("result").Value = 3    '无状态返回，将终端的信息表中标志故障
     '                    rs_lamp.Update()
 
     '                End If
@@ -1990,7 +1990,7 @@
     '                rs_lamp = Nothing
 
     '                '将超时信息输入到故障表中
-    '                '判断故障列表中是否存在该路灯的该故障
+    '                '判断故障列表中是否存在该终端的该故障
 
     '                control_lamp_obj.Input_problem(3, lamp_id_tag, lamp_state)  '写入故障列表
     '                time_wait2 = 0  '轮询的等待时间置为0
@@ -2007,11 +2007,11 @@
     '                msg = ""
     '                sql = "select * from lamp_inf where lamp_id='" & lamp_id_tag & "'"
 
-    '                rs_lamp = DBOperation.SelectSQL(conn, sql, msg)  '在路灯的表中找到当前需要查询的路灯的信息
+    '                rs_lamp = DBOperation.SelectSQL(conn, sql, msg)  '在终端的表中找到当前需要查询的终端的信息
 
-    '                If rs_lamp.RecordCount > 0 Then  '如果存在该路灯
+    '                If rs_lamp.RecordCount > 0 Then  '如果存在该终端
     '                    lamp_state = rs_lamp.Fields("state").Value   '记录灯的状态
-    '                    rs_lamp.Fields("result").Value = 3    '无状态返回，将路灯的信息表中标志故障
+    '                    rs_lamp.Fields("result").Value = 3    '无状态返回，将终端的信息表中标志故障
     '                    rs_lamp.Update()
 
     '                End If
@@ -2022,7 +2022,7 @@
     '                rs_lamp = Nothing
 
     '                '将超时信息输入到故障表中
-    '                '判断故障列表中是否存在该路灯的该故障
+    '                '判断故障列表中是否存在该终端的该故障
 
     '                control_lamp_obj.Input_problem(3, lamp_id_tag, lamp_state)  '写入故障列表
     '                time_wait3 = 0  '轮询的等待时间置为0
@@ -2034,9 +2034,9 @@
 
 
     '        msg = ""
-    '        '对比路灯状态返回值与操作值 
+    '        '对比终端状态返回值与操作值 
 
-    '        state_string = control_lamp_obj.Get_actual_state(lamp_id_tag, control_time, hand_control_tag)  '获取路灯的运行状态
+    '        state_string = control_lamp_obj.Get_actual_state(lamp_id_tag, control_time, hand_control_tag)  '获取终端的运行状态
     '        If state_string = "" Then
     '            'MsgBox("查询出错！")
     '            If id = 1 Then
@@ -2086,8 +2086,8 @@
     '                        lamp_state = rs.Fields("state").Value   '灯的状态
     '                        ' Me.StatusStrip_control_box = Trim(rs.Fields("control_box_id").Value)   '提示栏中的控制箱编号
     '                        Me.StatusStrip_control_box1 = Mid(lamp_id_tag, 1, 4)   '提示栏中的控制箱编号
-    '                        Me.StatusStrip_lamp_id1 = lamp_id_tag   '提示栏中的路灯编号
-    '                        rs.Fields("date").Value = Now    '更新路灯信息表中的时间信息
+    '                        Me.StatusStrip_lamp_id1 = lamp_id_tag   '提示栏中的终端编号
+    '                        rs.Fields("date").Value = Now    '更新终端信息表中的时间信息
     '                        Me.SetTextDelegate("区域：" & Me.StatusStrip_boxname1 & vbCrLf, True, Me.Doing_now_text)
     '                        Me.SetTextDelegate("景观灯类型：" & Me.StatusStrip_typestring1 & vbCrLf, True, Me.Doing_now_text)
     '                        Me.SetTextDelegate("景观灯编号：" & Mid(Me.StatusStrip_lamp_id1, 7, 3) & vbCrLf, True, Me.Doing_now_text)
@@ -2100,8 +2100,8 @@
     '                        lamp_state = rs.Fields("state").Value   '灯的状态
     '                        ' Me.StatusStrip_control_box = Trim(rs.Fields("control_box_id").Value)   '提示栏中的控制箱编号
     '                        Me.StatusStrip_control_box2 = Mid(lamp_id_tag, 1, 4)   '提示栏中的控制箱编号
-    '                        Me.StatusStrip_lamp_id2 = lamp_id_tag   '提示栏中的路灯编号
-    '                        rs.Fields("date").Value = Now    '更新路灯信息表中的时间信息
+    '                        Me.StatusStrip_lamp_id2 = lamp_id_tag   '提示栏中的终端编号
+    '                        rs.Fields("date").Value = Now    '更新终端信息表中的时间信息
     '                        Me.SetTextDelegate("区域：" & Me.StatusStrip_boxname2 & vbCrLf, True, Me.Doing_now_text)
     '                        Me.SetTextDelegate("景观灯类型：" & Me.StatusStrip_typestring2 & vbCrLf, True, Me.Doing_now_text)
     '                        Me.SetTextDelegate("景观灯编号：" & Mid(Me.StatusStrip_lamp_id2, 7, 3) & vbCrLf, True, Me.Doing_now_text)
@@ -2115,8 +2115,8 @@
     '                        lamp_state = rs.Fields("state").Value   '灯的状态
     '                        ' Me.StatusStrip_control_box = Trim(rs.Fields("control_box_id").Value)   '提示栏中的控制箱编号
     '                        Me.StatusStrip_control_box3 = Mid(lamp_id_tag, 1, 4)   '提示栏中的控制箱编号
-    '                        Me.StatusStrip_lamp_id3 = lamp_id_tag   '提示栏中的路灯编号
-    '                        rs.Fields("date").Value = Now    '更新路灯信息表中的时间信息
+    '                        Me.StatusStrip_lamp_id3 = lamp_id_tag   '提示栏中的终端编号
+    '                        rs.Fields("date").Value = Now    '更新终端信息表中的时间信息
     '                        Me.SetTextDelegate("区域：" & Me.StatusStrip_boxname3 & vbCrLf, True, Me.Doing_now_text)
     '                        Me.SetTextDelegate("景观灯类型：" & Me.StatusStrip_typestring3 & vbCrLf, True, Me.Doing_now_text)
     '                        Me.SetTextDelegate("景观灯编号：" & Mid(Me.StatusStrip_lamp_id3, 7, 3) & vbCrLf, True, Me.Doing_now_text)
@@ -2131,14 +2131,14 @@
     '                            If rs.Fields("result").Value <> 0 Then
     '                                Dim rs_work_end As ADODB.Recordset
     '                                sql = "select * from work_table where lamp_id='" & lamp_id_tag & "'and time_end is null"
-    '                                rs_work_end = DBOperation.SelectSQL(conn, sql, msg)   '维修工单中找到只有开始时间没有结束时间的该路灯条目
+    '                                rs_work_end = DBOperation.SelectSQL(conn, sql, msg)   '维修工单中找到只有开始时间没有结束时间的该终端条目
     '                                If rs_work_end.RecordCount > 0 Then
     '                                    '分配了工单,记录工单中的故障维修完成时间
     '                                    rs_work_end.Fields("time_end").Value = Now
     '                                    rs_work_end.Update()
 
-    '                                    sql = "select * from lamp_inf_record  where lamp_id='" & lamp_id_tag & "' and state_inf=" & 4  '将路灯状态中标志到维修清单中的路灯标志为维修好
-    '                                    rs_work_end = DBOperation.SelectSQL(conn, sql, msg) '标志路灯维修好
+    '                                    sql = "select * from lamp_inf_record  where lamp_id='" & lamp_id_tag & "' and state_inf=" & 4  '将终端状态中标志到维修清单中的终端标志为维修好
+    '                                    rs_work_end = DBOperation.SelectSQL(conn, sql, msg) '标志终端维修好
     '                                    If rs_work_end.RecordCount > 0 Then
     '                                        rs_work_end.Fields("server_state").Value = 2  '标志为维修好的
     '                                        rs_work_end.Update()
@@ -2150,8 +2150,8 @@
     '                                rs_work_end = Nothing
     '                            End If
 
-    '                            rs.Fields("result").Value = 0  '将路灯表中的路灯结果该为成功
-    '                            rs.Fields("state").Value = 0   '路灯状态为暗
+    '                            rs.Fields("result").Value = 0  '将终端表中的终端结果该为成功
+    '                            rs.Fields("state").Value = 0   '终端状态为暗
     '                            rs.Update()
     '                            'Me.SetTextDelegate("状态：" & control_lamp_obj.Get_actual_state(Me.StatusStrip_lamp_id, Me.show_time) & " 暗" & Now & vbCrLf, True, Me.Doing_now_text)
     '                            Me.SetTextDelegate("状态： 暗  " & Now & vbCrLf, True, Me.Doing_now_text)
@@ -2183,7 +2183,7 @@
     '                                    rs_work_end.Update()
 
     '                                    sql = "select * from lamp_inf_record  where lamp_id='" & lamp_id_tag & "'and state_inf=" & 4
-    '                                    rs_work_end = DBOperation.SelectSQL(conn, sql, msg) '标志路灯维修好
+    '                                    rs_work_end = DBOperation.SelectSQL(conn, sql, msg) '标志终端维修好
 
     '                                    If rs_work_end.RecordCount > 0 Then
     '                                        rs_work_end.Fields("server_state").Value = 2  '标志为维修好的
@@ -2196,8 +2196,8 @@
     '                                rs_work_end = Nothing
 
     '                            End If
-    '                            rs.Fields("result").Value = 0  '路灯表中的结果该为成功
-    '                            rs.Fields("state").Value = 1   '路灯表中的状态改为亮
+    '                            rs.Fields("result").Value = 0  '终端表中的结果该为成功
+    '                            rs.Fields("state").Value = 1   '终端表中的状态改为亮
     '                            rs.Update()
     '                            ' Me.SetTextDelegate("状态：" & control_lamp_obj.Get_actual_state(Me.StatusStrip_lamp_id, Me.show_time) & " 亮" & Now & vbCrLf, True, Me.Doing_now_text)
     '                            Me.SetTextDelegate("状态： 亮  " & Now & vbCrLf, True, Me.Doing_now_text)
@@ -2217,10 +2217,10 @@
     '                                state3_string = "状态： 亮  " & Now & vbCrLf
     '                            End If
     '                        Case "C"
-    '                            '判断故障列表中是否存在该路灯的该故障
+    '                            '判断故障列表中是否存在该终端的该故障
     '                            control_lamp_obj.Input_problem(1, lamp_id_tag, lamp_state)  '写入故障列表
     '                            '  rs.Fields("state").Value = 0
-    '                            rs.Fields("result").Value = 1  '路灯列表中的结果为该亮非亮
+    '                            rs.Fields("result").Value = 1  '终端列表中的结果为该亮非亮
     '                            rs.Update()
     '                            Me.SetTextDelegate("状态：该亮非亮  " & Now & vbCrLf, True, Me.Doing_now_text)
     '                            If id = 1 Then
@@ -2239,10 +2239,10 @@
     '                                state3_string = "状态： 该亮非亮  " & Now & vbCrLf
     '                            End If
     '                        Case "D"
-    '                            ''判断故障列表中是否存在该路灯的该故障
+    '                            ''判断故障列表中是否存在该终端的该故障
     '                            control_lamp_obj.Input_problem(2, Trim(rs.Fields("lamp_id").Value), lamp_state)  '如果没有写入故障列表
     '                            '  rs.Fields("state").Value = 1
-    '                            rs.Fields("result").Value = 2  '路灯列表中的结果为该暗非暗
+    '                            rs.Fields("result").Value = 2  '终端列表中的结果为该暗非暗
     '                            rs.Update()
     '                            Me.SetTextDelegate("状态：该暗非暗  " & Now & vbCrLf, True, Me.Doing_now_text)
     '                            If id = 1 Then
@@ -2263,7 +2263,7 @@
     '                        Case Else
     '                            rs.Close()
     '                            rs = Nothing
-    '                            MsgBox("路灯状态对比出错！", , msg_box_title)
+    '                            MsgBox("终端状态对比出错！", , msg_box_title)
     '                            conn.Close()
     '                            conn = Nothing
     '                            Exit Sub

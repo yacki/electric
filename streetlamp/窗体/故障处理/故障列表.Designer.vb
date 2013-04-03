@@ -237,7 +237,7 @@ Partial Class 故障列表
         Me.pro_lamp_id_string.Name = "pro_lamp_id_string"
         Me.pro_lamp_id_string.Size = New System.Drawing.Size(65, 12)
         Me.pro_lamp_id_string.TabIndex = 94
-        Me.pro_lamp_id_string.Text = "路灯编号："
+        Me.pro_lamp_id_string.Text = "终端编号："
         '
         'cb_control_box_name
         '
@@ -540,7 +540,7 @@ Partial Class 故障列表
         Me.rb_lamp_id_control.Size = New System.Drawing.Size(71, 16)
         Me.rb_lamp_id_control.TabIndex = 118
         Me.rb_lamp_id_control.TabStop = True
-        Me.rb_lamp_id_control.Text = "路灯编号"
+        Me.rb_lamp_id_control.Text = "终端编号"
         Me.rb_lamp_id_control.UseVisualStyleBackColor = False
         '
         'GroupBox3

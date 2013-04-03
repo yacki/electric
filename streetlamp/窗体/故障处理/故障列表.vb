@@ -98,7 +98,7 @@ Public Class 故障列表
             rs.MoveNext()
         End While
 
-        choose_state() '对路灯的编号进行重新赋值
+        choose_state() '对终端的编号进行重新赋值
 
         If rs.State = 1 Then
             rs.Close()
@@ -131,7 +131,7 @@ Public Class 故障列表
 
         m_xlApp.Cells(2, 1) = "编号"
         m_xlApp.Cells(2, 2) = "主控箱名称"
-        m_xlApp.Cells(2, 3) = "路灯编号"
+        m_xlApp.Cells(2, 3) = "终端编号"
         m_xlApp.Cells(2, 4) = "报警原因"
         m_xlApp.Cells(2, 5) = "报警是否解除"
         m_xlApp.Cells(2, 6) = "开始时间"
@@ -197,7 +197,7 @@ Public Class 故障列表
     End Sub
 
     ''' <summary>
-    ''' 路灯编号
+    ''' 终端编号
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
@@ -228,7 +228,7 @@ Public Class 故障列表
     Private Sub bt_find_record_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles bt_find_record.Click
 
         Dim time_start, time_end As System.DateTime
-        Dim lamp_id_string As String  '记录路灯的完整编号
+        Dim lamp_id_string As String  '记录终端的完整编号
         Dim rs As New ADODB.Recordset
         Dim msg As String
         Dim sql As String
@@ -535,7 +535,7 @@ Public Class 故障列表
             rs.MoveNext()
         End While
 
-        choose_state() '对路灯的编号进行重新赋值
+        choose_state() '对终端的编号进行重新赋值
         If rs.State = 1 Then
             rs.Close()
             rs = Nothing

@@ -212,12 +212,12 @@ Public Class 编辑电控箱
 
         If g_addboxtag = 2 Then
             '表示坐标被更新过
-            '屏幕中的路灯起点坐标转换城地图中的相对坐标
+            '屏幕中的终端起点坐标转换城地图中的相对坐标
             pos_add.X = Val(lb_start_pos_x.Text - g_welcomewinobj.GroupBox1.Location.X - g_welcomewinobj.DesktopLocation.X - (Me.Width - Me.ClientSize.Width) - g_welcomewinobj.pb_map.Location.X - g_welcomewinobj.SplitContainer3.Panel1.Width)
             pos_add.Y = Val(lb_start_pos_y.Text - g_welcomewinobj.GroupBox1.Location.Y - g_welcomewinobj.DesktopLocation.Y - (Me.Height - Me.ClientSize.Height) - g_welcomewinobj.pb_map.Location.Y)
 
         Else
-            '屏幕中的路灯起点坐标转换城地图中的相对坐标
+            '屏幕中的终端起点坐标转换城地图中的相对坐标
             pos_add.X = Val(lb_start_pos_x.Text)
             pos_add.Y = Val(lb_start_pos_y.Text)
 
@@ -351,7 +351,7 @@ finish:
         g_welcomewinobj.m_controlboxobj.set_controlbox_list(g_welcomewinobj.tv_box_inf_list)
 
 
-       
+
 
 
     End Sub
@@ -442,7 +442,7 @@ finish:
             sql = "delete from box_lamptype where control_box_id='" & m_boxid & "'"
             DBOperation.ExecuteSQL(conn, sql, msg)
 
-            '删除lamp_inf该电控箱编号的路灯信息
+            '删除lamp_inf该电控箱编号的终端信息
             sql = "delete from lamp_inf where control_box_id='" & m_boxid & "'"
             DBOperation.ExecuteSQL(conn, sql, msg)
 

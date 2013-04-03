@@ -111,7 +111,7 @@ Public Class 增加主控箱
         Dim msg As String
         Dim conn As New ADODB.Connection
         Dim street_id As String
-        Dim pos_add As System.Drawing.Point  '新增一串路灯的起点和终点坐标
+        Dim pos_add As System.Drawing.Point  '新增一串终端的起点和终点坐标
         Dim box_id As String  '电控箱编号！
         Dim imei_string, box_name_string As String
         Dim huilunum As Integer  '模拟量
@@ -151,7 +151,7 @@ Public Class 增加主控箱
             Exit Sub
         End If
 
-        '屏幕中的路灯起点坐标转换城地图中的相对坐标
+        '屏幕中的终端起点坐标转换城地图中的相对坐标
         pos_add.X = Val(tb_start_pos_x.Text - g_welcomewinobj.GroupBox1.Location.X - g_welcomewinobj.DesktopLocation.X - (Me.Width - Me.ClientSize.Width) - g_welcomewinobj.pb_map.Location.X - g_welcomewinobj.SplitContainer3.Panel1.Width)
         pos_add.Y = Val(tb_start_pos_y.Text - g_welcomewinobj.GroupBox1.Location.Y - g_welcomewinobj.DesktopLocation.Y - (Me.Height - Me.ClientSize.Height) - g_welcomewinobj.pb_map.Location.Y)
 
@@ -215,7 +215,7 @@ Public Class 增加主控箱
                 DBOperation.ExecuteSQL(conn, sql, msg)
 
             End If
-            '增加该电控箱下的路灯类型
+            '增加该电控箱下的终端类型
             sql = "insert into box_lamptype(control_box_id,lamp_type_id) values('" & box_id & "','0')"
             DBOperation.ExecuteSQL(conn, sql, msg)
 

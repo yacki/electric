@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class 增加路灯
+Partial Class 增加终端
     Inherits System.Windows.Forms.Form
 
     'Form 重写 Dispose，以清理组件列表。
@@ -27,7 +27,7 @@ Partial Class 增加路灯
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(增加路灯))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(增加终端))
         Me.cb_box_add = New System.Windows.Forms.ComboBox()
         Me.box_add_string = New System.Windows.Forms.Label()
         Me.lamp_id_string = New System.Windows.Forms.Label()
@@ -317,7 +317,7 @@ Partial Class 增加路灯
         Me.lb_lamp_id_start.Name = "lb_lamp_id_start"
         Me.lb_lamp_id_start.Size = New System.Drawing.Size(113, 12)
         Me.lb_lamp_id_start.TabIndex = 125
-        Me.lb_lamp_id_start.Text = "路灯编号的前半部分"
+        Me.lb_lamp_id_start.Text = "终端编号的前半部分"
         Me.lb_lamp_id_start.Visible = False
         '
         'StatusStrip1
@@ -391,7 +391,7 @@ Partial Class 增加路灯
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(65, 12)
         Me.Label16.TabIndex = 175
-        Me.Label16.Text = "节点备注："
+        Me.Label16.Text = "联系电话："
         '
         'GroupBox7
         '
@@ -1716,10 +1716,10 @@ Partial Class 增加路灯
         'lamp_pointinfor
         '
         Me.lamp_pointinfor.DataPropertyName = "lamp_pointinfor"
-        Me.lamp_pointinfor.HeaderText = "节点备注"
+        Me.lamp_pointinfor.HeaderText = "联系电话"
         Me.lamp_pointinfor.Name = "lamp_pointinfor"
         '
-        '增加路灯
+        '增加终端
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -1730,7 +1730,7 @@ Partial Class 增加路灯
         Me.Font = New System.Drawing.Font("宋体", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
-        Me.Name = "增加路灯"
+        Me.Name = "增加终端"
         Me.Text = "编辑终端设备"
         CType(Me.dgv_old_lamp_list, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LampstreetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

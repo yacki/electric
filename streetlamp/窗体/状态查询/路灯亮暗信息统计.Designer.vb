@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class 路灯亮暗信息统计
+Partial Class 终端亮暗信息统计
     Inherits System.Windows.Forms.Form
 
     'Form 重写 Dispose，以清理组件列表。
@@ -25,7 +25,7 @@ Partial Class 路灯亮暗信息统计
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(路灯亮暗信息统计))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(终端亮暗信息统计))
         Me.static_excel = New System.Windows.Forms.Button()
         Me.clear = New System.Windows.Forms.Button()
         Me.Date_end = New System.Windows.Forms.DateTimePicker()
@@ -866,7 +866,7 @@ Partial Class 路灯亮暗信息统计
         Me.StateflagDataGridViewTextBoxColumn.Name = "StateflagDataGridViewTextBoxColumn"
         Me.StateflagDataGridViewTextBoxColumn.Visible = False
         '
-        '路灯亮暗信息统计
+        '终端亮暗信息统计
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -876,7 +876,7 @@ Partial Class 路灯亮暗信息统计
         Me.Controls.Add(Me.StatusStrip1)
         Me.Font = New System.Drawing.Font("宋体", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "路灯亮暗信息统计"
+        Me.Name = "终端亮暗信息统计"
         Me.Text = "设备日志"
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()

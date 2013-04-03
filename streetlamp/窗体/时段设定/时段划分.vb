@@ -50,7 +50,7 @@ Public Class 时段划分
                
                 mod1.Text = Mid(Trim(rs.Fields("mod").Value), 3)  '控制模式
                 'lv1.Text = Trim(rs.Fields("gonglv").Value)  '时段控制的功率
-                gonglv1.Text = Trim(rs.Fields("diangan").Value) '时段控制的电感路灯控制方式
+                gonglv1.Text = Trim(rs.Fields("diangan").Value) '时段控制的电感终端控制方式
 
             Else
                 If rs.Fields("id").Value = 2 Then  '时段中的第二时间区间
@@ -59,16 +59,16 @@ Public Class 时段划分
                     second2_beg.Text = Trim(rs.Fields("second_beg").Value) '时段开始的秒
                     mod2.Text = Mid(Trim(rs.Fields("mod").Value), 3) '控制模式
                     'lv2.Text = Trim(rs.Fields("gonglv").Value) '时段控制的功率
-                    gonglv2.Text = Trim(rs.Fields("diangan").Value) '时段控制的电感路灯控制方式
+                    gonglv2.Text = Trim(rs.Fields("diangan").Value) '时段控制的电感终端控制方式
 
                 Else
                     If rs.Fields("id").Value = 3 Then  '时段中的第三时间区间
                         hour3_beg.Text = Trim(rs.Fields("hour_beg").Value) '时间段开始时间的小时
                         min3_beg.Text = Trim(rs.Fields("min_beg").Value) '时间段开始时间的分钟
                         second3_beg.Text = Trim(rs.Fields("second_beg").Value) '时间段开始时间的秒
-                      
+
                         'lv3.Text = Trim(rs.Fields("gonglv").Value) '时段控制的功率
-                        gonglv3.Text = Trim(rs.Fields("diangan").Value) '时段控制的电感路灯控制方式
+                        gonglv3.Text = Trim(rs.Fields("diangan").Value) '时段控制的电感终端控制方式
 
 
                     End If
@@ -169,7 +169,7 @@ Public Class 时段划分
             conn = Nothing
             Exit Sub
         End If
-      
+
 
         rs = DBOperation.SelectSQL(conn, sql, msg)
         If rs.RecordCount = 0 Then
@@ -178,10 +178,10 @@ Public Class 时段划分
             rs.Fields("hour_beg").Value = Trim(hour1_beg.Text)  '时段1开始时间小时
             rs.Fields("min_beg").Value = Trim(min1_beg.Text) '时段1开始时间分钟
             rs.Fields("second_beg").Value = Trim(second1_beg.Text) '时段1开始时间秒
-           
+
             rs.Fields("mod").Value = "类型" & Trim(mod1.Text) '时段1控制模式
             rs.Fields("gonglv").Value = lv '时段1控制功率
-            rs.Fields("diangan").Value = Trim(gonglv1.Text) '时段1电感路灯控制方法
+            rs.Fields("diangan").Value = Trim(gonglv1.Text) '时段1电感终端控制方法
             rs.Fields("id").Value = 1 '时段1标号
             rs.Fields("div_level").Value = mod_level '时段1的级别
 
@@ -193,7 +193,7 @@ Public Class 时段划分
             rs.Fields("second_beg").Value = Trim(second2_beg.Text) '时段2开始时间秒
             rs.Fields("mod").Value = "类型" & Trim(mod2.Text) '时段2控制模式
             rs.Fields("gonglv").Value = lv '时段2控制功率
-            rs.Fields("diangan").Value = Trim(gonglv2.Text) '时段2电感路灯控制方法
+            rs.Fields("diangan").Value = Trim(gonglv2.Text) '时段2电感终端控制方法
             rs.Fields("id").Value = 2 '时段2标号
             rs.Fields("div_level").Value = mod_level '时段2的级别
             rs.Update()
@@ -202,10 +202,10 @@ Public Class 时段划分
             rs.Fields("hour_beg").Value = Trim(hour3_beg.Text) '时段3开始时间小时
             rs.Fields("min_beg").Value = Trim(min3_beg.Text) '时段3开始时间分钟
             rs.Fields("second_beg").Value = Trim(second3_beg.Text) '时段3开始时间秒
-          
+
             rs.Fields("mod").Value = "类型" & Trim(mod3.Text) '时段3控制模式
             rs.Fields("gonglv").Value = lv '时段3控制功率
-            rs.Fields("diangan").Value = Trim(gonglv3.Text) '时段3电感路灯控制方法
+            rs.Fields("diangan").Value = Trim(gonglv3.Text) '时段3电感终端控制方法
             rs.Fields("id").Value = 3 '时段3标号
 
             rs.Fields("div_level").Value = mod_level '时段3的级别

@@ -3,7 +3,7 @@
 ''' </summary>
 ''' <remarks></remarks>
 
-Public Class 路灯状态查询窗口
+Public Class 终端状态查询窗口
     Private Const TIME As Integer = 15  '等待最长时间15秒
 
     Private m_condition As String   '查询级别
@@ -99,7 +99,7 @@ Public Class 路灯状态查询窗口
 #End Region
 
     Private Sub lamp_id_DropDown(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lamp_id.DropDown
-        '为路灯编号下拉框增加内容
+        '为终端编号下拉框增加内容
         Com_inf.Select_lamp_id_type(control_box_name, lamp_type, lamp_id, lamp_id_start)
     End Sub
 
@@ -341,7 +341,7 @@ Public Class 路灯状态查询窗口
 
             Else
                 If m_condition = "景观灯" Then
-                    '按路灯进行查询
+                    '按终端进行查询
 
                     control_string = m_controllampobj.Set_control_inf(m_condition_inf)  '设置控制命令
                     m_controllampobj.Input_db_control(control_string, Mid(m_condition_inf, 1, 4), "", 1, -1)   '发送控制命令
@@ -408,7 +408,7 @@ Public Class 路灯状态查询窗口
         result_tag = 0
         state_tag = 0
         power_tag = 0
-        control_lamp_obj.Get_condition()  '获取判断路灯状态的标准，是电阻还是电流
+        control_lamp_obj.Get_condition()  '获取判断终端状态的标准，是电阻还是电流
         Com_inf.lamp_id_to_detail(lamp_id)
         find_single = False   '初始化为没找到
 
@@ -425,7 +425,7 @@ Public Class 路灯状态查询窗口
             'rs_lamp = DBOperation.SelectSQL(conn, sql, msg)
             'If rs_lamp.RecordCount > 0 Then
             '    'lamp_state = rs_lamp.Fields("state").Value
-            '    rs_lamp.Fields("result").Value = 3  '标志路灯的无返回状态
+            '    rs_lamp.Fields("result").Value = 3  '标志终端的无返回状态
             '    rs_lamp.Update()
 
             'End If
@@ -452,17 +452,17 @@ Public Class 路灯状态查询窗口
 
         msg = ""
 
-     
-        ox_str = Com_inf.Dec_to_Bin(Val(Mid(lamp_id, 5, 2)), 5) & Com_inf.Dec_to_Bin(Val(Mid(lamp_id, 7, LAMP_ID_LEN)), 11)  '二进制的路灯16位长度的路灯编号，前5位为类型号，后11位为灯的独立编号
+
+        ox_str = Com_inf.Dec_to_Bin(Val(Mid(lamp_id, 5, 2)), 5) & Com_inf.Dec_to_Bin(Val(Mid(lamp_id, 7, LAMP_ID_LEN)), 11)  '二进制的终端16位长度的终端编号，前5位为类型号，后11位为灯的独立编号
         ox_str = Com_inf.BIN_to_HEX(ox_str)  '转换成4位长度的十六进制
         If SYSTEM_VISION = 1 Then
             control_box_ox = Dec_to_Hex(Mid(lamp_id, 1, 4), 2)
-            lamp_id_ox = control_box_ox & " " & Mid(ox_str, 1, 2) & " " & Mid(ox_str, 3, 2) '路灯编号的16进制位数 4位
+            lamp_id_ox = control_box_ox & " " & Mid(ox_str, 1, 2) & " " & Mid(ox_str, 3, 2) '终端编号的16进制位数 4位
             sql = "select * from RoadLightStatus where StatusContent like '" & lamp_id_ox & "%' and Createtime>'" & m_controltime & "' and HandlerFlag=" & 0
 
         Else
             control_box_ox = Dec_to_Hex(Mid(lamp_id, 1, 4), 4)
-            lamp_id_ox = Mid(control_box_ox, 3, 2) & " " & Mid(ox_str, 1, 2) & " " & Mid(ox_str, 3, 2)  '路灯编号的16进制位数 4位
+            lamp_id_ox = Mid(control_box_ox, 3, 2) & " " & Mid(ox_str, 1, 2) & " " & Mid(ox_str, 3, 2)  '终端编号的16进制位数 4位
             sql = "select * from RoadLightStatus where StatusContent like '" & lamp_id_ox & "%' and StautsContent like '%" & Mid(control_box_ox, 1, 2) & "' and Createtime>'" & m_controltime & "' and HandlerFlag=" & 0
 
         End If
@@ -486,7 +486,7 @@ Public Class 路灯状态查询窗口
                 conn = Nothing
                 Exit Function
             End If
-            '有返回的路灯状态数据,将其与路灯状态表中的状态对比，并将对比结果输入的result字段中
+            '有返回的终端状态数据,将其与终端状态表中的状态对比，并将对比结果输入的result字段中
 
             sql = "select * from lamp_inf where lamp_id='" & lamp_id & "'"
             rs_lamp = DBOperation.SelectSQL(conn, sql, msg)
@@ -511,11 +511,11 @@ Public Class 路灯状态查询窗口
                 '        If Mid(lamp_id, 5, 2) = "03" Then
                 '            control_value_ad = 64
                 '        Else
-                '            control_value_ad = control_lamp_obj.Property_control_value  '判断路灯亮暗的控制值，即电阻值或电流值
+                '            control_value_ad = control_lamp_obj.Property_control_value  '判断终端亮暗的控制值，即电阻值或电流值
                 '        End If
 
                 '    Else
-                '        control_value_ad = control_lamp_obj.Property_control_value  '判断路灯亮暗的控制值，即电阻值或电流值
+                '        control_value_ad = control_lamp_obj.Property_control_value  '判断终端亮暗的控制值，即电阻值或电流值
 
                 '    End If
 
@@ -524,11 +524,11 @@ Public Class 路灯状态查询窗口
                     control_value_ad_all = 2
                     control_value_ad_part = 1
                 Else
-                    control_value_ad_part = g_controlvaluepart  '判断路灯亮暗的控制值，即电阻值或电流值
-                    control_value_ad_all = g_controlvalueall  '判断路灯亮暗的控制值，即电阻值或电流值
+                    control_value_ad_part = g_controlvaluepart  '判断终端亮暗的控制值，即电阻值或电流值
+                    control_value_ad_all = g_controlvalueall  '判断终端亮暗的控制值，即电阻值或电流值
 
                 End If
-              
+
                 control_condition_ad = current_ad
                 If rs_lamp.Fields("state").Value <> 0 And rs_lamp.Fields("state").Value <> 1 And rs_lamp.Fields("state").Value <> 3 And rs_lamp.Fields("state").Value <> 4 Then
                     MsgBox("灯的状态信息出错,请检查数据库表lamp_inf", , PROJECT_TITLE_STRING)
@@ -672,7 +672,7 @@ Public Class 路灯状态查询窗口
                 m_rownum += 1
 
             Else
-                MsgBox("未找到路灯的信息，请确定数据库中的路灯信息正确！", , PROJECT_TITLE_STRING)
+                MsgBox("未找到终端的信息，请确定数据库中的终端信息正确！", , PROJECT_TITLE_STRING)
             End If
             find_single = True   '标识设为找到
 
@@ -711,12 +711,12 @@ Public Class 路灯状态查询窗口
     End Function
 
     ''' <summary>
-    ''' 路灯状态查询的载入函数，初始化下拉框的内容
+    ''' 终端状态查询的载入函数，初始化下拉框的内容
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     ''' <remarks></remarks>
-    Private Sub 路灯状态查询窗口_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    Private Sub 终端状态查询窗口_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         ' find_tag = 0
         m_rownum = 0
         ' control_dianzu_string = "电阻"
@@ -742,7 +742,7 @@ Public Class 路灯状态查询窗口
         'state_off = LoginForm.Property_welcome_win_obj.Property_state_off
     End Sub
 
-    Private Sub 路灯状态查询窗口_FormClosed(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles MyBase.FormClosed
+    Private Sub 终端状态查询窗口_FormClosed(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles MyBase.FormClosed
         If Me.BackgroundWorker_state IsNot Nothing Then
             Me.BackgroundWorker_state.Dispose()
         End If
@@ -758,7 +758,7 @@ Public Class 路灯状态查询窗口
 
     Private Sub lamp_id_control_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lamp_id_control.Click
 
-        If lamp_id_control.Checked = True Then '按路灯编号进行查询
+        If lamp_id_control.Checked = True Then '按终端编号进行查询
             control_box_name.Enabled = True '电控箱编号可用
             lamp_type.Enabled = True  '景观灯类型可用
             lamp_id.Enabled = True '景观灯编号可用
@@ -849,7 +849,7 @@ Public Class 路灯状态查询窗口
         '等待回复信息
 
         While i <= TIME
-            find_state_tag = find_communication_state(Mid(control_string, 1, 8), control_time, i)  '查找标志路灯的状态返回
+            find_state_tag = find_communication_state(Mid(control_string, 1, 8), control_time, i)  '查找标志终端的状态返回
             System.Threading.Thread.Sleep(1000)  '线程休眠1秒
             i += 1
             If find_state_tag = True Then    '如果找到了当前灯的返回值
@@ -898,7 +898,7 @@ Public Class 路灯状态查询窗口
         '    SetTextLabelDelegate("通信不正常，请稍后重试！", Me.StatusStrip1, "finding")
         '    MsgBox("通信不正常，请稍后重试！", , LoginForm.Property_welcome_win_obj.Property_msg_box_title)
         '    '将超时信息输入到故障表中
-        '    '判断故障列表中是否存在该路灯的该故障
+        '    '判断故障列表中是否存在该终端的该故障
 
 
         '    'time_wait = 0  '轮询的等待时间置为0
@@ -908,7 +908,7 @@ Public Class 路灯状态查询窗口
         '    Exit Function
         'End If
         msg = ""
-        '对比路灯状态返回值与操作值 
+        '对比终端状态返回值与操作值 
         sql = "select * from RoadLightStatus where StatusContent like '" & lamp_id_tag & "%' and HandlerFlag=" & 0 & " and Createtime>'" & control_time & "' order by Createtime "
 
         rs = DBOperation.SelectSQL(conn, sql, msg)
@@ -937,7 +937,7 @@ Public Class 路灯状态查询窗口
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     ''' <remarks></remarks>
-    Private Sub 路灯状态查询窗口_FormClosing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
+    Private Sub 终端状态查询窗口_FormClosing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
         If Me.BackgroundWorker_state.IsBusy = True Then '关闭窗体时如果查询仍在进行，则停止查询进程
             Me.BackgroundWorker_state.CancelAsync()
         End If

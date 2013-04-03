@@ -224,7 +224,7 @@ Partial Class 系统参数设置
         Me.GroupBox1.Size = New System.Drawing.Size(232, 160)
         Me.GroupBox1.TabIndex = 5
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "路灯开关控制参数（电流AD）"
+        Me.GroupBox1.Text = "终端开关控制参数（电流AD）"
         '
         'tb_control_value_all
         '

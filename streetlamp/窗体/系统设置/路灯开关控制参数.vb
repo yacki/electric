@@ -104,7 +104,7 @@ Public Class 系统参数设置
                 rs.Update()
             End If
 
-            MsgBox("路灯开关参数设置成功", , PROJECT_TITLE_STRING)
+            MsgBox("终端开关参数设置成功", , PROJECT_TITLE_STRING)
 
             '增加操作记录
             Com_inf.Insert_Operation("编辑开关控制参数：" & Trim(tb_control_value_part.Text) & ", " & Trim(tb_control_value_all.Text))
@@ -136,7 +136,7 @@ Public Class 系统参数设置
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     ''' <remarks></remarks>
-    Private Sub 路灯开关控制参数_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    Private Sub 终端开关控制参数_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         '目前的控制参数
         '设置各个窗体的图标
         Me.Icon = New Icon("图片\favicon.ico", 32, 32)
@@ -2192,7 +2192,7 @@ finish:
     End Sub
 
     ''' <summary>
-    ''' 设置路灯的光照度开关阈值
+    ''' 设置终端的光照度开关阈值
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>

@@ -4519,3808 +4519,3808 @@ Me.RadioButton3.Location = New System.Drawing.Point(103, 20)
 Me.RadioButton3.Name = "RadioButton3"
 Me.RadioButton3.Size = New System.Drawing.Size(47, 16)
 Me.RadioButton3.TabIndex = 85
-Me.RadioButton3.Text = "路灯"
-Me.RadioButton3.UseVisualStyleBackColor = true
-'
-'RadioButton4
-'
-Me.RadioButton4.AutoSize = true
-Me.RadioButton4.Checked = true
-Me.RadioButton4.Location = New System.Drawing.Point(6, 21)
-Me.RadioButton4.Name = "RadioButton4"
-Me.RadioButton4.Size = New System.Drawing.Size(83, 16)
-Me.RadioButton4.TabIndex = 84
-Me.RadioButton4.TabStop = true
-Me.RadioButton4.Text = "主控箱节点"
-Me.RadioButton4.UseVisualStyleBackColor = true
-'
-'RadioButton5
-'
-Me.RadioButton5.AutoSize = true
-Me.RadioButton5.Checked = true
-Me.RadioButton5.Location = New System.Drawing.Point(371, 22)
-Me.RadioButton5.Name = "RadioButton5"
-Me.RadioButton5.Size = New System.Drawing.Size(71, 16)
-Me.RadioButton5.TabIndex = 100
-Me.RadioButton5.TabStop = true
-Me.RadioButton5.Text = "回路控制"
-Me.RadioButton5.UseVisualStyleBackColor = true
-'
-'RadioButton6
-'
-Me.RadioButton6.AutoSize = true
-Me.RadioButton6.Location = New System.Drawing.Point(268, 22)
-Me.RadioButton6.Name = "RadioButton6"
-Me.RadioButton6.Size = New System.Drawing.Size(71, 16)
-Me.RadioButton6.TabIndex = 99
-Me.RadioButton6.Text = "整体控制"
-Me.RadioButton6.UseVisualStyleBackColor = true
-'
-'GroupBox14
-'
-Me.GroupBox14.Controls.Add(Me.CheckBox16)
-Me.GroupBox14.Controls.Add(Me.CheckBox17)
-Me.GroupBox14.Controls.Add(Me.CheckBox18)
-Me.GroupBox14.Controls.Add(Me.CheckBox19)
-Me.GroupBox14.Controls.Add(Me.CheckBox20)
-Me.GroupBox14.Controls.Add(Me.CheckBox21)
-Me.GroupBox14.Location = New System.Drawing.Point(268, 118)
-Me.GroupBox14.Name = "GroupBox14"
-Me.GroupBox14.Size = New System.Drawing.Size(178, 110)
-Me.GroupBox14.TabIndex = 98
-Me.GroupBox14.TabStop = false
-Me.GroupBox14.Text = "回路控制"
-'
-'CheckBox16
-'
-Me.CheckBox16.AutoSize = true
-Me.CheckBox16.Location = New System.Drawing.Point(103, 83)
-Me.CheckBox16.Name = "CheckBox16"
-Me.CheckBox16.Size = New System.Drawing.Size(36, 16)
-Me.CheckBox16.TabIndex = 87
-Me.CheckBox16.Text = "K6"
-Me.CheckBox16.UseVisualStyleBackColor = true
-'
-'CheckBox17
-'
-Me.CheckBox17.AutoSize = true
-Me.CheckBox17.Location = New System.Drawing.Point(6, 83)
-Me.CheckBox17.Name = "CheckBox17"
-Me.CheckBox17.Size = New System.Drawing.Size(36, 16)
-Me.CheckBox17.TabIndex = 86
-Me.CheckBox17.Text = "K5"
-Me.CheckBox17.UseVisualStyleBackColor = true
-'
-'CheckBox18
-'
-Me.CheckBox18.AutoSize = true
-Me.CheckBox18.Location = New System.Drawing.Point(103, 52)
-Me.CheckBox18.Name = "CheckBox18"
-Me.CheckBox18.Size = New System.Drawing.Size(36, 16)
-Me.CheckBox18.TabIndex = 85
-Me.CheckBox18.Text = "K4"
-Me.CheckBox18.UseVisualStyleBackColor = true
-'
-'CheckBox19
-'
-Me.CheckBox19.AutoSize = true
-Me.CheckBox19.Location = New System.Drawing.Point(6, 52)
-Me.CheckBox19.Name = "CheckBox19"
-Me.CheckBox19.Size = New System.Drawing.Size(36, 16)
-Me.CheckBox19.TabIndex = 84
-Me.CheckBox19.Text = "K3"
-Me.CheckBox19.UseVisualStyleBackColor = true
-'
-'CheckBox20
-'
-Me.CheckBox20.AutoSize = true
-Me.CheckBox20.Location = New System.Drawing.Point(103, 22)
-Me.CheckBox20.Name = "CheckBox20"
-Me.CheckBox20.Size = New System.Drawing.Size(36, 16)
-Me.CheckBox20.TabIndex = 83
-Me.CheckBox20.Text = "K2"
-Me.CheckBox20.UseVisualStyleBackColor = true
-'
-'CheckBox21
-'
-Me.CheckBox21.AutoSize = true
-Me.CheckBox21.Location = New System.Drawing.Point(6, 22)
-Me.CheckBox21.Name = "CheckBox21"
-Me.CheckBox21.Size = New System.Drawing.Size(36, 16)
-Me.CheckBox21.TabIndex = 82
-Me.CheckBox21.Text = "K1"
-Me.CheckBox21.UseVisualStyleBackColor = true
-'
-'ComboBox8
-'
-Me.ComboBox8.FormattingEnabled = true
-Me.ComboBox8.Location = New System.Drawing.Point(347, 415)
-Me.ComboBox8.Name = "ComboBox8"
-Me.ComboBox8.Size = New System.Drawing.Size(99, 20)
-Me.ComboBox8.TabIndex = 95
-'
-'Label25
-'
-Me.Label25.AutoSize = true
-Me.Label25.Location = New System.Drawing.Point(268, 418)
-Me.Label25.Name = "Label25"
-Me.Label25.Size = New System.Drawing.Size(65, 12)
-Me.Label25.TabIndex = 94
-Me.Label25.Text = "模式名称："
-'
-'Button4
-'
-Me.Button4.Location = New System.Drawing.Point(326, 463)
-Me.Button4.Name = "Button4"
-Me.Button4.Size = New System.Drawing.Size(75, 23)
-Me.Button4.TabIndex = 82
-Me.Button4.Text = "模式分配"
-Me.Button4.UseVisualStyleBackColor = true
-'
-'CheckedListBox2
-'
-Me.CheckedListBox2.FormattingEnabled = true
-Me.CheckedListBox2.Location = New System.Drawing.Point(20, 22)
-Me.CheckedListBox2.Name = "CheckedListBox2"
-Me.CheckedListBox2.Size = New System.Drawing.Size(242, 452)
-Me.CheckedListBox2.TabIndex = 75
-'
-'GroupBox15
-'
-Me.GroupBox15.Controls.Add(Me.GroupBox16)
-Me.GroupBox15.Controls.Add(Me.ComboBox13)
-Me.GroupBox15.Controls.Add(Me.CheckBox22)
-Me.GroupBox15.Controls.Add(Me.RadioButton9)
-Me.GroupBox15.Controls.Add(Me.RadioButton10)
-Me.GroupBox15.Controls.Add(Me.RadioButton11)
-Me.GroupBox15.Controls.Add(Me.TextBox3)
-Me.GroupBox15.Controls.Add(Me.Label31)
-Me.GroupBox15.Controls.Add(Me.Button6)
-Me.GroupBox15.Controls.Add(Me.ComboBox14)
-Me.GroupBox15.Controls.Add(Me.DataGridView2)
-Me.GroupBox15.Location = New System.Drawing.Point(6, 6)
-Me.GroupBox15.Name = "GroupBox15"
-Me.GroupBox15.Size = New System.Drawing.Size(432, 492)
-Me.GroupBox15.TabIndex = 74
-Me.GroupBox15.TabStop = false
-'
-'GroupBox16
-'
-Me.GroupBox16.Controls.Add(Me.RadioButton7)
-Me.GroupBox16.Controls.Add(Me.RadioButton8)
-Me.GroupBox16.Controls.Add(Me.Button5)
-Me.GroupBox16.Controls.Add(Me.Label26)
-Me.GroupBox16.Controls.Add(Me.ComboBox9)
-Me.GroupBox16.Controls.Add(Me.ComboBox10)
-Me.GroupBox16.Controls.Add(Me.ComboBox11)
-Me.GroupBox16.Controls.Add(Me.ComboBox12)
-Me.GroupBox16.Controls.Add(Me.Label27)
-Me.GroupBox16.Controls.Add(Me.Label28)
-Me.GroupBox16.Controls.Add(Me.Label29)
-Me.GroupBox16.Controls.Add(Me.Label30)
-Me.GroupBox16.Location = New System.Drawing.Point(19, 48)
-Me.GroupBox16.Name = "GroupBox16"
-Me.GroupBox16.Size = New System.Drawing.Size(397, 140)
-Me.GroupBox16.TabIndex = 94
-Me.GroupBox16.TabStop = false
-'
-'RadioButton7
-'
-Me.RadioButton7.AutoSize = true
-Me.RadioButton7.Location = New System.Drawing.Point(201, 59)
-Me.RadioButton7.Name = "RadioButton7"
-Me.RadioButton7.Size = New System.Drawing.Size(131, 16)
-Me.RadioButton7.TabIndex = 99
-Me.RadioButton7.Text = "三回路组合控制方式"
-Me.RadioButton7.UseVisualStyleBackColor = true
-'
-'RadioButton8
-'
-Me.RadioButton8.AutoSize = true
-Me.RadioButton8.Checked = true
-Me.RadioButton8.Location = New System.Drawing.Point(10, 59)
-Me.RadioButton8.Name = "RadioButton8"
-Me.RadioButton8.Size = New System.Drawing.Size(95, 16)
-Me.RadioButton8.TabIndex = 98
-Me.RadioButton8.TabStop = true
-Me.RadioButton8.Text = "传统控制方式"
-Me.RadioButton8.UseVisualStyleBackColor = true
-'
-'Button5
-'
-Me.Button5.Location = New System.Drawing.Point(297, 90)
-Me.Button5.Name = "Button5"
-Me.Button5.Size = New System.Drawing.Size(75, 23)
-Me.Button5.TabIndex = 97
-Me.Button5.Text = "增加时段"
-Me.Button5.UseVisualStyleBackColor = true
-'
-'Label26
-'
-Me.Label26.AutoSize = true
-Me.Label26.Location = New System.Drawing.Point(8, 27)
-Me.Label26.Name = "Label26"
-Me.Label26.Size = New System.Drawing.Size(65, 12)
-Me.Label26.TabIndex = 96
-Me.Label26.Text = "开始时间："
-'
-'ComboBox9
-'
-Me.ComboBox9.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-Me.ComboBox9.FormattingEnabled = true
-Me.ComboBox9.Items.AddRange(New Object() {"00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59"})
-Me.ComboBox9.Location = New System.Drawing.Point(281, 22)
-Me.ComboBox9.Name = "ComboBox9"
-Me.ComboBox9.Size = New System.Drawing.Size(60, 20)
-Me.ComboBox9.TabIndex = 95
-'
-'ComboBox10
-'
-Me.ComboBox10.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-Me.ComboBox10.FormattingEnabled = true
-Me.ComboBox10.Items.AddRange(New Object() {"00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59"})
-Me.ComboBox10.Location = New System.Drawing.Point(187, 22)
-Me.ComboBox10.Name = "ComboBox10"
-Me.ComboBox10.Size = New System.Drawing.Size(60, 20)
-Me.ComboBox10.TabIndex = 94
-'
-'ComboBox11
-'
-Me.ComboBox11.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-Me.ComboBox11.FormattingEnabled = true
-Me.ComboBox11.Items.AddRange(New Object() {"00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"})
-Me.ComboBox11.Location = New System.Drawing.Point(90, 22)
-Me.ComboBox11.Name = "ComboBox11"
-Me.ComboBox11.Size = New System.Drawing.Size(61, 20)
-Me.ComboBox11.TabIndex = 93
-'
-'ComboBox12
-'
-Me.ComboBox12.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-Me.ComboBox12.FormattingEnabled = true
-Me.ComboBox12.Items.AddRange(New Object() {"类型全开", "类型全闭", "类型奇开", "类型偶开", "回路开", "回路关"})
-Me.ComboBox12.Location = New System.Drawing.Point(90, 90)
-Me.ComboBox12.Name = "ComboBox12"
-Me.ComboBox12.Size = New System.Drawing.Size(157, 20)
-Me.ComboBox12.TabIndex = 88
-'
-'Label27
-'
-Me.Label27.AutoSize = true
-Me.Label27.Location = New System.Drawing.Point(7, 93)
-Me.Label27.Name = "Label27"
-Me.Label27.Size = New System.Drawing.Size(65, 12)
-Me.Label27.TabIndex = 89
-Me.Label27.Text = "控制方式："
-'
-'Label28
-'
-Me.Label28.AutoSize = true
-Me.Label28.Location = New System.Drawing.Point(159, 25)
-Me.Label28.Name = "Label28"
-Me.Label28.Size = New System.Drawing.Size(17, 12)
-Me.Label28.TabIndex = 90
-Me.Label28.Text = "时"
-'
-'Label29
-'
-Me.Label29.AutoSize = true
-Me.Label29.Location = New System.Drawing.Point(254, 25)
-Me.Label29.Name = "Label29"
-Me.Label29.Size = New System.Drawing.Size(17, 12)
-Me.Label29.TabIndex = 91
-Me.Label29.Text = "分"
-'
-'Label30
-'
-Me.Label30.AutoSize = true
-Me.Label30.Location = New System.Drawing.Point(348, 27)
-Me.Label30.Name = "Label30"
-Me.Label30.Size = New System.Drawing.Size(17, 12)
-Me.Label30.TabIndex = 92
-Me.Label30.Text = "秒"
-'
-'ComboBox13
-'
-Me.ComboBox13.FormattingEnabled = true
-Me.ComboBox13.Location = New System.Drawing.Point(88, 405)
-Me.ComboBox13.Name = "ComboBox13"
-Me.ComboBox13.Size = New System.Drawing.Size(99, 20)
-Me.ComboBox13.TabIndex = 93
-Me.ComboBox13.Visible = false
-'
-'CheckBox22
-'
-Me.CheckBox22.AutoSize = true
-Me.CheckBox22.Location = New System.Drawing.Point(220, 407)
-Me.CheckBox22.Name = "CheckBox22"
-Me.CheckBox22.Size = New System.Drawing.Size(96, 16)
-Me.CheckBox22.TabIndex = 91
-Me.CheckBox22.Text = "显示控制信息"
-Me.CheckBox22.UseVisualStyleBackColor = true
-'
-'RadioButton9
-'
-Me.RadioButton9.AutoSize = true
-Me.RadioButton9.Location = New System.Drawing.Point(307, 31)
-Me.RadioButton9.Name = "RadioButton9"
-Me.RadioButton9.Size = New System.Drawing.Size(95, 16)
-Me.RadioButton9.TabIndex = 90
-Me.RadioButton9.Text = "删除控制模式"
-Me.RadioButton9.UseVisualStyleBackColor = true
-'
-'RadioButton10
-'
-Me.RadioButton10.AutoSize = true
-Me.RadioButton10.Location = New System.Drawing.Point(157, 31)
-Me.RadioButton10.Name = "RadioButton10"
-Me.RadioButton10.Size = New System.Drawing.Size(95, 16)
-Me.RadioButton10.TabIndex = 89
-Me.RadioButton10.Text = "编辑控制模式"
-Me.RadioButton10.UseVisualStyleBackColor = true
-'
-'RadioButton11
-'
-Me.RadioButton11.AutoSize = true
-Me.RadioButton11.Checked = true
-Me.RadioButton11.Location = New System.Drawing.Point(17, 31)
-Me.RadioButton11.Name = "RadioButton11"
-Me.RadioButton11.Size = New System.Drawing.Size(95, 16)
-Me.RadioButton11.TabIndex = 88
-Me.RadioButton11.TabStop = true
-Me.RadioButton11.Text = "增加控制模式"
-Me.RadioButton11.UseVisualStyleBackColor = true
-'
-'TextBox3
-'
-Me.TextBox3.Location = New System.Drawing.Point(99, 405)
-Me.TextBox3.Name = "TextBox3"
-Me.TextBox3.Size = New System.Drawing.Size(100, 21)
-Me.TextBox3.TabIndex = 78
-'
-'Label31
-'
-Me.Label31.AutoSize = true
-Me.Label31.Location = New System.Drawing.Point(16, 408)
-Me.Label31.Name = "Label31"
-Me.Label31.Size = New System.Drawing.Size(65, 12)
-Me.Label31.TabIndex = 77
-Me.Label31.Text = "模式名称："
-'
-'Button6
-'
-Me.Button6.Location = New System.Drawing.Point(163, 449)
-Me.Button6.Name = "Button6"
-Me.Button6.Size = New System.Drawing.Size(107, 27)
-Me.Button6.TabIndex = 76
-Me.Button6.Text = "输入控制模式"
-Me.Button6.UseVisualStyleBackColor = true
-'
-'ComboBox14
-'
-Me.ComboBox14.FormattingEnabled = true
-Me.ComboBox14.Items.AddRange(New Object() {"全功率", "半功率"})
-Me.ComboBox14.Location = New System.Drawing.Point(350, 408)
-Me.ComboBox14.Name = "ComboBox14"
-Me.ComboBox14.Size = New System.Drawing.Size(57, 20)
-Me.ComboBox14.TabIndex = 75
-Me.ComboBox14.Text = "全功率"
-Me.ComboBox14.Visible = false
-'
-'DataGridView2
-'
-Me.DataGridView2.AllowUserToAddRows = false
-Me.DataGridView2.BackgroundColor = System.Drawing.Color.WhiteSmoke
-Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11})
-Me.DataGridView2.Location = New System.Drawing.Point(17, 201)
-Me.DataGridView2.Name = "DataGridView2"
-Me.DataGridView2.RowTemplate.Height = 23
-Me.DataGridView2.Size = New System.Drawing.Size(399, 188)
-Me.DataGridView2.TabIndex = 67
-'
-'DataGridViewTextBoxColumn7
-'
-Me.DataGridViewTextBoxColumn7.HeaderText = "编号"
-Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-Me.DataGridViewTextBoxColumn7.Width = 60
-'
-'DataGridViewTextBoxColumn8
-'
-Me.DataGridViewTextBoxColumn8.HeaderText = "小时"
-Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
-Me.DataGridViewTextBoxColumn8.Width = 60
-'
-'DataGridViewTextBoxColumn9
-'
-Me.DataGridViewTextBoxColumn9.HeaderText = "分钟"
-Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
-Me.DataGridViewTextBoxColumn9.Width = 60
-'
-'DataGridViewTextBoxColumn10
-'
-Me.DataGridViewTextBoxColumn10.HeaderText = "秒"
-Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
-Me.DataGridViewTextBoxColumn10.Width = 60
-'
-'DataGridViewTextBoxColumn11
-'
-Me.DataGridViewTextBoxColumn11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-Me.DataGridViewTextBoxColumn11.HeaderText = "控制方式"
-Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
-'
-'TabPage7
-'
-Me.TabPage7.Controls.Add(Me.GroupBox17)
-Me.TabPage7.Controls.Add(Me.GroupBox20)
-Me.TabPage7.Location = New System.Drawing.Point(4, 23)
-Me.TabPage7.Name = "TabPage7"
-Me.TabPage7.Padding = New System.Windows.Forms.Padding(3)
-Me.TabPage7.Size = New System.Drawing.Size(902, 517)
-Me.TabPage7.TabIndex = 3
-Me.TabPage7.Text = "节假日控制模式设置"
-Me.TabPage7.UseVisualStyleBackColor = true
-'
-'GroupBox17
-'
-Me.GroupBox17.Controls.Add(Me.GroupBox18)
-Me.GroupBox17.Controls.Add(Me.RadioButton14)
-Me.GroupBox17.Controls.Add(Me.RadioButton15)
-Me.GroupBox17.Controls.Add(Me.GroupBox19)
-Me.GroupBox17.Controls.Add(Me.ComboBox15)
-Me.GroupBox17.Controls.Add(Me.Label32)
-Me.GroupBox17.Controls.Add(Me.Button7)
-Me.GroupBox17.Controls.Add(Me.CheckedListBox3)
-Me.GroupBox17.Location = New System.Drawing.Point(444, 6)
-Me.GroupBox17.Name = "GroupBox17"
-Me.GroupBox17.Size = New System.Drawing.Size(452, 492)
-Me.GroupBox17.TabIndex = 78
-Me.GroupBox17.TabStop = false
-Me.GroupBox17.Text = "分配控制模式"
-'
-'GroupBox18
-'
-Me.GroupBox18.Controls.Add(Me.RadioButton12)
-Me.GroupBox18.Controls.Add(Me.RadioButton13)
-Me.GroupBox18.Enabled = false
-Me.GroupBox18.Location = New System.Drawing.Point(274, 115)
-Me.GroupBox18.Name = "GroupBox18"
-Me.GroupBox18.Size = New System.Drawing.Size(155, 90)
-Me.GroupBox18.TabIndex = 101
-Me.GroupBox18.TabStop = false
-Me.GroupBox18.Text = "整体控制"
-'
-'RadioButton12
-'
-Me.RadioButton12.AutoSize = true
-Me.RadioButton12.Location = New System.Drawing.Point(6, 54)
-Me.RadioButton12.Name = "RadioButton12"
-Me.RadioButton12.Size = New System.Drawing.Size(47, 16)
-Me.RadioButton12.TabIndex = 85
-Me.RadioButton12.Text = "路灯"
-Me.RadioButton12.UseVisualStyleBackColor = true
-'
-'RadioButton13
-'
-Me.RadioButton13.AutoSize = true
-Me.RadioButton13.Checked = true
-Me.RadioButton13.Location = New System.Drawing.Point(6, 22)
-Me.RadioButton13.Name = "RadioButton13"
-Me.RadioButton13.Size = New System.Drawing.Size(83, 16)
-Me.RadioButton13.TabIndex = 84
-Me.RadioButton13.TabStop = true
-Me.RadioButton13.Text = "主控箱节点"
-Me.RadioButton13.UseVisualStyleBackColor = true
-'
-'RadioButton14
-'
-Me.RadioButton14.AutoSize = true
-Me.RadioButton14.Checked = true
-Me.RadioButton14.Location = New System.Drawing.Point(280, 73)
-Me.RadioButton14.Name = "RadioButton14"
-Me.RadioButton14.Size = New System.Drawing.Size(71, 16)
-Me.RadioButton14.TabIndex = 100
-Me.RadioButton14.TabStop = true
-Me.RadioButton14.Text = "回路控制"
-Me.RadioButton14.UseVisualStyleBackColor = true
-'
-'RadioButton15
-'
-Me.RadioButton15.AutoSize = true
-Me.RadioButton15.Location = New System.Drawing.Point(280, 31)
-Me.RadioButton15.Name = "RadioButton15"
-Me.RadioButton15.Size = New System.Drawing.Size(71, 16)
-Me.RadioButton15.TabIndex = 99
-Me.RadioButton15.Text = "整体控制"
-Me.RadioButton15.UseVisualStyleBackColor = true
-'
-'GroupBox19
-'
-Me.GroupBox19.Controls.Add(Me.CheckBox23)
-Me.GroupBox19.Controls.Add(Me.CheckBox24)
-Me.GroupBox19.Controls.Add(Me.CheckBox25)
-Me.GroupBox19.Controls.Add(Me.CheckBox26)
-Me.GroupBox19.Controls.Add(Me.CheckBox27)
-Me.GroupBox19.Controls.Add(Me.CheckBox28)
-Me.GroupBox19.Location = New System.Drawing.Point(274, 211)
-Me.GroupBox19.Name = "GroupBox19"
-Me.GroupBox19.Size = New System.Drawing.Size(155, 137)
-Me.GroupBox19.TabIndex = 98
-Me.GroupBox19.TabStop = false
-Me.GroupBox19.Text = "回路控制"
-'
-'CheckBox23
-'
-Me.CheckBox23.AutoSize = true
-Me.CheckBox23.Location = New System.Drawing.Point(74, 102)
-Me.CheckBox23.Name = "CheckBox23"
-Me.CheckBox23.Size = New System.Drawing.Size(36, 16)
-Me.CheckBox23.TabIndex = 87
-Me.CheckBox23.Text = "K6"
-Me.CheckBox23.UseVisualStyleBackColor = true
-'
-'CheckBox24
-'
-Me.CheckBox24.AutoSize = true
-Me.CheckBox24.Location = New System.Drawing.Point(6, 102)
-Me.CheckBox24.Name = "CheckBox24"
-Me.CheckBox24.Size = New System.Drawing.Size(36, 16)
-Me.CheckBox24.TabIndex = 86
-Me.CheckBox24.Text = "K5"
-Me.CheckBox24.UseVisualStyleBackColor = true
-'
-'CheckBox25
-'
-Me.CheckBox25.AutoSize = true
-Me.CheckBox25.Location = New System.Drawing.Point(74, 62)
-Me.CheckBox25.Name = "CheckBox25"
-Me.CheckBox25.Size = New System.Drawing.Size(36, 16)
-Me.CheckBox25.TabIndex = 85
-Me.CheckBox25.Text = "K4"
-Me.CheckBox25.UseVisualStyleBackColor = true
-'
-'CheckBox26
-'
-Me.CheckBox26.AutoSize = true
-Me.CheckBox26.Location = New System.Drawing.Point(6, 62)
-Me.CheckBox26.Name = "CheckBox26"
-Me.CheckBox26.Size = New System.Drawing.Size(36, 16)
-Me.CheckBox26.TabIndex = 84
-Me.CheckBox26.Text = "K3"
-Me.CheckBox26.UseVisualStyleBackColor = true
-'
-'CheckBox27
-'
-Me.CheckBox27.AutoSize = true
-Me.CheckBox27.Location = New System.Drawing.Point(74, 26)
-Me.CheckBox27.Name = "CheckBox27"
-Me.CheckBox27.Size = New System.Drawing.Size(36, 16)
-Me.CheckBox27.TabIndex = 83
-Me.CheckBox27.Text = "K2"
-Me.CheckBox27.UseVisualStyleBackColor = true
-'
-'CheckBox28
-'
-Me.CheckBox28.AutoSize = true
-Me.CheckBox28.Location = New System.Drawing.Point(6, 26)
-Me.CheckBox28.Name = "CheckBox28"
-Me.CheckBox28.Size = New System.Drawing.Size(36, 16)
-Me.CheckBox28.TabIndex = 82
-Me.CheckBox28.Text = "K1"
-Me.CheckBox28.UseVisualStyleBackColor = true
-'
-'ComboBox15
-'
-Me.ComboBox15.FormattingEnabled = true
-Me.ComboBox15.Location = New System.Drawing.Point(347, 378)
-Me.ComboBox15.Name = "ComboBox15"
-Me.ComboBox15.Size = New System.Drawing.Size(99, 20)
-Me.ComboBox15.TabIndex = 95
-'
-'Label32
-'
-Me.Label32.AutoSize = true
-Me.Label32.Location = New System.Drawing.Point(271, 386)
-Me.Label32.Name = "Label32"
-Me.Label32.Size = New System.Drawing.Size(65, 12)
-Me.Label32.TabIndex = 94
-Me.Label32.Text = "模式名称："
-'
-'Button7
-'
-Me.Button7.Location = New System.Drawing.Point(334, 449)
-Me.Button7.Name = "Button7"
-Me.Button7.Size = New System.Drawing.Size(75, 23)
-Me.Button7.TabIndex = 82
-Me.Button7.Text = "模式分配"
-Me.Button7.UseVisualStyleBackColor = true
-'
-'CheckedListBox3
-'
-Me.CheckedListBox3.FormattingEnabled = true
-Me.CheckedListBox3.Location = New System.Drawing.Point(20, 22)
-Me.CheckedListBox3.Name = "CheckedListBox3"
-Me.CheckedListBox3.Size = New System.Drawing.Size(248, 452)
-Me.CheckedListBox3.TabIndex = 75
-'
-'GroupBox20
-'
-Me.GroupBox20.Controls.Add(Me.GroupBox21)
-Me.GroupBox20.Controls.Add(Me.ComboBox17)
-Me.GroupBox20.Controls.Add(Me.CheckBox29)
-Me.GroupBox20.Controls.Add(Me.RadioButton18)
-Me.GroupBox20.Controls.Add(Me.RadioButton19)
-Me.GroupBox20.Controls.Add(Me.RadioButton20)
-Me.GroupBox20.Controls.Add(Me.TextBox4)
-Me.GroupBox20.Controls.Add(Me.Label35)
-Me.GroupBox20.Controls.Add(Me.Button9)
-Me.GroupBox20.Controls.Add(Me.ComboBox18)
-Me.GroupBox20.Controls.Add(Me.DataGridView3)
-Me.GroupBox20.Location = New System.Drawing.Point(6, 6)
-Me.GroupBox20.Name = "GroupBox20"
-Me.GroupBox20.Size = New System.Drawing.Size(432, 492)
-Me.GroupBox20.TabIndex = 77
-Me.GroupBox20.TabStop = false
-'
-'GroupBox21
-'
-Me.GroupBox21.Controls.Add(Me.RadioButton16)
-Me.GroupBox21.Controls.Add(Me.RadioButton17)
-Me.GroupBox21.Controls.Add(Me.DateTimePicker1)
-Me.GroupBox21.Controls.Add(Me.Button8)
-Me.GroupBox21.Controls.Add(Me.Label33)
-Me.GroupBox21.Controls.Add(Me.ComboBox16)
-Me.GroupBox21.Controls.Add(Me.Label34)
-Me.GroupBox21.Location = New System.Drawing.Point(19, 48)
-Me.GroupBox21.Name = "GroupBox21"
-Me.GroupBox21.Size = New System.Drawing.Size(397, 139)
-Me.GroupBox21.TabIndex = 94
-Me.GroupBox21.TabStop = false
-'
-'RadioButton16
-'
-Me.RadioButton16.AutoSize = true
-Me.RadioButton16.Location = New System.Drawing.Point(201, 67)
-Me.RadioButton16.Name = "RadioButton16"
-Me.RadioButton16.Size = New System.Drawing.Size(131, 16)
-Me.RadioButton16.TabIndex = 101
-Me.RadioButton16.Text = "三回路组合控制方式"
-Me.RadioButton16.UseVisualStyleBackColor = true
-'
-'RadioButton17
-'
-Me.RadioButton17.AutoSize = true
-Me.RadioButton17.Checked = true
-Me.RadioButton17.Location = New System.Drawing.Point(10, 67)
-Me.RadioButton17.Name = "RadioButton17"
-Me.RadioButton17.Size = New System.Drawing.Size(95, 16)
-Me.RadioButton17.TabIndex = 100
-Me.RadioButton17.TabStop = true
-Me.RadioButton17.Text = "传统控制方式"
-Me.RadioButton17.UseVisualStyleBackColor = true
-'
-'DateTimePicker1
-'
-Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-Me.DateTimePicker1.Location = New System.Drawing.Point(91, 25)
-Me.DateTimePicker1.Name = "DateTimePicker1"
-Me.DateTimePicker1.Size = New System.Drawing.Size(156, 21)
-Me.DateTimePicker1.TabIndex = 98
-'
-'Button8
-'
-Me.Button8.Location = New System.Drawing.Point(287, 110)
-Me.Button8.Name = "Button8"
-Me.Button8.Size = New System.Drawing.Size(75, 23)
-Me.Button8.TabIndex = 97
-Me.Button8.Text = "增加时段"
-Me.Button8.UseVisualStyleBackColor = true
-'
-'Label33
-'
-Me.Label33.AutoSize = true
-Me.Label33.Location = New System.Drawing.Point(8, 27)
-Me.Label33.Name = "Label33"
-Me.Label33.Size = New System.Drawing.Size(65, 12)
-Me.Label33.TabIndex = 96
-Me.Label33.Text = "开始时间："
-'
-'ComboBox16
-'
-Me.ComboBox16.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-Me.ComboBox16.FormattingEnabled = true
-Me.ComboBox16.Items.AddRange(New Object() {"类型全开", "类型全闭", "类型奇开", "类型偶开", "回路开", "回路关"})
-Me.ComboBox16.Location = New System.Drawing.Point(90, 110)
-Me.ComboBox16.Name = "ComboBox16"
-Me.ComboBox16.Size = New System.Drawing.Size(157, 20)
-Me.ComboBox16.TabIndex = 88
-'
-'Label34
-'
-Me.Label34.AutoSize = true
-Me.Label34.Location = New System.Drawing.Point(7, 113)
-Me.Label34.Name = "Label34"
-Me.Label34.Size = New System.Drawing.Size(65, 12)
-Me.Label34.TabIndex = 89
-Me.Label34.Text = "控制方式："
-'
-'ComboBox17
-'
-Me.ComboBox17.FormattingEnabled = true
-Me.ComboBox17.Location = New System.Drawing.Point(88, 405)
-Me.ComboBox17.Name = "ComboBox17"
-Me.ComboBox17.Size = New System.Drawing.Size(99, 20)
-Me.ComboBox17.TabIndex = 93
-Me.ComboBox17.Visible = false
-'
-'CheckBox29
-'
-Me.CheckBox29.AutoSize = true
-Me.CheckBox29.Location = New System.Drawing.Point(220, 407)
-Me.CheckBox29.Name = "CheckBox29"
-Me.CheckBox29.Size = New System.Drawing.Size(96, 16)
-Me.CheckBox29.TabIndex = 91
-Me.CheckBox29.Text = "显示控制信息"
-Me.CheckBox29.UseVisualStyleBackColor = true
-'
-'RadioButton18
-'
-Me.RadioButton18.AutoSize = true
-Me.RadioButton18.Location = New System.Drawing.Point(297, 31)
-Me.RadioButton18.Name = "RadioButton18"
-Me.RadioButton18.Size = New System.Drawing.Size(119, 16)
-Me.RadioButton18.TabIndex = 90
-Me.RadioButton18.Text = "删除节日控制模式"
-Me.RadioButton18.UseVisualStyleBackColor = true
-'
-'RadioButton19
-'
-Me.RadioButton19.AutoSize = true
-Me.RadioButton19.Location = New System.Drawing.Point(157, 31)
-Me.RadioButton19.Name = "RadioButton19"
-Me.RadioButton19.Size = New System.Drawing.Size(119, 16)
-Me.RadioButton19.TabIndex = 89
-Me.RadioButton19.Text = "编辑节日控制模式"
-Me.RadioButton19.UseVisualStyleBackColor = true
-'
-'RadioButton20
-'
-Me.RadioButton20.AutoSize = true
-Me.RadioButton20.Checked = true
-Me.RadioButton20.Location = New System.Drawing.Point(17, 31)
-Me.RadioButton20.Name = "RadioButton20"
-Me.RadioButton20.Size = New System.Drawing.Size(119, 16)
-Me.RadioButton20.TabIndex = 88
-Me.RadioButton20.TabStop = true
-Me.RadioButton20.Text = "增加节日控制模式"
-Me.RadioButton20.UseVisualStyleBackColor = true
-'
-'TextBox4
-'
-Me.TextBox4.Location = New System.Drawing.Point(99, 405)
-Me.TextBox4.Name = "TextBox4"
-Me.TextBox4.Size = New System.Drawing.Size(100, 21)
-Me.TextBox4.TabIndex = 78
-'
-'Label35
-'
-Me.Label35.AutoSize = true
-Me.Label35.Location = New System.Drawing.Point(16, 408)
-Me.Label35.Name = "Label35"
-Me.Label35.Size = New System.Drawing.Size(65, 12)
-Me.Label35.TabIndex = 77
-Me.Label35.Text = "模式名称："
-'
-'Button9
-'
-Me.Button9.Location = New System.Drawing.Point(163, 449)
-Me.Button9.Name = "Button9"
-Me.Button9.Size = New System.Drawing.Size(107, 27)
-Me.Button9.TabIndex = 76
-Me.Button9.Text = "输入控制模式"
-Me.Button9.UseVisualStyleBackColor = true
-'
-'ComboBox18
-'
-Me.ComboBox18.FormattingEnabled = true
-Me.ComboBox18.Items.AddRange(New Object() {"全功率", "半功率"})
-Me.ComboBox18.Location = New System.Drawing.Point(350, 408)
-Me.ComboBox18.Name = "ComboBox18"
-Me.ComboBox18.Size = New System.Drawing.Size(57, 20)
-Me.ComboBox18.TabIndex = 75
-Me.ComboBox18.Text = "全功率"
-Me.ComboBox18.Visible = false
-'
-'DataGridView3
-'
-Me.DataGridView3.AllowUserToAddRows = false
-Me.DataGridView3.BackgroundColor = System.Drawing.Color.WhiteSmoke
-Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn12, Me.DataGridViewTextBoxColumn13, Me.DataGridViewTextBoxColumn14})
-Me.DataGridView3.Location = New System.Drawing.Point(17, 197)
-Me.DataGridView3.Name = "DataGridView3"
-Me.DataGridView3.RowTemplate.Height = 23
-Me.DataGridView3.Size = New System.Drawing.Size(399, 192)
-Me.DataGridView3.TabIndex = 67
-'
-'DataGridViewTextBoxColumn12
-'
-Me.DataGridViewTextBoxColumn12.HeaderText = "编号"
-Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
-Me.DataGridViewTextBoxColumn12.Width = 60
-'
-'DataGridViewTextBoxColumn13
-'
-Me.DataGridViewTextBoxColumn13.HeaderText = "时间"
-Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
-Me.DataGridViewTextBoxColumn13.Width = 150
-'
-'DataGridViewTextBoxColumn14
-'
-Me.DataGridViewTextBoxColumn14.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-Me.DataGridViewTextBoxColumn14.HeaderText = "控制方式"
-Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
-'
-'TabPage8
-'
-Me.TabPage8.Controls.Add(Me.Button10)
-Me.TabPage8.Controls.Add(Me.Button11)
-Me.TabPage8.Controls.Add(Me.CheckBox30)
-Me.TabPage8.Controls.Add(Me.ComboBox19)
-Me.TabPage8.Controls.Add(Me.DataGridView4)
-Me.TabPage8.Controls.Add(Me.Label36)
-Me.TabPage8.Controls.Add(Me.Button12)
-Me.TabPage8.Controls.Add(Me.TextBox5)
-Me.TabPage8.Controls.Add(Me.Label37)
-Me.TabPage8.Controls.Add(Me.TextBox6)
-Me.TabPage8.Controls.Add(Me.Label38)
-Me.TabPage8.Location = New System.Drawing.Point(4, 23)
-Me.TabPage8.Name = "TabPage8"
-Me.TabPage8.Padding = New System.Windows.Forms.Padding(3)
-Me.TabPage8.Size = New System.Drawing.Size(902, 517)
-Me.TabPage8.TabIndex = 0
-Me.TabPage8.Text = "年度日出日落表"
-Me.TabPage8.UseVisualStyleBackColor = true
-'
-'Button10
-'
-Me.Button10.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left),System.Windows.Forms.AnchorStyles)
-Me.Button10.Location = New System.Drawing.Point(543, 470)
-Me.Button10.Name = "Button10"
-Me.Button10.Size = New System.Drawing.Size(125, 27)
-Me.Button10.TabIndex = 17
-Me.Button10.Text = "导出时刻表"
-Me.Button10.UseVisualStyleBackColor = true
-'
-'Button11
-'
-Me.Button11.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left),System.Windows.Forms.AnchorStyles)
-Me.Button11.Location = New System.Drawing.Point(396, 470)
-Me.Button11.Name = "Button11"
-Me.Button11.Size = New System.Drawing.Size(125, 27)
-Me.Button11.TabIndex = 16
-Me.Button11.Text = "日出日落时刻表"
-Me.Button11.UseVisualStyleBackColor = true
-'
-'CheckBox30
-'
-Me.CheckBox30.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left),System.Windows.Forms.AnchorStyles)
-Me.CheckBox30.AutoSize = true
-Me.CheckBox30.Location = New System.Drawing.Point(712, 426)
-Me.CheckBox30.Name = "CheckBox30"
-Me.CheckBox30.Size = New System.Drawing.Size(144, 16)
-Me.CheckBox30.TabIndex = 15
-Me.CheckBox30.Text = "记录当前日出日落时间"
-Me.CheckBox30.UseVisualStyleBackColor = true
-'
-'ComboBox19
-'
-Me.ComboBox19.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left),System.Windows.Forms.AnchorStyles)
-Me.ComboBox19.FormattingEnabled = true
-Me.ComboBox19.Items.AddRange(New Object() {"2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020"})
-Me.ComboBox19.Location = New System.Drawing.Point(94, 424)
-Me.ComboBox19.Name = "ComboBox19"
-Me.ComboBox19.Size = New System.Drawing.Size(121, 20)
-Me.ComboBox19.TabIndex = 14
-'
-'DataGridView4
-'
-Me.DataGridView4.AllowUserToAddRows = false
-Me.DataGridView4.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom)  _
-            Or System.Windows.Forms.AnchorStyles.Left)  _
-            Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
-Me.DataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-Me.DataGridView4.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn15, Me.DataGridViewTextBoxColumn16, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn18, Me.DataGridViewTextBoxColumn19, Me.DataGridViewTextBoxColumn20, Me.DataGridViewTextBoxColumn21, Me.DataGridViewTextBoxColumn22, Me.DataGridViewTextBoxColumn23, Me.DataGridViewTextBoxColumn24, Me.DataGridViewTextBoxColumn25, Me.DataGridViewTextBoxColumn26, Me.DataGridViewTextBoxColumn27})
-Me.DataGridView4.Location = New System.Drawing.Point(3, 6)
-Me.DataGridView4.Name = "DataGridView4"
-Me.DataGridView4.RowTemplate.Height = 23
-Me.DataGridView4.Size = New System.Drawing.Size(893, 395)
-Me.DataGridView4.TabIndex = 12
-'
-'DataGridViewTextBoxColumn15
-'
-Me.DataGridViewTextBoxColumn15.HeaderText = "日期"
-Me.DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15"
-Me.DataGridViewTextBoxColumn15.Width = 150
-'
-'DataGridViewTextBoxColumn16
-'
-Me.DataGridViewTextBoxColumn16.HeaderText = "1月"
-Me.DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16"
-'
-'DataGridViewTextBoxColumn17
-'
-Me.DataGridViewTextBoxColumn17.HeaderText = "2月"
-Me.DataGridViewTextBoxColumn17.Name = "DataGridViewTextBoxColumn17"
-'
-'DataGridViewTextBoxColumn18
-'
-Me.DataGridViewTextBoxColumn18.HeaderText = "3月"
-Me.DataGridViewTextBoxColumn18.Name = "DataGridViewTextBoxColumn18"
-'
-'DataGridViewTextBoxColumn19
-'
-Me.DataGridViewTextBoxColumn19.HeaderText = "4月"
-Me.DataGridViewTextBoxColumn19.Name = "DataGridViewTextBoxColumn19"
-'
-'DataGridViewTextBoxColumn20
-'
-Me.DataGridViewTextBoxColumn20.HeaderText = "5月"
-Me.DataGridViewTextBoxColumn20.Name = "DataGridViewTextBoxColumn20"
-'
-'DataGridViewTextBoxColumn21
-'
-Me.DataGridViewTextBoxColumn21.HeaderText = "6月"
-Me.DataGridViewTextBoxColumn21.Name = "DataGridViewTextBoxColumn21"
-'
-'DataGridViewTextBoxColumn22
-'
-Me.DataGridViewTextBoxColumn22.HeaderText = "7月"
-Me.DataGridViewTextBoxColumn22.Name = "DataGridViewTextBoxColumn22"
-'
-'DataGridViewTextBoxColumn23
-'
-Me.DataGridViewTextBoxColumn23.HeaderText = "8月"
-Me.DataGridViewTextBoxColumn23.Name = "DataGridViewTextBoxColumn23"
-'
-'DataGridViewTextBoxColumn24
-'
-Me.DataGridViewTextBoxColumn24.HeaderText = "9月"
-Me.DataGridViewTextBoxColumn24.Name = "DataGridViewTextBoxColumn24"
-'
-'DataGridViewTextBoxColumn25
-'
-Me.DataGridViewTextBoxColumn25.HeaderText = "10月"
-Me.DataGridViewTextBoxColumn25.Name = "DataGridViewTextBoxColumn25"
-'
-'DataGridViewTextBoxColumn26
-'
-Me.DataGridViewTextBoxColumn26.HeaderText = "11月"
-Me.DataGridViewTextBoxColumn26.Name = "DataGridViewTextBoxColumn26"
-'
-'DataGridViewTextBoxColumn27
-'
-Me.DataGridViewTextBoxColumn27.HeaderText = "12月"
-Me.DataGridViewTextBoxColumn27.Name = "DataGridViewTextBoxColumn27"
-'
-'Label36
-'
-Me.Label36.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left),System.Windows.Forms.AnchorStyles)
-Me.Label36.AutoSize = true
-Me.Label36.Location = New System.Drawing.Point(39, 432)
-Me.Label36.Name = "Label36"
-Me.Label36.Size = New System.Drawing.Size(41, 12)
-Me.Label36.TabIndex = 13
-Me.Label36.Text = "年份："
-'
-'Button12
-'
-Me.Button12.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left),System.Windows.Forms.AnchorStyles)
-Me.Button12.Location = New System.Drawing.Point(235, 470)
-Me.Button12.Name = "Button12"
-Me.Button12.Size = New System.Drawing.Size(125, 27)
-Me.Button12.TabIndex = 11
-Me.Button12.Text = "时刻查询"
-Me.Button12.UseVisualStyleBackColor = true
-'
-'TextBox5
-'
-Me.TextBox5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left),System.Windows.Forms.AnchorStyles)
-Me.TextBox5.Location = New System.Drawing.Point(551, 423)
-Me.TextBox5.Name = "TextBox5"
-Me.TextBox5.Size = New System.Drawing.Size(116, 21)
-Me.TextBox5.TabIndex = 1
-'
-'Label37
-'
-Me.Label37.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left),System.Windows.Forms.AnchorStyles)
-Me.Label37.AutoSize = true
-Me.Label37.Location = New System.Drawing.Point(496, 432)
-Me.Label37.Name = "Label37"
-Me.Label37.Size = New System.Drawing.Size(41, 12)
-Me.Label37.TabIndex = 6
-Me.Label37.Text = "纬度："
-'
-'TextBox6
-'
-Me.TextBox6.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left),System.Windows.Forms.AnchorStyles)
-Me.TextBox6.Location = New System.Drawing.Point(335, 423)
-Me.TextBox6.Name = "TextBox6"
-Me.TextBox6.Size = New System.Drawing.Size(116, 21)
-Me.TextBox6.TabIndex = 0
-'
-'Label38
-'
-Me.Label38.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left),System.Windows.Forms.AnchorStyles)
-Me.Label38.AutoSize = true
-Me.Label38.Location = New System.Drawing.Point(280, 432)
-Me.Label38.Name = "Label38"
-Me.Label38.Size = New System.Drawing.Size(41, 12)
-Me.Label38.TabIndex = 5
-Me.Label38.Text = "经度："
-'
-'TabPage9
-'
-Me.TabPage9.Controls.Add(Me.GroupBox22)
-Me.TabPage9.Controls.Add(Me.GroupBox23)
-Me.TabPage9.Controls.Add(Me.GroupBox24)
-Me.TabPage9.Controls.Add(Me.GroupBox25)
-Me.TabPage9.Controls.Add(Me.Button13)
-Me.TabPage9.Controls.Add(Me.GroupBox26)
-Me.TabPage9.Controls.Add(Me.GroupBox27)
-Me.TabPage9.Controls.Add(Me.RadioButton25)
-Me.TabPage9.Controls.Add(Me.TreeView1)
-Me.TabPage9.Controls.Add(Me.RadioButton26)
-Me.TabPage9.Controls.Add(Me.GroupBox28)
-Me.TabPage9.Location = New System.Drawing.Point(4, 23)
-Me.TabPage9.Name = "TabPage9"
-Me.TabPage9.Padding = New System.Windows.Forms.Padding(3)
-Me.TabPage9.Size = New System.Drawing.Size(902, 517)
-Me.TabPage9.TabIndex = 4
-Me.TabPage9.Text = "自动开关列表"
-Me.TabPage9.UseVisualStyleBackColor = true
-'
-'GroupBox22
-'
-Me.GroupBox22.Controls.Add(Me.CheckBox31)
-Me.GroupBox22.Controls.Add(Me.CheckBox32)
-Me.GroupBox22.Controls.Add(Me.CheckBox33)
-Me.GroupBox22.Enabled = false
-Me.GroupBox22.Location = New System.Drawing.Point(284, 376)
-Me.GroupBox22.Name = "GroupBox22"
-Me.GroupBox22.Size = New System.Drawing.Size(147, 83)
-Me.GroupBox22.TabIndex = 161
-Me.GroupBox22.TabStop = false
-'
-'CheckBox31
-'
-Me.CheckBox31.AutoSize = true
-Me.CheckBox31.Location = New System.Drawing.Point(11, 61)
-Me.CheckBox31.Name = "CheckBox31"
-Me.CheckBox31.Size = New System.Drawing.Size(108, 16)
-Me.CheckBox31.TabIndex = 163
-Me.CheckBox31.Text = "节假日控制模式"
-Me.CheckBox31.UseVisualStyleBackColor = true
-'
-'CheckBox32
-'
-Me.CheckBox32.AutoSize = true
-Me.CheckBox32.Location = New System.Drawing.Point(11, 37)
-Me.CheckBox32.Name = "CheckBox32"
-Me.CheckBox32.Size = New System.Drawing.Size(96, 16)
-Me.CheckBox32.TabIndex = 162
-Me.CheckBox32.Text = "特殊控制模式"
-Me.CheckBox32.UseVisualStyleBackColor = true
-'
-'CheckBox33
-'
-Me.CheckBox33.AutoSize = true
-Me.CheckBox33.Location = New System.Drawing.Point(11, 13)
-Me.CheckBox33.Name = "CheckBox33"
-Me.CheckBox33.Size = New System.Drawing.Size(108, 16)
-Me.CheckBox33.TabIndex = 161
-Me.CheckBox33.Text = "经纬度控制模式"
-Me.CheckBox33.UseVisualStyleBackColor = true
-'
-'GroupBox23
-'
-Me.GroupBox23.Controls.Add(Me.RadioButton21)
-Me.GroupBox23.Controls.Add(Me.RadioButton22)
-Me.GroupBox23.Location = New System.Drawing.Point(284, 316)
-Me.GroupBox23.Name = "GroupBox23"
-Me.GroupBox23.Size = New System.Drawing.Size(147, 59)
-Me.GroupBox23.TabIndex = 160
-Me.GroupBox23.TabStop = false
-'
-'RadioButton21
-'
-Me.RadioButton21.AutoSize = true
-Me.RadioButton21.Location = New System.Drawing.Point(6, 36)
-Me.RadioButton21.Name = "RadioButton21"
-Me.RadioButton21.Size = New System.Drawing.Size(47, 16)
-Me.RadioButton21.TabIndex = 157
-Me.RadioButton21.Text = "删除"
-Me.RadioButton21.UseVisualStyleBackColor = true
-'
-'RadioButton22
-'
-Me.RadioButton22.AutoSize = true
-Me.RadioButton22.Checked = true
-Me.RadioButton22.Location = New System.Drawing.Point(6, 12)
-Me.RadioButton22.Name = "RadioButton22"
-Me.RadioButton22.Size = New System.Drawing.Size(47, 16)
-Me.RadioButton22.TabIndex = 156
-Me.RadioButton22.TabStop = true
-Me.RadioButton22.Text = "查询"
-Me.RadioButton22.UseVisualStyleBackColor = true
-'
-'GroupBox24
-'
-Me.GroupBox24.Controls.Add(Me.DataGridView5)
-Me.GroupBox24.Location = New System.Drawing.Point(449, 387)
-Me.GroupBox24.Name = "GroupBox24"
-Me.GroupBox24.Size = New System.Drawing.Size(438, 124)
-Me.GroupBox24.TabIndex = 159
-Me.GroupBox24.TabStop = false
-Me.GroupBox24.Text = "节假日控制时刻表"
-'
-'DataGridView5
-'
-Me.DataGridView5.AllowUserToAddRows = false
-Me.DataGridView5.BackgroundColor = System.Drawing.Color.WhiteSmoke
-Me.DataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-Me.DataGridView5.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn28, Me.DataGridViewTextBoxColumn29, Me.DataGridViewTextBoxColumn30})
-Me.DataGridView5.Location = New System.Drawing.Point(12, 22)
-Me.DataGridView5.Name = "DataGridView5"
-Me.DataGridView5.RowTemplate.Height = 23
-Me.DataGridView5.Size = New System.Drawing.Size(417, 95)
-Me.DataGridView5.TabIndex = 0
-'
-'DataGridViewTextBoxColumn28
-'
-Me.DataGridViewTextBoxColumn28.HeaderText = "编号"
-Me.DataGridViewTextBoxColumn28.Name = "DataGridViewTextBoxColumn28"
-Me.DataGridViewTextBoxColumn28.Width = 60
-'
-'DataGridViewTextBoxColumn29
-'
-Me.DataGridViewTextBoxColumn29.HeaderText = "时间"
-Me.DataGridViewTextBoxColumn29.Name = "DataGridViewTextBoxColumn29"
-Me.DataGridViewTextBoxColumn29.Width = 170
-'
-'DataGridViewTextBoxColumn30
-'
-Me.DataGridViewTextBoxColumn30.HeaderText = "控制方式"
-Me.DataGridViewTextBoxColumn30.Name = "DataGridViewTextBoxColumn30"
-Me.DataGridViewTextBoxColumn30.Width = 150
-'
-'GroupBox25
-'
-Me.GroupBox25.Controls.Add(Me.DataGridView6)
-Me.GroupBox25.Location = New System.Drawing.Point(449, 207)
-Me.GroupBox25.Name = "GroupBox25"
-Me.GroupBox25.Size = New System.Drawing.Size(438, 176)
-Me.GroupBox25.TabIndex = 158
-Me.GroupBox25.TabStop = false
-Me.GroupBox25.Text = "特殊控制时刻表"
-'
-'DataGridView6
-'
-Me.DataGridView6.AllowUserToAddRows = false
-Me.DataGridView6.BackgroundColor = System.Drawing.Color.WhiteSmoke
-Me.DataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-Me.DataGridView6.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn31, Me.DataGridViewTextBoxColumn32, Me.DataGridViewTextBoxColumn33, Me.DataGridViewTextBoxColumn34, Me.DataGridViewTextBoxColumn35, Me.DataGridViewTextBoxColumn36})
-Me.DataGridView6.Location = New System.Drawing.Point(12, 22)
-Me.DataGridView6.Name = "DataGridView6"
-Me.DataGridView6.RowTemplate.Height = 23
-Me.DataGridView6.Size = New System.Drawing.Size(420, 146)
-Me.DataGridView6.TabIndex = 0
-'
-'DataGridViewTextBoxColumn31
-'
-Me.DataGridViewTextBoxColumn31.HeaderText = "编号"
-Me.DataGridViewTextBoxColumn31.Name = "DataGridViewTextBoxColumn31"
-Me.DataGridViewTextBoxColumn31.Width = 60
-'
-'DataGridViewTextBoxColumn32
-'
-Me.DataGridViewTextBoxColumn32.HeaderText = "星期"
-Me.DataGridViewTextBoxColumn32.Name = "DataGridViewTextBoxColumn32"
-Me.DataGridViewTextBoxColumn32.Width = 60
-'
-'DataGridViewTextBoxColumn33
-'
-Me.DataGridViewTextBoxColumn33.HeaderText = "小时"
-Me.DataGridViewTextBoxColumn33.Name = "DataGridViewTextBoxColumn33"
-Me.DataGridViewTextBoxColumn33.Width = 60
-'
-'DataGridViewTextBoxColumn34
-'
-Me.DataGridViewTextBoxColumn34.HeaderText = "分钟"
-Me.DataGridViewTextBoxColumn34.Name = "DataGridViewTextBoxColumn34"
-Me.DataGridViewTextBoxColumn34.Width = 60
-'
-'DataGridViewTextBoxColumn35
-'
-Me.DataGridViewTextBoxColumn35.HeaderText = "秒"
-Me.DataGridViewTextBoxColumn35.Name = "DataGridViewTextBoxColumn35"
-Me.DataGridViewTextBoxColumn35.Width = 60
-'
-'DataGridViewTextBoxColumn36
-'
-Me.DataGridViewTextBoxColumn36.HeaderText = "控制方式"
-Me.DataGridViewTextBoxColumn36.Name = "DataGridViewTextBoxColumn36"
-'
-'Button13
-'
-Me.Button13.Location = New System.Drawing.Point(321, 470)
-Me.Button13.Name = "Button13"
-Me.Button13.Size = New System.Drawing.Size(77, 26)
-Me.Button13.TabIndex = 157
-Me.Button13.Text = "操作"
-Me.Button13.UseVisualStyleBackColor = true
-'
-'GroupBox26
-'
-Me.GroupBox26.Controls.Add(Me.RadioButton23)
-Me.GroupBox26.Controls.Add(Me.RadioButton24)
-Me.GroupBox26.Enabled = false
-Me.GroupBox26.Location = New System.Drawing.Point(284, 70)
-Me.GroupBox26.Name = "GroupBox26"
-Me.GroupBox26.Size = New System.Drawing.Size(147, 96)
-Me.GroupBox26.TabIndex = 156
-Me.GroupBox26.TabStop = false
-Me.GroupBox26.Text = "整体控制"
-'
-'RadioButton23
-'
-Me.RadioButton23.AutoSize = true
-Me.RadioButton23.Location = New System.Drawing.Point(6, 61)
-Me.RadioButton23.Name = "RadioButton23"
-Me.RadioButton23.Size = New System.Drawing.Size(47, 16)
-Me.RadioButton23.TabIndex = 85
-Me.RadioButton23.Text = "路灯"
-Me.RadioButton23.UseVisualStyleBackColor = true
-'
-'RadioButton24
-'
-Me.RadioButton24.AutoSize = true
-Me.RadioButton24.Checked = true
-Me.RadioButton24.Location = New System.Drawing.Point(6, 22)
-Me.RadioButton24.Name = "RadioButton24"
-Me.RadioButton24.Size = New System.Drawing.Size(83, 16)
-Me.RadioButton24.TabIndex = 84
-Me.RadioButton24.TabStop = true
-Me.RadioButton24.Text = "主控箱节点"
-Me.RadioButton24.UseVisualStyleBackColor = true
-'
-'GroupBox27
-'
-Me.GroupBox27.Controls.Add(Me.DataGridView7)
-Me.GroupBox27.Location = New System.Drawing.Point(449, 6)
-Me.GroupBox27.Name = "GroupBox27"
-Me.GroupBox27.Size = New System.Drawing.Size(438, 195)
-Me.GroupBox27.TabIndex = 153
-Me.GroupBox27.TabStop = false
-Me.GroupBox27.Text = "未来一周经纬度开关灯时刻表"
-'
-'DataGridView7
-'
-Me.DataGridView7.AllowUserToAddRows = false
-Me.DataGridView7.BackgroundColor = System.Drawing.Color.WhiteSmoke
-Me.DataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-Me.DataGridView7.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn37, Me.DataGridViewTextBoxColumn38, Me.DataGridViewTextBoxColumn39})
-Me.DataGridView7.Location = New System.Drawing.Point(12, 22)
-Me.DataGridView7.Name = "DataGridView7"
-Me.DataGridView7.RowTemplate.Height = 23
-Me.DataGridView7.Size = New System.Drawing.Size(417, 164)
-Me.DataGridView7.TabIndex = 152
-'
-'DataGridViewTextBoxColumn37
-'
-Me.DataGridViewTextBoxColumn37.HeaderText = "星期"
-Me.DataGridViewTextBoxColumn37.Name = "DataGridViewTextBoxColumn37"
-'
-'DataGridViewTextBoxColumn38
-'
-Me.DataGridViewTextBoxColumn38.HeaderText = "开灯时间"
-Me.DataGridViewTextBoxColumn38.Name = "DataGridViewTextBoxColumn38"
-Me.DataGridViewTextBoxColumn38.Width = 150
-'
-'DataGridViewTextBoxColumn39
-'
-Me.DataGridViewTextBoxColumn39.HeaderText = "关灯时间"
-Me.DataGridViewTextBoxColumn39.Name = "DataGridViewTextBoxColumn39"
-Me.DataGridViewTextBoxColumn39.Width = 150
-'
-'RadioButton25
-'
-Me.RadioButton25.AutoSize = true
-Me.RadioButton25.Checked = true
-Me.RadioButton25.Location = New System.Drawing.Point(290, 38)
-Me.RadioButton25.Name = "RadioButton25"
-Me.RadioButton25.Size = New System.Drawing.Size(71, 16)
-Me.RadioButton25.TabIndex = 155
-Me.RadioButton25.TabStop = true
-Me.RadioButton25.Text = "回路控制"
-Me.RadioButton25.UseVisualStyleBackColor = true
-'
-'TreeView1
-'
-Me.TreeView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom)  _
-            Or System.Windows.Forms.AnchorStyles.Left)  _
-            Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
-Me.TreeView1.LineColor = System.Drawing.Color.Empty
-Me.TreeView1.Location = New System.Drawing.Point(3, 3)
-Me.TreeView1.Name = "TreeView1"
-Me.TreeView1.Size = New System.Drawing.Size(259, 508)
-Me.TreeView1.TabIndex = 1
-'
-'RadioButton26
-'
-Me.RadioButton26.AutoSize = true
-Me.RadioButton26.Location = New System.Drawing.Point(290, 14)
-Me.RadioButton26.Name = "RadioButton26"
-Me.RadioButton26.Size = New System.Drawing.Size(71, 16)
-Me.RadioButton26.TabIndex = 154
-Me.RadioButton26.Text = "整体控制"
-Me.RadioButton26.UseVisualStyleBackColor = true
-'
-'GroupBox28
-'
-Me.GroupBox28.Controls.Add(Me.RadioButton27)
-Me.GroupBox28.Controls.Add(Me.RadioButton28)
-Me.GroupBox28.Controls.Add(Me.RadioButton29)
-Me.GroupBox28.Controls.Add(Me.RadioButton30)
-Me.GroupBox28.Controls.Add(Me.RadioButton31)
-Me.GroupBox28.Controls.Add(Me.RadioButton32)
-Me.GroupBox28.Location = New System.Drawing.Point(284, 172)
-Me.GroupBox28.Name = "GroupBox28"
-Me.GroupBox28.Size = New System.Drawing.Size(147, 138)
-Me.GroupBox28.TabIndex = 153
-Me.GroupBox28.TabStop = false
-Me.GroupBox28.Text = "回路控制"
-'
-'RadioButton27
-'
-Me.RadioButton27.AutoSize = true
-Me.RadioButton27.Location = New System.Drawing.Point(82, 98)
-Me.RadioButton27.Name = "RadioButton27"
-Me.RadioButton27.Size = New System.Drawing.Size(35, 16)
-Me.RadioButton27.TabIndex = 93
-Me.RadioButton27.Text = "K6"
-Me.RadioButton27.UseVisualStyleBackColor = true
-'
-'RadioButton28
-'
-Me.RadioButton28.AutoSize = true
-Me.RadioButton28.Location = New System.Drawing.Point(6, 98)
-Me.RadioButton28.Name = "RadioButton28"
-Me.RadioButton28.Size = New System.Drawing.Size(35, 16)
-Me.RadioButton28.TabIndex = 92
-Me.RadioButton28.Text = "K5"
-Me.RadioButton28.UseVisualStyleBackColor = true
-'
-'RadioButton29
-'
-Me.RadioButton29.AutoSize = true
-Me.RadioButton29.Location = New System.Drawing.Point(82, 56)
-Me.RadioButton29.Name = "RadioButton29"
-Me.RadioButton29.Size = New System.Drawing.Size(35, 16)
-Me.RadioButton29.TabIndex = 91
-Me.RadioButton29.Text = "K4"
-Me.RadioButton29.UseVisualStyleBackColor = true
-'
-'RadioButton30
-'
-Me.RadioButton30.AutoSize = true
-Me.RadioButton30.Location = New System.Drawing.Point(6, 56)
-Me.RadioButton30.Name = "RadioButton30"
-Me.RadioButton30.Size = New System.Drawing.Size(35, 16)
-Me.RadioButton30.TabIndex = 90
-Me.RadioButton30.Text = "K3"
-Me.RadioButton30.UseVisualStyleBackColor = true
-'
-'RadioButton31
-'
-Me.RadioButton31.AutoSize = true
-Me.RadioButton31.Location = New System.Drawing.Point(82, 22)
-Me.RadioButton31.Name = "RadioButton31"
-Me.RadioButton31.Size = New System.Drawing.Size(35, 16)
-Me.RadioButton31.TabIndex = 89
-Me.RadioButton31.Text = "K2"
-Me.RadioButton31.UseVisualStyleBackColor = true
-'
-'RadioButton32
-'
-Me.RadioButton32.AutoSize = true
-Me.RadioButton32.Checked = true
-Me.RadioButton32.Location = New System.Drawing.Point(6, 22)
-Me.RadioButton32.Name = "RadioButton32"
-Me.RadioButton32.Size = New System.Drawing.Size(35, 16)
-Me.RadioButton32.TabIndex = 88
-Me.RadioButton32.TabStop = true
-Me.RadioButton32.Text = "K1"
-Me.RadioButton32.UseVisualStyleBackColor = true
-'
-'TabPage10
-'
-Me.TabPage10.Controls.Add(Me.CheckBox34)
-Me.TabPage10.Controls.Add(Me.GroupBox29)
-Me.TabPage10.Controls.Add(Me.GroupBox30)
-Me.TabPage10.Controls.Add(Me.GroupBox31)
-Me.TabPage10.Location = New System.Drawing.Point(4, 23)
-Me.TabPage10.Name = "TabPage10"
-Me.TabPage10.Padding = New System.Windows.Forms.Padding(3)
-Me.TabPage10.Size = New System.Drawing.Size(902, 517)
-Me.TabPage10.TabIndex = 1
-Me.TabPage10.Text = "全夜灯模式设置"
-Me.TabPage10.UseVisualStyleBackColor = true
-'
-'CheckBox34
-'
-Me.CheckBox34.AutoSize = true
-Me.CheckBox34.Location = New System.Drawing.Point(742, 25)
-Me.CheckBox34.Name = "CheckBox34"
-Me.CheckBox34.Size = New System.Drawing.Size(96, 16)
-Me.CheckBox34.TabIndex = 163
-Me.CheckBox34.Text = "模式参数设置"
-Me.CheckBox34.UseVisualStyleBackColor = true
-'
-'GroupBox29
-'
-Me.GroupBox29.Controls.Add(Me.Button14)
-Me.GroupBox29.Controls.Add(Me.ComboBox20)
-Me.GroupBox29.Enabled = false
-Me.GroupBox29.Location = New System.Drawing.Point(739, 58)
-Me.GroupBox29.Name = "GroupBox29"
-Me.GroupBox29.Size = New System.Drawing.Size(157, 119)
-Me.GroupBox29.TabIndex = 162
-Me.GroupBox29.TabStop = false
-Me.GroupBox29.Text = "控制级别设置"
-'
-'Button14
-'
-Me.Button14.Location = New System.Drawing.Point(39, 87)
-Me.Button14.Name = "Button14"
-Me.Button14.Size = New System.Drawing.Size(75, 23)
-Me.Button14.TabIndex = 162
-Me.Button14.Text = "设置"
-Me.Button14.UseVisualStyleBackColor = true
-'
-'ComboBox20
-'
-Me.ComboBox20.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-Me.ComboBox20.FormattingEnabled = true
-Me.ComboBox20.Items.AddRange(New Object() {"时间控制模式", "光照控制模式"})
-Me.ComboBox20.Location = New System.Drawing.Point(25, 36)
-Me.ComboBox20.Name = "ComboBox20"
-Me.ComboBox20.Size = New System.Drawing.Size(100, 20)
-Me.ComboBox20.TabIndex = 151
-'
-'GroupBox30
-'
-Me.GroupBox30.Controls.Add(Me.CheckBox35)
-Me.GroupBox30.Controls.Add(Me.Button15)
-Me.GroupBox30.Controls.Add(Me.CheckBox36)
-Me.GroupBox30.Controls.Add(Me.CheckBox37)
-Me.GroupBox30.Enabled = false
-Me.GroupBox30.Location = New System.Drawing.Point(739, 183)
-Me.GroupBox30.Name = "GroupBox30"
-Me.GroupBox30.Size = New System.Drawing.Size(157, 184)
-Me.GroupBox30.TabIndex = 153
-Me.GroupBox30.TabStop = false
-Me.GroupBox30.Text = "模式组合"
-'
-'CheckBox35
-'
-Me.CheckBox35.AutoSize = true
-Me.CheckBox35.Location = New System.Drawing.Point(9, 100)
-Me.CheckBox35.Name = "CheckBox35"
-Me.CheckBox35.Size = New System.Drawing.Size(108, 16)
-Me.CheckBox35.TabIndex = 2
-Me.CheckBox35.Text = "节假日控制模式"
-Me.CheckBox35.UseVisualStyleBackColor = true
-'
-'Button15
-'
-Me.Button15.Location = New System.Drawing.Point(39, 147)
-Me.Button15.Name = "Button15"
-Me.Button15.Size = New System.Drawing.Size(75, 23)
-Me.Button15.TabIndex = 161
-Me.Button15.Text = "设置"
-Me.Button15.UseVisualStyleBackColor = true
-'
-'CheckBox36
-'
-Me.CheckBox36.AutoSize = true
-Me.CheckBox36.Location = New System.Drawing.Point(9, 66)
-Me.CheckBox36.Name = "CheckBox36"
-Me.CheckBox36.Size = New System.Drawing.Size(96, 16)
-Me.CheckBox36.TabIndex = 1
-Me.CheckBox36.Text = "特殊控制模式"
-Me.CheckBox36.UseVisualStyleBackColor = true
-'
-'CheckBox37
-'
-Me.CheckBox37.AutoSize = true
-Me.CheckBox37.Location = New System.Drawing.Point(9, 32)
-Me.CheckBox37.Name = "CheckBox37"
-Me.CheckBox37.Size = New System.Drawing.Size(108, 16)
-Me.CheckBox37.TabIndex = 0
-Me.CheckBox37.Text = "经纬度控制模式"
-Me.CheckBox37.UseVisualStyleBackColor = true
-'
-'GroupBox31
-'
-Me.GroupBox31.Controls.Add(Me.RadioButton33)
-Me.GroupBox31.Controls.Add(Me.RadioButton34)
-Me.GroupBox31.Controls.Add(Me.TextBox7)
-Me.GroupBox31.Controls.Add(Me.Label39)
-Me.GroupBox31.Controls.Add(Me.Label40)
-Me.GroupBox31.Controls.Add(Me.TextBox8)
-Me.GroupBox31.Controls.Add(Me.Label41)
-Me.GroupBox31.Controls.Add(Me.ComboBox21)
-Me.GroupBox31.Controls.Add(Me.Label42)
-Me.GroupBox31.Controls.Add(Me.CheckBox38)
-Me.GroupBox31.Controls.Add(Me.Button16)
-Me.GroupBox31.Controls.Add(Me.CheckedListBox4)
-Me.GroupBox31.Controls.Add(Me.CheckBox39)
-Me.GroupBox31.Controls.Add(Me.CheckBox40)
-Me.GroupBox31.Controls.Add(Me.CheckBox41)
-Me.GroupBox31.Controls.Add(Me.ComboBox22)
-Me.GroupBox31.Controls.Add(Me.Label43)
-Me.GroupBox31.Controls.Add(Me.Label44)
-Me.GroupBox31.Controls.Add(Me.DataGridView8)
-Me.GroupBox31.Controls.Add(Me.ComboBox23)
-Me.GroupBox31.Controls.Add(Me.ComboBox24)
-Me.GroupBox31.Controls.Add(Me.ComboBox25)
-Me.GroupBox31.Controls.Add(Me.Label45)
-Me.GroupBox31.Controls.Add(Me.Label46)
-Me.GroupBox31.Controls.Add(Me.ComboBox26)
-Me.GroupBox31.Controls.Add(Me.Label47)
-Me.GroupBox31.Location = New System.Drawing.Point(6, 6)
-Me.GroupBox31.Name = "GroupBox31"
-Me.GroupBox31.Size = New System.Drawing.Size(717, 491)
-Me.GroupBox31.TabIndex = 146
-Me.GroupBox31.TabStop = false
-'
-'RadioButton33
-'
-Me.RadioButton33.AutoSize = true
-Me.RadioButton33.Checked = true
-Me.RadioButton33.Enabled = false
-Me.RadioButton33.Location = New System.Drawing.Point(655, 23)
-Me.RadioButton33.Name = "RadioButton33"
-Me.RadioButton33.Size = New System.Drawing.Size(47, 16)
-Me.RadioButton33.TabIndex = 168
-Me.RadioButton33.TabStop = true
-Me.RadioButton33.Text = "清空"
-Me.RadioButton33.UseVisualStyleBackColor = true
-'
-'RadioButton34
-'
-Me.RadioButton34.AutoSize = true
-Me.RadioButton34.Enabled = false
-Me.RadioButton34.Location = New System.Drawing.Point(579, 22)
-Me.RadioButton34.Name = "RadioButton34"
-Me.RadioButton34.Size = New System.Drawing.Size(47, 16)
-Me.RadioButton34.TabIndex = 167
-Me.RadioButton34.Text = "全选"
-Me.RadioButton34.UseVisualStyleBackColor = true
-'
-'TextBox7
-'
-Me.TextBox7.Enabled = false
-Me.TextBox7.Location = New System.Drawing.Point(215, 165)
-Me.TextBox7.Name = "TextBox7"
-Me.TextBox7.Size = New System.Drawing.Size(97, 21)
-Me.TextBox7.TabIndex = 3
-'
-'Label39
-'
-Me.Label39.AutoSize = true
-Me.Label39.Location = New System.Drawing.Point(118, 170)
-Me.Label39.Name = "Label39"
-Me.Label39.Size = New System.Drawing.Size(77, 12)
-Me.Label39.TabIndex = 1
-Me.Label39.Text = "关灯偏移量："
-'
-'Label40
-'
-Me.Label40.AutoSize = true
-Me.Label40.BackColor = System.Drawing.Color.Transparent
-Me.Label40.Location = New System.Drawing.Point(441, 429)
-Me.Label40.Name = "Label40"
-Me.Label40.Size = New System.Drawing.Size(125, 12)
-Me.Label40.TabIndex = 164
-Me.Label40.Text = "景观灯编号的前半部分"
-Me.Label40.Visible = false
-'
-'TextBox8
-'
-Me.TextBox8.Enabled = false
-Me.TextBox8.Location = New System.Drawing.Point(215, 127)
-Me.TextBox8.Name = "TextBox8"
-Me.TextBox8.Size = New System.Drawing.Size(97, 21)
-Me.TextBox8.TabIndex = 2
-'
-'Label41
-'
-Me.Label41.AutoSize = true
-Me.Label41.BackColor = System.Drawing.Color.Transparent
-Me.Label41.Location = New System.Drawing.Point(19, 91)
-Me.Label41.Name = "Label41"
-Me.Label41.Size = New System.Drawing.Size(65, 12)
-Me.Label41.TabIndex = 163
-Me.Label41.Text = "类型名称："
-'
-'ComboBox21
-'
-Me.ComboBox21.FormattingEnabled = true
-Me.ComboBox21.Location = New System.Drawing.Point(102, 83)
-Me.ComboBox21.Name = "ComboBox21"
-Me.ComboBox21.Size = New System.Drawing.Size(98, 20)
-Me.ComboBox21.TabIndex = 162
-'
-'Label42
-'
-Me.Label42.AutoSize = true
-Me.Label42.Location = New System.Drawing.Point(118, 130)
-Me.Label42.Name = "Label42"
-Me.Label42.Size = New System.Drawing.Size(77, 12)
-Me.Label42.TabIndex = 0
-Me.Label42.Text = "开灯偏移量："
-'
-'CheckBox38
-'
-Me.CheckBox38.AutoSize = true
-Me.CheckBox38.Location = New System.Drawing.Point(22, 199)
-Me.CheckBox38.Name = "CheckBox38"
-Me.CheckBox38.Size = New System.Drawing.Size(144, 16)
-Me.CheckBox38.TabIndex = 161
-Me.CheckBox38.Text = "显示未来一周时刻设置"
-Me.CheckBox38.UseVisualStyleBackColor = true
-'
-'Button16
-'
-Me.Button16.Location = New System.Drawing.Point(533, 446)
-Me.Button16.Name = "Button16"
-Me.Button16.Size = New System.Drawing.Size(75, 23)
-Me.Button16.TabIndex = 160
-Me.Button16.Text = "设置"
-Me.Button16.UseVisualStyleBackColor = true
-'
-'CheckedListBox4
-'
-Me.CheckedListBox4.Enabled = false
-Me.CheckedListBox4.FormattingEnabled = true
-Me.CheckedListBox4.Location = New System.Drawing.Point(441, 47)
-Me.CheckedListBox4.Name = "CheckedListBox4"
-Me.CheckedListBox4.Size = New System.Drawing.Size(267, 356)
-Me.CheckedListBox4.TabIndex = 159
-'
-'CheckBox39
-'
-Me.CheckBox39.AutoSize = true
-Me.CheckBox39.Location = New System.Drawing.Point(444, 23)
-Me.CheckBox39.Name = "CheckBox39"
-Me.CheckBox39.Size = New System.Drawing.Size(96, 16)
-Me.CheckBox39.TabIndex = 158
-Me.CheckBox39.Text = "组合分组设置"
-Me.CheckBox39.UseVisualStyleBackColor = true
-'
-'CheckBox40
-'
-Me.CheckBox40.AutoSize = true
-Me.CheckBox40.Location = New System.Drawing.Point(22, 168)
-Me.CheckBox40.Name = "CheckBox40"
-Me.CheckBox40.Size = New System.Drawing.Size(60, 16)
-Me.CheckBox40.TabIndex = 155
-Me.CheckBox40.Text = "关偏移"
-Me.CheckBox40.UseVisualStyleBackColor = true
-'
-'CheckBox41
-'
-Me.CheckBox41.AutoSize = true
-Me.CheckBox41.Location = New System.Drawing.Point(22, 129)
-Me.CheckBox41.Name = "CheckBox41"
-Me.CheckBox41.Size = New System.Drawing.Size(60, 16)
-Me.CheckBox41.TabIndex = 154
-Me.CheckBox41.Text = "开偏移"
-Me.CheckBox41.UseVisualStyleBackColor = true
-'
-'ComboBox22
-'
-Me.ComboBox22.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-Me.ComboBox22.FormattingEnabled = true
-Me.ComboBox22.Items.AddRange(New Object() {"K1", "K2", "K3", "K4", "K5", "K6"})
-Me.ComboBox22.Location = New System.Drawing.Point(316, 86)
-Me.ComboBox22.Name = "ComboBox22"
-Me.ComboBox22.Size = New System.Drawing.Size(98, 20)
-Me.ComboBox22.TabIndex = 153
-'
-'Label43
-'
-Me.Label43.AutoSize = true
-Me.Label43.Location = New System.Drawing.Point(232, 89)
-Me.Label43.Name = "Label43"
-Me.Label43.Size = New System.Drawing.Size(65, 12)
-Me.Label43.TabIndex = 152
-Me.Label43.Text = "节点编号："
-'
-'Label44
-'
-Me.Label44.AutoSize = true
-Me.Label44.BackColor = System.Drawing.Color.Transparent
-Me.Label44.Location = New System.Drawing.Point(218, 55)
-Me.Label44.Name = "Label44"
-Me.Label44.Size = New System.Drawing.Size(77, 12)
-Me.Label44.TabIndex = 149
-Me.Label44.Text = "主控箱名称："
-'
-'DataGridView8
-'
-Me.DataGridView8.AllowUserToAddRows = false
-Me.DataGridView8.BackgroundColor = System.Drawing.Color.WhiteSmoke
-Me.DataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-Me.DataGridView8.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn40, Me.DataGridViewTextBoxColumn41, Me.DataGridViewTextBoxColumn42})
-Me.DataGridView8.Location = New System.Drawing.Point(15, 223)
-Me.DataGridView8.Name = "DataGridView8"
-Me.DataGridView8.RowTemplate.Height = 23
-Me.DataGridView8.Size = New System.Drawing.Size(399, 252)
-Me.DataGridView8.TabIndex = 151
-'
-'DataGridViewTextBoxColumn40
-'
-Me.DataGridViewTextBoxColumn40.HeaderText = "星期"
-Me.DataGridViewTextBoxColumn40.Name = "DataGridViewTextBoxColumn40"
-'
-'DataGridViewTextBoxColumn41
-'
-Me.DataGridViewTextBoxColumn41.HeaderText = "开灯时间"
-Me.DataGridViewTextBoxColumn41.Name = "DataGridViewTextBoxColumn41"
-Me.DataGridViewTextBoxColumn41.Width = 130
-'
-'DataGridViewTextBoxColumn42
-'
-Me.DataGridViewTextBoxColumn42.HeaderText = "关灯时间"
-Me.DataGridViewTextBoxColumn42.Name = "DataGridViewTextBoxColumn42"
-Me.DataGridViewTextBoxColumn42.Width = 130
-'
-'ComboBox23
-'
-Me.ComboBox23.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-Me.ComboBox23.FormattingEnabled = true
-Me.ComboBox23.Location = New System.Drawing.Point(315, 55)
-Me.ComboBox23.Name = "ComboBox23"
-Me.ComboBox23.Size = New System.Drawing.Size(98, 20)
-Me.ComboBox23.TabIndex = 150
-'
-'ComboBox24
-'
-Me.ComboBox24.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-Me.ComboBox24.FormattingEnabled = true
-Me.ComboBox24.Location = New System.Drawing.Point(102, 22)
-Me.ComboBox24.Name = "ComboBox24"
-Me.ComboBox24.Size = New System.Drawing.Size(98, 20)
-Me.ComboBox24.TabIndex = 144
-'
-'ComboBox25
-'
-Me.ComboBox25.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-Me.ComboBox25.FormattingEnabled = true
-Me.ComboBox25.Location = New System.Drawing.Point(102, 52)
-Me.ComboBox25.Name = "ComboBox25"
-Me.ComboBox25.Size = New System.Drawing.Size(98, 20)
-Me.ComboBox25.TabIndex = 148
-'
-'Label45
-'
-Me.Label45.AutoSize = true
-Me.Label45.BackColor = System.Drawing.Color.Transparent
-Me.Label45.Location = New System.Drawing.Point(19, 58)
-Me.Label45.Name = "Label45"
-Me.Label45.Size = New System.Drawing.Size(65, 12)
-Me.Label45.TabIndex = 147
-Me.Label45.Text = "街道名称："
-'
-'Label46
-'
-Me.Label46.AutoSize = true
-Me.Label46.BackColor = System.Drawing.Color.Transparent
-Me.Label46.Location = New System.Drawing.Point(19, 25)
-Me.Label46.Name = "Label46"
-Me.Label46.Size = New System.Drawing.Size(65, 12)
-Me.Label46.TabIndex = 143
-Me.Label46.Text = "城市名称："
-'
-'ComboBox26
-'
-Me.ComboBox26.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-Me.ComboBox26.FormattingEnabled = true
-Me.ComboBox26.Location = New System.Drawing.Point(316, 21)
-Me.ComboBox26.Name = "ComboBox26"
-Me.ComboBox26.Size = New System.Drawing.Size(98, 20)
-Me.ComboBox26.TabIndex = 146
-'
-'Label47
-'
-Me.Label47.AutoSize = true
-Me.Label47.BackColor = System.Drawing.Color.Transparent
-Me.Label47.Location = New System.Drawing.Point(232, 25)
-Me.Label47.Name = "Label47"
-Me.Label47.Size = New System.Drawing.Size(65, 12)
-Me.Label47.TabIndex = 145
-Me.Label47.Text = "区域名称："
-'
-'TabPage11
-'
-Me.TabPage11.Controls.Add(Me.GroupBox32)
-Me.TabPage11.Controls.Add(Me.GroupBox36)
-Me.TabPage11.Location = New System.Drawing.Point(4, 23)
-Me.TabPage11.Name = "TabPage11"
-Me.TabPage11.Padding = New System.Windows.Forms.Padding(3)
-Me.TabPage11.Size = New System.Drawing.Size(902, 517)
-Me.TabPage11.TabIndex = 2
-Me.TabPage11.Text = "特殊控制模式设置"
-Me.TabPage11.UseVisualStyleBackColor = true
-'
-'GroupBox32
-'
-Me.GroupBox32.Controls.Add(Me.GroupBox33)
-Me.GroupBox32.Controls.Add(Me.GroupBox34)
-Me.GroupBox32.Controls.Add(Me.RadioButton37)
-Me.GroupBox32.Controls.Add(Me.RadioButton38)
-Me.GroupBox32.Controls.Add(Me.GroupBox35)
-Me.GroupBox32.Controls.Add(Me.ComboBox27)
-Me.GroupBox32.Controls.Add(Me.Label48)
-Me.GroupBox32.Controls.Add(Me.Button17)
-Me.GroupBox32.Controls.Add(Me.CheckedListBox5)
-Me.GroupBox32.Location = New System.Drawing.Point(444, 6)
-Me.GroupBox32.Name = "GroupBox32"
-Me.GroupBox32.Size = New System.Drawing.Size(452, 492)
-Me.GroupBox32.TabIndex = 76
-Me.GroupBox32.TabStop = false
-Me.GroupBox32.Text = "分配控制模式"
-'
-'GroupBox33
-'
-Me.GroupBox33.Controls.Add(Me.CheckBox42)
-Me.GroupBox33.Controls.Add(Me.CheckBox43)
-Me.GroupBox33.Controls.Add(Me.CheckBox44)
-Me.GroupBox33.Controls.Add(Me.CheckBox45)
-Me.GroupBox33.Controls.Add(Me.CheckBox46)
-Me.GroupBox33.Controls.Add(Me.CheckBox47)
-Me.GroupBox33.Controls.Add(Me.CheckBox48)
-Me.GroupBox33.Location = New System.Drawing.Point(268, 234)
-Me.GroupBox33.Name = "GroupBox33"
-Me.GroupBox33.Size = New System.Drawing.Size(178, 152)
-Me.GroupBox33.TabIndex = 102
-Me.GroupBox33.TabStop = false
-Me.GroupBox33.Text = "周设置"
-'
-'CheckBox42
-'
-Me.CheckBox42.AutoSize = true
-Me.CheckBox42.Checked = true
-Me.CheckBox42.CheckState = System.Windows.Forms.CheckState.Checked
-Me.CheckBox42.Location = New System.Drawing.Point(3, 130)
-Me.CheckBox42.Name = "CheckBox42"
-Me.CheckBox42.Size = New System.Drawing.Size(60, 16)
-Me.CheckBox42.TabIndex = 6
-Me.CheckBox42.Text = "星期日"
-Me.CheckBox42.UseVisualStyleBackColor = true
-'
-'CheckBox43
-'
-Me.CheckBox43.AutoSize = true
-Me.CheckBox43.Checked = true
-Me.CheckBox43.CheckState = System.Windows.Forms.CheckState.Checked
-Me.CheckBox43.Location = New System.Drawing.Point(103, 94)
-Me.CheckBox43.Name = "CheckBox43"
-Me.CheckBox43.Size = New System.Drawing.Size(60, 16)
-Me.CheckBox43.TabIndex = 5
-Me.CheckBox43.Text = "星期六"
-Me.CheckBox43.UseVisualStyleBackColor = true
-'
-'CheckBox44
-'
-Me.CheckBox44.AutoSize = true
-Me.CheckBox44.Checked = true
-Me.CheckBox44.CheckState = System.Windows.Forms.CheckState.Checked
-Me.CheckBox44.Location = New System.Drawing.Point(3, 94)
-Me.CheckBox44.Name = "CheckBox44"
-Me.CheckBox44.Size = New System.Drawing.Size(60, 16)
-Me.CheckBox44.TabIndex = 4
-Me.CheckBox44.Text = "星期五"
-Me.CheckBox44.UseVisualStyleBackColor = true
-'
-'CheckBox45
-'
-Me.CheckBox45.AutoSize = true
-Me.CheckBox45.Checked = true
-Me.CheckBox45.CheckState = System.Windows.Forms.CheckState.Checked
-Me.CheckBox45.Location = New System.Drawing.Point(103, 58)
-Me.CheckBox45.Name = "CheckBox45"
-Me.CheckBox45.Size = New System.Drawing.Size(60, 16)
-Me.CheckBox45.TabIndex = 3
-Me.CheckBox45.Text = "星期四"
-Me.CheckBox45.UseVisualStyleBackColor = true
-'
-'CheckBox46
-'
-Me.CheckBox46.AutoSize = true
-Me.CheckBox46.Checked = true
-Me.CheckBox46.CheckState = System.Windows.Forms.CheckState.Checked
-Me.CheckBox46.Location = New System.Drawing.Point(3, 58)
-Me.CheckBox46.Name = "CheckBox46"
-Me.CheckBox46.Size = New System.Drawing.Size(60, 16)
-Me.CheckBox46.TabIndex = 2
-Me.CheckBox46.Text = "星期三"
-Me.CheckBox46.UseVisualStyleBackColor = true
-'
-'CheckBox47
-'
-Me.CheckBox47.AutoSize = true
-Me.CheckBox47.Checked = true
-Me.CheckBox47.CheckState = System.Windows.Forms.CheckState.Checked
-Me.CheckBox47.Location = New System.Drawing.Point(103, 22)
-Me.CheckBox47.Name = "CheckBox47"
-Me.CheckBox47.Size = New System.Drawing.Size(60, 16)
-Me.CheckBox47.TabIndex = 1
-Me.CheckBox47.Text = "星期二"
-Me.CheckBox47.UseVisualStyleBackColor = true
-'
-'CheckBox48
-'
-Me.CheckBox48.AutoSize = true
-Me.CheckBox48.Checked = true
-Me.CheckBox48.CheckState = System.Windows.Forms.CheckState.Checked
-Me.CheckBox48.Location = New System.Drawing.Point(6, 22)
-Me.CheckBox48.Name = "CheckBox48"
-Me.CheckBox48.Size = New System.Drawing.Size(60, 16)
-Me.CheckBox48.TabIndex = 0
-Me.CheckBox48.Text = "星期一"
-Me.CheckBox48.UseVisualStyleBackColor = true
-'
-'GroupBox34
-'
-Me.GroupBox34.Controls.Add(Me.RadioButton35)
-Me.GroupBox34.Controls.Add(Me.RadioButton36)
-Me.GroupBox34.Enabled = false
-Me.GroupBox34.Location = New System.Drawing.Point(268, 54)
-Me.GroupBox34.Name = "GroupBox34"
-Me.GroupBox34.Size = New System.Drawing.Size(178, 58)
-Me.GroupBox34.TabIndex = 101
-Me.GroupBox34.TabStop = false
-Me.GroupBox34.Text = "整体控制"
-'
-'RadioButton35
-'
-Me.RadioButton35.AutoSize = true
-Me.RadioButton35.Location = New System.Drawing.Point(103, 20)
-Me.RadioButton35.Name = "RadioButton35"
-Me.RadioButton35.Size = New System.Drawing.Size(47, 16)
-Me.RadioButton35.TabIndex = 85
-Me.RadioButton35.Text = "路灯"
-Me.RadioButton35.UseVisualStyleBackColor = true
-'
-'RadioButton36
-'
-Me.RadioButton36.AutoSize = true
-Me.RadioButton36.Checked = true
-Me.RadioButton36.Location = New System.Drawing.Point(6, 21)
-Me.RadioButton36.Name = "RadioButton36"
-Me.RadioButton36.Size = New System.Drawing.Size(83, 16)
-Me.RadioButton36.TabIndex = 84
-Me.RadioButton36.TabStop = true
-Me.RadioButton36.Text = "主控箱节点"
-Me.RadioButton36.UseVisualStyleBackColor = true
-'
-'RadioButton37
-'
-Me.RadioButton37.AutoSize = true
-Me.RadioButton37.Checked = true
-Me.RadioButton37.Location = New System.Drawing.Point(371, 22)
-Me.RadioButton37.Name = "RadioButton37"
-Me.RadioButton37.Size = New System.Drawing.Size(71, 16)
-Me.RadioButton37.TabIndex = 100
-Me.RadioButton37.TabStop = true
-Me.RadioButton37.Text = "回路控制"
-Me.RadioButton37.UseVisualStyleBackColor = true
-'
-'RadioButton38
-'
-Me.RadioButton38.AutoSize = true
-Me.RadioButton38.Location = New System.Drawing.Point(268, 22)
-Me.RadioButton38.Name = "RadioButton38"
-Me.RadioButton38.Size = New System.Drawing.Size(71, 16)
-Me.RadioButton38.TabIndex = 99
-Me.RadioButton38.Text = "整体控制"
-Me.RadioButton38.UseVisualStyleBackColor = true
-'
-'GroupBox35
-'
-Me.GroupBox35.Controls.Add(Me.CheckBox49)
-Me.GroupBox35.Controls.Add(Me.CheckBox50)
-Me.GroupBox35.Controls.Add(Me.CheckBox51)
-Me.GroupBox35.Controls.Add(Me.CheckBox52)
-Me.GroupBox35.Controls.Add(Me.CheckBox53)
-Me.GroupBox35.Controls.Add(Me.CheckBox54)
-Me.GroupBox35.Location = New System.Drawing.Point(268, 118)
-Me.GroupBox35.Name = "GroupBox35"
-Me.GroupBox35.Size = New System.Drawing.Size(178, 110)
-Me.GroupBox35.TabIndex = 98
-Me.GroupBox35.TabStop = false
-Me.GroupBox35.Text = "回路控制"
-'
-'CheckBox49
-'
-Me.CheckBox49.AutoSize = true
-Me.CheckBox49.Location = New System.Drawing.Point(103, 83)
-Me.CheckBox49.Name = "CheckBox49"
-Me.CheckBox49.Size = New System.Drawing.Size(36, 16)
-Me.CheckBox49.TabIndex = 87
-Me.CheckBox49.Text = "K6"
-Me.CheckBox49.UseVisualStyleBackColor = true
-'
-'CheckBox50
-'
-Me.CheckBox50.AutoSize = true
-Me.CheckBox50.Location = New System.Drawing.Point(6, 83)
-Me.CheckBox50.Name = "CheckBox50"
-Me.CheckBox50.Size = New System.Drawing.Size(36, 16)
-Me.CheckBox50.TabIndex = 86
-Me.CheckBox50.Text = "K5"
-Me.CheckBox50.UseVisualStyleBackColor = true
-'
-'CheckBox51
-'
-Me.CheckBox51.AutoSize = true
-Me.CheckBox51.Location = New System.Drawing.Point(103, 52)
-Me.CheckBox51.Name = "CheckBox51"
-Me.CheckBox51.Size = New System.Drawing.Size(36, 16)
-Me.CheckBox51.TabIndex = 85
-Me.CheckBox51.Text = "K4"
-Me.CheckBox51.UseVisualStyleBackColor = true
-'
-'CheckBox52
-'
-Me.CheckBox52.AutoSize = true
-Me.CheckBox52.Location = New System.Drawing.Point(6, 52)
-Me.CheckBox52.Name = "CheckBox52"
-Me.CheckBox52.Size = New System.Drawing.Size(36, 16)
-Me.CheckBox52.TabIndex = 84
-Me.CheckBox52.Text = "K3"
-Me.CheckBox52.UseVisualStyleBackColor = true
-'
-'CheckBox53
-'
-Me.CheckBox53.AutoSize = true
-Me.CheckBox53.Location = New System.Drawing.Point(103, 22)
-Me.CheckBox53.Name = "CheckBox53"
-Me.CheckBox53.Size = New System.Drawing.Size(36, 16)
-Me.CheckBox53.TabIndex = 83
-Me.CheckBox53.Text = "K2"
-Me.CheckBox53.UseVisualStyleBackColor = true
-'
-'CheckBox54
-'
-Me.CheckBox54.AutoSize = true
-Me.CheckBox54.Location = New System.Drawing.Point(6, 22)
-Me.CheckBox54.Name = "CheckBox54"
-Me.CheckBox54.Size = New System.Drawing.Size(36, 16)
-Me.CheckBox54.TabIndex = 82
-Me.CheckBox54.Text = "K1"
-Me.CheckBox54.UseVisualStyleBackColor = true
-'
-'ComboBox27
-'
-Me.ComboBox27.FormattingEnabled = true
-Me.ComboBox27.Location = New System.Drawing.Point(347, 415)
-Me.ComboBox27.Name = "ComboBox27"
-Me.ComboBox27.Size = New System.Drawing.Size(99, 20)
-Me.ComboBox27.TabIndex = 95
-'
-'Label48
-'
-Me.Label48.AutoSize = true
-Me.Label48.Location = New System.Drawing.Point(268, 418)
-Me.Label48.Name = "Label48"
-Me.Label48.Size = New System.Drawing.Size(65, 12)
-Me.Label48.TabIndex = 94
-Me.Label48.Text = "模式名称："
-'
-'Button17
-'
-Me.Button17.Location = New System.Drawing.Point(326, 463)
-Me.Button17.Name = "Button17"
-Me.Button17.Size = New System.Drawing.Size(75, 23)
-Me.Button17.TabIndex = 82
-Me.Button17.Text = "模式分配"
-Me.Button17.UseVisualStyleBackColor = true
-'
-'CheckedListBox5
-'
-Me.CheckedListBox5.FormattingEnabled = true
-Me.CheckedListBox5.Location = New System.Drawing.Point(20, 22)
-Me.CheckedListBox5.Name = "CheckedListBox5"
-Me.CheckedListBox5.Size = New System.Drawing.Size(242, 452)
-Me.CheckedListBox5.TabIndex = 75
-'
-'GroupBox36
-'
-Me.GroupBox36.Controls.Add(Me.GroupBox37)
-Me.GroupBox36.Controls.Add(Me.ComboBox32)
-Me.GroupBox36.Controls.Add(Me.CheckBox55)
-Me.GroupBox36.Controls.Add(Me.RadioButton41)
-Me.GroupBox36.Controls.Add(Me.RadioButton42)
-Me.GroupBox36.Controls.Add(Me.RadioButton43)
-Me.GroupBox36.Controls.Add(Me.TextBox9)
-Me.GroupBox36.Controls.Add(Me.Label54)
-Me.GroupBox36.Controls.Add(Me.Button19)
-Me.GroupBox36.Controls.Add(Me.ComboBox33)
-Me.GroupBox36.Controls.Add(Me.DataGridView9)
-Me.GroupBox36.Location = New System.Drawing.Point(6, 6)
-Me.GroupBox36.Name = "GroupBox36"
-Me.GroupBox36.Size = New System.Drawing.Size(432, 492)
-Me.GroupBox36.TabIndex = 74
-Me.GroupBox36.TabStop = false
-'
-'GroupBox37
-'
-Me.GroupBox37.Controls.Add(Me.RadioButton39)
-Me.GroupBox37.Controls.Add(Me.RadioButton40)
-Me.GroupBox37.Controls.Add(Me.Button18)
-Me.GroupBox37.Controls.Add(Me.Label49)
-Me.GroupBox37.Controls.Add(Me.ComboBox28)
-Me.GroupBox37.Controls.Add(Me.ComboBox29)
-Me.GroupBox37.Controls.Add(Me.ComboBox30)
-Me.GroupBox37.Controls.Add(Me.ComboBox31)
-Me.GroupBox37.Controls.Add(Me.Label50)
-Me.GroupBox37.Controls.Add(Me.Label51)
-Me.GroupBox37.Controls.Add(Me.Label52)
-Me.GroupBox37.Controls.Add(Me.Label53)
-Me.GroupBox37.Location = New System.Drawing.Point(19, 48)
-Me.GroupBox37.Name = "GroupBox37"
-Me.GroupBox37.Size = New System.Drawing.Size(397, 140)
-Me.GroupBox37.TabIndex = 94
-Me.GroupBox37.TabStop = false
-'
-'RadioButton39
-'
-Me.RadioButton39.AutoSize = true
-Me.RadioButton39.Location = New System.Drawing.Point(201, 59)
-Me.RadioButton39.Name = "RadioButton39"
-Me.RadioButton39.Size = New System.Drawing.Size(131, 16)
-Me.RadioButton39.TabIndex = 99
-Me.RadioButton39.Text = "三回路组合控制方式"
-Me.RadioButton39.UseVisualStyleBackColor = true
-'
-'RadioButton40
-'
-Me.RadioButton40.AutoSize = true
-Me.RadioButton40.Checked = true
-Me.RadioButton40.Location = New System.Drawing.Point(10, 59)
-Me.RadioButton40.Name = "RadioButton40"
-Me.RadioButton40.Size = New System.Drawing.Size(95, 16)
-Me.RadioButton40.TabIndex = 98
-Me.RadioButton40.TabStop = true
-Me.RadioButton40.Text = "传统控制方式"
-Me.RadioButton40.UseVisualStyleBackColor = true
-'
-'Button18
-'
-Me.Button18.Location = New System.Drawing.Point(297, 90)
-Me.Button18.Name = "Button18"
-Me.Button18.Size = New System.Drawing.Size(75, 23)
-Me.Button18.TabIndex = 97
-Me.Button18.Text = "增加时段"
-Me.Button18.UseVisualStyleBackColor = true
-'
-'Label49
-'
-Me.Label49.AutoSize = true
-Me.Label49.Location = New System.Drawing.Point(8, 27)
-Me.Label49.Name = "Label49"
-Me.Label49.Size = New System.Drawing.Size(65, 12)
-Me.Label49.TabIndex = 96
-Me.Label49.Text = "开始时间："
-'
-'ComboBox28
-'
-Me.ComboBox28.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-Me.ComboBox28.FormattingEnabled = true
-Me.ComboBox28.Items.AddRange(New Object() {"00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59"})
-Me.ComboBox28.Location = New System.Drawing.Point(281, 22)
-Me.ComboBox28.Name = "ComboBox28"
-Me.ComboBox28.Size = New System.Drawing.Size(60, 20)
-Me.ComboBox28.TabIndex = 95
-'
-'ComboBox29
-'
-Me.ComboBox29.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-Me.ComboBox29.FormattingEnabled = true
-Me.ComboBox29.Items.AddRange(New Object() {"00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59"})
-Me.ComboBox29.Location = New System.Drawing.Point(187, 22)
-Me.ComboBox29.Name = "ComboBox29"
-Me.ComboBox29.Size = New System.Drawing.Size(60, 20)
-Me.ComboBox29.TabIndex = 94
-'
-'ComboBox30
-'
-Me.ComboBox30.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-Me.ComboBox30.FormattingEnabled = true
-Me.ComboBox30.Items.AddRange(New Object() {"00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"})
-Me.ComboBox30.Location = New System.Drawing.Point(90, 22)
-Me.ComboBox30.Name = "ComboBox30"
-Me.ComboBox30.Size = New System.Drawing.Size(61, 20)
-Me.ComboBox30.TabIndex = 93
-'
-'ComboBox31
-'
-Me.ComboBox31.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-Me.ComboBox31.FormattingEnabled = true
-Me.ComboBox31.Items.AddRange(New Object() {"类型全开", "类型全闭", "类型奇开", "类型偶开", "回路开", "回路关"})
-Me.ComboBox31.Location = New System.Drawing.Point(90, 90)
-Me.ComboBox31.Name = "ComboBox31"
-Me.ComboBox31.Size = New System.Drawing.Size(157, 20)
-Me.ComboBox31.TabIndex = 88
-'
-'Label50
-'
-Me.Label50.AutoSize = true
-Me.Label50.Location = New System.Drawing.Point(7, 93)
-Me.Label50.Name = "Label50"
-Me.Label50.Size = New System.Drawing.Size(65, 12)
-Me.Label50.TabIndex = 89
-Me.Label50.Text = "控制方式："
-'
-'Label51
-'
-Me.Label51.AutoSize = true
-Me.Label51.Location = New System.Drawing.Point(159, 25)
-Me.Label51.Name = "Label51"
-Me.Label51.Size = New System.Drawing.Size(17, 12)
-Me.Label51.TabIndex = 90
-Me.Label51.Text = "时"
-'
-'Label52
-'
-Me.Label52.AutoSize = true
-Me.Label52.Location = New System.Drawing.Point(254, 25)
-Me.Label52.Name = "Label52"
-Me.Label52.Size = New System.Drawing.Size(17, 12)
-Me.Label52.TabIndex = 91
-Me.Label52.Text = "分"
-'
-'Label53
-'
-Me.Label53.AutoSize = true
-Me.Label53.Location = New System.Drawing.Point(348, 27)
-Me.Label53.Name = "Label53"
-Me.Label53.Size = New System.Drawing.Size(17, 12)
-Me.Label53.TabIndex = 92
-Me.Label53.Text = "秒"
-'
-'ComboBox32
-'
-Me.ComboBox32.FormattingEnabled = true
-Me.ComboBox32.Location = New System.Drawing.Point(88, 405)
-Me.ComboBox32.Name = "ComboBox32"
-Me.ComboBox32.Size = New System.Drawing.Size(99, 20)
-Me.ComboBox32.TabIndex = 93
-Me.ComboBox32.Visible = false
-'
-'CheckBox55
-'
-Me.CheckBox55.AutoSize = true
-Me.CheckBox55.Location = New System.Drawing.Point(220, 407)
-Me.CheckBox55.Name = "CheckBox55"
-Me.CheckBox55.Size = New System.Drawing.Size(96, 16)
-Me.CheckBox55.TabIndex = 91
-Me.CheckBox55.Text = "显示控制信息"
-Me.CheckBox55.UseVisualStyleBackColor = true
-'
-'RadioButton41
-'
-Me.RadioButton41.AutoSize = true
-Me.RadioButton41.Location = New System.Drawing.Point(307, 31)
-Me.RadioButton41.Name = "RadioButton41"
-Me.RadioButton41.Size = New System.Drawing.Size(95, 16)
-Me.RadioButton41.TabIndex = 90
-Me.RadioButton41.Text = "删除控制模式"
-Me.RadioButton41.UseVisualStyleBackColor = true
-'
-'RadioButton42
-'
-Me.RadioButton42.AutoSize = true
-Me.RadioButton42.Location = New System.Drawing.Point(157, 31)
-Me.RadioButton42.Name = "RadioButton42"
-Me.RadioButton42.Size = New System.Drawing.Size(95, 16)
-Me.RadioButton42.TabIndex = 89
-Me.RadioButton42.Text = "编辑控制模式"
-Me.RadioButton42.UseVisualStyleBackColor = true
-'
-'RadioButton43
-'
-Me.RadioButton43.AutoSize = true
-Me.RadioButton43.Checked = true
-Me.RadioButton43.Location = New System.Drawing.Point(17, 31)
-Me.RadioButton43.Name = "RadioButton43"
-Me.RadioButton43.Size = New System.Drawing.Size(95, 16)
-Me.RadioButton43.TabIndex = 88
-Me.RadioButton43.TabStop = true
-Me.RadioButton43.Text = "增加控制模式"
-Me.RadioButton43.UseVisualStyleBackColor = true
-'
-'TextBox9
-'
-Me.TextBox9.Location = New System.Drawing.Point(99, 405)
-Me.TextBox9.Name = "TextBox9"
-Me.TextBox9.Size = New System.Drawing.Size(100, 21)
-Me.TextBox9.TabIndex = 78
-'
-'Label54
-'
-Me.Label54.AutoSize = true
-Me.Label54.Location = New System.Drawing.Point(16, 408)
-Me.Label54.Name = "Label54"
-Me.Label54.Size = New System.Drawing.Size(65, 12)
-Me.Label54.TabIndex = 77
-Me.Label54.Text = "模式名称："
-'
-'Button19
-'
-Me.Button19.Location = New System.Drawing.Point(163, 449)
-Me.Button19.Name = "Button19"
-Me.Button19.Size = New System.Drawing.Size(107, 27)
-Me.Button19.TabIndex = 76
-Me.Button19.Text = "输入控制模式"
-Me.Button19.UseVisualStyleBackColor = true
-'
-'ComboBox33
-'
-Me.ComboBox33.FormattingEnabled = true
-Me.ComboBox33.Items.AddRange(New Object() {"全功率", "半功率"})
-Me.ComboBox33.Location = New System.Drawing.Point(350, 408)
-Me.ComboBox33.Name = "ComboBox33"
-Me.ComboBox33.Size = New System.Drawing.Size(57, 20)
-Me.ComboBox33.TabIndex = 75
-Me.ComboBox33.Text = "全功率"
-Me.ComboBox33.Visible = false
-'
-'DataGridView9
-'
-Me.DataGridView9.AllowUserToAddRows = false
-Me.DataGridView9.BackgroundColor = System.Drawing.Color.WhiteSmoke
-Me.DataGridView9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-Me.DataGridView9.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn43, Me.DataGridViewTextBoxColumn44, Me.DataGridViewTextBoxColumn45, Me.DataGridViewTextBoxColumn46, Me.DataGridViewTextBoxColumn47})
-Me.DataGridView9.Location = New System.Drawing.Point(17, 201)
-Me.DataGridView9.Name = "DataGridView9"
-Me.DataGridView9.RowTemplate.Height = 23
-Me.DataGridView9.Size = New System.Drawing.Size(399, 188)
-Me.DataGridView9.TabIndex = 67
-'
-'DataGridViewTextBoxColumn43
-'
-Me.DataGridViewTextBoxColumn43.HeaderText = "编号"
-Me.DataGridViewTextBoxColumn43.Name = "DataGridViewTextBoxColumn43"
-Me.DataGridViewTextBoxColumn43.Width = 60
-'
-'DataGridViewTextBoxColumn44
-'
-Me.DataGridViewTextBoxColumn44.HeaderText = "小时"
-Me.DataGridViewTextBoxColumn44.Name = "DataGridViewTextBoxColumn44"
-Me.DataGridViewTextBoxColumn44.Width = 60
-'
-'DataGridViewTextBoxColumn45
-'
-Me.DataGridViewTextBoxColumn45.HeaderText = "分钟"
-Me.DataGridViewTextBoxColumn45.Name = "DataGridViewTextBoxColumn45"
-Me.DataGridViewTextBoxColumn45.Width = 60
-'
-'DataGridViewTextBoxColumn46
-'
-Me.DataGridViewTextBoxColumn46.HeaderText = "秒"
-Me.DataGridViewTextBoxColumn46.Name = "DataGridViewTextBoxColumn46"
-Me.DataGridViewTextBoxColumn46.Width = 60
-'
-'DataGridViewTextBoxColumn47
-'
-Me.DataGridViewTextBoxColumn47.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-Me.DataGridViewTextBoxColumn47.HeaderText = "控制方式"
-Me.DataGridViewTextBoxColumn47.Name = "DataGridViewTextBoxColumn47"
-'
-'TabPage12
-'
-Me.TabPage12.Controls.Add(Me.GroupBox38)
-Me.TabPage12.Controls.Add(Me.GroupBox41)
-Me.TabPage12.Location = New System.Drawing.Point(4, 23)
-Me.TabPage12.Name = "TabPage12"
-Me.TabPage12.Padding = New System.Windows.Forms.Padding(3)
-Me.TabPage12.Size = New System.Drawing.Size(902, 517)
-Me.TabPage12.TabIndex = 3
-Me.TabPage12.Text = "节假日控制模式设置"
-Me.TabPage12.UseVisualStyleBackColor = true
-'
-'GroupBox38
-'
-Me.GroupBox38.Controls.Add(Me.GroupBox39)
-Me.GroupBox38.Controls.Add(Me.RadioButton46)
-Me.GroupBox38.Controls.Add(Me.RadioButton47)
-Me.GroupBox38.Controls.Add(Me.GroupBox40)
-Me.GroupBox38.Controls.Add(Me.ComboBox34)
-Me.GroupBox38.Controls.Add(Me.Label55)
-Me.GroupBox38.Controls.Add(Me.Button20)
-Me.GroupBox38.Controls.Add(Me.CheckedListBox6)
-Me.GroupBox38.Location = New System.Drawing.Point(444, 6)
-Me.GroupBox38.Name = "GroupBox38"
-Me.GroupBox38.Size = New System.Drawing.Size(452, 492)
-Me.GroupBox38.TabIndex = 78
-Me.GroupBox38.TabStop = false
-Me.GroupBox38.Text = "分配控制模式"
-'
-'GroupBox39
-'
-Me.GroupBox39.Controls.Add(Me.RadioButton44)
-Me.GroupBox39.Controls.Add(Me.RadioButton45)
-Me.GroupBox39.Enabled = false
-Me.GroupBox39.Location = New System.Drawing.Point(274, 115)
-Me.GroupBox39.Name = "GroupBox39"
-Me.GroupBox39.Size = New System.Drawing.Size(155, 90)
-Me.GroupBox39.TabIndex = 101
-Me.GroupBox39.TabStop = false
-Me.GroupBox39.Text = "整体控制"
-'
-'RadioButton44
-'
-Me.RadioButton44.AutoSize = true
-Me.RadioButton44.Location = New System.Drawing.Point(6, 54)
-Me.RadioButton44.Name = "RadioButton44"
-Me.RadioButton44.Size = New System.Drawing.Size(47, 16)
-Me.RadioButton44.TabIndex = 85
-Me.RadioButton44.Text = "路灯"
-Me.RadioButton44.UseVisualStyleBackColor = true
-'
-'RadioButton45
-'
-Me.RadioButton45.AutoSize = true
-Me.RadioButton45.Checked = true
-Me.RadioButton45.Location = New System.Drawing.Point(6, 22)
-Me.RadioButton45.Name = "RadioButton45"
-Me.RadioButton45.Size = New System.Drawing.Size(83, 16)
-Me.RadioButton45.TabIndex = 84
-Me.RadioButton45.TabStop = true
-Me.RadioButton45.Text = "主控箱节点"
-Me.RadioButton45.UseVisualStyleBackColor = true
-'
-'RadioButton46
-'
-Me.RadioButton46.AutoSize = true
-Me.RadioButton46.Checked = true
-Me.RadioButton46.Location = New System.Drawing.Point(280, 73)
-Me.RadioButton46.Name = "RadioButton46"
-Me.RadioButton46.Size = New System.Drawing.Size(71, 16)
-Me.RadioButton46.TabIndex = 100
-Me.RadioButton46.TabStop = true
-Me.RadioButton46.Text = "回路控制"
-Me.RadioButton46.UseVisualStyleBackColor = true
-'
-'RadioButton47
-'
-Me.RadioButton47.AutoSize = true
-Me.RadioButton47.Location = New System.Drawing.Point(280, 31)
-Me.RadioButton47.Name = "RadioButton47"
-Me.RadioButton47.Size = New System.Drawing.Size(71, 16)
-Me.RadioButton47.TabIndex = 99
-Me.RadioButton47.Text = "整体控制"
-Me.RadioButton47.UseVisualStyleBackColor = true
-'
-'GroupBox40
-'
-Me.GroupBox40.Controls.Add(Me.CheckBox56)
-Me.GroupBox40.Controls.Add(Me.CheckBox57)
-Me.GroupBox40.Controls.Add(Me.CheckBox58)
-Me.GroupBox40.Controls.Add(Me.CheckBox59)
-Me.GroupBox40.Controls.Add(Me.CheckBox60)
-Me.GroupBox40.Controls.Add(Me.CheckBox61)
-Me.GroupBox40.Location = New System.Drawing.Point(274, 211)
-Me.GroupBox40.Name = "GroupBox40"
-Me.GroupBox40.Size = New System.Drawing.Size(155, 137)
-Me.GroupBox40.TabIndex = 98
-Me.GroupBox40.TabStop = false
-Me.GroupBox40.Text = "回路控制"
-'
-'CheckBox56
-'
-Me.CheckBox56.AutoSize = true
-Me.CheckBox56.Location = New System.Drawing.Point(74, 102)
-Me.CheckBox56.Name = "CheckBox56"
-Me.CheckBox56.Size = New System.Drawing.Size(36, 16)
-Me.CheckBox56.TabIndex = 87
-Me.CheckBox56.Text = "K6"
-Me.CheckBox56.UseVisualStyleBackColor = true
-'
-'CheckBox57
-'
-Me.CheckBox57.AutoSize = true
-Me.CheckBox57.Location = New System.Drawing.Point(6, 102)
-Me.CheckBox57.Name = "CheckBox57"
-Me.CheckBox57.Size = New System.Drawing.Size(36, 16)
-Me.CheckBox57.TabIndex = 86
-Me.CheckBox57.Text = "K5"
-Me.CheckBox57.UseVisualStyleBackColor = true
-'
-'CheckBox58
-'
-Me.CheckBox58.AutoSize = true
-Me.CheckBox58.Location = New System.Drawing.Point(74, 62)
-Me.CheckBox58.Name = "CheckBox58"
-Me.CheckBox58.Size = New System.Drawing.Size(36, 16)
-Me.CheckBox58.TabIndex = 85
-Me.CheckBox58.Text = "K4"
-Me.CheckBox58.UseVisualStyleBackColor = true
-'
-'CheckBox59
-'
-Me.CheckBox59.AutoSize = true
-Me.CheckBox59.Location = New System.Drawing.Point(6, 62)
-Me.CheckBox59.Name = "CheckBox59"
-Me.CheckBox59.Size = New System.Drawing.Size(36, 16)
-Me.CheckBox59.TabIndex = 84
-Me.CheckBox59.Text = "K3"
-Me.CheckBox59.UseVisualStyleBackColor = true
-'
-'CheckBox60
-'
-Me.CheckBox60.AutoSize = true
-Me.CheckBox60.Location = New System.Drawing.Point(74, 26)
-Me.CheckBox60.Name = "CheckBox60"
-Me.CheckBox60.Size = New System.Drawing.Size(36, 16)
-Me.CheckBox60.TabIndex = 83
-Me.CheckBox60.Text = "K2"
-Me.CheckBox60.UseVisualStyleBackColor = true
-'
-'CheckBox61
-'
-Me.CheckBox61.AutoSize = true
-Me.CheckBox61.Location = New System.Drawing.Point(6, 26)
-Me.CheckBox61.Name = "CheckBox61"
-Me.CheckBox61.Size = New System.Drawing.Size(36, 16)
-Me.CheckBox61.TabIndex = 82
-Me.CheckBox61.Text = "K1"
-Me.CheckBox61.UseVisualStyleBackColor = true
-'
-'ComboBox34
-'
-Me.ComboBox34.FormattingEnabled = true
-Me.ComboBox34.Location = New System.Drawing.Point(347, 378)
-Me.ComboBox34.Name = "ComboBox34"
-Me.ComboBox34.Size = New System.Drawing.Size(99, 20)
-Me.ComboBox34.TabIndex = 95
-'
-'Label55
-'
-Me.Label55.AutoSize = true
-Me.Label55.Location = New System.Drawing.Point(271, 386)
-Me.Label55.Name = "Label55"
-Me.Label55.Size = New System.Drawing.Size(65, 12)
-Me.Label55.TabIndex = 94
-Me.Label55.Text = "模式名称："
-'
-'Button20
-'
-Me.Button20.Location = New System.Drawing.Point(334, 449)
-Me.Button20.Name = "Button20"
-Me.Button20.Size = New System.Drawing.Size(75, 23)
-Me.Button20.TabIndex = 82
-Me.Button20.Text = "模式分配"
-Me.Button20.UseVisualStyleBackColor = true
-'
-'CheckedListBox6
-'
-Me.CheckedListBox6.FormattingEnabled = true
-Me.CheckedListBox6.Location = New System.Drawing.Point(20, 22)
-Me.CheckedListBox6.Name = "CheckedListBox6"
-Me.CheckedListBox6.Size = New System.Drawing.Size(248, 452)
-Me.CheckedListBox6.TabIndex = 75
-'
-'GroupBox41
-'
-Me.GroupBox41.Controls.Add(Me.GroupBox42)
-Me.GroupBox41.Controls.Add(Me.ComboBox36)
-Me.GroupBox41.Controls.Add(Me.CheckBox62)
-Me.GroupBox41.Controls.Add(Me.RadioButton50)
-Me.GroupBox41.Controls.Add(Me.RadioButton51)
-Me.GroupBox41.Controls.Add(Me.RadioButton52)
-Me.GroupBox41.Controls.Add(Me.TextBox10)
-Me.GroupBox41.Controls.Add(Me.Label58)
-Me.GroupBox41.Controls.Add(Me.Button22)
-Me.GroupBox41.Controls.Add(Me.ComboBox37)
-Me.GroupBox41.Controls.Add(Me.DataGridView10)
-Me.GroupBox41.Location = New System.Drawing.Point(6, 6)
-Me.GroupBox41.Name = "GroupBox41"
-Me.GroupBox41.Size = New System.Drawing.Size(432, 492)
-Me.GroupBox41.TabIndex = 77
-Me.GroupBox41.TabStop = false
-'
-'GroupBox42
-'
-Me.GroupBox42.Controls.Add(Me.RadioButton48)
-Me.GroupBox42.Controls.Add(Me.RadioButton49)
-Me.GroupBox42.Controls.Add(Me.DateTimePicker2)
-Me.GroupBox42.Controls.Add(Me.Button21)
-Me.GroupBox42.Controls.Add(Me.Label56)
-Me.GroupBox42.Controls.Add(Me.ComboBox35)
-Me.GroupBox42.Controls.Add(Me.Label57)
-Me.GroupBox42.Location = New System.Drawing.Point(19, 48)
-Me.GroupBox42.Name = "GroupBox42"
-Me.GroupBox42.Size = New System.Drawing.Size(397, 139)
-Me.GroupBox42.TabIndex = 94
-Me.GroupBox42.TabStop = false
-'
-'RadioButton48
-'
-Me.RadioButton48.AutoSize = true
-Me.RadioButton48.Location = New System.Drawing.Point(201, 67)
-Me.RadioButton48.Name = "RadioButton48"
-Me.RadioButton48.Size = New System.Drawing.Size(131, 16)
-Me.RadioButton48.TabIndex = 101
-Me.RadioButton48.Text = "三回路组合控制方式"
-Me.RadioButton48.UseVisualStyleBackColor = true
-'
-'RadioButton49
-'
-Me.RadioButton49.AutoSize = true
-Me.RadioButton49.Checked = true
-Me.RadioButton49.Location = New System.Drawing.Point(10, 67)
-Me.RadioButton49.Name = "RadioButton49"
-Me.RadioButton49.Size = New System.Drawing.Size(95, 16)
-Me.RadioButton49.TabIndex = 100
-Me.RadioButton49.TabStop = true
-Me.RadioButton49.Text = "传统控制方式"
-Me.RadioButton49.UseVisualStyleBackColor = true
-'
-'DateTimePicker2
-'
-Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-Me.DateTimePicker2.Location = New System.Drawing.Point(91, 25)
-Me.DateTimePicker2.Name = "DateTimePicker2"
-Me.DateTimePicker2.Size = New System.Drawing.Size(156, 21)
-Me.DateTimePicker2.TabIndex = 98
-'
-'Button21
-'
-Me.Button21.Location = New System.Drawing.Point(287, 110)
-Me.Button21.Name = "Button21"
-Me.Button21.Size = New System.Drawing.Size(75, 23)
-Me.Button21.TabIndex = 97
-Me.Button21.Text = "增加时段"
-Me.Button21.UseVisualStyleBackColor = true
-'
-'Label56
-'
-Me.Label56.AutoSize = true
-Me.Label56.Location = New System.Drawing.Point(8, 27)
-Me.Label56.Name = "Label56"
-Me.Label56.Size = New System.Drawing.Size(65, 12)
-Me.Label56.TabIndex = 96
-Me.Label56.Text = "开始时间："
-'
-'ComboBox35
-'
-Me.ComboBox35.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-Me.ComboBox35.FormattingEnabled = true
-Me.ComboBox35.Items.AddRange(New Object() {"类型全开", "类型全闭", "类型奇开", "类型偶开", "回路开", "回路关"})
-Me.ComboBox35.Location = New System.Drawing.Point(90, 110)
-Me.ComboBox35.Name = "ComboBox35"
-Me.ComboBox35.Size = New System.Drawing.Size(157, 20)
-Me.ComboBox35.TabIndex = 88
-'
-'Label57
-'
-Me.Label57.AutoSize = true
-Me.Label57.Location = New System.Drawing.Point(7, 113)
-Me.Label57.Name = "Label57"
-Me.Label57.Size = New System.Drawing.Size(65, 12)
-Me.Label57.TabIndex = 89
-Me.Label57.Text = "控制方式："
-'
-'ComboBox36
-'
-Me.ComboBox36.FormattingEnabled = true
-Me.ComboBox36.Location = New System.Drawing.Point(88, 405)
-Me.ComboBox36.Name = "ComboBox36"
-Me.ComboBox36.Size = New System.Drawing.Size(99, 20)
-Me.ComboBox36.TabIndex = 93
-Me.ComboBox36.Visible = false
-'
-'CheckBox62
-'
-Me.CheckBox62.AutoSize = true
-Me.CheckBox62.Location = New System.Drawing.Point(220, 407)
-Me.CheckBox62.Name = "CheckBox62"
-Me.CheckBox62.Size = New System.Drawing.Size(96, 16)
-Me.CheckBox62.TabIndex = 91
-Me.CheckBox62.Text = "显示控制信息"
-Me.CheckBox62.UseVisualStyleBackColor = true
-'
-'RadioButton50
-'
-Me.RadioButton50.AutoSize = true
-Me.RadioButton50.Location = New System.Drawing.Point(297, 31)
-Me.RadioButton50.Name = "RadioButton50"
-Me.RadioButton50.Size = New System.Drawing.Size(119, 16)
-Me.RadioButton50.TabIndex = 90
-Me.RadioButton50.Text = "删除节日控制模式"
-Me.RadioButton50.UseVisualStyleBackColor = true
-'
-'RadioButton51
-'
-Me.RadioButton51.AutoSize = true
-Me.RadioButton51.Location = New System.Drawing.Point(157, 31)
-Me.RadioButton51.Name = "RadioButton51"
-Me.RadioButton51.Size = New System.Drawing.Size(119, 16)
-Me.RadioButton51.TabIndex = 89
-Me.RadioButton51.Text = "编辑节日控制模式"
-Me.RadioButton51.UseVisualStyleBackColor = true
-'
-'RadioButton52
-'
-Me.RadioButton52.AutoSize = true
-Me.RadioButton52.Checked = true
-Me.RadioButton52.Location = New System.Drawing.Point(17, 31)
-Me.RadioButton52.Name = "RadioButton52"
-Me.RadioButton52.Size = New System.Drawing.Size(119, 16)
-Me.RadioButton52.TabIndex = 88
-Me.RadioButton52.TabStop = true
-Me.RadioButton52.Text = "增加节日控制模式"
-Me.RadioButton52.UseVisualStyleBackColor = true
-'
-'TextBox10
-'
-Me.TextBox10.Location = New System.Drawing.Point(99, 405)
-Me.TextBox10.Name = "TextBox10"
-Me.TextBox10.Size = New System.Drawing.Size(100, 21)
-Me.TextBox10.TabIndex = 78
-'
-'Label58
-'
-Me.Label58.AutoSize = true
-Me.Label58.Location = New System.Drawing.Point(16, 408)
-Me.Label58.Name = "Label58"
-Me.Label58.Size = New System.Drawing.Size(65, 12)
-Me.Label58.TabIndex = 77
-Me.Label58.Text = "模式名称："
-'
-'Button22
-'
-Me.Button22.Location = New System.Drawing.Point(163, 449)
-Me.Button22.Name = "Button22"
-Me.Button22.Size = New System.Drawing.Size(107, 27)
-Me.Button22.TabIndex = 76
-Me.Button22.Text = "输入控制模式"
-Me.Button22.UseVisualStyleBackColor = true
-'
-'ComboBox37
-'
-Me.ComboBox37.FormattingEnabled = true
-Me.ComboBox37.Items.AddRange(New Object() {"全功率", "半功率"})
-Me.ComboBox37.Location = New System.Drawing.Point(350, 408)
-Me.ComboBox37.Name = "ComboBox37"
-Me.ComboBox37.Size = New System.Drawing.Size(57, 20)
-Me.ComboBox37.TabIndex = 75
-Me.ComboBox37.Text = "全功率"
-Me.ComboBox37.Visible = false
-'
-'DataGridView10
-'
-Me.DataGridView10.AllowUserToAddRows = false
-Me.DataGridView10.BackgroundColor = System.Drawing.Color.WhiteSmoke
-Me.DataGridView10.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-Me.DataGridView10.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn48, Me.DataGridViewTextBoxColumn49, Me.DataGridViewTextBoxColumn50})
-Me.DataGridView10.Location = New System.Drawing.Point(17, 197)
-Me.DataGridView10.Name = "DataGridView10"
-Me.DataGridView10.RowTemplate.Height = 23
-Me.DataGridView10.Size = New System.Drawing.Size(399, 192)
-Me.DataGridView10.TabIndex = 67
-'
-'DataGridViewTextBoxColumn48
-'
-Me.DataGridViewTextBoxColumn48.HeaderText = "编号"
-Me.DataGridViewTextBoxColumn48.Name = "DataGridViewTextBoxColumn48"
-Me.DataGridViewTextBoxColumn48.Width = 60
-'
-'DataGridViewTextBoxColumn49
-'
-Me.DataGridViewTextBoxColumn49.HeaderText = "时间"
-Me.DataGridViewTextBoxColumn49.Name = "DataGridViewTextBoxColumn49"
-Me.DataGridViewTextBoxColumn49.Width = 150
-'
-'DataGridViewTextBoxColumn50
-'
-Me.DataGridViewTextBoxColumn50.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-Me.DataGridViewTextBoxColumn50.HeaderText = "控制方式"
-Me.DataGridViewTextBoxColumn50.Name = "DataGridViewTextBoxColumn50"
-'
-'TabPage13
-'
-Me.TabPage13.Controls.Add(Me.Button23)
-Me.TabPage13.Controls.Add(Me.Button24)
-Me.TabPage13.Controls.Add(Me.CheckBox63)
-Me.TabPage13.Controls.Add(Me.ComboBox38)
-Me.TabPage13.Controls.Add(Me.DataGridView11)
-Me.TabPage13.Controls.Add(Me.Label59)
-Me.TabPage13.Controls.Add(Me.Button25)
-Me.TabPage13.Controls.Add(Me.TextBox11)
-Me.TabPage13.Controls.Add(Me.Label60)
-Me.TabPage13.Controls.Add(Me.TextBox12)
-Me.TabPage13.Controls.Add(Me.Label61)
-Me.TabPage13.Location = New System.Drawing.Point(4, 23)
-Me.TabPage13.Name = "TabPage13"
-Me.TabPage13.Padding = New System.Windows.Forms.Padding(3)
-Me.TabPage13.Size = New System.Drawing.Size(902, 517)
-Me.TabPage13.TabIndex = 0
-Me.TabPage13.Text = "年度日出日落表"
-Me.TabPage13.UseVisualStyleBackColor = true
-'
-'Button23
-'
-Me.Button23.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left),System.Windows.Forms.AnchorStyles)
-Me.Button23.Location = New System.Drawing.Point(543, 470)
-Me.Button23.Name = "Button23"
-Me.Button23.Size = New System.Drawing.Size(125, 27)
-Me.Button23.TabIndex = 17
-Me.Button23.Text = "导出时刻表"
-Me.Button23.UseVisualStyleBackColor = true
-'
-'Button24
-'
-Me.Button24.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left),System.Windows.Forms.AnchorStyles)
-Me.Button24.Location = New System.Drawing.Point(396, 470)
-Me.Button24.Name = "Button24"
-Me.Button24.Size = New System.Drawing.Size(125, 27)
-Me.Button24.TabIndex = 16
-Me.Button24.Text = "日出日落时刻表"
-Me.Button24.UseVisualStyleBackColor = true
-'
-'CheckBox63
-'
-Me.CheckBox63.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left),System.Windows.Forms.AnchorStyles)
-Me.CheckBox63.AutoSize = true
-Me.CheckBox63.Location = New System.Drawing.Point(712, 426)
-Me.CheckBox63.Name = "CheckBox63"
-Me.CheckBox63.Size = New System.Drawing.Size(144, 16)
-Me.CheckBox63.TabIndex = 15
-Me.CheckBox63.Text = "记录当前日出日落时间"
-Me.CheckBox63.UseVisualStyleBackColor = true
-'
-'ComboBox38
-'
-Me.ComboBox38.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left),System.Windows.Forms.AnchorStyles)
-Me.ComboBox38.FormattingEnabled = true
-Me.ComboBox38.Items.AddRange(New Object() {"2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020"})
-Me.ComboBox38.Location = New System.Drawing.Point(94, 424)
-Me.ComboBox38.Name = "ComboBox38"
-Me.ComboBox38.Size = New System.Drawing.Size(121, 20)
-Me.ComboBox38.TabIndex = 14
-'
-'DataGridView11
-'
-Me.DataGridView11.AllowUserToAddRows = false
-Me.DataGridView11.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom)  _
-            Or System.Windows.Forms.AnchorStyles.Left)  _
-            Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
-Me.DataGridView11.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-Me.DataGridView11.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn51, Me.DataGridViewTextBoxColumn52, Me.DataGridViewTextBoxColumn53, Me.DataGridViewTextBoxColumn54, Me.DataGridViewTextBoxColumn55, Me.DataGridViewTextBoxColumn56, Me.DataGridViewTextBoxColumn57, Me.DataGridViewTextBoxColumn58, Me.DataGridViewTextBoxColumn59, Me.DataGridViewTextBoxColumn60, Me.DataGridViewTextBoxColumn61, Me.DataGridViewTextBoxColumn62, Me.DataGridViewTextBoxColumn63})
-Me.DataGridView11.Location = New System.Drawing.Point(3, 6)
-Me.DataGridView11.Name = "DataGridView11"
-Me.DataGridView11.RowTemplate.Height = 23
-Me.DataGridView11.Size = New System.Drawing.Size(893, 395)
-Me.DataGridView11.TabIndex = 12
-'
-'DataGridViewTextBoxColumn51
-'
-Me.DataGridViewTextBoxColumn51.HeaderText = "日期"
-Me.DataGridViewTextBoxColumn51.Name = "DataGridViewTextBoxColumn51"
-Me.DataGridViewTextBoxColumn51.Width = 150
-'
-'DataGridViewTextBoxColumn52
-'
-Me.DataGridViewTextBoxColumn52.HeaderText = "1月"
-Me.DataGridViewTextBoxColumn52.Name = "DataGridViewTextBoxColumn52"
-'
-'DataGridViewTextBoxColumn53
-'
-Me.DataGridViewTextBoxColumn53.HeaderText = "2月"
-Me.DataGridViewTextBoxColumn53.Name = "DataGridViewTextBoxColumn53"
-'
-'DataGridViewTextBoxColumn54
-'
-Me.DataGridViewTextBoxColumn54.HeaderText = "3月"
-Me.DataGridViewTextBoxColumn54.Name = "DataGridViewTextBoxColumn54"
-'
-'DataGridViewTextBoxColumn55
-'
-Me.DataGridViewTextBoxColumn55.HeaderText = "4月"
-Me.DataGridViewTextBoxColumn55.Name = "DataGridViewTextBoxColumn55"
-'
-'DataGridViewTextBoxColumn56
-'
-Me.DataGridViewTextBoxColumn56.HeaderText = "5月"
-Me.DataGridViewTextBoxColumn56.Name = "DataGridViewTextBoxColumn56"
-'
-'DataGridViewTextBoxColumn57
-'
-Me.DataGridViewTextBoxColumn57.HeaderText = "6月"
-Me.DataGridViewTextBoxColumn57.Name = "DataGridViewTextBoxColumn57"
-'
-'DataGridViewTextBoxColumn58
-'
-Me.DataGridViewTextBoxColumn58.HeaderText = "7月"
-Me.DataGridViewTextBoxColumn58.Name = "DataGridViewTextBoxColumn58"
-'
-'DataGridViewTextBoxColumn59
-'
-Me.DataGridViewTextBoxColumn59.HeaderText = "8月"
-Me.DataGridViewTextBoxColumn59.Name = "DataGridViewTextBoxColumn59"
-'
-'DataGridViewTextBoxColumn60
-'
-Me.DataGridViewTextBoxColumn60.HeaderText = "9月"
-Me.DataGridViewTextBoxColumn60.Name = "DataGridViewTextBoxColumn60"
-'
-'DataGridViewTextBoxColumn61
-'
-Me.DataGridViewTextBoxColumn61.HeaderText = "10月"
-Me.DataGridViewTextBoxColumn61.Name = "DataGridViewTextBoxColumn61"
-'
-'DataGridViewTextBoxColumn62
-'
-Me.DataGridViewTextBoxColumn62.HeaderText = "11月"
-Me.DataGridViewTextBoxColumn62.Name = "DataGridViewTextBoxColumn62"
-'
-'DataGridViewTextBoxColumn63
-'
-Me.DataGridViewTextBoxColumn63.HeaderText = "12月"
-Me.DataGridViewTextBoxColumn63.Name = "DataGridViewTextBoxColumn63"
-'
-'Label59
-'
-Me.Label59.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left),System.Windows.Forms.AnchorStyles)
-Me.Label59.AutoSize = true
-Me.Label59.Location = New System.Drawing.Point(39, 432)
-Me.Label59.Name = "Label59"
-Me.Label59.Size = New System.Drawing.Size(41, 12)
-Me.Label59.TabIndex = 13
-Me.Label59.Text = "年份："
-'
-'Button25
-'
-Me.Button25.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left),System.Windows.Forms.AnchorStyles)
-Me.Button25.Location = New System.Drawing.Point(235, 470)
-Me.Button25.Name = "Button25"
-Me.Button25.Size = New System.Drawing.Size(125, 27)
-Me.Button25.TabIndex = 11
-Me.Button25.Text = "时刻查询"
-Me.Button25.UseVisualStyleBackColor = true
-'
-'TextBox11
-'
-Me.TextBox11.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left),System.Windows.Forms.AnchorStyles)
-Me.TextBox11.Location = New System.Drawing.Point(551, 423)
-Me.TextBox11.Name = "TextBox11"
-Me.TextBox11.Size = New System.Drawing.Size(116, 21)
-Me.TextBox11.TabIndex = 1
-'
-'Label60
-'
-Me.Label60.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left),System.Windows.Forms.AnchorStyles)
-Me.Label60.AutoSize = true
-Me.Label60.Location = New System.Drawing.Point(496, 432)
-Me.Label60.Name = "Label60"
-Me.Label60.Size = New System.Drawing.Size(41, 12)
-Me.Label60.TabIndex = 6
-Me.Label60.Text = "纬度："
-'
-'TextBox12
-'
-Me.TextBox12.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left),System.Windows.Forms.AnchorStyles)
-Me.TextBox12.Location = New System.Drawing.Point(335, 423)
-Me.TextBox12.Name = "TextBox12"
-Me.TextBox12.Size = New System.Drawing.Size(116, 21)
-Me.TextBox12.TabIndex = 0
-'
-'Label61
-'
-Me.Label61.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left),System.Windows.Forms.AnchorStyles)
-Me.Label61.AutoSize = true
-Me.Label61.Location = New System.Drawing.Point(280, 432)
-Me.Label61.Name = "Label61"
-Me.Label61.Size = New System.Drawing.Size(41, 12)
-Me.Label61.TabIndex = 5
-Me.Label61.Text = "经度："
-'
-'TabPage14
-'
-Me.TabPage14.Controls.Add(Me.GroupBox43)
-Me.TabPage14.Controls.Add(Me.GroupBox44)
-Me.TabPage14.Controls.Add(Me.GroupBox45)
-Me.TabPage14.Controls.Add(Me.GroupBox46)
-Me.TabPage14.Controls.Add(Me.Button26)
-Me.TabPage14.Controls.Add(Me.GroupBox47)
-Me.TabPage14.Controls.Add(Me.GroupBox48)
-Me.TabPage14.Controls.Add(Me.RadioButton57)
-Me.TabPage14.Controls.Add(Me.TreeView2)
-Me.TabPage14.Controls.Add(Me.RadioButton58)
-Me.TabPage14.Controls.Add(Me.GroupBox49)
-Me.TabPage14.Location = New System.Drawing.Point(4, 23)
-Me.TabPage14.Name = "TabPage14"
-Me.TabPage14.Padding = New System.Windows.Forms.Padding(3)
-Me.TabPage14.Size = New System.Drawing.Size(902, 517)
-Me.TabPage14.TabIndex = 4
-Me.TabPage14.Text = "自动开关列表"
-Me.TabPage14.UseVisualStyleBackColor = true
-'
-'GroupBox43
-'
-Me.GroupBox43.Controls.Add(Me.CheckBox64)
-Me.GroupBox43.Controls.Add(Me.CheckBox65)
-Me.GroupBox43.Controls.Add(Me.CheckBox66)
-Me.GroupBox43.Enabled = false
-Me.GroupBox43.Location = New System.Drawing.Point(284, 376)
-Me.GroupBox43.Name = "GroupBox43"
-Me.GroupBox43.Size = New System.Drawing.Size(147, 83)
-Me.GroupBox43.TabIndex = 161
-Me.GroupBox43.TabStop = false
-'
-'CheckBox64
-'
-Me.CheckBox64.AutoSize = true
-Me.CheckBox64.Location = New System.Drawing.Point(11, 61)
-Me.CheckBox64.Name = "CheckBox64"
-Me.CheckBox64.Size = New System.Drawing.Size(108, 16)
-Me.CheckBox64.TabIndex = 163
-Me.CheckBox64.Text = "节假日控制模式"
-Me.CheckBox64.UseVisualStyleBackColor = true
-'
-'CheckBox65
-'
-Me.CheckBox65.AutoSize = true
-Me.CheckBox65.Location = New System.Drawing.Point(11, 37)
-Me.CheckBox65.Name = "CheckBox65"
-Me.CheckBox65.Size = New System.Drawing.Size(96, 16)
-Me.CheckBox65.TabIndex = 162
-Me.CheckBox65.Text = "特殊控制模式"
-Me.CheckBox65.UseVisualStyleBackColor = true
-'
-'CheckBox66
-'
-Me.CheckBox66.AutoSize = true
-Me.CheckBox66.Location = New System.Drawing.Point(11, 13)
-Me.CheckBox66.Name = "CheckBox66"
-Me.CheckBox66.Size = New System.Drawing.Size(108, 16)
-Me.CheckBox66.TabIndex = 161
-Me.CheckBox66.Text = "经纬度控制模式"
-Me.CheckBox66.UseVisualStyleBackColor = true
-'
-'GroupBox44
-'
-Me.GroupBox44.Controls.Add(Me.RadioButton53)
-Me.GroupBox44.Controls.Add(Me.RadioButton54)
-Me.GroupBox44.Location = New System.Drawing.Point(284, 316)
-Me.GroupBox44.Name = "GroupBox44"
-Me.GroupBox44.Size = New System.Drawing.Size(147, 59)
-Me.GroupBox44.TabIndex = 160
-Me.GroupBox44.TabStop = false
-'
-'RadioButton53
-'
-Me.RadioButton53.AutoSize = true
-Me.RadioButton53.Location = New System.Drawing.Point(6, 36)
-Me.RadioButton53.Name = "RadioButton53"
-Me.RadioButton53.Size = New System.Drawing.Size(47, 16)
-Me.RadioButton53.TabIndex = 157
-Me.RadioButton53.Text = "删除"
-Me.RadioButton53.UseVisualStyleBackColor = true
-'
-'RadioButton54
-'
-Me.RadioButton54.AutoSize = true
-Me.RadioButton54.Checked = true
-Me.RadioButton54.Location = New System.Drawing.Point(6, 12)
-Me.RadioButton54.Name = "RadioButton54"
-Me.RadioButton54.Size = New System.Drawing.Size(47, 16)
-Me.RadioButton54.TabIndex = 156
-Me.RadioButton54.TabStop = true
-Me.RadioButton54.Text = "查询"
-Me.RadioButton54.UseVisualStyleBackColor = true
-'
-'GroupBox45
-'
-Me.GroupBox45.Controls.Add(Me.DataGridView12)
-Me.GroupBox45.Location = New System.Drawing.Point(449, 387)
-Me.GroupBox45.Name = "GroupBox45"
-Me.GroupBox45.Size = New System.Drawing.Size(438, 124)
-Me.GroupBox45.TabIndex = 159
-Me.GroupBox45.TabStop = false
-Me.GroupBox45.Text = "节假日控制时刻表"
-'
-'DataGridView12
-'
-Me.DataGridView12.AllowUserToAddRows = false
-Me.DataGridView12.BackgroundColor = System.Drawing.Color.WhiteSmoke
-Me.DataGridView12.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-Me.DataGridView12.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn64, Me.DataGridViewTextBoxColumn65, Me.DataGridViewTextBoxColumn66})
-Me.DataGridView12.Location = New System.Drawing.Point(12, 22)
-Me.DataGridView12.Name = "DataGridView12"
-Me.DataGridView12.RowTemplate.Height = 23
-Me.DataGridView12.Size = New System.Drawing.Size(417, 95)
-Me.DataGridView12.TabIndex = 0
-'
-'DataGridViewTextBoxColumn64
-'
-Me.DataGridViewTextBoxColumn64.HeaderText = "编号"
-Me.DataGridViewTextBoxColumn64.Name = "DataGridViewTextBoxColumn64"
-Me.DataGridViewTextBoxColumn64.Width = 60
-'
-'DataGridViewTextBoxColumn65
-'
-Me.DataGridViewTextBoxColumn65.HeaderText = "时间"
-Me.DataGridViewTextBoxColumn65.Name = "DataGridViewTextBoxColumn65"
-Me.DataGridViewTextBoxColumn65.Width = 170
-'
-'DataGridViewTextBoxColumn66
-'
-Me.DataGridViewTextBoxColumn66.HeaderText = "控制方式"
-Me.DataGridViewTextBoxColumn66.Name = "DataGridViewTextBoxColumn66"
-Me.DataGridViewTextBoxColumn66.Width = 150
-'
-'GroupBox46
-'
-Me.GroupBox46.Controls.Add(Me.DataGridView13)
-Me.GroupBox46.Location = New System.Drawing.Point(449, 207)
-Me.GroupBox46.Name = "GroupBox46"
-Me.GroupBox46.Size = New System.Drawing.Size(438, 176)
-Me.GroupBox46.TabIndex = 158
-Me.GroupBox46.TabStop = false
-Me.GroupBox46.Text = "特殊控制时刻表"
-'
-'DataGridView13
-'
-Me.DataGridView13.AllowUserToAddRows = false
-Me.DataGridView13.BackgroundColor = System.Drawing.Color.WhiteSmoke
-Me.DataGridView13.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-Me.DataGridView13.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn67, Me.DataGridViewTextBoxColumn68, Me.DataGridViewTextBoxColumn69, Me.DataGridViewTextBoxColumn70, Me.DataGridViewTextBoxColumn71, Me.DataGridViewTextBoxColumn72})
-Me.DataGridView13.Location = New System.Drawing.Point(12, 22)
-Me.DataGridView13.Name = "DataGridView13"
-Me.DataGridView13.RowTemplate.Height = 23
-Me.DataGridView13.Size = New System.Drawing.Size(420, 146)
-Me.DataGridView13.TabIndex = 0
-'
-'DataGridViewTextBoxColumn67
-'
-Me.DataGridViewTextBoxColumn67.HeaderText = "编号"
-Me.DataGridViewTextBoxColumn67.Name = "DataGridViewTextBoxColumn67"
-Me.DataGridViewTextBoxColumn67.Width = 60
-'
-'DataGridViewTextBoxColumn68
-'
-Me.DataGridViewTextBoxColumn68.HeaderText = "星期"
-Me.DataGridViewTextBoxColumn68.Name = "DataGridViewTextBoxColumn68"
-Me.DataGridViewTextBoxColumn68.Width = 60
-'
-'DataGridViewTextBoxColumn69
-'
-Me.DataGridViewTextBoxColumn69.HeaderText = "小时"
-Me.DataGridViewTextBoxColumn69.Name = "DataGridViewTextBoxColumn69"
-Me.DataGridViewTextBoxColumn69.Width = 60
-'
-'DataGridViewTextBoxColumn70
-'
-Me.DataGridViewTextBoxColumn70.HeaderText = "分钟"
-Me.DataGridViewTextBoxColumn70.Name = "DataGridViewTextBoxColumn70"
-Me.DataGridViewTextBoxColumn70.Width = 60
-'
-'DataGridViewTextBoxColumn71
-'
-Me.DataGridViewTextBoxColumn71.HeaderText = "秒"
-Me.DataGridViewTextBoxColumn71.Name = "DataGridViewTextBoxColumn71"
-Me.DataGridViewTextBoxColumn71.Width = 60
-'
-'DataGridViewTextBoxColumn72
-'
-Me.DataGridViewTextBoxColumn72.HeaderText = "控制方式"
-Me.DataGridViewTextBoxColumn72.Name = "DataGridViewTextBoxColumn72"
-'
-'Button26
-'
-Me.Button26.Location = New System.Drawing.Point(321, 470)
-Me.Button26.Name = "Button26"
-Me.Button26.Size = New System.Drawing.Size(77, 26)
-Me.Button26.TabIndex = 157
-Me.Button26.Text = "操作"
-Me.Button26.UseVisualStyleBackColor = true
-'
-'GroupBox47
-'
-Me.GroupBox47.Controls.Add(Me.RadioButton55)
-Me.GroupBox47.Controls.Add(Me.RadioButton56)
-Me.GroupBox47.Enabled = false
-Me.GroupBox47.Location = New System.Drawing.Point(284, 70)
-Me.GroupBox47.Name = "GroupBox47"
-Me.GroupBox47.Size = New System.Drawing.Size(147, 96)
-Me.GroupBox47.TabIndex = 156
-Me.GroupBox47.TabStop = false
-Me.GroupBox47.Text = "整体控制"
-'
-'RadioButton55
-'
-Me.RadioButton55.AutoSize = true
-Me.RadioButton55.Location = New System.Drawing.Point(6, 61)
-Me.RadioButton55.Name = "RadioButton55"
-Me.RadioButton55.Size = New System.Drawing.Size(47, 16)
-Me.RadioButton55.TabIndex = 85
-Me.RadioButton55.Text = "路灯"
-Me.RadioButton55.UseVisualStyleBackColor = true
-'
-'RadioButton56
-'
-Me.RadioButton56.AutoSize = true
-Me.RadioButton56.Checked = true
-Me.RadioButton56.Location = New System.Drawing.Point(6, 22)
-Me.RadioButton56.Name = "RadioButton56"
-Me.RadioButton56.Size = New System.Drawing.Size(83, 16)
-Me.RadioButton56.TabIndex = 84
-Me.RadioButton56.TabStop = true
-Me.RadioButton56.Text = "主控箱节点"
-Me.RadioButton56.UseVisualStyleBackColor = true
-'
-'GroupBox48
-'
-Me.GroupBox48.Controls.Add(Me.DataGridView14)
-Me.GroupBox48.Location = New System.Drawing.Point(449, 6)
-Me.GroupBox48.Name = "GroupBox48"
-Me.GroupBox48.Size = New System.Drawing.Size(438, 195)
-Me.GroupBox48.TabIndex = 153
-Me.GroupBox48.TabStop = false
-Me.GroupBox48.Text = "未来一周经纬度开关灯时刻表"
-'
-'DataGridView14
-'
-Me.DataGridView14.AllowUserToAddRows = false
-Me.DataGridView14.BackgroundColor = System.Drawing.Color.WhiteSmoke
-Me.DataGridView14.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-Me.DataGridView14.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn73, Me.DataGridViewTextBoxColumn74, Me.DataGridViewTextBoxColumn75})
-Me.DataGridView14.Location = New System.Drawing.Point(12, 22)
-Me.DataGridView14.Name = "DataGridView14"
-Me.DataGridView14.RowTemplate.Height = 23
-Me.DataGridView14.Size = New System.Drawing.Size(417, 164)
-Me.DataGridView14.TabIndex = 152
-'
-'DataGridViewTextBoxColumn73
-'
-Me.DataGridViewTextBoxColumn73.HeaderText = "星期"
-Me.DataGridViewTextBoxColumn73.Name = "DataGridViewTextBoxColumn73"
-'
-'DataGridViewTextBoxColumn74
-'
-Me.DataGridViewTextBoxColumn74.HeaderText = "开灯时间"
-Me.DataGridViewTextBoxColumn74.Name = "DataGridViewTextBoxColumn74"
-Me.DataGridViewTextBoxColumn74.Width = 150
-'
-'DataGridViewTextBoxColumn75
-'
-Me.DataGridViewTextBoxColumn75.HeaderText = "关灯时间"
-Me.DataGridViewTextBoxColumn75.Name = "DataGridViewTextBoxColumn75"
-Me.DataGridViewTextBoxColumn75.Width = 150
-'
-'RadioButton57
-'
-Me.RadioButton57.AutoSize = true
-Me.RadioButton57.Checked = true
-Me.RadioButton57.Location = New System.Drawing.Point(290, 38)
-Me.RadioButton57.Name = "RadioButton57"
-Me.RadioButton57.Size = New System.Drawing.Size(71, 16)
-Me.RadioButton57.TabIndex = 155
-Me.RadioButton57.TabStop = true
-Me.RadioButton57.Text = "回路控制"
-Me.RadioButton57.UseVisualStyleBackColor = true
-'
-'TreeView2
-'
-Me.TreeView2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom)  _
-            Or System.Windows.Forms.AnchorStyles.Left)  _
-            Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
-Me.TreeView2.LineColor = System.Drawing.Color.Empty
-Me.TreeView2.Location = New System.Drawing.Point(3, 3)
-Me.TreeView2.Name = "TreeView2"
-Me.TreeView2.Size = New System.Drawing.Size(259, 508)
-Me.TreeView2.TabIndex = 1
-'
-'RadioButton58
-'
-Me.RadioButton58.AutoSize = true
-Me.RadioButton58.Location = New System.Drawing.Point(290, 14)
-Me.RadioButton58.Name = "RadioButton58"
-Me.RadioButton58.Size = New System.Drawing.Size(71, 16)
-Me.RadioButton58.TabIndex = 154
-Me.RadioButton58.Text = "整体控制"
-Me.RadioButton58.UseVisualStyleBackColor = true
-'
-'GroupBox49
-'
-Me.GroupBox49.Controls.Add(Me.RadioButton59)
-Me.GroupBox49.Controls.Add(Me.RadioButton60)
-Me.GroupBox49.Controls.Add(Me.RadioButton61)
-Me.GroupBox49.Controls.Add(Me.RadioButton62)
-Me.GroupBox49.Controls.Add(Me.RadioButton63)
-Me.GroupBox49.Controls.Add(Me.RadioButton64)
-Me.GroupBox49.Location = New System.Drawing.Point(284, 172)
-Me.GroupBox49.Name = "GroupBox49"
-Me.GroupBox49.Size = New System.Drawing.Size(147, 138)
-Me.GroupBox49.TabIndex = 153
-Me.GroupBox49.TabStop = false
-Me.GroupBox49.Text = "回路控制"
-'
-'RadioButton59
-'
-Me.RadioButton59.AutoSize = true
-Me.RadioButton59.Location = New System.Drawing.Point(82, 98)
-Me.RadioButton59.Name = "RadioButton59"
-Me.RadioButton59.Size = New System.Drawing.Size(35, 16)
-Me.RadioButton59.TabIndex = 93
-Me.RadioButton59.Text = "K6"
-Me.RadioButton59.UseVisualStyleBackColor = true
-'
-'RadioButton60
-'
-Me.RadioButton60.AutoSize = true
-Me.RadioButton60.Location = New System.Drawing.Point(6, 98)
-Me.RadioButton60.Name = "RadioButton60"
-Me.RadioButton60.Size = New System.Drawing.Size(35, 16)
-Me.RadioButton60.TabIndex = 92
-Me.RadioButton60.Text = "K5"
-Me.RadioButton60.UseVisualStyleBackColor = true
-'
-'RadioButton61
-'
-Me.RadioButton61.AutoSize = true
-Me.RadioButton61.Location = New System.Drawing.Point(82, 56)
-Me.RadioButton61.Name = "RadioButton61"
-Me.RadioButton61.Size = New System.Drawing.Size(35, 16)
-Me.RadioButton61.TabIndex = 91
-Me.RadioButton61.Text = "K4"
-Me.RadioButton61.UseVisualStyleBackColor = true
-'
-'RadioButton62
-'
-Me.RadioButton62.AutoSize = true
-Me.RadioButton62.Location = New System.Drawing.Point(6, 56)
-Me.RadioButton62.Name = "RadioButton62"
-Me.RadioButton62.Size = New System.Drawing.Size(35, 16)
-Me.RadioButton62.TabIndex = 90
-Me.RadioButton62.Text = "K3"
-Me.RadioButton62.UseVisualStyleBackColor = true
-'
-'RadioButton63
-'
-Me.RadioButton63.AutoSize = true
-Me.RadioButton63.Location = New System.Drawing.Point(82, 22)
-Me.RadioButton63.Name = "RadioButton63"
-Me.RadioButton63.Size = New System.Drawing.Size(35, 16)
-Me.RadioButton63.TabIndex = 89
-Me.RadioButton63.Text = "K2"
-Me.RadioButton63.UseVisualStyleBackColor = true
-'
-'RadioButton64
-'
-Me.RadioButton64.AutoSize = true
-Me.RadioButton64.Checked = true
-Me.RadioButton64.Location = New System.Drawing.Point(6, 22)
-Me.RadioButton64.Name = "RadioButton64"
-Me.RadioButton64.Size = New System.Drawing.Size(35, 16)
-Me.RadioButton64.TabIndex = 88
-Me.RadioButton64.TabStop = true
-Me.RadioButton64.Text = "K1"
-Me.RadioButton64.UseVisualStyleBackColor = true
-'
-'GroupBox53
-'
-Me.GroupBox53.Controls.Add(Me.RadioButton65)
-Me.GroupBox53.Controls.Add(Me.RadioButton66)
-Me.GroupBox53.Controls.Add(Me.Button27)
-Me.GroupBox53.Controls.Add(Me.Label3)
-Me.GroupBox53.Controls.Add(Me.ComboBox39)
-Me.GroupBox53.Controls.Add(Me.ComboBox40)
-Me.GroupBox53.Controls.Add(Me.ComboBox41)
-Me.GroupBox53.Controls.Add(Me.ComboBox42)
-Me.GroupBox53.Controls.Add(Me.Label4)
-Me.GroupBox53.Controls.Add(Me.Label5)
-Me.GroupBox53.Controls.Add(Me.Label9)
-Me.GroupBox53.Controls.Add(Me.Label11)
-Me.GroupBox53.Location = New System.Drawing.Point(19, 48)
-Me.GroupBox53.Name = "GroupBox53"
-Me.GroupBox53.Size = New System.Drawing.Size(397, 140)
-Me.GroupBox53.TabIndex = 94
-Me.GroupBox53.TabStop = false
-'
-'RadioButton65
-'
-Me.RadioButton65.AutoSize = true
-Me.RadioButton65.Location = New System.Drawing.Point(201, 59)
-Me.RadioButton65.Name = "RadioButton65"
-Me.RadioButton65.Size = New System.Drawing.Size(131, 16)
-Me.RadioButton65.TabIndex = 99
-Me.RadioButton65.Text = "三回路组合控制方式"
-Me.RadioButton65.UseVisualStyleBackColor = true
-'
-'RadioButton66
-'
-Me.RadioButton66.AutoSize = true
-Me.RadioButton66.Checked = true
-Me.RadioButton66.Location = New System.Drawing.Point(10, 59)
-Me.RadioButton66.Name = "RadioButton66"
-Me.RadioButton66.Size = New System.Drawing.Size(95, 16)
-Me.RadioButton66.TabIndex = 98
-Me.RadioButton66.TabStop = true
-Me.RadioButton66.Text = "传统控制方式"
-Me.RadioButton66.UseVisualStyleBackColor = true
-'
-'Button27
-'
-Me.Button27.Location = New System.Drawing.Point(297, 90)
-Me.Button27.Name = "Button27"
-Me.Button27.Size = New System.Drawing.Size(75, 23)
-Me.Button27.TabIndex = 97
-Me.Button27.Text = "增加时段"
-Me.Button27.UseVisualStyleBackColor = true
-'
-'Label3
-'
-Me.Label3.AutoSize = true
-Me.Label3.Location = New System.Drawing.Point(8, 27)
-Me.Label3.Name = "Label3"
-Me.Label3.Size = New System.Drawing.Size(65, 12)
-Me.Label3.TabIndex = 96
-Me.Label3.Text = "开始时间："
-'
-'ComboBox39
-'
-Me.ComboBox39.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-Me.ComboBox39.FormattingEnabled = true
-Me.ComboBox39.Items.AddRange(New Object() {"00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59"})
-Me.ComboBox39.Location = New System.Drawing.Point(281, 22)
-Me.ComboBox39.Name = "ComboBox39"
-Me.ComboBox39.Size = New System.Drawing.Size(60, 20)
-Me.ComboBox39.TabIndex = 95
-'
-'ComboBox40
-'
-Me.ComboBox40.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-Me.ComboBox40.FormattingEnabled = true
-Me.ComboBox40.Items.AddRange(New Object() {"00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59"})
-Me.ComboBox40.Location = New System.Drawing.Point(187, 22)
-Me.ComboBox40.Name = "ComboBox40"
-Me.ComboBox40.Size = New System.Drawing.Size(60, 20)
-Me.ComboBox40.TabIndex = 94
-'
-'ComboBox41
-'
-Me.ComboBox41.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-Me.ComboBox41.FormattingEnabled = true
-Me.ComboBox41.Items.AddRange(New Object() {"00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"})
-Me.ComboBox41.Location = New System.Drawing.Point(90, 22)
-Me.ComboBox41.Name = "ComboBox41"
-Me.ComboBox41.Size = New System.Drawing.Size(61, 20)
-Me.ComboBox41.TabIndex = 93
-'
-'ComboBox42
-'
-Me.ComboBox42.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-Me.ComboBox42.FormattingEnabled = true
-Me.ComboBox42.Items.AddRange(New Object() {"类型全开", "类型全闭", "类型奇开", "类型偶开", "回路开", "回路关"})
-Me.ComboBox42.Location = New System.Drawing.Point(90, 90)
-Me.ComboBox42.Name = "ComboBox42"
-Me.ComboBox42.Size = New System.Drawing.Size(157, 20)
-Me.ComboBox42.TabIndex = 88
-'
-'Label4
-'
-Me.Label4.AutoSize = true
-Me.Label4.Location = New System.Drawing.Point(7, 93)
-Me.Label4.Name = "Label4"
-Me.Label4.Size = New System.Drawing.Size(65, 12)
-Me.Label4.TabIndex = 89
-Me.Label4.Text = "控制方式："
-'
-'Label5
-'
-Me.Label5.AutoSize = true
-Me.Label5.Location = New System.Drawing.Point(159, 25)
-Me.Label5.Name = "Label5"
-Me.Label5.Size = New System.Drawing.Size(17, 12)
-Me.Label5.TabIndex = 90
-Me.Label5.Text = "时"
-'
-'Label9
-'
-Me.Label9.AutoSize = true
-Me.Label9.Location = New System.Drawing.Point(254, 25)
-Me.Label9.Name = "Label9"
-Me.Label9.Size = New System.Drawing.Size(17, 12)
-Me.Label9.TabIndex = 91
-Me.Label9.Text = "分"
-'
-'Label11
-'
-Me.Label11.AutoSize = true
-Me.Label11.Location = New System.Drawing.Point(348, 27)
-Me.Label11.Name = "Label11"
-Me.Label11.Size = New System.Drawing.Size(17, 12)
-Me.Label11.TabIndex = 92
-Me.Label11.Text = "秒"
-'
-'ComboBox43
-'
-Me.ComboBox43.FormattingEnabled = true
-Me.ComboBox43.Location = New System.Drawing.Point(88, 405)
-Me.ComboBox43.Name = "ComboBox43"
-Me.ComboBox43.Size = New System.Drawing.Size(99, 20)
-Me.ComboBox43.TabIndex = 93
-Me.ComboBox43.Visible = false
-'
-'CheckBox67
-'
-Me.CheckBox67.AutoSize = true
-Me.CheckBox67.Location = New System.Drawing.Point(220, 407)
-Me.CheckBox67.Name = "CheckBox67"
-Me.CheckBox67.Size = New System.Drawing.Size(96, 16)
-Me.CheckBox67.TabIndex = 91
-Me.CheckBox67.Text = "显示控制信息"
-Me.CheckBox67.UseVisualStyleBackColor = true
-'
-'RadioButton67
-'
-Me.RadioButton67.AutoSize = true
-Me.RadioButton67.Location = New System.Drawing.Point(307, 31)
-Me.RadioButton67.Name = "RadioButton67"
-Me.RadioButton67.Size = New System.Drawing.Size(95, 16)
-Me.RadioButton67.TabIndex = 90
-Me.RadioButton67.Text = "删除控制模式"
-Me.RadioButton67.UseVisualStyleBackColor = true
-'
-'RadioButton68
-'
-Me.RadioButton68.AutoSize = true
-Me.RadioButton68.Location = New System.Drawing.Point(157, 31)
-Me.RadioButton68.Name = "RadioButton68"
-Me.RadioButton68.Size = New System.Drawing.Size(95, 16)
-Me.RadioButton68.TabIndex = 89
-Me.RadioButton68.Text = "编辑控制模式"
-Me.RadioButton68.UseVisualStyleBackColor = true
-'
-'RadioButton69
-'
-Me.RadioButton69.AutoSize = true
-Me.RadioButton69.Checked = true
-Me.RadioButton69.Location = New System.Drawing.Point(17, 31)
-Me.RadioButton69.Name = "RadioButton69"
-Me.RadioButton69.Size = New System.Drawing.Size(95, 16)
-Me.RadioButton69.TabIndex = 88
-Me.RadioButton69.TabStop = true
-Me.RadioButton69.Text = "增加控制模式"
-Me.RadioButton69.UseVisualStyleBackColor = true
-'
-'TextBox13
-'
-Me.TextBox13.Location = New System.Drawing.Point(99, 405)
-Me.TextBox13.Name = "TextBox13"
-Me.TextBox13.Size = New System.Drawing.Size(100, 21)
-Me.TextBox13.TabIndex = 78
-'
-'Label62
-'
-Me.Label62.AutoSize = true
-Me.Label62.Location = New System.Drawing.Point(16, 408)
-Me.Label62.Name = "Label62"
-Me.Label62.Size = New System.Drawing.Size(65, 12)
-Me.Label62.TabIndex = 77
-Me.Label62.Text = "模式名称："
-'
-'Button28
-'
-Me.Button28.Location = New System.Drawing.Point(163, 449)
-Me.Button28.Name = "Button28"
-Me.Button28.Size = New System.Drawing.Size(107, 27)
-Me.Button28.TabIndex = 76
-Me.Button28.Text = "输入控制模式"
-Me.Button28.UseVisualStyleBackColor = true
-'
-'ComboBox44
-'
-Me.ComboBox44.FormattingEnabled = true
-Me.ComboBox44.Items.AddRange(New Object() {"全功率", "半功率"})
-Me.ComboBox44.Location = New System.Drawing.Point(350, 408)
-Me.ComboBox44.Name = "ComboBox44"
-Me.ComboBox44.Size = New System.Drawing.Size(57, 20)
-Me.ComboBox44.TabIndex = 75
-Me.ComboBox44.Text = "全功率"
-Me.ComboBox44.Visible = false
-'
-'DataGridView15
-'
-Me.DataGridView15.AllowUserToAddRows = false
-Me.DataGridView15.BackgroundColor = System.Drawing.Color.WhiteSmoke
-Me.DataGridView15.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-Me.DataGridView15.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn76, Me.DataGridViewTextBoxColumn77, Me.DataGridViewTextBoxColumn78, Me.DataGridViewTextBoxColumn79, Me.DataGridViewTextBoxColumn80})
-Me.DataGridView15.Location = New System.Drawing.Point(17, 201)
-Me.DataGridView15.Name = "DataGridView15"
-Me.DataGridView15.RowTemplate.Height = 23
-Me.DataGridView15.Size = New System.Drawing.Size(399, 188)
-Me.DataGridView15.TabIndex = 67
-'
-'DataGridViewTextBoxColumn76
-'
-Me.DataGridViewTextBoxColumn76.HeaderText = "编号"
-Me.DataGridViewTextBoxColumn76.Name = "DataGridViewTextBoxColumn76"
-Me.DataGridViewTextBoxColumn76.Width = 60
-'
-'DataGridViewTextBoxColumn77
-'
-Me.DataGridViewTextBoxColumn77.HeaderText = "小时"
-Me.DataGridViewTextBoxColumn77.Name = "DataGridViewTextBoxColumn77"
-Me.DataGridViewTextBoxColumn77.Width = 60
-'
-'DataGridViewTextBoxColumn78
-'
-Me.DataGridViewTextBoxColumn78.HeaderText = "分钟"
-Me.DataGridViewTextBoxColumn78.Name = "DataGridViewTextBoxColumn78"
-Me.DataGridViewTextBoxColumn78.Width = 60
-'
-'DataGridViewTextBoxColumn79
-'
-Me.DataGridViewTextBoxColumn79.HeaderText = "秒"
-Me.DataGridViewTextBoxColumn79.Name = "DataGridViewTextBoxColumn79"
-Me.DataGridViewTextBoxColumn79.Width = 60
-'
-'DataGridViewTextBoxColumn80
-'
-Me.DataGridViewTextBoxColumn80.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-Me.DataGridViewTextBoxColumn80.HeaderText = "控制方式"
-Me.DataGridViewTextBoxColumn80.Name = "DataGridViewTextBoxColumn80"
-'
-'TreeView3
-'
-Me.TreeView3.CheckBoxes = true
-Me.TreeView3.LineColor = System.Drawing.Color.Empty
-Me.TreeView3.Location = New System.Drawing.Point(12, 58)
-Me.TreeView3.Name = "TreeView3"
-Me.TreeView3.Size = New System.Drawing.Size(235, 426)
-Me.TreeView3.TabIndex = 175
-'
-'GroupBox54
-'
-Me.GroupBox54.Controls.Add(Me.CheckBox68)
-Me.GroupBox54.Controls.Add(Me.CheckBox69)
-Me.GroupBox54.Controls.Add(Me.CheckBox70)
-Me.GroupBox54.Controls.Add(Me.CheckBox71)
-Me.GroupBox54.Controls.Add(Me.CheckBox72)
-Me.GroupBox54.Controls.Add(Me.CheckBox73)
-Me.GroupBox54.Controls.Add(Me.CheckBox74)
-Me.GroupBox54.Location = New System.Drawing.Point(268, 234)
-Me.GroupBox54.Name = "GroupBox54"
-Me.GroupBox54.Size = New System.Drawing.Size(178, 152)
-Me.GroupBox54.TabIndex = 102
-Me.GroupBox54.TabStop = false
-Me.GroupBox54.Text = "周设置"
-'
-'CheckBox68
-'
-Me.CheckBox68.AutoSize = true
-Me.CheckBox68.Checked = true
-Me.CheckBox68.CheckState = System.Windows.Forms.CheckState.Checked
-Me.CheckBox68.Location = New System.Drawing.Point(3, 130)
-Me.CheckBox68.Name = "CheckBox68"
-Me.CheckBox68.Size = New System.Drawing.Size(60, 16)
-Me.CheckBox68.TabIndex = 6
-Me.CheckBox68.Text = "星期日"
-Me.CheckBox68.UseVisualStyleBackColor = true
-'
-'CheckBox69
-'
-Me.CheckBox69.AutoSize = true
-Me.CheckBox69.Checked = true
-Me.CheckBox69.CheckState = System.Windows.Forms.CheckState.Checked
-Me.CheckBox69.Location = New System.Drawing.Point(103, 94)
-Me.CheckBox69.Name = "CheckBox69"
-Me.CheckBox69.Size = New System.Drawing.Size(60, 16)
-Me.CheckBox69.TabIndex = 5
-Me.CheckBox69.Text = "星期六"
-Me.CheckBox69.UseVisualStyleBackColor = true
-'
-'CheckBox70
-'
-Me.CheckBox70.AutoSize = true
-Me.CheckBox70.Checked = true
-Me.CheckBox70.CheckState = System.Windows.Forms.CheckState.Checked
-Me.CheckBox70.Location = New System.Drawing.Point(3, 94)
-Me.CheckBox70.Name = "CheckBox70"
-Me.CheckBox70.Size = New System.Drawing.Size(60, 16)
-Me.CheckBox70.TabIndex = 4
-Me.CheckBox70.Text = "星期五"
-Me.CheckBox70.UseVisualStyleBackColor = true
-'
-'CheckBox71
-'
-Me.CheckBox71.AutoSize = true
-Me.CheckBox71.Checked = true
-Me.CheckBox71.CheckState = System.Windows.Forms.CheckState.Checked
-Me.CheckBox71.Location = New System.Drawing.Point(103, 58)
-Me.CheckBox71.Name = "CheckBox71"
-Me.CheckBox71.Size = New System.Drawing.Size(60, 16)
-Me.CheckBox71.TabIndex = 3
-Me.CheckBox71.Text = "星期四"
-Me.CheckBox71.UseVisualStyleBackColor = true
-'
-'CheckBox72
-'
-Me.CheckBox72.AutoSize = true
-Me.CheckBox72.Checked = true
-Me.CheckBox72.CheckState = System.Windows.Forms.CheckState.Checked
-Me.CheckBox72.Location = New System.Drawing.Point(3, 58)
-Me.CheckBox72.Name = "CheckBox72"
-Me.CheckBox72.Size = New System.Drawing.Size(60, 16)
-Me.CheckBox72.TabIndex = 2
-Me.CheckBox72.Text = "星期三"
-Me.CheckBox72.UseVisualStyleBackColor = true
-'
-'CheckBox73
-'
-Me.CheckBox73.AutoSize = true
-Me.CheckBox73.Checked = true
-Me.CheckBox73.CheckState = System.Windows.Forms.CheckState.Checked
-Me.CheckBox73.Location = New System.Drawing.Point(103, 22)
-Me.CheckBox73.Name = "CheckBox73"
-Me.CheckBox73.Size = New System.Drawing.Size(60, 16)
-Me.CheckBox73.TabIndex = 1
-Me.CheckBox73.Text = "星期二"
-Me.CheckBox73.UseVisualStyleBackColor = true
-'
-'CheckBox74
-'
-Me.CheckBox74.AutoSize = true
-Me.CheckBox74.Checked = true
-Me.CheckBox74.CheckState = System.Windows.Forms.CheckState.Checked
-Me.CheckBox74.Location = New System.Drawing.Point(6, 22)
-Me.CheckBox74.Name = "CheckBox74"
-Me.CheckBox74.Size = New System.Drawing.Size(60, 16)
-Me.CheckBox74.TabIndex = 0
-Me.CheckBox74.Text = "星期一"
-Me.CheckBox74.UseVisualStyleBackColor = true
-'
-'GroupBox55
-'
-Me.GroupBox55.Controls.Add(Me.RadioButton70)
-Me.GroupBox55.Controls.Add(Me.RadioButton71)
-Me.GroupBox55.Enabled = false
-Me.GroupBox55.Location = New System.Drawing.Point(268, 54)
-Me.GroupBox55.Name = "GroupBox55"
-Me.GroupBox55.Size = New System.Drawing.Size(178, 58)
-Me.GroupBox55.TabIndex = 101
-Me.GroupBox55.TabStop = false
-Me.GroupBox55.Text = "整体控制"
-'
-'RadioButton70
-'
-Me.RadioButton70.AutoSize = true
-Me.RadioButton70.Location = New System.Drawing.Point(103, 20)
-Me.RadioButton70.Name = "RadioButton70"
-Me.RadioButton70.Size = New System.Drawing.Size(47, 16)
-Me.RadioButton70.TabIndex = 85
-Me.RadioButton70.Text = "路灯"
+        Me.RadioButton3.Text = "终端"
+        Me.RadioButton3.UseVisualStyleBackColor = True
+        '
+        'RadioButton4
+        '
+        Me.RadioButton4.AutoSize = True
+        Me.RadioButton4.Checked = True
+        Me.RadioButton4.Location = New System.Drawing.Point(6, 21)
+        Me.RadioButton4.Name = "RadioButton4"
+        Me.RadioButton4.Size = New System.Drawing.Size(83, 16)
+        Me.RadioButton4.TabIndex = 84
+        Me.RadioButton4.TabStop = True
+        Me.RadioButton4.Text = "主控箱节点"
+        Me.RadioButton4.UseVisualStyleBackColor = True
+        '
+        'RadioButton5
+        '
+        Me.RadioButton5.AutoSize = True
+        Me.RadioButton5.Checked = True
+        Me.RadioButton5.Location = New System.Drawing.Point(371, 22)
+        Me.RadioButton5.Name = "RadioButton5"
+        Me.RadioButton5.Size = New System.Drawing.Size(71, 16)
+        Me.RadioButton5.TabIndex = 100
+        Me.RadioButton5.TabStop = True
+        Me.RadioButton5.Text = "回路控制"
+        Me.RadioButton5.UseVisualStyleBackColor = True
+        '
+        'RadioButton6
+        '
+        Me.RadioButton6.AutoSize = True
+        Me.RadioButton6.Location = New System.Drawing.Point(268, 22)
+        Me.RadioButton6.Name = "RadioButton6"
+        Me.RadioButton6.Size = New System.Drawing.Size(71, 16)
+        Me.RadioButton6.TabIndex = 99
+        Me.RadioButton6.Text = "整体控制"
+        Me.RadioButton6.UseVisualStyleBackColor = True
+        '
+        'GroupBox14
+        '
+        Me.GroupBox14.Controls.Add(Me.CheckBox16)
+        Me.GroupBox14.Controls.Add(Me.CheckBox17)
+        Me.GroupBox14.Controls.Add(Me.CheckBox18)
+        Me.GroupBox14.Controls.Add(Me.CheckBox19)
+        Me.GroupBox14.Controls.Add(Me.CheckBox20)
+        Me.GroupBox14.Controls.Add(Me.CheckBox21)
+        Me.GroupBox14.Location = New System.Drawing.Point(268, 118)
+        Me.GroupBox14.Name = "GroupBox14"
+        Me.GroupBox14.Size = New System.Drawing.Size(178, 110)
+        Me.GroupBox14.TabIndex = 98
+        Me.GroupBox14.TabStop = False
+        Me.GroupBox14.Text = "回路控制"
+        '
+        'CheckBox16
+        '
+        Me.CheckBox16.AutoSize = True
+        Me.CheckBox16.Location = New System.Drawing.Point(103, 83)
+        Me.CheckBox16.Name = "CheckBox16"
+        Me.CheckBox16.Size = New System.Drawing.Size(36, 16)
+        Me.CheckBox16.TabIndex = 87
+        Me.CheckBox16.Text = "K6"
+        Me.CheckBox16.UseVisualStyleBackColor = True
+        '
+        'CheckBox17
+        '
+        Me.CheckBox17.AutoSize = True
+        Me.CheckBox17.Location = New System.Drawing.Point(6, 83)
+        Me.CheckBox17.Name = "CheckBox17"
+        Me.CheckBox17.Size = New System.Drawing.Size(36, 16)
+        Me.CheckBox17.TabIndex = 86
+        Me.CheckBox17.Text = "K5"
+        Me.CheckBox17.UseVisualStyleBackColor = True
+        '
+        'CheckBox18
+        '
+        Me.CheckBox18.AutoSize = True
+        Me.CheckBox18.Location = New System.Drawing.Point(103, 52)
+        Me.CheckBox18.Name = "CheckBox18"
+        Me.CheckBox18.Size = New System.Drawing.Size(36, 16)
+        Me.CheckBox18.TabIndex = 85
+        Me.CheckBox18.Text = "K4"
+        Me.CheckBox18.UseVisualStyleBackColor = True
+        '
+        'CheckBox19
+        '
+        Me.CheckBox19.AutoSize = True
+        Me.CheckBox19.Location = New System.Drawing.Point(6, 52)
+        Me.CheckBox19.Name = "CheckBox19"
+        Me.CheckBox19.Size = New System.Drawing.Size(36, 16)
+        Me.CheckBox19.TabIndex = 84
+        Me.CheckBox19.Text = "K3"
+        Me.CheckBox19.UseVisualStyleBackColor = True
+        '
+        'CheckBox20
+        '
+        Me.CheckBox20.AutoSize = True
+        Me.CheckBox20.Location = New System.Drawing.Point(103, 22)
+        Me.CheckBox20.Name = "CheckBox20"
+        Me.CheckBox20.Size = New System.Drawing.Size(36, 16)
+        Me.CheckBox20.TabIndex = 83
+        Me.CheckBox20.Text = "K2"
+        Me.CheckBox20.UseVisualStyleBackColor = True
+        '
+        'CheckBox21
+        '
+        Me.CheckBox21.AutoSize = True
+        Me.CheckBox21.Location = New System.Drawing.Point(6, 22)
+        Me.CheckBox21.Name = "CheckBox21"
+        Me.CheckBox21.Size = New System.Drawing.Size(36, 16)
+        Me.CheckBox21.TabIndex = 82
+        Me.CheckBox21.Text = "K1"
+        Me.CheckBox21.UseVisualStyleBackColor = True
+        '
+        'ComboBox8
+        '
+        Me.ComboBox8.FormattingEnabled = True
+        Me.ComboBox8.Location = New System.Drawing.Point(347, 415)
+        Me.ComboBox8.Name = "ComboBox8"
+        Me.ComboBox8.Size = New System.Drawing.Size(99, 20)
+        Me.ComboBox8.TabIndex = 95
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Location = New System.Drawing.Point(268, 418)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(65, 12)
+        Me.Label25.TabIndex = 94
+        Me.Label25.Text = "模式名称："
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(326, 463)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(75, 23)
+        Me.Button4.TabIndex = 82
+        Me.Button4.Text = "模式分配"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'CheckedListBox2
+        '
+        Me.CheckedListBox2.FormattingEnabled = True
+        Me.CheckedListBox2.Location = New System.Drawing.Point(20, 22)
+        Me.CheckedListBox2.Name = "CheckedListBox2"
+        Me.CheckedListBox2.Size = New System.Drawing.Size(242, 452)
+        Me.CheckedListBox2.TabIndex = 75
+        '
+        'GroupBox15
+        '
+        Me.GroupBox15.Controls.Add(Me.GroupBox16)
+        Me.GroupBox15.Controls.Add(Me.ComboBox13)
+        Me.GroupBox15.Controls.Add(Me.CheckBox22)
+        Me.GroupBox15.Controls.Add(Me.RadioButton9)
+        Me.GroupBox15.Controls.Add(Me.RadioButton10)
+        Me.GroupBox15.Controls.Add(Me.RadioButton11)
+        Me.GroupBox15.Controls.Add(Me.TextBox3)
+        Me.GroupBox15.Controls.Add(Me.Label31)
+        Me.GroupBox15.Controls.Add(Me.Button6)
+        Me.GroupBox15.Controls.Add(Me.ComboBox14)
+        Me.GroupBox15.Controls.Add(Me.DataGridView2)
+        Me.GroupBox15.Location = New System.Drawing.Point(6, 6)
+        Me.GroupBox15.Name = "GroupBox15"
+        Me.GroupBox15.Size = New System.Drawing.Size(432, 492)
+        Me.GroupBox15.TabIndex = 74
+        Me.GroupBox15.TabStop = False
+        '
+        'GroupBox16
+        '
+        Me.GroupBox16.Controls.Add(Me.RadioButton7)
+        Me.GroupBox16.Controls.Add(Me.RadioButton8)
+        Me.GroupBox16.Controls.Add(Me.Button5)
+        Me.GroupBox16.Controls.Add(Me.Label26)
+        Me.GroupBox16.Controls.Add(Me.ComboBox9)
+        Me.GroupBox16.Controls.Add(Me.ComboBox10)
+        Me.GroupBox16.Controls.Add(Me.ComboBox11)
+        Me.GroupBox16.Controls.Add(Me.ComboBox12)
+        Me.GroupBox16.Controls.Add(Me.Label27)
+        Me.GroupBox16.Controls.Add(Me.Label28)
+        Me.GroupBox16.Controls.Add(Me.Label29)
+        Me.GroupBox16.Controls.Add(Me.Label30)
+        Me.GroupBox16.Location = New System.Drawing.Point(19, 48)
+        Me.GroupBox16.Name = "GroupBox16"
+        Me.GroupBox16.Size = New System.Drawing.Size(397, 140)
+        Me.GroupBox16.TabIndex = 94
+        Me.GroupBox16.TabStop = False
+        '
+        'RadioButton7
+        '
+        Me.RadioButton7.AutoSize = True
+        Me.RadioButton7.Location = New System.Drawing.Point(201, 59)
+        Me.RadioButton7.Name = "RadioButton7"
+        Me.RadioButton7.Size = New System.Drawing.Size(131, 16)
+        Me.RadioButton7.TabIndex = 99
+        Me.RadioButton7.Text = "三回路组合控制方式"
+        Me.RadioButton7.UseVisualStyleBackColor = True
+        '
+        'RadioButton8
+        '
+        Me.RadioButton8.AutoSize = True
+        Me.RadioButton8.Checked = True
+        Me.RadioButton8.Location = New System.Drawing.Point(10, 59)
+        Me.RadioButton8.Name = "RadioButton8"
+        Me.RadioButton8.Size = New System.Drawing.Size(95, 16)
+        Me.RadioButton8.TabIndex = 98
+        Me.RadioButton8.TabStop = True
+        Me.RadioButton8.Text = "传统控制方式"
+        Me.RadioButton8.UseVisualStyleBackColor = True
+        '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(297, 90)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(75, 23)
+        Me.Button5.TabIndex = 97
+        Me.Button5.Text = "增加时段"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Location = New System.Drawing.Point(8, 27)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(65, 12)
+        Me.Label26.TabIndex = 96
+        Me.Label26.Text = "开始时间："
+        '
+        'ComboBox9
+        '
+        Me.ComboBox9.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox9.FormattingEnabled = True
+        Me.ComboBox9.Items.AddRange(New Object() {"00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59"})
+        Me.ComboBox9.Location = New System.Drawing.Point(281, 22)
+        Me.ComboBox9.Name = "ComboBox9"
+        Me.ComboBox9.Size = New System.Drawing.Size(60, 20)
+        Me.ComboBox9.TabIndex = 95
+        '
+        'ComboBox10
+        '
+        Me.ComboBox10.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox10.FormattingEnabled = True
+        Me.ComboBox10.Items.AddRange(New Object() {"00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59"})
+        Me.ComboBox10.Location = New System.Drawing.Point(187, 22)
+        Me.ComboBox10.Name = "ComboBox10"
+        Me.ComboBox10.Size = New System.Drawing.Size(60, 20)
+        Me.ComboBox10.TabIndex = 94
+        '
+        'ComboBox11
+        '
+        Me.ComboBox11.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox11.FormattingEnabled = True
+        Me.ComboBox11.Items.AddRange(New Object() {"00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"})
+        Me.ComboBox11.Location = New System.Drawing.Point(90, 22)
+        Me.ComboBox11.Name = "ComboBox11"
+        Me.ComboBox11.Size = New System.Drawing.Size(61, 20)
+        Me.ComboBox11.TabIndex = 93
+        '
+        'ComboBox12
+        '
+        Me.ComboBox12.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox12.FormattingEnabled = True
+        Me.ComboBox12.Items.AddRange(New Object() {"类型全开", "类型全闭", "类型奇开", "类型偶开", "回路开", "回路关"})
+        Me.ComboBox12.Location = New System.Drawing.Point(90, 90)
+        Me.ComboBox12.Name = "ComboBox12"
+        Me.ComboBox12.Size = New System.Drawing.Size(157, 20)
+        Me.ComboBox12.TabIndex = 88
+        '
+        'Label27
+        '
+        Me.Label27.AutoSize = True
+        Me.Label27.Location = New System.Drawing.Point(7, 93)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(65, 12)
+        Me.Label27.TabIndex = 89
+        Me.Label27.Text = "控制方式："
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Location = New System.Drawing.Point(159, 25)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(17, 12)
+        Me.Label28.TabIndex = 90
+        Me.Label28.Text = "时"
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.Location = New System.Drawing.Point(254, 25)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(17, 12)
+        Me.Label29.TabIndex = 91
+        Me.Label29.Text = "分"
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.Location = New System.Drawing.Point(348, 27)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(17, 12)
+        Me.Label30.TabIndex = 92
+        Me.Label30.Text = "秒"
+        '
+        'ComboBox13
+        '
+        Me.ComboBox13.FormattingEnabled = True
+        Me.ComboBox13.Location = New System.Drawing.Point(88, 405)
+        Me.ComboBox13.Name = "ComboBox13"
+        Me.ComboBox13.Size = New System.Drawing.Size(99, 20)
+        Me.ComboBox13.TabIndex = 93
+        Me.ComboBox13.Visible = False
+        '
+        'CheckBox22
+        '
+        Me.CheckBox22.AutoSize = True
+        Me.CheckBox22.Location = New System.Drawing.Point(220, 407)
+        Me.CheckBox22.Name = "CheckBox22"
+        Me.CheckBox22.Size = New System.Drawing.Size(96, 16)
+        Me.CheckBox22.TabIndex = 91
+        Me.CheckBox22.Text = "显示控制信息"
+        Me.CheckBox22.UseVisualStyleBackColor = True
+        '
+        'RadioButton9
+        '
+        Me.RadioButton9.AutoSize = True
+        Me.RadioButton9.Location = New System.Drawing.Point(307, 31)
+        Me.RadioButton9.Name = "RadioButton9"
+        Me.RadioButton9.Size = New System.Drawing.Size(95, 16)
+        Me.RadioButton9.TabIndex = 90
+        Me.RadioButton9.Text = "删除控制模式"
+        Me.RadioButton9.UseVisualStyleBackColor = True
+        '
+        'RadioButton10
+        '
+        Me.RadioButton10.AutoSize = True
+        Me.RadioButton10.Location = New System.Drawing.Point(157, 31)
+        Me.RadioButton10.Name = "RadioButton10"
+        Me.RadioButton10.Size = New System.Drawing.Size(95, 16)
+        Me.RadioButton10.TabIndex = 89
+        Me.RadioButton10.Text = "编辑控制模式"
+        Me.RadioButton10.UseVisualStyleBackColor = True
+        '
+        'RadioButton11
+        '
+        Me.RadioButton11.AutoSize = True
+        Me.RadioButton11.Checked = True
+        Me.RadioButton11.Location = New System.Drawing.Point(17, 31)
+        Me.RadioButton11.Name = "RadioButton11"
+        Me.RadioButton11.Size = New System.Drawing.Size(95, 16)
+        Me.RadioButton11.TabIndex = 88
+        Me.RadioButton11.TabStop = True
+        Me.RadioButton11.Text = "增加控制模式"
+        Me.RadioButton11.UseVisualStyleBackColor = True
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(99, 405)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(100, 21)
+        Me.TextBox3.TabIndex = 78
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = True
+        Me.Label31.Location = New System.Drawing.Point(16, 408)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(65, 12)
+        Me.Label31.TabIndex = 77
+        Me.Label31.Text = "模式名称："
+        '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(163, 449)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(107, 27)
+        Me.Button6.TabIndex = 76
+        Me.Button6.Text = "输入控制模式"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
+        'ComboBox14
+        '
+        Me.ComboBox14.FormattingEnabled = True
+        Me.ComboBox14.Items.AddRange(New Object() {"全功率", "半功率"})
+        Me.ComboBox14.Location = New System.Drawing.Point(350, 408)
+        Me.ComboBox14.Name = "ComboBox14"
+        Me.ComboBox14.Size = New System.Drawing.Size(57, 20)
+        Me.ComboBox14.TabIndex = 75
+        Me.ComboBox14.Text = "全功率"
+        Me.ComboBox14.Visible = False
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.AllowUserToAddRows = False
+        Me.DataGridView2.BackgroundColor = System.Drawing.Color.WhiteSmoke
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11})
+        Me.DataGridView2.Location = New System.Drawing.Point(17, 201)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.RowTemplate.Height = 23
+        Me.DataGridView2.Size = New System.Drawing.Size(399, 188)
+        Me.DataGridView2.TabIndex = 67
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.HeaderText = "编号"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.Width = 60
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.HeaderText = "小时"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        Me.DataGridViewTextBoxColumn8.Width = 60
+        '
+        'DataGridViewTextBoxColumn9
+        '
+        Me.DataGridViewTextBoxColumn9.HeaderText = "分钟"
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        Me.DataGridViewTextBoxColumn9.Width = 60
+        '
+        'DataGridViewTextBoxColumn10
+        '
+        Me.DataGridViewTextBoxColumn10.HeaderText = "秒"
+        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
+        Me.DataGridViewTextBoxColumn10.Width = 60
+        '
+        'DataGridViewTextBoxColumn11
+        '
+        Me.DataGridViewTextBoxColumn11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn11.HeaderText = "控制方式"
+        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
+        '
+        'TabPage7
+        '
+        Me.TabPage7.Controls.Add(Me.GroupBox17)
+        Me.TabPage7.Controls.Add(Me.GroupBox20)
+        Me.TabPage7.Location = New System.Drawing.Point(4, 23)
+        Me.TabPage7.Name = "TabPage7"
+        Me.TabPage7.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage7.Size = New System.Drawing.Size(902, 517)
+        Me.TabPage7.TabIndex = 3
+        Me.TabPage7.Text = "节假日控制模式设置"
+        Me.TabPage7.UseVisualStyleBackColor = True
+        '
+        'GroupBox17
+        '
+        Me.GroupBox17.Controls.Add(Me.GroupBox18)
+        Me.GroupBox17.Controls.Add(Me.RadioButton14)
+        Me.GroupBox17.Controls.Add(Me.RadioButton15)
+        Me.GroupBox17.Controls.Add(Me.GroupBox19)
+        Me.GroupBox17.Controls.Add(Me.ComboBox15)
+        Me.GroupBox17.Controls.Add(Me.Label32)
+        Me.GroupBox17.Controls.Add(Me.Button7)
+        Me.GroupBox17.Controls.Add(Me.CheckedListBox3)
+        Me.GroupBox17.Location = New System.Drawing.Point(444, 6)
+        Me.GroupBox17.Name = "GroupBox17"
+        Me.GroupBox17.Size = New System.Drawing.Size(452, 492)
+        Me.GroupBox17.TabIndex = 78
+        Me.GroupBox17.TabStop = False
+        Me.GroupBox17.Text = "分配控制模式"
+        '
+        'GroupBox18
+        '
+        Me.GroupBox18.Controls.Add(Me.RadioButton12)
+        Me.GroupBox18.Controls.Add(Me.RadioButton13)
+        Me.GroupBox18.Enabled = False
+        Me.GroupBox18.Location = New System.Drawing.Point(274, 115)
+        Me.GroupBox18.Name = "GroupBox18"
+        Me.GroupBox18.Size = New System.Drawing.Size(155, 90)
+        Me.GroupBox18.TabIndex = 101
+        Me.GroupBox18.TabStop = False
+        Me.GroupBox18.Text = "整体控制"
+        '
+        'RadioButton12
+        '
+        Me.RadioButton12.AutoSize = True
+        Me.RadioButton12.Location = New System.Drawing.Point(6, 54)
+        Me.RadioButton12.Name = "RadioButton12"
+        Me.RadioButton12.Size = New System.Drawing.Size(47, 16)
+        Me.RadioButton12.TabIndex = 85
+        Me.RadioButton12.Text = "终端"
+        Me.RadioButton12.UseVisualStyleBackColor = True
+        '
+        'RadioButton13
+        '
+        Me.RadioButton13.AutoSize = True
+        Me.RadioButton13.Checked = True
+        Me.RadioButton13.Location = New System.Drawing.Point(6, 22)
+        Me.RadioButton13.Name = "RadioButton13"
+        Me.RadioButton13.Size = New System.Drawing.Size(83, 16)
+        Me.RadioButton13.TabIndex = 84
+        Me.RadioButton13.TabStop = True
+        Me.RadioButton13.Text = "主控箱节点"
+        Me.RadioButton13.UseVisualStyleBackColor = True
+        '
+        'RadioButton14
+        '
+        Me.RadioButton14.AutoSize = True
+        Me.RadioButton14.Checked = True
+        Me.RadioButton14.Location = New System.Drawing.Point(280, 73)
+        Me.RadioButton14.Name = "RadioButton14"
+        Me.RadioButton14.Size = New System.Drawing.Size(71, 16)
+        Me.RadioButton14.TabIndex = 100
+        Me.RadioButton14.TabStop = True
+        Me.RadioButton14.Text = "回路控制"
+        Me.RadioButton14.UseVisualStyleBackColor = True
+        '
+        'RadioButton15
+        '
+        Me.RadioButton15.AutoSize = True
+        Me.RadioButton15.Location = New System.Drawing.Point(280, 31)
+        Me.RadioButton15.Name = "RadioButton15"
+        Me.RadioButton15.Size = New System.Drawing.Size(71, 16)
+        Me.RadioButton15.TabIndex = 99
+        Me.RadioButton15.Text = "整体控制"
+        Me.RadioButton15.UseVisualStyleBackColor = True
+        '
+        'GroupBox19
+        '
+        Me.GroupBox19.Controls.Add(Me.CheckBox23)
+        Me.GroupBox19.Controls.Add(Me.CheckBox24)
+        Me.GroupBox19.Controls.Add(Me.CheckBox25)
+        Me.GroupBox19.Controls.Add(Me.CheckBox26)
+        Me.GroupBox19.Controls.Add(Me.CheckBox27)
+        Me.GroupBox19.Controls.Add(Me.CheckBox28)
+        Me.GroupBox19.Location = New System.Drawing.Point(274, 211)
+        Me.GroupBox19.Name = "GroupBox19"
+        Me.GroupBox19.Size = New System.Drawing.Size(155, 137)
+        Me.GroupBox19.TabIndex = 98
+        Me.GroupBox19.TabStop = False
+        Me.GroupBox19.Text = "回路控制"
+        '
+        'CheckBox23
+        '
+        Me.CheckBox23.AutoSize = True
+        Me.CheckBox23.Location = New System.Drawing.Point(74, 102)
+        Me.CheckBox23.Name = "CheckBox23"
+        Me.CheckBox23.Size = New System.Drawing.Size(36, 16)
+        Me.CheckBox23.TabIndex = 87
+        Me.CheckBox23.Text = "K6"
+        Me.CheckBox23.UseVisualStyleBackColor = True
+        '
+        'CheckBox24
+        '
+        Me.CheckBox24.AutoSize = True
+        Me.CheckBox24.Location = New System.Drawing.Point(6, 102)
+        Me.CheckBox24.Name = "CheckBox24"
+        Me.CheckBox24.Size = New System.Drawing.Size(36, 16)
+        Me.CheckBox24.TabIndex = 86
+        Me.CheckBox24.Text = "K5"
+        Me.CheckBox24.UseVisualStyleBackColor = True
+        '
+        'CheckBox25
+        '
+        Me.CheckBox25.AutoSize = True
+        Me.CheckBox25.Location = New System.Drawing.Point(74, 62)
+        Me.CheckBox25.Name = "CheckBox25"
+        Me.CheckBox25.Size = New System.Drawing.Size(36, 16)
+        Me.CheckBox25.TabIndex = 85
+        Me.CheckBox25.Text = "K4"
+        Me.CheckBox25.UseVisualStyleBackColor = True
+        '
+        'CheckBox26
+        '
+        Me.CheckBox26.AutoSize = True
+        Me.CheckBox26.Location = New System.Drawing.Point(6, 62)
+        Me.CheckBox26.Name = "CheckBox26"
+        Me.CheckBox26.Size = New System.Drawing.Size(36, 16)
+        Me.CheckBox26.TabIndex = 84
+        Me.CheckBox26.Text = "K3"
+        Me.CheckBox26.UseVisualStyleBackColor = True
+        '
+        'CheckBox27
+        '
+        Me.CheckBox27.AutoSize = True
+        Me.CheckBox27.Location = New System.Drawing.Point(74, 26)
+        Me.CheckBox27.Name = "CheckBox27"
+        Me.CheckBox27.Size = New System.Drawing.Size(36, 16)
+        Me.CheckBox27.TabIndex = 83
+        Me.CheckBox27.Text = "K2"
+        Me.CheckBox27.UseVisualStyleBackColor = True
+        '
+        'CheckBox28
+        '
+        Me.CheckBox28.AutoSize = True
+        Me.CheckBox28.Location = New System.Drawing.Point(6, 26)
+        Me.CheckBox28.Name = "CheckBox28"
+        Me.CheckBox28.Size = New System.Drawing.Size(36, 16)
+        Me.CheckBox28.TabIndex = 82
+        Me.CheckBox28.Text = "K1"
+        Me.CheckBox28.UseVisualStyleBackColor = True
+        '
+        'ComboBox15
+        '
+        Me.ComboBox15.FormattingEnabled = True
+        Me.ComboBox15.Location = New System.Drawing.Point(347, 378)
+        Me.ComboBox15.Name = "ComboBox15"
+        Me.ComboBox15.Size = New System.Drawing.Size(99, 20)
+        Me.ComboBox15.TabIndex = 95
+        '
+        'Label32
+        '
+        Me.Label32.AutoSize = True
+        Me.Label32.Location = New System.Drawing.Point(271, 386)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(65, 12)
+        Me.Label32.TabIndex = 94
+        Me.Label32.Text = "模式名称："
+        '
+        'Button7
+        '
+        Me.Button7.Location = New System.Drawing.Point(334, 449)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(75, 23)
+        Me.Button7.TabIndex = 82
+        Me.Button7.Text = "模式分配"
+        Me.Button7.UseVisualStyleBackColor = True
+        '
+        'CheckedListBox3
+        '
+        Me.CheckedListBox3.FormattingEnabled = True
+        Me.CheckedListBox3.Location = New System.Drawing.Point(20, 22)
+        Me.CheckedListBox3.Name = "CheckedListBox3"
+        Me.CheckedListBox3.Size = New System.Drawing.Size(248, 452)
+        Me.CheckedListBox3.TabIndex = 75
+        '
+        'GroupBox20
+        '
+        Me.GroupBox20.Controls.Add(Me.GroupBox21)
+        Me.GroupBox20.Controls.Add(Me.ComboBox17)
+        Me.GroupBox20.Controls.Add(Me.CheckBox29)
+        Me.GroupBox20.Controls.Add(Me.RadioButton18)
+        Me.GroupBox20.Controls.Add(Me.RadioButton19)
+        Me.GroupBox20.Controls.Add(Me.RadioButton20)
+        Me.GroupBox20.Controls.Add(Me.TextBox4)
+        Me.GroupBox20.Controls.Add(Me.Label35)
+        Me.GroupBox20.Controls.Add(Me.Button9)
+        Me.GroupBox20.Controls.Add(Me.ComboBox18)
+        Me.GroupBox20.Controls.Add(Me.DataGridView3)
+        Me.GroupBox20.Location = New System.Drawing.Point(6, 6)
+        Me.GroupBox20.Name = "GroupBox20"
+        Me.GroupBox20.Size = New System.Drawing.Size(432, 492)
+        Me.GroupBox20.TabIndex = 77
+        Me.GroupBox20.TabStop = False
+        '
+        'GroupBox21
+        '
+        Me.GroupBox21.Controls.Add(Me.RadioButton16)
+        Me.GroupBox21.Controls.Add(Me.RadioButton17)
+        Me.GroupBox21.Controls.Add(Me.DateTimePicker1)
+        Me.GroupBox21.Controls.Add(Me.Button8)
+        Me.GroupBox21.Controls.Add(Me.Label33)
+        Me.GroupBox21.Controls.Add(Me.ComboBox16)
+        Me.GroupBox21.Controls.Add(Me.Label34)
+        Me.GroupBox21.Location = New System.Drawing.Point(19, 48)
+        Me.GroupBox21.Name = "GroupBox21"
+        Me.GroupBox21.Size = New System.Drawing.Size(397, 139)
+        Me.GroupBox21.TabIndex = 94
+        Me.GroupBox21.TabStop = False
+        '
+        'RadioButton16
+        '
+        Me.RadioButton16.AutoSize = True
+        Me.RadioButton16.Location = New System.Drawing.Point(201, 67)
+        Me.RadioButton16.Name = "RadioButton16"
+        Me.RadioButton16.Size = New System.Drawing.Size(131, 16)
+        Me.RadioButton16.TabIndex = 101
+        Me.RadioButton16.Text = "三回路组合控制方式"
+        Me.RadioButton16.UseVisualStyleBackColor = True
+        '
+        'RadioButton17
+        '
+        Me.RadioButton17.AutoSize = True
+        Me.RadioButton17.Checked = True
+        Me.RadioButton17.Location = New System.Drawing.Point(10, 67)
+        Me.RadioButton17.Name = "RadioButton17"
+        Me.RadioButton17.Size = New System.Drawing.Size(95, 16)
+        Me.RadioButton17.TabIndex = 100
+        Me.RadioButton17.TabStop = True
+        Me.RadioButton17.Text = "传统控制方式"
+        Me.RadioButton17.UseVisualStyleBackColor = True
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.DateTimePicker1.Location = New System.Drawing.Point(91, 25)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(156, 21)
+        Me.DateTimePicker1.TabIndex = 98
+        '
+        'Button8
+        '
+        Me.Button8.Location = New System.Drawing.Point(287, 110)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(75, 23)
+        Me.Button8.TabIndex = 97
+        Me.Button8.Text = "增加时段"
+        Me.Button8.UseVisualStyleBackColor = True
+        '
+        'Label33
+        '
+        Me.Label33.AutoSize = True
+        Me.Label33.Location = New System.Drawing.Point(8, 27)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(65, 12)
+        Me.Label33.TabIndex = 96
+        Me.Label33.Text = "开始时间："
+        '
+        'ComboBox16
+        '
+        Me.ComboBox16.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox16.FormattingEnabled = True
+        Me.ComboBox16.Items.AddRange(New Object() {"类型全开", "类型全闭", "类型奇开", "类型偶开", "回路开", "回路关"})
+        Me.ComboBox16.Location = New System.Drawing.Point(90, 110)
+        Me.ComboBox16.Name = "ComboBox16"
+        Me.ComboBox16.Size = New System.Drawing.Size(157, 20)
+        Me.ComboBox16.TabIndex = 88
+        '
+        'Label34
+        '
+        Me.Label34.AutoSize = True
+        Me.Label34.Location = New System.Drawing.Point(7, 113)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(65, 12)
+        Me.Label34.TabIndex = 89
+        Me.Label34.Text = "控制方式："
+        '
+        'ComboBox17
+        '
+        Me.ComboBox17.FormattingEnabled = True
+        Me.ComboBox17.Location = New System.Drawing.Point(88, 405)
+        Me.ComboBox17.Name = "ComboBox17"
+        Me.ComboBox17.Size = New System.Drawing.Size(99, 20)
+        Me.ComboBox17.TabIndex = 93
+        Me.ComboBox17.Visible = False
+        '
+        'CheckBox29
+        '
+        Me.CheckBox29.AutoSize = True
+        Me.CheckBox29.Location = New System.Drawing.Point(220, 407)
+        Me.CheckBox29.Name = "CheckBox29"
+        Me.CheckBox29.Size = New System.Drawing.Size(96, 16)
+        Me.CheckBox29.TabIndex = 91
+        Me.CheckBox29.Text = "显示控制信息"
+        Me.CheckBox29.UseVisualStyleBackColor = True
+        '
+        'RadioButton18
+        '
+        Me.RadioButton18.AutoSize = True
+        Me.RadioButton18.Location = New System.Drawing.Point(297, 31)
+        Me.RadioButton18.Name = "RadioButton18"
+        Me.RadioButton18.Size = New System.Drawing.Size(119, 16)
+        Me.RadioButton18.TabIndex = 90
+        Me.RadioButton18.Text = "删除节日控制模式"
+        Me.RadioButton18.UseVisualStyleBackColor = True
+        '
+        'RadioButton19
+        '
+        Me.RadioButton19.AutoSize = True
+        Me.RadioButton19.Location = New System.Drawing.Point(157, 31)
+        Me.RadioButton19.Name = "RadioButton19"
+        Me.RadioButton19.Size = New System.Drawing.Size(119, 16)
+        Me.RadioButton19.TabIndex = 89
+        Me.RadioButton19.Text = "编辑节日控制模式"
+        Me.RadioButton19.UseVisualStyleBackColor = True
+        '
+        'RadioButton20
+        '
+        Me.RadioButton20.AutoSize = True
+        Me.RadioButton20.Checked = True
+        Me.RadioButton20.Location = New System.Drawing.Point(17, 31)
+        Me.RadioButton20.Name = "RadioButton20"
+        Me.RadioButton20.Size = New System.Drawing.Size(119, 16)
+        Me.RadioButton20.TabIndex = 88
+        Me.RadioButton20.TabStop = True
+        Me.RadioButton20.Text = "增加节日控制模式"
+        Me.RadioButton20.UseVisualStyleBackColor = True
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(99, 405)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(100, 21)
+        Me.TextBox4.TabIndex = 78
+        '
+        'Label35
+        '
+        Me.Label35.AutoSize = True
+        Me.Label35.Location = New System.Drawing.Point(16, 408)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(65, 12)
+        Me.Label35.TabIndex = 77
+        Me.Label35.Text = "模式名称："
+        '
+        'Button9
+        '
+        Me.Button9.Location = New System.Drawing.Point(163, 449)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(107, 27)
+        Me.Button9.TabIndex = 76
+        Me.Button9.Text = "输入控制模式"
+        Me.Button9.UseVisualStyleBackColor = True
+        '
+        'ComboBox18
+        '
+        Me.ComboBox18.FormattingEnabled = True
+        Me.ComboBox18.Items.AddRange(New Object() {"全功率", "半功率"})
+        Me.ComboBox18.Location = New System.Drawing.Point(350, 408)
+        Me.ComboBox18.Name = "ComboBox18"
+        Me.ComboBox18.Size = New System.Drawing.Size(57, 20)
+        Me.ComboBox18.TabIndex = 75
+        Me.ComboBox18.Text = "全功率"
+        Me.ComboBox18.Visible = False
+        '
+        'DataGridView3
+        '
+        Me.DataGridView3.AllowUserToAddRows = False
+        Me.DataGridView3.BackgroundColor = System.Drawing.Color.WhiteSmoke
+        Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn12, Me.DataGridViewTextBoxColumn13, Me.DataGridViewTextBoxColumn14})
+        Me.DataGridView3.Location = New System.Drawing.Point(17, 197)
+        Me.DataGridView3.Name = "DataGridView3"
+        Me.DataGridView3.RowTemplate.Height = 23
+        Me.DataGridView3.Size = New System.Drawing.Size(399, 192)
+        Me.DataGridView3.TabIndex = 67
+        '
+        'DataGridViewTextBoxColumn12
+        '
+        Me.DataGridViewTextBoxColumn12.HeaderText = "编号"
+        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
+        Me.DataGridViewTextBoxColumn12.Width = 60
+        '
+        'DataGridViewTextBoxColumn13
+        '
+        Me.DataGridViewTextBoxColumn13.HeaderText = "时间"
+        Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
+        Me.DataGridViewTextBoxColumn13.Width = 150
+        '
+        'DataGridViewTextBoxColumn14
+        '
+        Me.DataGridViewTextBoxColumn14.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn14.HeaderText = "控制方式"
+        Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
+        '
+        'TabPage8
+        '
+        Me.TabPage8.Controls.Add(Me.Button10)
+        Me.TabPage8.Controls.Add(Me.Button11)
+        Me.TabPage8.Controls.Add(Me.CheckBox30)
+        Me.TabPage8.Controls.Add(Me.ComboBox19)
+        Me.TabPage8.Controls.Add(Me.DataGridView4)
+        Me.TabPage8.Controls.Add(Me.Label36)
+        Me.TabPage8.Controls.Add(Me.Button12)
+        Me.TabPage8.Controls.Add(Me.TextBox5)
+        Me.TabPage8.Controls.Add(Me.Label37)
+        Me.TabPage8.Controls.Add(Me.TextBox6)
+        Me.TabPage8.Controls.Add(Me.Label38)
+        Me.TabPage8.Location = New System.Drawing.Point(4, 23)
+        Me.TabPage8.Name = "TabPage8"
+        Me.TabPage8.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage8.Size = New System.Drawing.Size(902, 517)
+        Me.TabPage8.TabIndex = 0
+        Me.TabPage8.Text = "年度日出日落表"
+        Me.TabPage8.UseVisualStyleBackColor = True
+        '
+        'Button10
+        '
+        Me.Button10.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Button10.Location = New System.Drawing.Point(543, 470)
+        Me.Button10.Name = "Button10"
+        Me.Button10.Size = New System.Drawing.Size(125, 27)
+        Me.Button10.TabIndex = 17
+        Me.Button10.Text = "导出时刻表"
+        Me.Button10.UseVisualStyleBackColor = True
+        '
+        'Button11
+        '
+        Me.Button11.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Button11.Location = New System.Drawing.Point(396, 470)
+        Me.Button11.Name = "Button11"
+        Me.Button11.Size = New System.Drawing.Size(125, 27)
+        Me.Button11.TabIndex = 16
+        Me.Button11.Text = "日出日落时刻表"
+        Me.Button11.UseVisualStyleBackColor = True
+        '
+        'CheckBox30
+        '
+        Me.CheckBox30.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.CheckBox30.AutoSize = True
+        Me.CheckBox30.Location = New System.Drawing.Point(712, 426)
+        Me.CheckBox30.Name = "CheckBox30"
+        Me.CheckBox30.Size = New System.Drawing.Size(144, 16)
+        Me.CheckBox30.TabIndex = 15
+        Me.CheckBox30.Text = "记录当前日出日落时间"
+        Me.CheckBox30.UseVisualStyleBackColor = True
+        '
+        'ComboBox19
+        '
+        Me.ComboBox19.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.ComboBox19.FormattingEnabled = True
+        Me.ComboBox19.Items.AddRange(New Object() {"2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020"})
+        Me.ComboBox19.Location = New System.Drawing.Point(94, 424)
+        Me.ComboBox19.Name = "ComboBox19"
+        Me.ComboBox19.Size = New System.Drawing.Size(121, 20)
+        Me.ComboBox19.TabIndex = 14
+        '
+        'DataGridView4
+        '
+        Me.DataGridView4.AllowUserToAddRows = False
+        Me.DataGridView4.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView4.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn15, Me.DataGridViewTextBoxColumn16, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn18, Me.DataGridViewTextBoxColumn19, Me.DataGridViewTextBoxColumn20, Me.DataGridViewTextBoxColumn21, Me.DataGridViewTextBoxColumn22, Me.DataGridViewTextBoxColumn23, Me.DataGridViewTextBoxColumn24, Me.DataGridViewTextBoxColumn25, Me.DataGridViewTextBoxColumn26, Me.DataGridViewTextBoxColumn27})
+        Me.DataGridView4.Location = New System.Drawing.Point(3, 6)
+        Me.DataGridView4.Name = "DataGridView4"
+        Me.DataGridView4.RowTemplate.Height = 23
+        Me.DataGridView4.Size = New System.Drawing.Size(893, 395)
+        Me.DataGridView4.TabIndex = 12
+        '
+        'DataGridViewTextBoxColumn15
+        '
+        Me.DataGridViewTextBoxColumn15.HeaderText = "日期"
+        Me.DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15"
+        Me.DataGridViewTextBoxColumn15.Width = 150
+        '
+        'DataGridViewTextBoxColumn16
+        '
+        Me.DataGridViewTextBoxColumn16.HeaderText = "1月"
+        Me.DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16"
+        '
+        'DataGridViewTextBoxColumn17
+        '
+        Me.DataGridViewTextBoxColumn17.HeaderText = "2月"
+        Me.DataGridViewTextBoxColumn17.Name = "DataGridViewTextBoxColumn17"
+        '
+        'DataGridViewTextBoxColumn18
+        '
+        Me.DataGridViewTextBoxColumn18.HeaderText = "3月"
+        Me.DataGridViewTextBoxColumn18.Name = "DataGridViewTextBoxColumn18"
+        '
+        'DataGridViewTextBoxColumn19
+        '
+        Me.DataGridViewTextBoxColumn19.HeaderText = "4月"
+        Me.DataGridViewTextBoxColumn19.Name = "DataGridViewTextBoxColumn19"
+        '
+        'DataGridViewTextBoxColumn20
+        '
+        Me.DataGridViewTextBoxColumn20.HeaderText = "5月"
+        Me.DataGridViewTextBoxColumn20.Name = "DataGridViewTextBoxColumn20"
+        '
+        'DataGridViewTextBoxColumn21
+        '
+        Me.DataGridViewTextBoxColumn21.HeaderText = "6月"
+        Me.DataGridViewTextBoxColumn21.Name = "DataGridViewTextBoxColumn21"
+        '
+        'DataGridViewTextBoxColumn22
+        '
+        Me.DataGridViewTextBoxColumn22.HeaderText = "7月"
+        Me.DataGridViewTextBoxColumn22.Name = "DataGridViewTextBoxColumn22"
+        '
+        'DataGridViewTextBoxColumn23
+        '
+        Me.DataGridViewTextBoxColumn23.HeaderText = "8月"
+        Me.DataGridViewTextBoxColumn23.Name = "DataGridViewTextBoxColumn23"
+        '
+        'DataGridViewTextBoxColumn24
+        '
+        Me.DataGridViewTextBoxColumn24.HeaderText = "9月"
+        Me.DataGridViewTextBoxColumn24.Name = "DataGridViewTextBoxColumn24"
+        '
+        'DataGridViewTextBoxColumn25
+        '
+        Me.DataGridViewTextBoxColumn25.HeaderText = "10月"
+        Me.DataGridViewTextBoxColumn25.Name = "DataGridViewTextBoxColumn25"
+        '
+        'DataGridViewTextBoxColumn26
+        '
+        Me.DataGridViewTextBoxColumn26.HeaderText = "11月"
+        Me.DataGridViewTextBoxColumn26.Name = "DataGridViewTextBoxColumn26"
+        '
+        'DataGridViewTextBoxColumn27
+        '
+        Me.DataGridViewTextBoxColumn27.HeaderText = "12月"
+        Me.DataGridViewTextBoxColumn27.Name = "DataGridViewTextBoxColumn27"
+        '
+        'Label36
+        '
+        Me.Label36.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label36.AutoSize = True
+        Me.Label36.Location = New System.Drawing.Point(39, 432)
+        Me.Label36.Name = "Label36"
+        Me.Label36.Size = New System.Drawing.Size(41, 12)
+        Me.Label36.TabIndex = 13
+        Me.Label36.Text = "年份："
+        '
+        'Button12
+        '
+        Me.Button12.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Button12.Location = New System.Drawing.Point(235, 470)
+        Me.Button12.Name = "Button12"
+        Me.Button12.Size = New System.Drawing.Size(125, 27)
+        Me.Button12.TabIndex = 11
+        Me.Button12.Text = "时刻查询"
+        Me.Button12.UseVisualStyleBackColor = True
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.TextBox5.Location = New System.Drawing.Point(551, 423)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(116, 21)
+        Me.TextBox5.TabIndex = 1
+        '
+        'Label37
+        '
+        Me.Label37.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label37.AutoSize = True
+        Me.Label37.Location = New System.Drawing.Point(496, 432)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(41, 12)
+        Me.Label37.TabIndex = 6
+        Me.Label37.Text = "纬度："
+        '
+        'TextBox6
+        '
+        Me.TextBox6.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.TextBox6.Location = New System.Drawing.Point(335, 423)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(116, 21)
+        Me.TextBox6.TabIndex = 0
+        '
+        'Label38
+        '
+        Me.Label38.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label38.AutoSize = True
+        Me.Label38.Location = New System.Drawing.Point(280, 432)
+        Me.Label38.Name = "Label38"
+        Me.Label38.Size = New System.Drawing.Size(41, 12)
+        Me.Label38.TabIndex = 5
+        Me.Label38.Text = "经度："
+        '
+        'TabPage9
+        '
+        Me.TabPage9.Controls.Add(Me.GroupBox22)
+        Me.TabPage9.Controls.Add(Me.GroupBox23)
+        Me.TabPage9.Controls.Add(Me.GroupBox24)
+        Me.TabPage9.Controls.Add(Me.GroupBox25)
+        Me.TabPage9.Controls.Add(Me.Button13)
+        Me.TabPage9.Controls.Add(Me.GroupBox26)
+        Me.TabPage9.Controls.Add(Me.GroupBox27)
+        Me.TabPage9.Controls.Add(Me.RadioButton25)
+        Me.TabPage9.Controls.Add(Me.TreeView1)
+        Me.TabPage9.Controls.Add(Me.RadioButton26)
+        Me.TabPage9.Controls.Add(Me.GroupBox28)
+        Me.TabPage9.Location = New System.Drawing.Point(4, 23)
+        Me.TabPage9.Name = "TabPage9"
+        Me.TabPage9.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage9.Size = New System.Drawing.Size(902, 517)
+        Me.TabPage9.TabIndex = 4
+        Me.TabPage9.Text = "自动开关列表"
+        Me.TabPage9.UseVisualStyleBackColor = True
+        '
+        'GroupBox22
+        '
+        Me.GroupBox22.Controls.Add(Me.CheckBox31)
+        Me.GroupBox22.Controls.Add(Me.CheckBox32)
+        Me.GroupBox22.Controls.Add(Me.CheckBox33)
+        Me.GroupBox22.Enabled = False
+        Me.GroupBox22.Location = New System.Drawing.Point(284, 376)
+        Me.GroupBox22.Name = "GroupBox22"
+        Me.GroupBox22.Size = New System.Drawing.Size(147, 83)
+        Me.GroupBox22.TabIndex = 161
+        Me.GroupBox22.TabStop = False
+        '
+        'CheckBox31
+        '
+        Me.CheckBox31.AutoSize = True
+        Me.CheckBox31.Location = New System.Drawing.Point(11, 61)
+        Me.CheckBox31.Name = "CheckBox31"
+        Me.CheckBox31.Size = New System.Drawing.Size(108, 16)
+        Me.CheckBox31.TabIndex = 163
+        Me.CheckBox31.Text = "节假日控制模式"
+        Me.CheckBox31.UseVisualStyleBackColor = True
+        '
+        'CheckBox32
+        '
+        Me.CheckBox32.AutoSize = True
+        Me.CheckBox32.Location = New System.Drawing.Point(11, 37)
+        Me.CheckBox32.Name = "CheckBox32"
+        Me.CheckBox32.Size = New System.Drawing.Size(96, 16)
+        Me.CheckBox32.TabIndex = 162
+        Me.CheckBox32.Text = "特殊控制模式"
+        Me.CheckBox32.UseVisualStyleBackColor = True
+        '
+        'CheckBox33
+        '
+        Me.CheckBox33.AutoSize = True
+        Me.CheckBox33.Location = New System.Drawing.Point(11, 13)
+        Me.CheckBox33.Name = "CheckBox33"
+        Me.CheckBox33.Size = New System.Drawing.Size(108, 16)
+        Me.CheckBox33.TabIndex = 161
+        Me.CheckBox33.Text = "经纬度控制模式"
+        Me.CheckBox33.UseVisualStyleBackColor = True
+        '
+        'GroupBox23
+        '
+        Me.GroupBox23.Controls.Add(Me.RadioButton21)
+        Me.GroupBox23.Controls.Add(Me.RadioButton22)
+        Me.GroupBox23.Location = New System.Drawing.Point(284, 316)
+        Me.GroupBox23.Name = "GroupBox23"
+        Me.GroupBox23.Size = New System.Drawing.Size(147, 59)
+        Me.GroupBox23.TabIndex = 160
+        Me.GroupBox23.TabStop = False
+        '
+        'RadioButton21
+        '
+        Me.RadioButton21.AutoSize = True
+        Me.RadioButton21.Location = New System.Drawing.Point(6, 36)
+        Me.RadioButton21.Name = "RadioButton21"
+        Me.RadioButton21.Size = New System.Drawing.Size(47, 16)
+        Me.RadioButton21.TabIndex = 157
+        Me.RadioButton21.Text = "删除"
+        Me.RadioButton21.UseVisualStyleBackColor = True
+        '
+        'RadioButton22
+        '
+        Me.RadioButton22.AutoSize = True
+        Me.RadioButton22.Checked = True
+        Me.RadioButton22.Location = New System.Drawing.Point(6, 12)
+        Me.RadioButton22.Name = "RadioButton22"
+        Me.RadioButton22.Size = New System.Drawing.Size(47, 16)
+        Me.RadioButton22.TabIndex = 156
+        Me.RadioButton22.TabStop = True
+        Me.RadioButton22.Text = "查询"
+        Me.RadioButton22.UseVisualStyleBackColor = True
+        '
+        'GroupBox24
+        '
+        Me.GroupBox24.Controls.Add(Me.DataGridView5)
+        Me.GroupBox24.Location = New System.Drawing.Point(449, 387)
+        Me.GroupBox24.Name = "GroupBox24"
+        Me.GroupBox24.Size = New System.Drawing.Size(438, 124)
+        Me.GroupBox24.TabIndex = 159
+        Me.GroupBox24.TabStop = False
+        Me.GroupBox24.Text = "节假日控制时刻表"
+        '
+        'DataGridView5
+        '
+        Me.DataGridView5.AllowUserToAddRows = False
+        Me.DataGridView5.BackgroundColor = System.Drawing.Color.WhiteSmoke
+        Me.DataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView5.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn28, Me.DataGridViewTextBoxColumn29, Me.DataGridViewTextBoxColumn30})
+        Me.DataGridView5.Location = New System.Drawing.Point(12, 22)
+        Me.DataGridView5.Name = "DataGridView5"
+        Me.DataGridView5.RowTemplate.Height = 23
+        Me.DataGridView5.Size = New System.Drawing.Size(417, 95)
+        Me.DataGridView5.TabIndex = 0
+        '
+        'DataGridViewTextBoxColumn28
+        '
+        Me.DataGridViewTextBoxColumn28.HeaderText = "编号"
+        Me.DataGridViewTextBoxColumn28.Name = "DataGridViewTextBoxColumn28"
+        Me.DataGridViewTextBoxColumn28.Width = 60
+        '
+        'DataGridViewTextBoxColumn29
+        '
+        Me.DataGridViewTextBoxColumn29.HeaderText = "时间"
+        Me.DataGridViewTextBoxColumn29.Name = "DataGridViewTextBoxColumn29"
+        Me.DataGridViewTextBoxColumn29.Width = 170
+        '
+        'DataGridViewTextBoxColumn30
+        '
+        Me.DataGridViewTextBoxColumn30.HeaderText = "控制方式"
+        Me.DataGridViewTextBoxColumn30.Name = "DataGridViewTextBoxColumn30"
+        Me.DataGridViewTextBoxColumn30.Width = 150
+        '
+        'GroupBox25
+        '
+        Me.GroupBox25.Controls.Add(Me.DataGridView6)
+        Me.GroupBox25.Location = New System.Drawing.Point(449, 207)
+        Me.GroupBox25.Name = "GroupBox25"
+        Me.GroupBox25.Size = New System.Drawing.Size(438, 176)
+        Me.GroupBox25.TabIndex = 158
+        Me.GroupBox25.TabStop = False
+        Me.GroupBox25.Text = "特殊控制时刻表"
+        '
+        'DataGridView6
+        '
+        Me.DataGridView6.AllowUserToAddRows = False
+        Me.DataGridView6.BackgroundColor = System.Drawing.Color.WhiteSmoke
+        Me.DataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView6.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn31, Me.DataGridViewTextBoxColumn32, Me.DataGridViewTextBoxColumn33, Me.DataGridViewTextBoxColumn34, Me.DataGridViewTextBoxColumn35, Me.DataGridViewTextBoxColumn36})
+        Me.DataGridView6.Location = New System.Drawing.Point(12, 22)
+        Me.DataGridView6.Name = "DataGridView6"
+        Me.DataGridView6.RowTemplate.Height = 23
+        Me.DataGridView6.Size = New System.Drawing.Size(420, 146)
+        Me.DataGridView6.TabIndex = 0
+        '
+        'DataGridViewTextBoxColumn31
+        '
+        Me.DataGridViewTextBoxColumn31.HeaderText = "编号"
+        Me.DataGridViewTextBoxColumn31.Name = "DataGridViewTextBoxColumn31"
+        Me.DataGridViewTextBoxColumn31.Width = 60
+        '
+        'DataGridViewTextBoxColumn32
+        '
+        Me.DataGridViewTextBoxColumn32.HeaderText = "星期"
+        Me.DataGridViewTextBoxColumn32.Name = "DataGridViewTextBoxColumn32"
+        Me.DataGridViewTextBoxColumn32.Width = 60
+        '
+        'DataGridViewTextBoxColumn33
+        '
+        Me.DataGridViewTextBoxColumn33.HeaderText = "小时"
+        Me.DataGridViewTextBoxColumn33.Name = "DataGridViewTextBoxColumn33"
+        Me.DataGridViewTextBoxColumn33.Width = 60
+        '
+        'DataGridViewTextBoxColumn34
+        '
+        Me.DataGridViewTextBoxColumn34.HeaderText = "分钟"
+        Me.DataGridViewTextBoxColumn34.Name = "DataGridViewTextBoxColumn34"
+        Me.DataGridViewTextBoxColumn34.Width = 60
+        '
+        'DataGridViewTextBoxColumn35
+        '
+        Me.DataGridViewTextBoxColumn35.HeaderText = "秒"
+        Me.DataGridViewTextBoxColumn35.Name = "DataGridViewTextBoxColumn35"
+        Me.DataGridViewTextBoxColumn35.Width = 60
+        '
+        'DataGridViewTextBoxColumn36
+        '
+        Me.DataGridViewTextBoxColumn36.HeaderText = "控制方式"
+        Me.DataGridViewTextBoxColumn36.Name = "DataGridViewTextBoxColumn36"
+        '
+        'Button13
+        '
+        Me.Button13.Location = New System.Drawing.Point(321, 470)
+        Me.Button13.Name = "Button13"
+        Me.Button13.Size = New System.Drawing.Size(77, 26)
+        Me.Button13.TabIndex = 157
+        Me.Button13.Text = "操作"
+        Me.Button13.UseVisualStyleBackColor = True
+        '
+        'GroupBox26
+        '
+        Me.GroupBox26.Controls.Add(Me.RadioButton23)
+        Me.GroupBox26.Controls.Add(Me.RadioButton24)
+        Me.GroupBox26.Enabled = False
+        Me.GroupBox26.Location = New System.Drawing.Point(284, 70)
+        Me.GroupBox26.Name = "GroupBox26"
+        Me.GroupBox26.Size = New System.Drawing.Size(147, 96)
+        Me.GroupBox26.TabIndex = 156
+        Me.GroupBox26.TabStop = False
+        Me.GroupBox26.Text = "整体控制"
+        '
+        'RadioButton23
+        '
+        Me.RadioButton23.AutoSize = True
+        Me.RadioButton23.Location = New System.Drawing.Point(6, 61)
+        Me.RadioButton23.Name = "RadioButton23"
+        Me.RadioButton23.Size = New System.Drawing.Size(47, 16)
+        Me.RadioButton23.TabIndex = 85
+        Me.RadioButton23.Text = "终端"
+        Me.RadioButton23.UseVisualStyleBackColor = True
+        '
+        'RadioButton24
+        '
+        Me.RadioButton24.AutoSize = True
+        Me.RadioButton24.Checked = True
+        Me.RadioButton24.Location = New System.Drawing.Point(6, 22)
+        Me.RadioButton24.Name = "RadioButton24"
+        Me.RadioButton24.Size = New System.Drawing.Size(83, 16)
+        Me.RadioButton24.TabIndex = 84
+        Me.RadioButton24.TabStop = True
+        Me.RadioButton24.Text = "主控箱节点"
+        Me.RadioButton24.UseVisualStyleBackColor = True
+        '
+        'GroupBox27
+        '
+        Me.GroupBox27.Controls.Add(Me.DataGridView7)
+        Me.GroupBox27.Location = New System.Drawing.Point(449, 6)
+        Me.GroupBox27.Name = "GroupBox27"
+        Me.GroupBox27.Size = New System.Drawing.Size(438, 195)
+        Me.GroupBox27.TabIndex = 153
+        Me.GroupBox27.TabStop = False
+        Me.GroupBox27.Text = "未来一周经纬度开关灯时刻表"
+        '
+        'DataGridView7
+        '
+        Me.DataGridView7.AllowUserToAddRows = False
+        Me.DataGridView7.BackgroundColor = System.Drawing.Color.WhiteSmoke
+        Me.DataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView7.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn37, Me.DataGridViewTextBoxColumn38, Me.DataGridViewTextBoxColumn39})
+        Me.DataGridView7.Location = New System.Drawing.Point(12, 22)
+        Me.DataGridView7.Name = "DataGridView7"
+        Me.DataGridView7.RowTemplate.Height = 23
+        Me.DataGridView7.Size = New System.Drawing.Size(417, 164)
+        Me.DataGridView7.TabIndex = 152
+        '
+        'DataGridViewTextBoxColumn37
+        '
+        Me.DataGridViewTextBoxColumn37.HeaderText = "星期"
+        Me.DataGridViewTextBoxColumn37.Name = "DataGridViewTextBoxColumn37"
+        '
+        'DataGridViewTextBoxColumn38
+        '
+        Me.DataGridViewTextBoxColumn38.HeaderText = "开灯时间"
+        Me.DataGridViewTextBoxColumn38.Name = "DataGridViewTextBoxColumn38"
+        Me.DataGridViewTextBoxColumn38.Width = 150
+        '
+        'DataGridViewTextBoxColumn39
+        '
+        Me.DataGridViewTextBoxColumn39.HeaderText = "关灯时间"
+        Me.DataGridViewTextBoxColumn39.Name = "DataGridViewTextBoxColumn39"
+        Me.DataGridViewTextBoxColumn39.Width = 150
+        '
+        'RadioButton25
+        '
+        Me.RadioButton25.AutoSize = True
+        Me.RadioButton25.Checked = True
+        Me.RadioButton25.Location = New System.Drawing.Point(290, 38)
+        Me.RadioButton25.Name = "RadioButton25"
+        Me.RadioButton25.Size = New System.Drawing.Size(71, 16)
+        Me.RadioButton25.TabIndex = 155
+        Me.RadioButton25.TabStop = True
+        Me.RadioButton25.Text = "回路控制"
+        Me.RadioButton25.UseVisualStyleBackColor = True
+        '
+        'TreeView1
+        '
+        Me.TreeView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TreeView1.LineColor = System.Drawing.Color.Empty
+        Me.TreeView1.Location = New System.Drawing.Point(3, 3)
+        Me.TreeView1.Name = "TreeView1"
+        Me.TreeView1.Size = New System.Drawing.Size(259, 508)
+        Me.TreeView1.TabIndex = 1
+        '
+        'RadioButton26
+        '
+        Me.RadioButton26.AutoSize = True
+        Me.RadioButton26.Location = New System.Drawing.Point(290, 14)
+        Me.RadioButton26.Name = "RadioButton26"
+        Me.RadioButton26.Size = New System.Drawing.Size(71, 16)
+        Me.RadioButton26.TabIndex = 154
+        Me.RadioButton26.Text = "整体控制"
+        Me.RadioButton26.UseVisualStyleBackColor = True
+        '
+        'GroupBox28
+        '
+        Me.GroupBox28.Controls.Add(Me.RadioButton27)
+        Me.GroupBox28.Controls.Add(Me.RadioButton28)
+        Me.GroupBox28.Controls.Add(Me.RadioButton29)
+        Me.GroupBox28.Controls.Add(Me.RadioButton30)
+        Me.GroupBox28.Controls.Add(Me.RadioButton31)
+        Me.GroupBox28.Controls.Add(Me.RadioButton32)
+        Me.GroupBox28.Location = New System.Drawing.Point(284, 172)
+        Me.GroupBox28.Name = "GroupBox28"
+        Me.GroupBox28.Size = New System.Drawing.Size(147, 138)
+        Me.GroupBox28.TabIndex = 153
+        Me.GroupBox28.TabStop = False
+        Me.GroupBox28.Text = "回路控制"
+        '
+        'RadioButton27
+        '
+        Me.RadioButton27.AutoSize = True
+        Me.RadioButton27.Location = New System.Drawing.Point(82, 98)
+        Me.RadioButton27.Name = "RadioButton27"
+        Me.RadioButton27.Size = New System.Drawing.Size(35, 16)
+        Me.RadioButton27.TabIndex = 93
+        Me.RadioButton27.Text = "K6"
+        Me.RadioButton27.UseVisualStyleBackColor = True
+        '
+        'RadioButton28
+        '
+        Me.RadioButton28.AutoSize = True
+        Me.RadioButton28.Location = New System.Drawing.Point(6, 98)
+        Me.RadioButton28.Name = "RadioButton28"
+        Me.RadioButton28.Size = New System.Drawing.Size(35, 16)
+        Me.RadioButton28.TabIndex = 92
+        Me.RadioButton28.Text = "K5"
+        Me.RadioButton28.UseVisualStyleBackColor = True
+        '
+        'RadioButton29
+        '
+        Me.RadioButton29.AutoSize = True
+        Me.RadioButton29.Location = New System.Drawing.Point(82, 56)
+        Me.RadioButton29.Name = "RadioButton29"
+        Me.RadioButton29.Size = New System.Drawing.Size(35, 16)
+        Me.RadioButton29.TabIndex = 91
+        Me.RadioButton29.Text = "K4"
+        Me.RadioButton29.UseVisualStyleBackColor = True
+        '
+        'RadioButton30
+        '
+        Me.RadioButton30.AutoSize = True
+        Me.RadioButton30.Location = New System.Drawing.Point(6, 56)
+        Me.RadioButton30.Name = "RadioButton30"
+        Me.RadioButton30.Size = New System.Drawing.Size(35, 16)
+        Me.RadioButton30.TabIndex = 90
+        Me.RadioButton30.Text = "K3"
+        Me.RadioButton30.UseVisualStyleBackColor = True
+        '
+        'RadioButton31
+        '
+        Me.RadioButton31.AutoSize = True
+        Me.RadioButton31.Location = New System.Drawing.Point(82, 22)
+        Me.RadioButton31.Name = "RadioButton31"
+        Me.RadioButton31.Size = New System.Drawing.Size(35, 16)
+        Me.RadioButton31.TabIndex = 89
+        Me.RadioButton31.Text = "K2"
+        Me.RadioButton31.UseVisualStyleBackColor = True
+        '
+        'RadioButton32
+        '
+        Me.RadioButton32.AutoSize = True
+        Me.RadioButton32.Checked = True
+        Me.RadioButton32.Location = New System.Drawing.Point(6, 22)
+        Me.RadioButton32.Name = "RadioButton32"
+        Me.RadioButton32.Size = New System.Drawing.Size(35, 16)
+        Me.RadioButton32.TabIndex = 88
+        Me.RadioButton32.TabStop = True
+        Me.RadioButton32.Text = "K1"
+        Me.RadioButton32.UseVisualStyleBackColor = True
+        '
+        'TabPage10
+        '
+        Me.TabPage10.Controls.Add(Me.CheckBox34)
+        Me.TabPage10.Controls.Add(Me.GroupBox29)
+        Me.TabPage10.Controls.Add(Me.GroupBox30)
+        Me.TabPage10.Controls.Add(Me.GroupBox31)
+        Me.TabPage10.Location = New System.Drawing.Point(4, 23)
+        Me.TabPage10.Name = "TabPage10"
+        Me.TabPage10.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage10.Size = New System.Drawing.Size(902, 517)
+        Me.TabPage10.TabIndex = 1
+        Me.TabPage10.Text = "全夜灯模式设置"
+        Me.TabPage10.UseVisualStyleBackColor = True
+        '
+        'CheckBox34
+        '
+        Me.CheckBox34.AutoSize = True
+        Me.CheckBox34.Location = New System.Drawing.Point(742, 25)
+        Me.CheckBox34.Name = "CheckBox34"
+        Me.CheckBox34.Size = New System.Drawing.Size(96, 16)
+        Me.CheckBox34.TabIndex = 163
+        Me.CheckBox34.Text = "模式参数设置"
+        Me.CheckBox34.UseVisualStyleBackColor = True
+        '
+        'GroupBox29
+        '
+        Me.GroupBox29.Controls.Add(Me.Button14)
+        Me.GroupBox29.Controls.Add(Me.ComboBox20)
+        Me.GroupBox29.Enabled = False
+        Me.GroupBox29.Location = New System.Drawing.Point(739, 58)
+        Me.GroupBox29.Name = "GroupBox29"
+        Me.GroupBox29.Size = New System.Drawing.Size(157, 119)
+        Me.GroupBox29.TabIndex = 162
+        Me.GroupBox29.TabStop = False
+        Me.GroupBox29.Text = "控制级别设置"
+        '
+        'Button14
+        '
+        Me.Button14.Location = New System.Drawing.Point(39, 87)
+        Me.Button14.Name = "Button14"
+        Me.Button14.Size = New System.Drawing.Size(75, 23)
+        Me.Button14.TabIndex = 162
+        Me.Button14.Text = "设置"
+        Me.Button14.UseVisualStyleBackColor = True
+        '
+        'ComboBox20
+        '
+        Me.ComboBox20.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox20.FormattingEnabled = True
+        Me.ComboBox20.Items.AddRange(New Object() {"时间控制模式", "光照控制模式"})
+        Me.ComboBox20.Location = New System.Drawing.Point(25, 36)
+        Me.ComboBox20.Name = "ComboBox20"
+        Me.ComboBox20.Size = New System.Drawing.Size(100, 20)
+        Me.ComboBox20.TabIndex = 151
+        '
+        'GroupBox30
+        '
+        Me.GroupBox30.Controls.Add(Me.CheckBox35)
+        Me.GroupBox30.Controls.Add(Me.Button15)
+        Me.GroupBox30.Controls.Add(Me.CheckBox36)
+        Me.GroupBox30.Controls.Add(Me.CheckBox37)
+        Me.GroupBox30.Enabled = False
+        Me.GroupBox30.Location = New System.Drawing.Point(739, 183)
+        Me.GroupBox30.Name = "GroupBox30"
+        Me.GroupBox30.Size = New System.Drawing.Size(157, 184)
+        Me.GroupBox30.TabIndex = 153
+        Me.GroupBox30.TabStop = False
+        Me.GroupBox30.Text = "模式组合"
+        '
+        'CheckBox35
+        '
+        Me.CheckBox35.AutoSize = True
+        Me.CheckBox35.Location = New System.Drawing.Point(9, 100)
+        Me.CheckBox35.Name = "CheckBox35"
+        Me.CheckBox35.Size = New System.Drawing.Size(108, 16)
+        Me.CheckBox35.TabIndex = 2
+        Me.CheckBox35.Text = "节假日控制模式"
+        Me.CheckBox35.UseVisualStyleBackColor = True
+        '
+        'Button15
+        '
+        Me.Button15.Location = New System.Drawing.Point(39, 147)
+        Me.Button15.Name = "Button15"
+        Me.Button15.Size = New System.Drawing.Size(75, 23)
+        Me.Button15.TabIndex = 161
+        Me.Button15.Text = "设置"
+        Me.Button15.UseVisualStyleBackColor = True
+        '
+        'CheckBox36
+        '
+        Me.CheckBox36.AutoSize = True
+        Me.CheckBox36.Location = New System.Drawing.Point(9, 66)
+        Me.CheckBox36.Name = "CheckBox36"
+        Me.CheckBox36.Size = New System.Drawing.Size(96, 16)
+        Me.CheckBox36.TabIndex = 1
+        Me.CheckBox36.Text = "特殊控制模式"
+        Me.CheckBox36.UseVisualStyleBackColor = True
+        '
+        'CheckBox37
+        '
+        Me.CheckBox37.AutoSize = True
+        Me.CheckBox37.Location = New System.Drawing.Point(9, 32)
+        Me.CheckBox37.Name = "CheckBox37"
+        Me.CheckBox37.Size = New System.Drawing.Size(108, 16)
+        Me.CheckBox37.TabIndex = 0
+        Me.CheckBox37.Text = "经纬度控制模式"
+        Me.CheckBox37.UseVisualStyleBackColor = True
+        '
+        'GroupBox31
+        '
+        Me.GroupBox31.Controls.Add(Me.RadioButton33)
+        Me.GroupBox31.Controls.Add(Me.RadioButton34)
+        Me.GroupBox31.Controls.Add(Me.TextBox7)
+        Me.GroupBox31.Controls.Add(Me.Label39)
+        Me.GroupBox31.Controls.Add(Me.Label40)
+        Me.GroupBox31.Controls.Add(Me.TextBox8)
+        Me.GroupBox31.Controls.Add(Me.Label41)
+        Me.GroupBox31.Controls.Add(Me.ComboBox21)
+        Me.GroupBox31.Controls.Add(Me.Label42)
+        Me.GroupBox31.Controls.Add(Me.CheckBox38)
+        Me.GroupBox31.Controls.Add(Me.Button16)
+        Me.GroupBox31.Controls.Add(Me.CheckedListBox4)
+        Me.GroupBox31.Controls.Add(Me.CheckBox39)
+        Me.GroupBox31.Controls.Add(Me.CheckBox40)
+        Me.GroupBox31.Controls.Add(Me.CheckBox41)
+        Me.GroupBox31.Controls.Add(Me.ComboBox22)
+        Me.GroupBox31.Controls.Add(Me.Label43)
+        Me.GroupBox31.Controls.Add(Me.Label44)
+        Me.GroupBox31.Controls.Add(Me.DataGridView8)
+        Me.GroupBox31.Controls.Add(Me.ComboBox23)
+        Me.GroupBox31.Controls.Add(Me.ComboBox24)
+        Me.GroupBox31.Controls.Add(Me.ComboBox25)
+        Me.GroupBox31.Controls.Add(Me.Label45)
+        Me.GroupBox31.Controls.Add(Me.Label46)
+        Me.GroupBox31.Controls.Add(Me.ComboBox26)
+        Me.GroupBox31.Controls.Add(Me.Label47)
+        Me.GroupBox31.Location = New System.Drawing.Point(6, 6)
+        Me.GroupBox31.Name = "GroupBox31"
+        Me.GroupBox31.Size = New System.Drawing.Size(717, 491)
+        Me.GroupBox31.TabIndex = 146
+        Me.GroupBox31.TabStop = False
+        '
+        'RadioButton33
+        '
+        Me.RadioButton33.AutoSize = True
+        Me.RadioButton33.Checked = True
+        Me.RadioButton33.Enabled = False
+        Me.RadioButton33.Location = New System.Drawing.Point(655, 23)
+        Me.RadioButton33.Name = "RadioButton33"
+        Me.RadioButton33.Size = New System.Drawing.Size(47, 16)
+        Me.RadioButton33.TabIndex = 168
+        Me.RadioButton33.TabStop = True
+        Me.RadioButton33.Text = "清空"
+        Me.RadioButton33.UseVisualStyleBackColor = True
+        '
+        'RadioButton34
+        '
+        Me.RadioButton34.AutoSize = True
+        Me.RadioButton34.Enabled = False
+        Me.RadioButton34.Location = New System.Drawing.Point(579, 22)
+        Me.RadioButton34.Name = "RadioButton34"
+        Me.RadioButton34.Size = New System.Drawing.Size(47, 16)
+        Me.RadioButton34.TabIndex = 167
+        Me.RadioButton34.Text = "全选"
+        Me.RadioButton34.UseVisualStyleBackColor = True
+        '
+        'TextBox7
+        '
+        Me.TextBox7.Enabled = False
+        Me.TextBox7.Location = New System.Drawing.Point(215, 165)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(97, 21)
+        Me.TextBox7.TabIndex = 3
+        '
+        'Label39
+        '
+        Me.Label39.AutoSize = True
+        Me.Label39.Location = New System.Drawing.Point(118, 170)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(77, 12)
+        Me.Label39.TabIndex = 1
+        Me.Label39.Text = "关灯偏移量："
+        '
+        'Label40
+        '
+        Me.Label40.AutoSize = True
+        Me.Label40.BackColor = System.Drawing.Color.Transparent
+        Me.Label40.Location = New System.Drawing.Point(441, 429)
+        Me.Label40.Name = "Label40"
+        Me.Label40.Size = New System.Drawing.Size(125, 12)
+        Me.Label40.TabIndex = 164
+        Me.Label40.Text = "景观灯编号的前半部分"
+        Me.Label40.Visible = False
+        '
+        'TextBox8
+        '
+        Me.TextBox8.Enabled = False
+        Me.TextBox8.Location = New System.Drawing.Point(215, 127)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.Size = New System.Drawing.Size(97, 21)
+        Me.TextBox8.TabIndex = 2
+        '
+        'Label41
+        '
+        Me.Label41.AutoSize = True
+        Me.Label41.BackColor = System.Drawing.Color.Transparent
+        Me.Label41.Location = New System.Drawing.Point(19, 91)
+        Me.Label41.Name = "Label41"
+        Me.Label41.Size = New System.Drawing.Size(65, 12)
+        Me.Label41.TabIndex = 163
+        Me.Label41.Text = "类型名称："
+        '
+        'ComboBox21
+        '
+        Me.ComboBox21.FormattingEnabled = True
+        Me.ComboBox21.Location = New System.Drawing.Point(102, 83)
+        Me.ComboBox21.Name = "ComboBox21"
+        Me.ComboBox21.Size = New System.Drawing.Size(98, 20)
+        Me.ComboBox21.TabIndex = 162
+        '
+        'Label42
+        '
+        Me.Label42.AutoSize = True
+        Me.Label42.Location = New System.Drawing.Point(118, 130)
+        Me.Label42.Name = "Label42"
+        Me.Label42.Size = New System.Drawing.Size(77, 12)
+        Me.Label42.TabIndex = 0
+        Me.Label42.Text = "开灯偏移量："
+        '
+        'CheckBox38
+        '
+        Me.CheckBox38.AutoSize = True
+        Me.CheckBox38.Location = New System.Drawing.Point(22, 199)
+        Me.CheckBox38.Name = "CheckBox38"
+        Me.CheckBox38.Size = New System.Drawing.Size(144, 16)
+        Me.CheckBox38.TabIndex = 161
+        Me.CheckBox38.Text = "显示未来一周时刻设置"
+        Me.CheckBox38.UseVisualStyleBackColor = True
+        '
+        'Button16
+        '
+        Me.Button16.Location = New System.Drawing.Point(533, 446)
+        Me.Button16.Name = "Button16"
+        Me.Button16.Size = New System.Drawing.Size(75, 23)
+        Me.Button16.TabIndex = 160
+        Me.Button16.Text = "设置"
+        Me.Button16.UseVisualStyleBackColor = True
+        '
+        'CheckedListBox4
+        '
+        Me.CheckedListBox4.Enabled = False
+        Me.CheckedListBox4.FormattingEnabled = True
+        Me.CheckedListBox4.Location = New System.Drawing.Point(441, 47)
+        Me.CheckedListBox4.Name = "CheckedListBox4"
+        Me.CheckedListBox4.Size = New System.Drawing.Size(267, 356)
+        Me.CheckedListBox4.TabIndex = 159
+        '
+        'CheckBox39
+        '
+        Me.CheckBox39.AutoSize = True
+        Me.CheckBox39.Location = New System.Drawing.Point(444, 23)
+        Me.CheckBox39.Name = "CheckBox39"
+        Me.CheckBox39.Size = New System.Drawing.Size(96, 16)
+        Me.CheckBox39.TabIndex = 158
+        Me.CheckBox39.Text = "组合分组设置"
+        Me.CheckBox39.UseVisualStyleBackColor = True
+        '
+        'CheckBox40
+        '
+        Me.CheckBox40.AutoSize = True
+        Me.CheckBox40.Location = New System.Drawing.Point(22, 168)
+        Me.CheckBox40.Name = "CheckBox40"
+        Me.CheckBox40.Size = New System.Drawing.Size(60, 16)
+        Me.CheckBox40.TabIndex = 155
+        Me.CheckBox40.Text = "关偏移"
+        Me.CheckBox40.UseVisualStyleBackColor = True
+        '
+        'CheckBox41
+        '
+        Me.CheckBox41.AutoSize = True
+        Me.CheckBox41.Location = New System.Drawing.Point(22, 129)
+        Me.CheckBox41.Name = "CheckBox41"
+        Me.CheckBox41.Size = New System.Drawing.Size(60, 16)
+        Me.CheckBox41.TabIndex = 154
+        Me.CheckBox41.Text = "开偏移"
+        Me.CheckBox41.UseVisualStyleBackColor = True
+        '
+        'ComboBox22
+        '
+        Me.ComboBox22.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox22.FormattingEnabled = True
+        Me.ComboBox22.Items.AddRange(New Object() {"K1", "K2", "K3", "K4", "K5", "K6"})
+        Me.ComboBox22.Location = New System.Drawing.Point(316, 86)
+        Me.ComboBox22.Name = "ComboBox22"
+        Me.ComboBox22.Size = New System.Drawing.Size(98, 20)
+        Me.ComboBox22.TabIndex = 153
+        '
+        'Label43
+        '
+        Me.Label43.AutoSize = True
+        Me.Label43.Location = New System.Drawing.Point(232, 89)
+        Me.Label43.Name = "Label43"
+        Me.Label43.Size = New System.Drawing.Size(65, 12)
+        Me.Label43.TabIndex = 152
+        Me.Label43.Text = "节点编号："
+        '
+        'Label44
+        '
+        Me.Label44.AutoSize = True
+        Me.Label44.BackColor = System.Drawing.Color.Transparent
+        Me.Label44.Location = New System.Drawing.Point(218, 55)
+        Me.Label44.Name = "Label44"
+        Me.Label44.Size = New System.Drawing.Size(77, 12)
+        Me.Label44.TabIndex = 149
+        Me.Label44.Text = "主控箱名称："
+        '
+        'DataGridView8
+        '
+        Me.DataGridView8.AllowUserToAddRows = False
+        Me.DataGridView8.BackgroundColor = System.Drawing.Color.WhiteSmoke
+        Me.DataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView8.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn40, Me.DataGridViewTextBoxColumn41, Me.DataGridViewTextBoxColumn42})
+        Me.DataGridView8.Location = New System.Drawing.Point(15, 223)
+        Me.DataGridView8.Name = "DataGridView8"
+        Me.DataGridView8.RowTemplate.Height = 23
+        Me.DataGridView8.Size = New System.Drawing.Size(399, 252)
+        Me.DataGridView8.TabIndex = 151
+        '
+        'DataGridViewTextBoxColumn40
+        '
+        Me.DataGridViewTextBoxColumn40.HeaderText = "星期"
+        Me.DataGridViewTextBoxColumn40.Name = "DataGridViewTextBoxColumn40"
+        '
+        'DataGridViewTextBoxColumn41
+        '
+        Me.DataGridViewTextBoxColumn41.HeaderText = "开灯时间"
+        Me.DataGridViewTextBoxColumn41.Name = "DataGridViewTextBoxColumn41"
+        Me.DataGridViewTextBoxColumn41.Width = 130
+        '
+        'DataGridViewTextBoxColumn42
+        '
+        Me.DataGridViewTextBoxColumn42.HeaderText = "关灯时间"
+        Me.DataGridViewTextBoxColumn42.Name = "DataGridViewTextBoxColumn42"
+        Me.DataGridViewTextBoxColumn42.Width = 130
+        '
+        'ComboBox23
+        '
+        Me.ComboBox23.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox23.FormattingEnabled = True
+        Me.ComboBox23.Location = New System.Drawing.Point(315, 55)
+        Me.ComboBox23.Name = "ComboBox23"
+        Me.ComboBox23.Size = New System.Drawing.Size(98, 20)
+        Me.ComboBox23.TabIndex = 150
+        '
+        'ComboBox24
+        '
+        Me.ComboBox24.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox24.FormattingEnabled = True
+        Me.ComboBox24.Location = New System.Drawing.Point(102, 22)
+        Me.ComboBox24.Name = "ComboBox24"
+        Me.ComboBox24.Size = New System.Drawing.Size(98, 20)
+        Me.ComboBox24.TabIndex = 144
+        '
+        'ComboBox25
+        '
+        Me.ComboBox25.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox25.FormattingEnabled = True
+        Me.ComboBox25.Location = New System.Drawing.Point(102, 52)
+        Me.ComboBox25.Name = "ComboBox25"
+        Me.ComboBox25.Size = New System.Drawing.Size(98, 20)
+        Me.ComboBox25.TabIndex = 148
+        '
+        'Label45
+        '
+        Me.Label45.AutoSize = True
+        Me.Label45.BackColor = System.Drawing.Color.Transparent
+        Me.Label45.Location = New System.Drawing.Point(19, 58)
+        Me.Label45.Name = "Label45"
+        Me.Label45.Size = New System.Drawing.Size(65, 12)
+        Me.Label45.TabIndex = 147
+        Me.Label45.Text = "街道名称："
+        '
+        'Label46
+        '
+        Me.Label46.AutoSize = True
+        Me.Label46.BackColor = System.Drawing.Color.Transparent
+        Me.Label46.Location = New System.Drawing.Point(19, 25)
+        Me.Label46.Name = "Label46"
+        Me.Label46.Size = New System.Drawing.Size(65, 12)
+        Me.Label46.TabIndex = 143
+        Me.Label46.Text = "城市名称："
+        '
+        'ComboBox26
+        '
+        Me.ComboBox26.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox26.FormattingEnabled = True
+        Me.ComboBox26.Location = New System.Drawing.Point(316, 21)
+        Me.ComboBox26.Name = "ComboBox26"
+        Me.ComboBox26.Size = New System.Drawing.Size(98, 20)
+        Me.ComboBox26.TabIndex = 146
+        '
+        'Label47
+        '
+        Me.Label47.AutoSize = True
+        Me.Label47.BackColor = System.Drawing.Color.Transparent
+        Me.Label47.Location = New System.Drawing.Point(232, 25)
+        Me.Label47.Name = "Label47"
+        Me.Label47.Size = New System.Drawing.Size(65, 12)
+        Me.Label47.TabIndex = 145
+        Me.Label47.Text = "区域名称："
+        '
+        'TabPage11
+        '
+        Me.TabPage11.Controls.Add(Me.GroupBox32)
+        Me.TabPage11.Controls.Add(Me.GroupBox36)
+        Me.TabPage11.Location = New System.Drawing.Point(4, 23)
+        Me.TabPage11.Name = "TabPage11"
+        Me.TabPage11.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage11.Size = New System.Drawing.Size(902, 517)
+        Me.TabPage11.TabIndex = 2
+        Me.TabPage11.Text = "特殊控制模式设置"
+        Me.TabPage11.UseVisualStyleBackColor = True
+        '
+        'GroupBox32
+        '
+        Me.GroupBox32.Controls.Add(Me.GroupBox33)
+        Me.GroupBox32.Controls.Add(Me.GroupBox34)
+        Me.GroupBox32.Controls.Add(Me.RadioButton37)
+        Me.GroupBox32.Controls.Add(Me.RadioButton38)
+        Me.GroupBox32.Controls.Add(Me.GroupBox35)
+        Me.GroupBox32.Controls.Add(Me.ComboBox27)
+        Me.GroupBox32.Controls.Add(Me.Label48)
+        Me.GroupBox32.Controls.Add(Me.Button17)
+        Me.GroupBox32.Controls.Add(Me.CheckedListBox5)
+        Me.GroupBox32.Location = New System.Drawing.Point(444, 6)
+        Me.GroupBox32.Name = "GroupBox32"
+        Me.GroupBox32.Size = New System.Drawing.Size(452, 492)
+        Me.GroupBox32.TabIndex = 76
+        Me.GroupBox32.TabStop = False
+        Me.GroupBox32.Text = "分配控制模式"
+        '
+        'GroupBox33
+        '
+        Me.GroupBox33.Controls.Add(Me.CheckBox42)
+        Me.GroupBox33.Controls.Add(Me.CheckBox43)
+        Me.GroupBox33.Controls.Add(Me.CheckBox44)
+        Me.GroupBox33.Controls.Add(Me.CheckBox45)
+        Me.GroupBox33.Controls.Add(Me.CheckBox46)
+        Me.GroupBox33.Controls.Add(Me.CheckBox47)
+        Me.GroupBox33.Controls.Add(Me.CheckBox48)
+        Me.GroupBox33.Location = New System.Drawing.Point(268, 234)
+        Me.GroupBox33.Name = "GroupBox33"
+        Me.GroupBox33.Size = New System.Drawing.Size(178, 152)
+        Me.GroupBox33.TabIndex = 102
+        Me.GroupBox33.TabStop = False
+        Me.GroupBox33.Text = "周设置"
+        '
+        'CheckBox42
+        '
+        Me.CheckBox42.AutoSize = True
+        Me.CheckBox42.Checked = True
+        Me.CheckBox42.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBox42.Location = New System.Drawing.Point(3, 130)
+        Me.CheckBox42.Name = "CheckBox42"
+        Me.CheckBox42.Size = New System.Drawing.Size(60, 16)
+        Me.CheckBox42.TabIndex = 6
+        Me.CheckBox42.Text = "星期日"
+        Me.CheckBox42.UseVisualStyleBackColor = True
+        '
+        'CheckBox43
+        '
+        Me.CheckBox43.AutoSize = True
+        Me.CheckBox43.Checked = True
+        Me.CheckBox43.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBox43.Location = New System.Drawing.Point(103, 94)
+        Me.CheckBox43.Name = "CheckBox43"
+        Me.CheckBox43.Size = New System.Drawing.Size(60, 16)
+        Me.CheckBox43.TabIndex = 5
+        Me.CheckBox43.Text = "星期六"
+        Me.CheckBox43.UseVisualStyleBackColor = True
+        '
+        'CheckBox44
+        '
+        Me.CheckBox44.AutoSize = True
+        Me.CheckBox44.Checked = True
+        Me.CheckBox44.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBox44.Location = New System.Drawing.Point(3, 94)
+        Me.CheckBox44.Name = "CheckBox44"
+        Me.CheckBox44.Size = New System.Drawing.Size(60, 16)
+        Me.CheckBox44.TabIndex = 4
+        Me.CheckBox44.Text = "星期五"
+        Me.CheckBox44.UseVisualStyleBackColor = True
+        '
+        'CheckBox45
+        '
+        Me.CheckBox45.AutoSize = True
+        Me.CheckBox45.Checked = True
+        Me.CheckBox45.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBox45.Location = New System.Drawing.Point(103, 58)
+        Me.CheckBox45.Name = "CheckBox45"
+        Me.CheckBox45.Size = New System.Drawing.Size(60, 16)
+        Me.CheckBox45.TabIndex = 3
+        Me.CheckBox45.Text = "星期四"
+        Me.CheckBox45.UseVisualStyleBackColor = True
+        '
+        'CheckBox46
+        '
+        Me.CheckBox46.AutoSize = True
+        Me.CheckBox46.Checked = True
+        Me.CheckBox46.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBox46.Location = New System.Drawing.Point(3, 58)
+        Me.CheckBox46.Name = "CheckBox46"
+        Me.CheckBox46.Size = New System.Drawing.Size(60, 16)
+        Me.CheckBox46.TabIndex = 2
+        Me.CheckBox46.Text = "星期三"
+        Me.CheckBox46.UseVisualStyleBackColor = True
+        '
+        'CheckBox47
+        '
+        Me.CheckBox47.AutoSize = True
+        Me.CheckBox47.Checked = True
+        Me.CheckBox47.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBox47.Location = New System.Drawing.Point(103, 22)
+        Me.CheckBox47.Name = "CheckBox47"
+        Me.CheckBox47.Size = New System.Drawing.Size(60, 16)
+        Me.CheckBox47.TabIndex = 1
+        Me.CheckBox47.Text = "星期二"
+        Me.CheckBox47.UseVisualStyleBackColor = True
+        '
+        'CheckBox48
+        '
+        Me.CheckBox48.AutoSize = True
+        Me.CheckBox48.Checked = True
+        Me.CheckBox48.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBox48.Location = New System.Drawing.Point(6, 22)
+        Me.CheckBox48.Name = "CheckBox48"
+        Me.CheckBox48.Size = New System.Drawing.Size(60, 16)
+        Me.CheckBox48.TabIndex = 0
+        Me.CheckBox48.Text = "星期一"
+        Me.CheckBox48.UseVisualStyleBackColor = True
+        '
+        'GroupBox34
+        '
+        Me.GroupBox34.Controls.Add(Me.RadioButton35)
+        Me.GroupBox34.Controls.Add(Me.RadioButton36)
+        Me.GroupBox34.Enabled = False
+        Me.GroupBox34.Location = New System.Drawing.Point(268, 54)
+        Me.GroupBox34.Name = "GroupBox34"
+        Me.GroupBox34.Size = New System.Drawing.Size(178, 58)
+        Me.GroupBox34.TabIndex = 101
+        Me.GroupBox34.TabStop = False
+        Me.GroupBox34.Text = "整体控制"
+        '
+        'RadioButton35
+        '
+        Me.RadioButton35.AutoSize = True
+        Me.RadioButton35.Location = New System.Drawing.Point(103, 20)
+        Me.RadioButton35.Name = "RadioButton35"
+        Me.RadioButton35.Size = New System.Drawing.Size(47, 16)
+        Me.RadioButton35.TabIndex = 85
+        Me.RadioButton35.Text = "终端"
+        Me.RadioButton35.UseVisualStyleBackColor = True
+        '
+        'RadioButton36
+        '
+        Me.RadioButton36.AutoSize = True
+        Me.RadioButton36.Checked = True
+        Me.RadioButton36.Location = New System.Drawing.Point(6, 21)
+        Me.RadioButton36.Name = "RadioButton36"
+        Me.RadioButton36.Size = New System.Drawing.Size(83, 16)
+        Me.RadioButton36.TabIndex = 84
+        Me.RadioButton36.TabStop = True
+        Me.RadioButton36.Text = "主控箱节点"
+        Me.RadioButton36.UseVisualStyleBackColor = True
+        '
+        'RadioButton37
+        '
+        Me.RadioButton37.AutoSize = True
+        Me.RadioButton37.Checked = True
+        Me.RadioButton37.Location = New System.Drawing.Point(371, 22)
+        Me.RadioButton37.Name = "RadioButton37"
+        Me.RadioButton37.Size = New System.Drawing.Size(71, 16)
+        Me.RadioButton37.TabIndex = 100
+        Me.RadioButton37.TabStop = True
+        Me.RadioButton37.Text = "回路控制"
+        Me.RadioButton37.UseVisualStyleBackColor = True
+        '
+        'RadioButton38
+        '
+        Me.RadioButton38.AutoSize = True
+        Me.RadioButton38.Location = New System.Drawing.Point(268, 22)
+        Me.RadioButton38.Name = "RadioButton38"
+        Me.RadioButton38.Size = New System.Drawing.Size(71, 16)
+        Me.RadioButton38.TabIndex = 99
+        Me.RadioButton38.Text = "整体控制"
+        Me.RadioButton38.UseVisualStyleBackColor = True
+        '
+        'GroupBox35
+        '
+        Me.GroupBox35.Controls.Add(Me.CheckBox49)
+        Me.GroupBox35.Controls.Add(Me.CheckBox50)
+        Me.GroupBox35.Controls.Add(Me.CheckBox51)
+        Me.GroupBox35.Controls.Add(Me.CheckBox52)
+        Me.GroupBox35.Controls.Add(Me.CheckBox53)
+        Me.GroupBox35.Controls.Add(Me.CheckBox54)
+        Me.GroupBox35.Location = New System.Drawing.Point(268, 118)
+        Me.GroupBox35.Name = "GroupBox35"
+        Me.GroupBox35.Size = New System.Drawing.Size(178, 110)
+        Me.GroupBox35.TabIndex = 98
+        Me.GroupBox35.TabStop = False
+        Me.GroupBox35.Text = "回路控制"
+        '
+        'CheckBox49
+        '
+        Me.CheckBox49.AutoSize = True
+        Me.CheckBox49.Location = New System.Drawing.Point(103, 83)
+        Me.CheckBox49.Name = "CheckBox49"
+        Me.CheckBox49.Size = New System.Drawing.Size(36, 16)
+        Me.CheckBox49.TabIndex = 87
+        Me.CheckBox49.Text = "K6"
+        Me.CheckBox49.UseVisualStyleBackColor = True
+        '
+        'CheckBox50
+        '
+        Me.CheckBox50.AutoSize = True
+        Me.CheckBox50.Location = New System.Drawing.Point(6, 83)
+        Me.CheckBox50.Name = "CheckBox50"
+        Me.CheckBox50.Size = New System.Drawing.Size(36, 16)
+        Me.CheckBox50.TabIndex = 86
+        Me.CheckBox50.Text = "K5"
+        Me.CheckBox50.UseVisualStyleBackColor = True
+        '
+        'CheckBox51
+        '
+        Me.CheckBox51.AutoSize = True
+        Me.CheckBox51.Location = New System.Drawing.Point(103, 52)
+        Me.CheckBox51.Name = "CheckBox51"
+        Me.CheckBox51.Size = New System.Drawing.Size(36, 16)
+        Me.CheckBox51.TabIndex = 85
+        Me.CheckBox51.Text = "K4"
+        Me.CheckBox51.UseVisualStyleBackColor = True
+        '
+        'CheckBox52
+        '
+        Me.CheckBox52.AutoSize = True
+        Me.CheckBox52.Location = New System.Drawing.Point(6, 52)
+        Me.CheckBox52.Name = "CheckBox52"
+        Me.CheckBox52.Size = New System.Drawing.Size(36, 16)
+        Me.CheckBox52.TabIndex = 84
+        Me.CheckBox52.Text = "K3"
+        Me.CheckBox52.UseVisualStyleBackColor = True
+        '
+        'CheckBox53
+        '
+        Me.CheckBox53.AutoSize = True
+        Me.CheckBox53.Location = New System.Drawing.Point(103, 22)
+        Me.CheckBox53.Name = "CheckBox53"
+        Me.CheckBox53.Size = New System.Drawing.Size(36, 16)
+        Me.CheckBox53.TabIndex = 83
+        Me.CheckBox53.Text = "K2"
+        Me.CheckBox53.UseVisualStyleBackColor = True
+        '
+        'CheckBox54
+        '
+        Me.CheckBox54.AutoSize = True
+        Me.CheckBox54.Location = New System.Drawing.Point(6, 22)
+        Me.CheckBox54.Name = "CheckBox54"
+        Me.CheckBox54.Size = New System.Drawing.Size(36, 16)
+        Me.CheckBox54.TabIndex = 82
+        Me.CheckBox54.Text = "K1"
+        Me.CheckBox54.UseVisualStyleBackColor = True
+        '
+        'ComboBox27
+        '
+        Me.ComboBox27.FormattingEnabled = True
+        Me.ComboBox27.Location = New System.Drawing.Point(347, 415)
+        Me.ComboBox27.Name = "ComboBox27"
+        Me.ComboBox27.Size = New System.Drawing.Size(99, 20)
+        Me.ComboBox27.TabIndex = 95
+        '
+        'Label48
+        '
+        Me.Label48.AutoSize = True
+        Me.Label48.Location = New System.Drawing.Point(268, 418)
+        Me.Label48.Name = "Label48"
+        Me.Label48.Size = New System.Drawing.Size(65, 12)
+        Me.Label48.TabIndex = 94
+        Me.Label48.Text = "模式名称："
+        '
+        'Button17
+        '
+        Me.Button17.Location = New System.Drawing.Point(326, 463)
+        Me.Button17.Name = "Button17"
+        Me.Button17.Size = New System.Drawing.Size(75, 23)
+        Me.Button17.TabIndex = 82
+        Me.Button17.Text = "模式分配"
+        Me.Button17.UseVisualStyleBackColor = True
+        '
+        'CheckedListBox5
+        '
+        Me.CheckedListBox5.FormattingEnabled = True
+        Me.CheckedListBox5.Location = New System.Drawing.Point(20, 22)
+        Me.CheckedListBox5.Name = "CheckedListBox5"
+        Me.CheckedListBox5.Size = New System.Drawing.Size(242, 452)
+        Me.CheckedListBox5.TabIndex = 75
+        '
+        'GroupBox36
+        '
+        Me.GroupBox36.Controls.Add(Me.GroupBox37)
+        Me.GroupBox36.Controls.Add(Me.ComboBox32)
+        Me.GroupBox36.Controls.Add(Me.CheckBox55)
+        Me.GroupBox36.Controls.Add(Me.RadioButton41)
+        Me.GroupBox36.Controls.Add(Me.RadioButton42)
+        Me.GroupBox36.Controls.Add(Me.RadioButton43)
+        Me.GroupBox36.Controls.Add(Me.TextBox9)
+        Me.GroupBox36.Controls.Add(Me.Label54)
+        Me.GroupBox36.Controls.Add(Me.Button19)
+        Me.GroupBox36.Controls.Add(Me.ComboBox33)
+        Me.GroupBox36.Controls.Add(Me.DataGridView9)
+        Me.GroupBox36.Location = New System.Drawing.Point(6, 6)
+        Me.GroupBox36.Name = "GroupBox36"
+        Me.GroupBox36.Size = New System.Drawing.Size(432, 492)
+        Me.GroupBox36.TabIndex = 74
+        Me.GroupBox36.TabStop = False
+        '
+        'GroupBox37
+        '
+        Me.GroupBox37.Controls.Add(Me.RadioButton39)
+        Me.GroupBox37.Controls.Add(Me.RadioButton40)
+        Me.GroupBox37.Controls.Add(Me.Button18)
+        Me.GroupBox37.Controls.Add(Me.Label49)
+        Me.GroupBox37.Controls.Add(Me.ComboBox28)
+        Me.GroupBox37.Controls.Add(Me.ComboBox29)
+        Me.GroupBox37.Controls.Add(Me.ComboBox30)
+        Me.GroupBox37.Controls.Add(Me.ComboBox31)
+        Me.GroupBox37.Controls.Add(Me.Label50)
+        Me.GroupBox37.Controls.Add(Me.Label51)
+        Me.GroupBox37.Controls.Add(Me.Label52)
+        Me.GroupBox37.Controls.Add(Me.Label53)
+        Me.GroupBox37.Location = New System.Drawing.Point(19, 48)
+        Me.GroupBox37.Name = "GroupBox37"
+        Me.GroupBox37.Size = New System.Drawing.Size(397, 140)
+        Me.GroupBox37.TabIndex = 94
+        Me.GroupBox37.TabStop = False
+        '
+        'RadioButton39
+        '
+        Me.RadioButton39.AutoSize = True
+        Me.RadioButton39.Location = New System.Drawing.Point(201, 59)
+        Me.RadioButton39.Name = "RadioButton39"
+        Me.RadioButton39.Size = New System.Drawing.Size(131, 16)
+        Me.RadioButton39.TabIndex = 99
+        Me.RadioButton39.Text = "三回路组合控制方式"
+        Me.RadioButton39.UseVisualStyleBackColor = True
+        '
+        'RadioButton40
+        '
+        Me.RadioButton40.AutoSize = True
+        Me.RadioButton40.Checked = True
+        Me.RadioButton40.Location = New System.Drawing.Point(10, 59)
+        Me.RadioButton40.Name = "RadioButton40"
+        Me.RadioButton40.Size = New System.Drawing.Size(95, 16)
+        Me.RadioButton40.TabIndex = 98
+        Me.RadioButton40.TabStop = True
+        Me.RadioButton40.Text = "传统控制方式"
+        Me.RadioButton40.UseVisualStyleBackColor = True
+        '
+        'Button18
+        '
+        Me.Button18.Location = New System.Drawing.Point(297, 90)
+        Me.Button18.Name = "Button18"
+        Me.Button18.Size = New System.Drawing.Size(75, 23)
+        Me.Button18.TabIndex = 97
+        Me.Button18.Text = "增加时段"
+        Me.Button18.UseVisualStyleBackColor = True
+        '
+        'Label49
+        '
+        Me.Label49.AutoSize = True
+        Me.Label49.Location = New System.Drawing.Point(8, 27)
+        Me.Label49.Name = "Label49"
+        Me.Label49.Size = New System.Drawing.Size(65, 12)
+        Me.Label49.TabIndex = 96
+        Me.Label49.Text = "开始时间："
+        '
+        'ComboBox28
+        '
+        Me.ComboBox28.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox28.FormattingEnabled = True
+        Me.ComboBox28.Items.AddRange(New Object() {"00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59"})
+        Me.ComboBox28.Location = New System.Drawing.Point(281, 22)
+        Me.ComboBox28.Name = "ComboBox28"
+        Me.ComboBox28.Size = New System.Drawing.Size(60, 20)
+        Me.ComboBox28.TabIndex = 95
+        '
+        'ComboBox29
+        '
+        Me.ComboBox29.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox29.FormattingEnabled = True
+        Me.ComboBox29.Items.AddRange(New Object() {"00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59"})
+        Me.ComboBox29.Location = New System.Drawing.Point(187, 22)
+        Me.ComboBox29.Name = "ComboBox29"
+        Me.ComboBox29.Size = New System.Drawing.Size(60, 20)
+        Me.ComboBox29.TabIndex = 94
+        '
+        'ComboBox30
+        '
+        Me.ComboBox30.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox30.FormattingEnabled = True
+        Me.ComboBox30.Items.AddRange(New Object() {"00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"})
+        Me.ComboBox30.Location = New System.Drawing.Point(90, 22)
+        Me.ComboBox30.Name = "ComboBox30"
+        Me.ComboBox30.Size = New System.Drawing.Size(61, 20)
+        Me.ComboBox30.TabIndex = 93
+        '
+        'ComboBox31
+        '
+        Me.ComboBox31.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox31.FormattingEnabled = True
+        Me.ComboBox31.Items.AddRange(New Object() {"类型全开", "类型全闭", "类型奇开", "类型偶开", "回路开", "回路关"})
+        Me.ComboBox31.Location = New System.Drawing.Point(90, 90)
+        Me.ComboBox31.Name = "ComboBox31"
+        Me.ComboBox31.Size = New System.Drawing.Size(157, 20)
+        Me.ComboBox31.TabIndex = 88
+        '
+        'Label50
+        '
+        Me.Label50.AutoSize = True
+        Me.Label50.Location = New System.Drawing.Point(7, 93)
+        Me.Label50.Name = "Label50"
+        Me.Label50.Size = New System.Drawing.Size(65, 12)
+        Me.Label50.TabIndex = 89
+        Me.Label50.Text = "控制方式："
+        '
+        'Label51
+        '
+        Me.Label51.AutoSize = True
+        Me.Label51.Location = New System.Drawing.Point(159, 25)
+        Me.Label51.Name = "Label51"
+        Me.Label51.Size = New System.Drawing.Size(17, 12)
+        Me.Label51.TabIndex = 90
+        Me.Label51.Text = "时"
+        '
+        'Label52
+        '
+        Me.Label52.AutoSize = True
+        Me.Label52.Location = New System.Drawing.Point(254, 25)
+        Me.Label52.Name = "Label52"
+        Me.Label52.Size = New System.Drawing.Size(17, 12)
+        Me.Label52.TabIndex = 91
+        Me.Label52.Text = "分"
+        '
+        'Label53
+        '
+        Me.Label53.AutoSize = True
+        Me.Label53.Location = New System.Drawing.Point(348, 27)
+        Me.Label53.Name = "Label53"
+        Me.Label53.Size = New System.Drawing.Size(17, 12)
+        Me.Label53.TabIndex = 92
+        Me.Label53.Text = "秒"
+        '
+        'ComboBox32
+        '
+        Me.ComboBox32.FormattingEnabled = True
+        Me.ComboBox32.Location = New System.Drawing.Point(88, 405)
+        Me.ComboBox32.Name = "ComboBox32"
+        Me.ComboBox32.Size = New System.Drawing.Size(99, 20)
+        Me.ComboBox32.TabIndex = 93
+        Me.ComboBox32.Visible = False
+        '
+        'CheckBox55
+        '
+        Me.CheckBox55.AutoSize = True
+        Me.CheckBox55.Location = New System.Drawing.Point(220, 407)
+        Me.CheckBox55.Name = "CheckBox55"
+        Me.CheckBox55.Size = New System.Drawing.Size(96, 16)
+        Me.CheckBox55.TabIndex = 91
+        Me.CheckBox55.Text = "显示控制信息"
+        Me.CheckBox55.UseVisualStyleBackColor = True
+        '
+        'RadioButton41
+        '
+        Me.RadioButton41.AutoSize = True
+        Me.RadioButton41.Location = New System.Drawing.Point(307, 31)
+        Me.RadioButton41.Name = "RadioButton41"
+        Me.RadioButton41.Size = New System.Drawing.Size(95, 16)
+        Me.RadioButton41.TabIndex = 90
+        Me.RadioButton41.Text = "删除控制模式"
+        Me.RadioButton41.UseVisualStyleBackColor = True
+        '
+        'RadioButton42
+        '
+        Me.RadioButton42.AutoSize = True
+        Me.RadioButton42.Location = New System.Drawing.Point(157, 31)
+        Me.RadioButton42.Name = "RadioButton42"
+        Me.RadioButton42.Size = New System.Drawing.Size(95, 16)
+        Me.RadioButton42.TabIndex = 89
+        Me.RadioButton42.Text = "编辑控制模式"
+        Me.RadioButton42.UseVisualStyleBackColor = True
+        '
+        'RadioButton43
+        '
+        Me.RadioButton43.AutoSize = True
+        Me.RadioButton43.Checked = True
+        Me.RadioButton43.Location = New System.Drawing.Point(17, 31)
+        Me.RadioButton43.Name = "RadioButton43"
+        Me.RadioButton43.Size = New System.Drawing.Size(95, 16)
+        Me.RadioButton43.TabIndex = 88
+        Me.RadioButton43.TabStop = True
+        Me.RadioButton43.Text = "增加控制模式"
+        Me.RadioButton43.UseVisualStyleBackColor = True
+        '
+        'TextBox9
+        '
+        Me.TextBox9.Location = New System.Drawing.Point(99, 405)
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.Size = New System.Drawing.Size(100, 21)
+        Me.TextBox9.TabIndex = 78
+        '
+        'Label54
+        '
+        Me.Label54.AutoSize = True
+        Me.Label54.Location = New System.Drawing.Point(16, 408)
+        Me.Label54.Name = "Label54"
+        Me.Label54.Size = New System.Drawing.Size(65, 12)
+        Me.Label54.TabIndex = 77
+        Me.Label54.Text = "模式名称："
+        '
+        'Button19
+        '
+        Me.Button19.Location = New System.Drawing.Point(163, 449)
+        Me.Button19.Name = "Button19"
+        Me.Button19.Size = New System.Drawing.Size(107, 27)
+        Me.Button19.TabIndex = 76
+        Me.Button19.Text = "输入控制模式"
+        Me.Button19.UseVisualStyleBackColor = True
+        '
+        'ComboBox33
+        '
+        Me.ComboBox33.FormattingEnabled = True
+        Me.ComboBox33.Items.AddRange(New Object() {"全功率", "半功率"})
+        Me.ComboBox33.Location = New System.Drawing.Point(350, 408)
+        Me.ComboBox33.Name = "ComboBox33"
+        Me.ComboBox33.Size = New System.Drawing.Size(57, 20)
+        Me.ComboBox33.TabIndex = 75
+        Me.ComboBox33.Text = "全功率"
+        Me.ComboBox33.Visible = False
+        '
+        'DataGridView9
+        '
+        Me.DataGridView9.AllowUserToAddRows = False
+        Me.DataGridView9.BackgroundColor = System.Drawing.Color.WhiteSmoke
+        Me.DataGridView9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView9.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn43, Me.DataGridViewTextBoxColumn44, Me.DataGridViewTextBoxColumn45, Me.DataGridViewTextBoxColumn46, Me.DataGridViewTextBoxColumn47})
+        Me.DataGridView9.Location = New System.Drawing.Point(17, 201)
+        Me.DataGridView9.Name = "DataGridView9"
+        Me.DataGridView9.RowTemplate.Height = 23
+        Me.DataGridView9.Size = New System.Drawing.Size(399, 188)
+        Me.DataGridView9.TabIndex = 67
+        '
+        'DataGridViewTextBoxColumn43
+        '
+        Me.DataGridViewTextBoxColumn43.HeaderText = "编号"
+        Me.DataGridViewTextBoxColumn43.Name = "DataGridViewTextBoxColumn43"
+        Me.DataGridViewTextBoxColumn43.Width = 60
+        '
+        'DataGridViewTextBoxColumn44
+        '
+        Me.DataGridViewTextBoxColumn44.HeaderText = "小时"
+        Me.DataGridViewTextBoxColumn44.Name = "DataGridViewTextBoxColumn44"
+        Me.DataGridViewTextBoxColumn44.Width = 60
+        '
+        'DataGridViewTextBoxColumn45
+        '
+        Me.DataGridViewTextBoxColumn45.HeaderText = "分钟"
+        Me.DataGridViewTextBoxColumn45.Name = "DataGridViewTextBoxColumn45"
+        Me.DataGridViewTextBoxColumn45.Width = 60
+        '
+        'DataGridViewTextBoxColumn46
+        '
+        Me.DataGridViewTextBoxColumn46.HeaderText = "秒"
+        Me.DataGridViewTextBoxColumn46.Name = "DataGridViewTextBoxColumn46"
+        Me.DataGridViewTextBoxColumn46.Width = 60
+        '
+        'DataGridViewTextBoxColumn47
+        '
+        Me.DataGridViewTextBoxColumn47.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn47.HeaderText = "控制方式"
+        Me.DataGridViewTextBoxColumn47.Name = "DataGridViewTextBoxColumn47"
+        '
+        'TabPage12
+        '
+        Me.TabPage12.Controls.Add(Me.GroupBox38)
+        Me.TabPage12.Controls.Add(Me.GroupBox41)
+        Me.TabPage12.Location = New System.Drawing.Point(4, 23)
+        Me.TabPage12.Name = "TabPage12"
+        Me.TabPage12.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage12.Size = New System.Drawing.Size(902, 517)
+        Me.TabPage12.TabIndex = 3
+        Me.TabPage12.Text = "节假日控制模式设置"
+        Me.TabPage12.UseVisualStyleBackColor = True
+        '
+        'GroupBox38
+        '
+        Me.GroupBox38.Controls.Add(Me.GroupBox39)
+        Me.GroupBox38.Controls.Add(Me.RadioButton46)
+        Me.GroupBox38.Controls.Add(Me.RadioButton47)
+        Me.GroupBox38.Controls.Add(Me.GroupBox40)
+        Me.GroupBox38.Controls.Add(Me.ComboBox34)
+        Me.GroupBox38.Controls.Add(Me.Label55)
+        Me.GroupBox38.Controls.Add(Me.Button20)
+        Me.GroupBox38.Controls.Add(Me.CheckedListBox6)
+        Me.GroupBox38.Location = New System.Drawing.Point(444, 6)
+        Me.GroupBox38.Name = "GroupBox38"
+        Me.GroupBox38.Size = New System.Drawing.Size(452, 492)
+        Me.GroupBox38.TabIndex = 78
+        Me.GroupBox38.TabStop = False
+        Me.GroupBox38.Text = "分配控制模式"
+        '
+        'GroupBox39
+        '
+        Me.GroupBox39.Controls.Add(Me.RadioButton44)
+        Me.GroupBox39.Controls.Add(Me.RadioButton45)
+        Me.GroupBox39.Enabled = False
+        Me.GroupBox39.Location = New System.Drawing.Point(274, 115)
+        Me.GroupBox39.Name = "GroupBox39"
+        Me.GroupBox39.Size = New System.Drawing.Size(155, 90)
+        Me.GroupBox39.TabIndex = 101
+        Me.GroupBox39.TabStop = False
+        Me.GroupBox39.Text = "整体控制"
+        '
+        'RadioButton44
+        '
+        Me.RadioButton44.AutoSize = True
+        Me.RadioButton44.Location = New System.Drawing.Point(6, 54)
+        Me.RadioButton44.Name = "RadioButton44"
+        Me.RadioButton44.Size = New System.Drawing.Size(47, 16)
+        Me.RadioButton44.TabIndex = 85
+        Me.RadioButton44.Text = "终端"
+        Me.RadioButton44.UseVisualStyleBackColor = True
+        '
+        'RadioButton45
+        '
+        Me.RadioButton45.AutoSize = True
+        Me.RadioButton45.Checked = True
+        Me.RadioButton45.Location = New System.Drawing.Point(6, 22)
+        Me.RadioButton45.Name = "RadioButton45"
+        Me.RadioButton45.Size = New System.Drawing.Size(83, 16)
+        Me.RadioButton45.TabIndex = 84
+        Me.RadioButton45.TabStop = True
+        Me.RadioButton45.Text = "主控箱节点"
+        Me.RadioButton45.UseVisualStyleBackColor = True
+        '
+        'RadioButton46
+        '
+        Me.RadioButton46.AutoSize = True
+        Me.RadioButton46.Checked = True
+        Me.RadioButton46.Location = New System.Drawing.Point(280, 73)
+        Me.RadioButton46.Name = "RadioButton46"
+        Me.RadioButton46.Size = New System.Drawing.Size(71, 16)
+        Me.RadioButton46.TabIndex = 100
+        Me.RadioButton46.TabStop = True
+        Me.RadioButton46.Text = "回路控制"
+        Me.RadioButton46.UseVisualStyleBackColor = True
+        '
+        'RadioButton47
+        '
+        Me.RadioButton47.AutoSize = True
+        Me.RadioButton47.Location = New System.Drawing.Point(280, 31)
+        Me.RadioButton47.Name = "RadioButton47"
+        Me.RadioButton47.Size = New System.Drawing.Size(71, 16)
+        Me.RadioButton47.TabIndex = 99
+        Me.RadioButton47.Text = "整体控制"
+        Me.RadioButton47.UseVisualStyleBackColor = True
+        '
+        'GroupBox40
+        '
+        Me.GroupBox40.Controls.Add(Me.CheckBox56)
+        Me.GroupBox40.Controls.Add(Me.CheckBox57)
+        Me.GroupBox40.Controls.Add(Me.CheckBox58)
+        Me.GroupBox40.Controls.Add(Me.CheckBox59)
+        Me.GroupBox40.Controls.Add(Me.CheckBox60)
+        Me.GroupBox40.Controls.Add(Me.CheckBox61)
+        Me.GroupBox40.Location = New System.Drawing.Point(274, 211)
+        Me.GroupBox40.Name = "GroupBox40"
+        Me.GroupBox40.Size = New System.Drawing.Size(155, 137)
+        Me.GroupBox40.TabIndex = 98
+        Me.GroupBox40.TabStop = False
+        Me.GroupBox40.Text = "回路控制"
+        '
+        'CheckBox56
+        '
+        Me.CheckBox56.AutoSize = True
+        Me.CheckBox56.Location = New System.Drawing.Point(74, 102)
+        Me.CheckBox56.Name = "CheckBox56"
+        Me.CheckBox56.Size = New System.Drawing.Size(36, 16)
+        Me.CheckBox56.TabIndex = 87
+        Me.CheckBox56.Text = "K6"
+        Me.CheckBox56.UseVisualStyleBackColor = True
+        '
+        'CheckBox57
+        '
+        Me.CheckBox57.AutoSize = True
+        Me.CheckBox57.Location = New System.Drawing.Point(6, 102)
+        Me.CheckBox57.Name = "CheckBox57"
+        Me.CheckBox57.Size = New System.Drawing.Size(36, 16)
+        Me.CheckBox57.TabIndex = 86
+        Me.CheckBox57.Text = "K5"
+        Me.CheckBox57.UseVisualStyleBackColor = True
+        '
+        'CheckBox58
+        '
+        Me.CheckBox58.AutoSize = True
+        Me.CheckBox58.Location = New System.Drawing.Point(74, 62)
+        Me.CheckBox58.Name = "CheckBox58"
+        Me.CheckBox58.Size = New System.Drawing.Size(36, 16)
+        Me.CheckBox58.TabIndex = 85
+        Me.CheckBox58.Text = "K4"
+        Me.CheckBox58.UseVisualStyleBackColor = True
+        '
+        'CheckBox59
+        '
+        Me.CheckBox59.AutoSize = True
+        Me.CheckBox59.Location = New System.Drawing.Point(6, 62)
+        Me.CheckBox59.Name = "CheckBox59"
+        Me.CheckBox59.Size = New System.Drawing.Size(36, 16)
+        Me.CheckBox59.TabIndex = 84
+        Me.CheckBox59.Text = "K3"
+        Me.CheckBox59.UseVisualStyleBackColor = True
+        '
+        'CheckBox60
+        '
+        Me.CheckBox60.AutoSize = True
+        Me.CheckBox60.Location = New System.Drawing.Point(74, 26)
+        Me.CheckBox60.Name = "CheckBox60"
+        Me.CheckBox60.Size = New System.Drawing.Size(36, 16)
+        Me.CheckBox60.TabIndex = 83
+        Me.CheckBox60.Text = "K2"
+        Me.CheckBox60.UseVisualStyleBackColor = True
+        '
+        'CheckBox61
+        '
+        Me.CheckBox61.AutoSize = True
+        Me.CheckBox61.Location = New System.Drawing.Point(6, 26)
+        Me.CheckBox61.Name = "CheckBox61"
+        Me.CheckBox61.Size = New System.Drawing.Size(36, 16)
+        Me.CheckBox61.TabIndex = 82
+        Me.CheckBox61.Text = "K1"
+        Me.CheckBox61.UseVisualStyleBackColor = True
+        '
+        'ComboBox34
+        '
+        Me.ComboBox34.FormattingEnabled = True
+        Me.ComboBox34.Location = New System.Drawing.Point(347, 378)
+        Me.ComboBox34.Name = "ComboBox34"
+        Me.ComboBox34.Size = New System.Drawing.Size(99, 20)
+        Me.ComboBox34.TabIndex = 95
+        '
+        'Label55
+        '
+        Me.Label55.AutoSize = True
+        Me.Label55.Location = New System.Drawing.Point(271, 386)
+        Me.Label55.Name = "Label55"
+        Me.Label55.Size = New System.Drawing.Size(65, 12)
+        Me.Label55.TabIndex = 94
+        Me.Label55.Text = "模式名称："
+        '
+        'Button20
+        '
+        Me.Button20.Location = New System.Drawing.Point(334, 449)
+        Me.Button20.Name = "Button20"
+        Me.Button20.Size = New System.Drawing.Size(75, 23)
+        Me.Button20.TabIndex = 82
+        Me.Button20.Text = "模式分配"
+        Me.Button20.UseVisualStyleBackColor = True
+        '
+        'CheckedListBox6
+        '
+        Me.CheckedListBox6.FormattingEnabled = True
+        Me.CheckedListBox6.Location = New System.Drawing.Point(20, 22)
+        Me.CheckedListBox6.Name = "CheckedListBox6"
+        Me.CheckedListBox6.Size = New System.Drawing.Size(248, 452)
+        Me.CheckedListBox6.TabIndex = 75
+        '
+        'GroupBox41
+        '
+        Me.GroupBox41.Controls.Add(Me.GroupBox42)
+        Me.GroupBox41.Controls.Add(Me.ComboBox36)
+        Me.GroupBox41.Controls.Add(Me.CheckBox62)
+        Me.GroupBox41.Controls.Add(Me.RadioButton50)
+        Me.GroupBox41.Controls.Add(Me.RadioButton51)
+        Me.GroupBox41.Controls.Add(Me.RadioButton52)
+        Me.GroupBox41.Controls.Add(Me.TextBox10)
+        Me.GroupBox41.Controls.Add(Me.Label58)
+        Me.GroupBox41.Controls.Add(Me.Button22)
+        Me.GroupBox41.Controls.Add(Me.ComboBox37)
+        Me.GroupBox41.Controls.Add(Me.DataGridView10)
+        Me.GroupBox41.Location = New System.Drawing.Point(6, 6)
+        Me.GroupBox41.Name = "GroupBox41"
+        Me.GroupBox41.Size = New System.Drawing.Size(432, 492)
+        Me.GroupBox41.TabIndex = 77
+        Me.GroupBox41.TabStop = False
+        '
+        'GroupBox42
+        '
+        Me.GroupBox42.Controls.Add(Me.RadioButton48)
+        Me.GroupBox42.Controls.Add(Me.RadioButton49)
+        Me.GroupBox42.Controls.Add(Me.DateTimePicker2)
+        Me.GroupBox42.Controls.Add(Me.Button21)
+        Me.GroupBox42.Controls.Add(Me.Label56)
+        Me.GroupBox42.Controls.Add(Me.ComboBox35)
+        Me.GroupBox42.Controls.Add(Me.Label57)
+        Me.GroupBox42.Location = New System.Drawing.Point(19, 48)
+        Me.GroupBox42.Name = "GroupBox42"
+        Me.GroupBox42.Size = New System.Drawing.Size(397, 139)
+        Me.GroupBox42.TabIndex = 94
+        Me.GroupBox42.TabStop = False
+        '
+        'RadioButton48
+        '
+        Me.RadioButton48.AutoSize = True
+        Me.RadioButton48.Location = New System.Drawing.Point(201, 67)
+        Me.RadioButton48.Name = "RadioButton48"
+        Me.RadioButton48.Size = New System.Drawing.Size(131, 16)
+        Me.RadioButton48.TabIndex = 101
+        Me.RadioButton48.Text = "三回路组合控制方式"
+        Me.RadioButton48.UseVisualStyleBackColor = True
+        '
+        'RadioButton49
+        '
+        Me.RadioButton49.AutoSize = True
+        Me.RadioButton49.Checked = True
+        Me.RadioButton49.Location = New System.Drawing.Point(10, 67)
+        Me.RadioButton49.Name = "RadioButton49"
+        Me.RadioButton49.Size = New System.Drawing.Size(95, 16)
+        Me.RadioButton49.TabIndex = 100
+        Me.RadioButton49.TabStop = True
+        Me.RadioButton49.Text = "传统控制方式"
+        Me.RadioButton49.UseVisualStyleBackColor = True
+        '
+        'DateTimePicker2
+        '
+        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.DateTimePicker2.Location = New System.Drawing.Point(91, 25)
+        Me.DateTimePicker2.Name = "DateTimePicker2"
+        Me.DateTimePicker2.Size = New System.Drawing.Size(156, 21)
+        Me.DateTimePicker2.TabIndex = 98
+        '
+        'Button21
+        '
+        Me.Button21.Location = New System.Drawing.Point(287, 110)
+        Me.Button21.Name = "Button21"
+        Me.Button21.Size = New System.Drawing.Size(75, 23)
+        Me.Button21.TabIndex = 97
+        Me.Button21.Text = "增加时段"
+        Me.Button21.UseVisualStyleBackColor = True
+        '
+        'Label56
+        '
+        Me.Label56.AutoSize = True
+        Me.Label56.Location = New System.Drawing.Point(8, 27)
+        Me.Label56.Name = "Label56"
+        Me.Label56.Size = New System.Drawing.Size(65, 12)
+        Me.Label56.TabIndex = 96
+        Me.Label56.Text = "开始时间："
+        '
+        'ComboBox35
+        '
+        Me.ComboBox35.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox35.FormattingEnabled = True
+        Me.ComboBox35.Items.AddRange(New Object() {"类型全开", "类型全闭", "类型奇开", "类型偶开", "回路开", "回路关"})
+        Me.ComboBox35.Location = New System.Drawing.Point(90, 110)
+        Me.ComboBox35.Name = "ComboBox35"
+        Me.ComboBox35.Size = New System.Drawing.Size(157, 20)
+        Me.ComboBox35.TabIndex = 88
+        '
+        'Label57
+        '
+        Me.Label57.AutoSize = True
+        Me.Label57.Location = New System.Drawing.Point(7, 113)
+        Me.Label57.Name = "Label57"
+        Me.Label57.Size = New System.Drawing.Size(65, 12)
+        Me.Label57.TabIndex = 89
+        Me.Label57.Text = "控制方式："
+        '
+        'ComboBox36
+        '
+        Me.ComboBox36.FormattingEnabled = True
+        Me.ComboBox36.Location = New System.Drawing.Point(88, 405)
+        Me.ComboBox36.Name = "ComboBox36"
+        Me.ComboBox36.Size = New System.Drawing.Size(99, 20)
+        Me.ComboBox36.TabIndex = 93
+        Me.ComboBox36.Visible = False
+        '
+        'CheckBox62
+        '
+        Me.CheckBox62.AutoSize = True
+        Me.CheckBox62.Location = New System.Drawing.Point(220, 407)
+        Me.CheckBox62.Name = "CheckBox62"
+        Me.CheckBox62.Size = New System.Drawing.Size(96, 16)
+        Me.CheckBox62.TabIndex = 91
+        Me.CheckBox62.Text = "显示控制信息"
+        Me.CheckBox62.UseVisualStyleBackColor = True
+        '
+        'RadioButton50
+        '
+        Me.RadioButton50.AutoSize = True
+        Me.RadioButton50.Location = New System.Drawing.Point(297, 31)
+        Me.RadioButton50.Name = "RadioButton50"
+        Me.RadioButton50.Size = New System.Drawing.Size(119, 16)
+        Me.RadioButton50.TabIndex = 90
+        Me.RadioButton50.Text = "删除节日控制模式"
+        Me.RadioButton50.UseVisualStyleBackColor = True
+        '
+        'RadioButton51
+        '
+        Me.RadioButton51.AutoSize = True
+        Me.RadioButton51.Location = New System.Drawing.Point(157, 31)
+        Me.RadioButton51.Name = "RadioButton51"
+        Me.RadioButton51.Size = New System.Drawing.Size(119, 16)
+        Me.RadioButton51.TabIndex = 89
+        Me.RadioButton51.Text = "编辑节日控制模式"
+        Me.RadioButton51.UseVisualStyleBackColor = True
+        '
+        'RadioButton52
+        '
+        Me.RadioButton52.AutoSize = True
+        Me.RadioButton52.Checked = True
+        Me.RadioButton52.Location = New System.Drawing.Point(17, 31)
+        Me.RadioButton52.Name = "RadioButton52"
+        Me.RadioButton52.Size = New System.Drawing.Size(119, 16)
+        Me.RadioButton52.TabIndex = 88
+        Me.RadioButton52.TabStop = True
+        Me.RadioButton52.Text = "增加节日控制模式"
+        Me.RadioButton52.UseVisualStyleBackColor = True
+        '
+        'TextBox10
+        '
+        Me.TextBox10.Location = New System.Drawing.Point(99, 405)
+        Me.TextBox10.Name = "TextBox10"
+        Me.TextBox10.Size = New System.Drawing.Size(100, 21)
+        Me.TextBox10.TabIndex = 78
+        '
+        'Label58
+        '
+        Me.Label58.AutoSize = True
+        Me.Label58.Location = New System.Drawing.Point(16, 408)
+        Me.Label58.Name = "Label58"
+        Me.Label58.Size = New System.Drawing.Size(65, 12)
+        Me.Label58.TabIndex = 77
+        Me.Label58.Text = "模式名称："
+        '
+        'Button22
+        '
+        Me.Button22.Location = New System.Drawing.Point(163, 449)
+        Me.Button22.Name = "Button22"
+        Me.Button22.Size = New System.Drawing.Size(107, 27)
+        Me.Button22.TabIndex = 76
+        Me.Button22.Text = "输入控制模式"
+        Me.Button22.UseVisualStyleBackColor = True
+        '
+        'ComboBox37
+        '
+        Me.ComboBox37.FormattingEnabled = True
+        Me.ComboBox37.Items.AddRange(New Object() {"全功率", "半功率"})
+        Me.ComboBox37.Location = New System.Drawing.Point(350, 408)
+        Me.ComboBox37.Name = "ComboBox37"
+        Me.ComboBox37.Size = New System.Drawing.Size(57, 20)
+        Me.ComboBox37.TabIndex = 75
+        Me.ComboBox37.Text = "全功率"
+        Me.ComboBox37.Visible = False
+        '
+        'DataGridView10
+        '
+        Me.DataGridView10.AllowUserToAddRows = False
+        Me.DataGridView10.BackgroundColor = System.Drawing.Color.WhiteSmoke
+        Me.DataGridView10.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView10.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn48, Me.DataGridViewTextBoxColumn49, Me.DataGridViewTextBoxColumn50})
+        Me.DataGridView10.Location = New System.Drawing.Point(17, 197)
+        Me.DataGridView10.Name = "DataGridView10"
+        Me.DataGridView10.RowTemplate.Height = 23
+        Me.DataGridView10.Size = New System.Drawing.Size(399, 192)
+        Me.DataGridView10.TabIndex = 67
+        '
+        'DataGridViewTextBoxColumn48
+        '
+        Me.DataGridViewTextBoxColumn48.HeaderText = "编号"
+        Me.DataGridViewTextBoxColumn48.Name = "DataGridViewTextBoxColumn48"
+        Me.DataGridViewTextBoxColumn48.Width = 60
+        '
+        'DataGridViewTextBoxColumn49
+        '
+        Me.DataGridViewTextBoxColumn49.HeaderText = "时间"
+        Me.DataGridViewTextBoxColumn49.Name = "DataGridViewTextBoxColumn49"
+        Me.DataGridViewTextBoxColumn49.Width = 150
+        '
+        'DataGridViewTextBoxColumn50
+        '
+        Me.DataGridViewTextBoxColumn50.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn50.HeaderText = "控制方式"
+        Me.DataGridViewTextBoxColumn50.Name = "DataGridViewTextBoxColumn50"
+        '
+        'TabPage13
+        '
+        Me.TabPage13.Controls.Add(Me.Button23)
+        Me.TabPage13.Controls.Add(Me.Button24)
+        Me.TabPage13.Controls.Add(Me.CheckBox63)
+        Me.TabPage13.Controls.Add(Me.ComboBox38)
+        Me.TabPage13.Controls.Add(Me.DataGridView11)
+        Me.TabPage13.Controls.Add(Me.Label59)
+        Me.TabPage13.Controls.Add(Me.Button25)
+        Me.TabPage13.Controls.Add(Me.TextBox11)
+        Me.TabPage13.Controls.Add(Me.Label60)
+        Me.TabPage13.Controls.Add(Me.TextBox12)
+        Me.TabPage13.Controls.Add(Me.Label61)
+        Me.TabPage13.Location = New System.Drawing.Point(4, 23)
+        Me.TabPage13.Name = "TabPage13"
+        Me.TabPage13.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage13.Size = New System.Drawing.Size(902, 517)
+        Me.TabPage13.TabIndex = 0
+        Me.TabPage13.Text = "年度日出日落表"
+        Me.TabPage13.UseVisualStyleBackColor = True
+        '
+        'Button23
+        '
+        Me.Button23.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Button23.Location = New System.Drawing.Point(543, 470)
+        Me.Button23.Name = "Button23"
+        Me.Button23.Size = New System.Drawing.Size(125, 27)
+        Me.Button23.TabIndex = 17
+        Me.Button23.Text = "导出时刻表"
+        Me.Button23.UseVisualStyleBackColor = True
+        '
+        'Button24
+        '
+        Me.Button24.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Button24.Location = New System.Drawing.Point(396, 470)
+        Me.Button24.Name = "Button24"
+        Me.Button24.Size = New System.Drawing.Size(125, 27)
+        Me.Button24.TabIndex = 16
+        Me.Button24.Text = "日出日落时刻表"
+        Me.Button24.UseVisualStyleBackColor = True
+        '
+        'CheckBox63
+        '
+        Me.CheckBox63.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.CheckBox63.AutoSize = True
+        Me.CheckBox63.Location = New System.Drawing.Point(712, 426)
+        Me.CheckBox63.Name = "CheckBox63"
+        Me.CheckBox63.Size = New System.Drawing.Size(144, 16)
+        Me.CheckBox63.TabIndex = 15
+        Me.CheckBox63.Text = "记录当前日出日落时间"
+        Me.CheckBox63.UseVisualStyleBackColor = True
+        '
+        'ComboBox38
+        '
+        Me.ComboBox38.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.ComboBox38.FormattingEnabled = True
+        Me.ComboBox38.Items.AddRange(New Object() {"2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020"})
+        Me.ComboBox38.Location = New System.Drawing.Point(94, 424)
+        Me.ComboBox38.Name = "ComboBox38"
+        Me.ComboBox38.Size = New System.Drawing.Size(121, 20)
+        Me.ComboBox38.TabIndex = 14
+        '
+        'DataGridView11
+        '
+        Me.DataGridView11.AllowUserToAddRows = False
+        Me.DataGridView11.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridView11.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView11.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn51, Me.DataGridViewTextBoxColumn52, Me.DataGridViewTextBoxColumn53, Me.DataGridViewTextBoxColumn54, Me.DataGridViewTextBoxColumn55, Me.DataGridViewTextBoxColumn56, Me.DataGridViewTextBoxColumn57, Me.DataGridViewTextBoxColumn58, Me.DataGridViewTextBoxColumn59, Me.DataGridViewTextBoxColumn60, Me.DataGridViewTextBoxColumn61, Me.DataGridViewTextBoxColumn62, Me.DataGridViewTextBoxColumn63})
+        Me.DataGridView11.Location = New System.Drawing.Point(3, 6)
+        Me.DataGridView11.Name = "DataGridView11"
+        Me.DataGridView11.RowTemplate.Height = 23
+        Me.DataGridView11.Size = New System.Drawing.Size(893, 395)
+        Me.DataGridView11.TabIndex = 12
+        '
+        'DataGridViewTextBoxColumn51
+        '
+        Me.DataGridViewTextBoxColumn51.HeaderText = "日期"
+        Me.DataGridViewTextBoxColumn51.Name = "DataGridViewTextBoxColumn51"
+        Me.DataGridViewTextBoxColumn51.Width = 150
+        '
+        'DataGridViewTextBoxColumn52
+        '
+        Me.DataGridViewTextBoxColumn52.HeaderText = "1月"
+        Me.DataGridViewTextBoxColumn52.Name = "DataGridViewTextBoxColumn52"
+        '
+        'DataGridViewTextBoxColumn53
+        '
+        Me.DataGridViewTextBoxColumn53.HeaderText = "2月"
+        Me.DataGridViewTextBoxColumn53.Name = "DataGridViewTextBoxColumn53"
+        '
+        'DataGridViewTextBoxColumn54
+        '
+        Me.DataGridViewTextBoxColumn54.HeaderText = "3月"
+        Me.DataGridViewTextBoxColumn54.Name = "DataGridViewTextBoxColumn54"
+        '
+        'DataGridViewTextBoxColumn55
+        '
+        Me.DataGridViewTextBoxColumn55.HeaderText = "4月"
+        Me.DataGridViewTextBoxColumn55.Name = "DataGridViewTextBoxColumn55"
+        '
+        'DataGridViewTextBoxColumn56
+        '
+        Me.DataGridViewTextBoxColumn56.HeaderText = "5月"
+        Me.DataGridViewTextBoxColumn56.Name = "DataGridViewTextBoxColumn56"
+        '
+        'DataGridViewTextBoxColumn57
+        '
+        Me.DataGridViewTextBoxColumn57.HeaderText = "6月"
+        Me.DataGridViewTextBoxColumn57.Name = "DataGridViewTextBoxColumn57"
+        '
+        'DataGridViewTextBoxColumn58
+        '
+        Me.DataGridViewTextBoxColumn58.HeaderText = "7月"
+        Me.DataGridViewTextBoxColumn58.Name = "DataGridViewTextBoxColumn58"
+        '
+        'DataGridViewTextBoxColumn59
+        '
+        Me.DataGridViewTextBoxColumn59.HeaderText = "8月"
+        Me.DataGridViewTextBoxColumn59.Name = "DataGridViewTextBoxColumn59"
+        '
+        'DataGridViewTextBoxColumn60
+        '
+        Me.DataGridViewTextBoxColumn60.HeaderText = "9月"
+        Me.DataGridViewTextBoxColumn60.Name = "DataGridViewTextBoxColumn60"
+        '
+        'DataGridViewTextBoxColumn61
+        '
+        Me.DataGridViewTextBoxColumn61.HeaderText = "10月"
+        Me.DataGridViewTextBoxColumn61.Name = "DataGridViewTextBoxColumn61"
+        '
+        'DataGridViewTextBoxColumn62
+        '
+        Me.DataGridViewTextBoxColumn62.HeaderText = "11月"
+        Me.DataGridViewTextBoxColumn62.Name = "DataGridViewTextBoxColumn62"
+        '
+        'DataGridViewTextBoxColumn63
+        '
+        Me.DataGridViewTextBoxColumn63.HeaderText = "12月"
+        Me.DataGridViewTextBoxColumn63.Name = "DataGridViewTextBoxColumn63"
+        '
+        'Label59
+        '
+        Me.Label59.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label59.AutoSize = True
+        Me.Label59.Location = New System.Drawing.Point(39, 432)
+        Me.Label59.Name = "Label59"
+        Me.Label59.Size = New System.Drawing.Size(41, 12)
+        Me.Label59.TabIndex = 13
+        Me.Label59.Text = "年份："
+        '
+        'Button25
+        '
+        Me.Button25.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Button25.Location = New System.Drawing.Point(235, 470)
+        Me.Button25.Name = "Button25"
+        Me.Button25.Size = New System.Drawing.Size(125, 27)
+        Me.Button25.TabIndex = 11
+        Me.Button25.Text = "时刻查询"
+        Me.Button25.UseVisualStyleBackColor = True
+        '
+        'TextBox11
+        '
+        Me.TextBox11.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.TextBox11.Location = New System.Drawing.Point(551, 423)
+        Me.TextBox11.Name = "TextBox11"
+        Me.TextBox11.Size = New System.Drawing.Size(116, 21)
+        Me.TextBox11.TabIndex = 1
+        '
+        'Label60
+        '
+        Me.Label60.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label60.AutoSize = True
+        Me.Label60.Location = New System.Drawing.Point(496, 432)
+        Me.Label60.Name = "Label60"
+        Me.Label60.Size = New System.Drawing.Size(41, 12)
+        Me.Label60.TabIndex = 6
+        Me.Label60.Text = "纬度："
+        '
+        'TextBox12
+        '
+        Me.TextBox12.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.TextBox12.Location = New System.Drawing.Point(335, 423)
+        Me.TextBox12.Name = "TextBox12"
+        Me.TextBox12.Size = New System.Drawing.Size(116, 21)
+        Me.TextBox12.TabIndex = 0
+        '
+        'Label61
+        '
+        Me.Label61.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label61.AutoSize = True
+        Me.Label61.Location = New System.Drawing.Point(280, 432)
+        Me.Label61.Name = "Label61"
+        Me.Label61.Size = New System.Drawing.Size(41, 12)
+        Me.Label61.TabIndex = 5
+        Me.Label61.Text = "经度："
+        '
+        'TabPage14
+        '
+        Me.TabPage14.Controls.Add(Me.GroupBox43)
+        Me.TabPage14.Controls.Add(Me.GroupBox44)
+        Me.TabPage14.Controls.Add(Me.GroupBox45)
+        Me.TabPage14.Controls.Add(Me.GroupBox46)
+        Me.TabPage14.Controls.Add(Me.Button26)
+        Me.TabPage14.Controls.Add(Me.GroupBox47)
+        Me.TabPage14.Controls.Add(Me.GroupBox48)
+        Me.TabPage14.Controls.Add(Me.RadioButton57)
+        Me.TabPage14.Controls.Add(Me.TreeView2)
+        Me.TabPage14.Controls.Add(Me.RadioButton58)
+        Me.TabPage14.Controls.Add(Me.GroupBox49)
+        Me.TabPage14.Location = New System.Drawing.Point(4, 23)
+        Me.TabPage14.Name = "TabPage14"
+        Me.TabPage14.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage14.Size = New System.Drawing.Size(902, 517)
+        Me.TabPage14.TabIndex = 4
+        Me.TabPage14.Text = "自动开关列表"
+        Me.TabPage14.UseVisualStyleBackColor = True
+        '
+        'GroupBox43
+        '
+        Me.GroupBox43.Controls.Add(Me.CheckBox64)
+        Me.GroupBox43.Controls.Add(Me.CheckBox65)
+        Me.GroupBox43.Controls.Add(Me.CheckBox66)
+        Me.GroupBox43.Enabled = False
+        Me.GroupBox43.Location = New System.Drawing.Point(284, 376)
+        Me.GroupBox43.Name = "GroupBox43"
+        Me.GroupBox43.Size = New System.Drawing.Size(147, 83)
+        Me.GroupBox43.TabIndex = 161
+        Me.GroupBox43.TabStop = False
+        '
+        'CheckBox64
+        '
+        Me.CheckBox64.AutoSize = True
+        Me.CheckBox64.Location = New System.Drawing.Point(11, 61)
+        Me.CheckBox64.Name = "CheckBox64"
+        Me.CheckBox64.Size = New System.Drawing.Size(108, 16)
+        Me.CheckBox64.TabIndex = 163
+        Me.CheckBox64.Text = "节假日控制模式"
+        Me.CheckBox64.UseVisualStyleBackColor = True
+        '
+        'CheckBox65
+        '
+        Me.CheckBox65.AutoSize = True
+        Me.CheckBox65.Location = New System.Drawing.Point(11, 37)
+        Me.CheckBox65.Name = "CheckBox65"
+        Me.CheckBox65.Size = New System.Drawing.Size(96, 16)
+        Me.CheckBox65.TabIndex = 162
+        Me.CheckBox65.Text = "特殊控制模式"
+        Me.CheckBox65.UseVisualStyleBackColor = True
+        '
+        'CheckBox66
+        '
+        Me.CheckBox66.AutoSize = True
+        Me.CheckBox66.Location = New System.Drawing.Point(11, 13)
+        Me.CheckBox66.Name = "CheckBox66"
+        Me.CheckBox66.Size = New System.Drawing.Size(108, 16)
+        Me.CheckBox66.TabIndex = 161
+        Me.CheckBox66.Text = "经纬度控制模式"
+        Me.CheckBox66.UseVisualStyleBackColor = True
+        '
+        'GroupBox44
+        '
+        Me.GroupBox44.Controls.Add(Me.RadioButton53)
+        Me.GroupBox44.Controls.Add(Me.RadioButton54)
+        Me.GroupBox44.Location = New System.Drawing.Point(284, 316)
+        Me.GroupBox44.Name = "GroupBox44"
+        Me.GroupBox44.Size = New System.Drawing.Size(147, 59)
+        Me.GroupBox44.TabIndex = 160
+        Me.GroupBox44.TabStop = False
+        '
+        'RadioButton53
+        '
+        Me.RadioButton53.AutoSize = True
+        Me.RadioButton53.Location = New System.Drawing.Point(6, 36)
+        Me.RadioButton53.Name = "RadioButton53"
+        Me.RadioButton53.Size = New System.Drawing.Size(47, 16)
+        Me.RadioButton53.TabIndex = 157
+        Me.RadioButton53.Text = "删除"
+        Me.RadioButton53.UseVisualStyleBackColor = True
+        '
+        'RadioButton54
+        '
+        Me.RadioButton54.AutoSize = True
+        Me.RadioButton54.Checked = True
+        Me.RadioButton54.Location = New System.Drawing.Point(6, 12)
+        Me.RadioButton54.Name = "RadioButton54"
+        Me.RadioButton54.Size = New System.Drawing.Size(47, 16)
+        Me.RadioButton54.TabIndex = 156
+        Me.RadioButton54.TabStop = True
+        Me.RadioButton54.Text = "查询"
+        Me.RadioButton54.UseVisualStyleBackColor = True
+        '
+        'GroupBox45
+        '
+        Me.GroupBox45.Controls.Add(Me.DataGridView12)
+        Me.GroupBox45.Location = New System.Drawing.Point(449, 387)
+        Me.GroupBox45.Name = "GroupBox45"
+        Me.GroupBox45.Size = New System.Drawing.Size(438, 124)
+        Me.GroupBox45.TabIndex = 159
+        Me.GroupBox45.TabStop = False
+        Me.GroupBox45.Text = "节假日控制时刻表"
+        '
+        'DataGridView12
+        '
+        Me.DataGridView12.AllowUserToAddRows = False
+        Me.DataGridView12.BackgroundColor = System.Drawing.Color.WhiteSmoke
+        Me.DataGridView12.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView12.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn64, Me.DataGridViewTextBoxColumn65, Me.DataGridViewTextBoxColumn66})
+        Me.DataGridView12.Location = New System.Drawing.Point(12, 22)
+        Me.DataGridView12.Name = "DataGridView12"
+        Me.DataGridView12.RowTemplate.Height = 23
+        Me.DataGridView12.Size = New System.Drawing.Size(417, 95)
+        Me.DataGridView12.TabIndex = 0
+        '
+        'DataGridViewTextBoxColumn64
+        '
+        Me.DataGridViewTextBoxColumn64.HeaderText = "编号"
+        Me.DataGridViewTextBoxColumn64.Name = "DataGridViewTextBoxColumn64"
+        Me.DataGridViewTextBoxColumn64.Width = 60
+        '
+        'DataGridViewTextBoxColumn65
+        '
+        Me.DataGridViewTextBoxColumn65.HeaderText = "时间"
+        Me.DataGridViewTextBoxColumn65.Name = "DataGridViewTextBoxColumn65"
+        Me.DataGridViewTextBoxColumn65.Width = 170
+        '
+        'DataGridViewTextBoxColumn66
+        '
+        Me.DataGridViewTextBoxColumn66.HeaderText = "控制方式"
+        Me.DataGridViewTextBoxColumn66.Name = "DataGridViewTextBoxColumn66"
+        Me.DataGridViewTextBoxColumn66.Width = 150
+        '
+        'GroupBox46
+        '
+        Me.GroupBox46.Controls.Add(Me.DataGridView13)
+        Me.GroupBox46.Location = New System.Drawing.Point(449, 207)
+        Me.GroupBox46.Name = "GroupBox46"
+        Me.GroupBox46.Size = New System.Drawing.Size(438, 176)
+        Me.GroupBox46.TabIndex = 158
+        Me.GroupBox46.TabStop = False
+        Me.GroupBox46.Text = "特殊控制时刻表"
+        '
+        'DataGridView13
+        '
+        Me.DataGridView13.AllowUserToAddRows = False
+        Me.DataGridView13.BackgroundColor = System.Drawing.Color.WhiteSmoke
+        Me.DataGridView13.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView13.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn67, Me.DataGridViewTextBoxColumn68, Me.DataGridViewTextBoxColumn69, Me.DataGridViewTextBoxColumn70, Me.DataGridViewTextBoxColumn71, Me.DataGridViewTextBoxColumn72})
+        Me.DataGridView13.Location = New System.Drawing.Point(12, 22)
+        Me.DataGridView13.Name = "DataGridView13"
+        Me.DataGridView13.RowTemplate.Height = 23
+        Me.DataGridView13.Size = New System.Drawing.Size(420, 146)
+        Me.DataGridView13.TabIndex = 0
+        '
+        'DataGridViewTextBoxColumn67
+        '
+        Me.DataGridViewTextBoxColumn67.HeaderText = "编号"
+        Me.DataGridViewTextBoxColumn67.Name = "DataGridViewTextBoxColumn67"
+        Me.DataGridViewTextBoxColumn67.Width = 60
+        '
+        'DataGridViewTextBoxColumn68
+        '
+        Me.DataGridViewTextBoxColumn68.HeaderText = "星期"
+        Me.DataGridViewTextBoxColumn68.Name = "DataGridViewTextBoxColumn68"
+        Me.DataGridViewTextBoxColumn68.Width = 60
+        '
+        'DataGridViewTextBoxColumn69
+        '
+        Me.DataGridViewTextBoxColumn69.HeaderText = "小时"
+        Me.DataGridViewTextBoxColumn69.Name = "DataGridViewTextBoxColumn69"
+        Me.DataGridViewTextBoxColumn69.Width = 60
+        '
+        'DataGridViewTextBoxColumn70
+        '
+        Me.DataGridViewTextBoxColumn70.HeaderText = "分钟"
+        Me.DataGridViewTextBoxColumn70.Name = "DataGridViewTextBoxColumn70"
+        Me.DataGridViewTextBoxColumn70.Width = 60
+        '
+        'DataGridViewTextBoxColumn71
+        '
+        Me.DataGridViewTextBoxColumn71.HeaderText = "秒"
+        Me.DataGridViewTextBoxColumn71.Name = "DataGridViewTextBoxColumn71"
+        Me.DataGridViewTextBoxColumn71.Width = 60
+        '
+        'DataGridViewTextBoxColumn72
+        '
+        Me.DataGridViewTextBoxColumn72.HeaderText = "控制方式"
+        Me.DataGridViewTextBoxColumn72.Name = "DataGridViewTextBoxColumn72"
+        '
+        'Button26
+        '
+        Me.Button26.Location = New System.Drawing.Point(321, 470)
+        Me.Button26.Name = "Button26"
+        Me.Button26.Size = New System.Drawing.Size(77, 26)
+        Me.Button26.TabIndex = 157
+        Me.Button26.Text = "操作"
+        Me.Button26.UseVisualStyleBackColor = True
+        '
+        'GroupBox47
+        '
+        Me.GroupBox47.Controls.Add(Me.RadioButton55)
+        Me.GroupBox47.Controls.Add(Me.RadioButton56)
+        Me.GroupBox47.Enabled = False
+        Me.GroupBox47.Location = New System.Drawing.Point(284, 70)
+        Me.GroupBox47.Name = "GroupBox47"
+        Me.GroupBox47.Size = New System.Drawing.Size(147, 96)
+        Me.GroupBox47.TabIndex = 156
+        Me.GroupBox47.TabStop = False
+        Me.GroupBox47.Text = "整体控制"
+        '
+        'RadioButton55
+        '
+        Me.RadioButton55.AutoSize = True
+        Me.RadioButton55.Location = New System.Drawing.Point(6, 61)
+        Me.RadioButton55.Name = "RadioButton55"
+        Me.RadioButton55.Size = New System.Drawing.Size(47, 16)
+        Me.RadioButton55.TabIndex = 85
+        Me.RadioButton55.Text = "终端"
+        Me.RadioButton55.UseVisualStyleBackColor = True
+        '
+        'RadioButton56
+        '
+        Me.RadioButton56.AutoSize = True
+        Me.RadioButton56.Checked = True
+        Me.RadioButton56.Location = New System.Drawing.Point(6, 22)
+        Me.RadioButton56.Name = "RadioButton56"
+        Me.RadioButton56.Size = New System.Drawing.Size(83, 16)
+        Me.RadioButton56.TabIndex = 84
+        Me.RadioButton56.TabStop = True
+        Me.RadioButton56.Text = "主控箱节点"
+        Me.RadioButton56.UseVisualStyleBackColor = True
+        '
+        'GroupBox48
+        '
+        Me.GroupBox48.Controls.Add(Me.DataGridView14)
+        Me.GroupBox48.Location = New System.Drawing.Point(449, 6)
+        Me.GroupBox48.Name = "GroupBox48"
+        Me.GroupBox48.Size = New System.Drawing.Size(438, 195)
+        Me.GroupBox48.TabIndex = 153
+        Me.GroupBox48.TabStop = False
+        Me.GroupBox48.Text = "未来一周经纬度开关灯时刻表"
+        '
+        'DataGridView14
+        '
+        Me.DataGridView14.AllowUserToAddRows = False
+        Me.DataGridView14.BackgroundColor = System.Drawing.Color.WhiteSmoke
+        Me.DataGridView14.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView14.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn73, Me.DataGridViewTextBoxColumn74, Me.DataGridViewTextBoxColumn75})
+        Me.DataGridView14.Location = New System.Drawing.Point(12, 22)
+        Me.DataGridView14.Name = "DataGridView14"
+        Me.DataGridView14.RowTemplate.Height = 23
+        Me.DataGridView14.Size = New System.Drawing.Size(417, 164)
+        Me.DataGridView14.TabIndex = 152
+        '
+        'DataGridViewTextBoxColumn73
+        '
+        Me.DataGridViewTextBoxColumn73.HeaderText = "星期"
+        Me.DataGridViewTextBoxColumn73.Name = "DataGridViewTextBoxColumn73"
+        '
+        'DataGridViewTextBoxColumn74
+        '
+        Me.DataGridViewTextBoxColumn74.HeaderText = "开灯时间"
+        Me.DataGridViewTextBoxColumn74.Name = "DataGridViewTextBoxColumn74"
+        Me.DataGridViewTextBoxColumn74.Width = 150
+        '
+        'DataGridViewTextBoxColumn75
+        '
+        Me.DataGridViewTextBoxColumn75.HeaderText = "关灯时间"
+        Me.DataGridViewTextBoxColumn75.Name = "DataGridViewTextBoxColumn75"
+        Me.DataGridViewTextBoxColumn75.Width = 150
+        '
+        'RadioButton57
+        '
+        Me.RadioButton57.AutoSize = True
+        Me.RadioButton57.Checked = True
+        Me.RadioButton57.Location = New System.Drawing.Point(290, 38)
+        Me.RadioButton57.Name = "RadioButton57"
+        Me.RadioButton57.Size = New System.Drawing.Size(71, 16)
+        Me.RadioButton57.TabIndex = 155
+        Me.RadioButton57.TabStop = True
+        Me.RadioButton57.Text = "回路控制"
+        Me.RadioButton57.UseVisualStyleBackColor = True
+        '
+        'TreeView2
+        '
+        Me.TreeView2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TreeView2.LineColor = System.Drawing.Color.Empty
+        Me.TreeView2.Location = New System.Drawing.Point(3, 3)
+        Me.TreeView2.Name = "TreeView2"
+        Me.TreeView2.Size = New System.Drawing.Size(259, 508)
+        Me.TreeView2.TabIndex = 1
+        '
+        'RadioButton58
+        '
+        Me.RadioButton58.AutoSize = True
+        Me.RadioButton58.Location = New System.Drawing.Point(290, 14)
+        Me.RadioButton58.Name = "RadioButton58"
+        Me.RadioButton58.Size = New System.Drawing.Size(71, 16)
+        Me.RadioButton58.TabIndex = 154
+        Me.RadioButton58.Text = "整体控制"
+        Me.RadioButton58.UseVisualStyleBackColor = True
+        '
+        'GroupBox49
+        '
+        Me.GroupBox49.Controls.Add(Me.RadioButton59)
+        Me.GroupBox49.Controls.Add(Me.RadioButton60)
+        Me.GroupBox49.Controls.Add(Me.RadioButton61)
+        Me.GroupBox49.Controls.Add(Me.RadioButton62)
+        Me.GroupBox49.Controls.Add(Me.RadioButton63)
+        Me.GroupBox49.Controls.Add(Me.RadioButton64)
+        Me.GroupBox49.Location = New System.Drawing.Point(284, 172)
+        Me.GroupBox49.Name = "GroupBox49"
+        Me.GroupBox49.Size = New System.Drawing.Size(147, 138)
+        Me.GroupBox49.TabIndex = 153
+        Me.GroupBox49.TabStop = False
+        Me.GroupBox49.Text = "回路控制"
+        '
+        'RadioButton59
+        '
+        Me.RadioButton59.AutoSize = True
+        Me.RadioButton59.Location = New System.Drawing.Point(82, 98)
+        Me.RadioButton59.Name = "RadioButton59"
+        Me.RadioButton59.Size = New System.Drawing.Size(35, 16)
+        Me.RadioButton59.TabIndex = 93
+        Me.RadioButton59.Text = "K6"
+        Me.RadioButton59.UseVisualStyleBackColor = True
+        '
+        'RadioButton60
+        '
+        Me.RadioButton60.AutoSize = True
+        Me.RadioButton60.Location = New System.Drawing.Point(6, 98)
+        Me.RadioButton60.Name = "RadioButton60"
+        Me.RadioButton60.Size = New System.Drawing.Size(35, 16)
+        Me.RadioButton60.TabIndex = 92
+        Me.RadioButton60.Text = "K5"
+        Me.RadioButton60.UseVisualStyleBackColor = True
+        '
+        'RadioButton61
+        '
+        Me.RadioButton61.AutoSize = True
+        Me.RadioButton61.Location = New System.Drawing.Point(82, 56)
+        Me.RadioButton61.Name = "RadioButton61"
+        Me.RadioButton61.Size = New System.Drawing.Size(35, 16)
+        Me.RadioButton61.TabIndex = 91
+        Me.RadioButton61.Text = "K4"
+        Me.RadioButton61.UseVisualStyleBackColor = True
+        '
+        'RadioButton62
+        '
+        Me.RadioButton62.AutoSize = True
+        Me.RadioButton62.Location = New System.Drawing.Point(6, 56)
+        Me.RadioButton62.Name = "RadioButton62"
+        Me.RadioButton62.Size = New System.Drawing.Size(35, 16)
+        Me.RadioButton62.TabIndex = 90
+        Me.RadioButton62.Text = "K3"
+        Me.RadioButton62.UseVisualStyleBackColor = True
+        '
+        'RadioButton63
+        '
+        Me.RadioButton63.AutoSize = True
+        Me.RadioButton63.Location = New System.Drawing.Point(82, 22)
+        Me.RadioButton63.Name = "RadioButton63"
+        Me.RadioButton63.Size = New System.Drawing.Size(35, 16)
+        Me.RadioButton63.TabIndex = 89
+        Me.RadioButton63.Text = "K2"
+        Me.RadioButton63.UseVisualStyleBackColor = True
+        '
+        'RadioButton64
+        '
+        Me.RadioButton64.AutoSize = True
+        Me.RadioButton64.Checked = True
+        Me.RadioButton64.Location = New System.Drawing.Point(6, 22)
+        Me.RadioButton64.Name = "RadioButton64"
+        Me.RadioButton64.Size = New System.Drawing.Size(35, 16)
+        Me.RadioButton64.TabIndex = 88
+        Me.RadioButton64.TabStop = True
+        Me.RadioButton64.Text = "K1"
+        Me.RadioButton64.UseVisualStyleBackColor = True
+        '
+        'GroupBox53
+        '
+        Me.GroupBox53.Controls.Add(Me.RadioButton65)
+        Me.GroupBox53.Controls.Add(Me.RadioButton66)
+        Me.GroupBox53.Controls.Add(Me.Button27)
+        Me.GroupBox53.Controls.Add(Me.Label3)
+        Me.GroupBox53.Controls.Add(Me.ComboBox39)
+        Me.GroupBox53.Controls.Add(Me.ComboBox40)
+        Me.GroupBox53.Controls.Add(Me.ComboBox41)
+        Me.GroupBox53.Controls.Add(Me.ComboBox42)
+        Me.GroupBox53.Controls.Add(Me.Label4)
+        Me.GroupBox53.Controls.Add(Me.Label5)
+        Me.GroupBox53.Controls.Add(Me.Label9)
+        Me.GroupBox53.Controls.Add(Me.Label11)
+        Me.GroupBox53.Location = New System.Drawing.Point(19, 48)
+        Me.GroupBox53.Name = "GroupBox53"
+        Me.GroupBox53.Size = New System.Drawing.Size(397, 140)
+        Me.GroupBox53.TabIndex = 94
+        Me.GroupBox53.TabStop = False
+        '
+        'RadioButton65
+        '
+        Me.RadioButton65.AutoSize = True
+        Me.RadioButton65.Location = New System.Drawing.Point(201, 59)
+        Me.RadioButton65.Name = "RadioButton65"
+        Me.RadioButton65.Size = New System.Drawing.Size(131, 16)
+        Me.RadioButton65.TabIndex = 99
+        Me.RadioButton65.Text = "三回路组合控制方式"
+        Me.RadioButton65.UseVisualStyleBackColor = True
+        '
+        'RadioButton66
+        '
+        Me.RadioButton66.AutoSize = True
+        Me.RadioButton66.Checked = True
+        Me.RadioButton66.Location = New System.Drawing.Point(10, 59)
+        Me.RadioButton66.Name = "RadioButton66"
+        Me.RadioButton66.Size = New System.Drawing.Size(95, 16)
+        Me.RadioButton66.TabIndex = 98
+        Me.RadioButton66.TabStop = True
+        Me.RadioButton66.Text = "传统控制方式"
+        Me.RadioButton66.UseVisualStyleBackColor = True
+        '
+        'Button27
+        '
+        Me.Button27.Location = New System.Drawing.Point(297, 90)
+        Me.Button27.Name = "Button27"
+        Me.Button27.Size = New System.Drawing.Size(75, 23)
+        Me.Button27.TabIndex = 97
+        Me.Button27.Text = "增加时段"
+        Me.Button27.UseVisualStyleBackColor = True
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(8, 27)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(65, 12)
+        Me.Label3.TabIndex = 96
+        Me.Label3.Text = "开始时间："
+        '
+        'ComboBox39
+        '
+        Me.ComboBox39.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox39.FormattingEnabled = True
+        Me.ComboBox39.Items.AddRange(New Object() {"00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59"})
+        Me.ComboBox39.Location = New System.Drawing.Point(281, 22)
+        Me.ComboBox39.Name = "ComboBox39"
+        Me.ComboBox39.Size = New System.Drawing.Size(60, 20)
+        Me.ComboBox39.TabIndex = 95
+        '
+        'ComboBox40
+        '
+        Me.ComboBox40.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox40.FormattingEnabled = True
+        Me.ComboBox40.Items.AddRange(New Object() {"00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59"})
+        Me.ComboBox40.Location = New System.Drawing.Point(187, 22)
+        Me.ComboBox40.Name = "ComboBox40"
+        Me.ComboBox40.Size = New System.Drawing.Size(60, 20)
+        Me.ComboBox40.TabIndex = 94
+        '
+        'ComboBox41
+        '
+        Me.ComboBox41.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox41.FormattingEnabled = True
+        Me.ComboBox41.Items.AddRange(New Object() {"00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"})
+        Me.ComboBox41.Location = New System.Drawing.Point(90, 22)
+        Me.ComboBox41.Name = "ComboBox41"
+        Me.ComboBox41.Size = New System.Drawing.Size(61, 20)
+        Me.ComboBox41.TabIndex = 93
+        '
+        'ComboBox42
+        '
+        Me.ComboBox42.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox42.FormattingEnabled = True
+        Me.ComboBox42.Items.AddRange(New Object() {"类型全开", "类型全闭", "类型奇开", "类型偶开", "回路开", "回路关"})
+        Me.ComboBox42.Location = New System.Drawing.Point(90, 90)
+        Me.ComboBox42.Name = "ComboBox42"
+        Me.ComboBox42.Size = New System.Drawing.Size(157, 20)
+        Me.ComboBox42.TabIndex = 88
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(7, 93)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(65, 12)
+        Me.Label4.TabIndex = 89
+        Me.Label4.Text = "控制方式："
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(159, 25)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(17, 12)
+        Me.Label5.TabIndex = 90
+        Me.Label5.Text = "时"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(254, 25)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(17, 12)
+        Me.Label9.TabIndex = 91
+        Me.Label9.Text = "分"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(348, 27)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(17, 12)
+        Me.Label11.TabIndex = 92
+        Me.Label11.Text = "秒"
+        '
+        'ComboBox43
+        '
+        Me.ComboBox43.FormattingEnabled = True
+        Me.ComboBox43.Location = New System.Drawing.Point(88, 405)
+        Me.ComboBox43.Name = "ComboBox43"
+        Me.ComboBox43.Size = New System.Drawing.Size(99, 20)
+        Me.ComboBox43.TabIndex = 93
+        Me.ComboBox43.Visible = False
+        '
+        'CheckBox67
+        '
+        Me.CheckBox67.AutoSize = True
+        Me.CheckBox67.Location = New System.Drawing.Point(220, 407)
+        Me.CheckBox67.Name = "CheckBox67"
+        Me.CheckBox67.Size = New System.Drawing.Size(96, 16)
+        Me.CheckBox67.TabIndex = 91
+        Me.CheckBox67.Text = "显示控制信息"
+        Me.CheckBox67.UseVisualStyleBackColor = True
+        '
+        'RadioButton67
+        '
+        Me.RadioButton67.AutoSize = True
+        Me.RadioButton67.Location = New System.Drawing.Point(307, 31)
+        Me.RadioButton67.Name = "RadioButton67"
+        Me.RadioButton67.Size = New System.Drawing.Size(95, 16)
+        Me.RadioButton67.TabIndex = 90
+        Me.RadioButton67.Text = "删除控制模式"
+        Me.RadioButton67.UseVisualStyleBackColor = True
+        '
+        'RadioButton68
+        '
+        Me.RadioButton68.AutoSize = True
+        Me.RadioButton68.Location = New System.Drawing.Point(157, 31)
+        Me.RadioButton68.Name = "RadioButton68"
+        Me.RadioButton68.Size = New System.Drawing.Size(95, 16)
+        Me.RadioButton68.TabIndex = 89
+        Me.RadioButton68.Text = "编辑控制模式"
+        Me.RadioButton68.UseVisualStyleBackColor = True
+        '
+        'RadioButton69
+        '
+        Me.RadioButton69.AutoSize = True
+        Me.RadioButton69.Checked = True
+        Me.RadioButton69.Location = New System.Drawing.Point(17, 31)
+        Me.RadioButton69.Name = "RadioButton69"
+        Me.RadioButton69.Size = New System.Drawing.Size(95, 16)
+        Me.RadioButton69.TabIndex = 88
+        Me.RadioButton69.TabStop = True
+        Me.RadioButton69.Text = "增加控制模式"
+        Me.RadioButton69.UseVisualStyleBackColor = True
+        '
+        'TextBox13
+        '
+        Me.TextBox13.Location = New System.Drawing.Point(99, 405)
+        Me.TextBox13.Name = "TextBox13"
+        Me.TextBox13.Size = New System.Drawing.Size(100, 21)
+        Me.TextBox13.TabIndex = 78
+        '
+        'Label62
+        '
+        Me.Label62.AutoSize = True
+        Me.Label62.Location = New System.Drawing.Point(16, 408)
+        Me.Label62.Name = "Label62"
+        Me.Label62.Size = New System.Drawing.Size(65, 12)
+        Me.Label62.TabIndex = 77
+        Me.Label62.Text = "模式名称："
+        '
+        'Button28
+        '
+        Me.Button28.Location = New System.Drawing.Point(163, 449)
+        Me.Button28.Name = "Button28"
+        Me.Button28.Size = New System.Drawing.Size(107, 27)
+        Me.Button28.TabIndex = 76
+        Me.Button28.Text = "输入控制模式"
+        Me.Button28.UseVisualStyleBackColor = True
+        '
+        'ComboBox44
+        '
+        Me.ComboBox44.FormattingEnabled = True
+        Me.ComboBox44.Items.AddRange(New Object() {"全功率", "半功率"})
+        Me.ComboBox44.Location = New System.Drawing.Point(350, 408)
+        Me.ComboBox44.Name = "ComboBox44"
+        Me.ComboBox44.Size = New System.Drawing.Size(57, 20)
+        Me.ComboBox44.TabIndex = 75
+        Me.ComboBox44.Text = "全功率"
+        Me.ComboBox44.Visible = False
+        '
+        'DataGridView15
+        '
+        Me.DataGridView15.AllowUserToAddRows = False
+        Me.DataGridView15.BackgroundColor = System.Drawing.Color.WhiteSmoke
+        Me.DataGridView15.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView15.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn76, Me.DataGridViewTextBoxColumn77, Me.DataGridViewTextBoxColumn78, Me.DataGridViewTextBoxColumn79, Me.DataGridViewTextBoxColumn80})
+        Me.DataGridView15.Location = New System.Drawing.Point(17, 201)
+        Me.DataGridView15.Name = "DataGridView15"
+        Me.DataGridView15.RowTemplate.Height = 23
+        Me.DataGridView15.Size = New System.Drawing.Size(399, 188)
+        Me.DataGridView15.TabIndex = 67
+        '
+        'DataGridViewTextBoxColumn76
+        '
+        Me.DataGridViewTextBoxColumn76.HeaderText = "编号"
+        Me.DataGridViewTextBoxColumn76.Name = "DataGridViewTextBoxColumn76"
+        Me.DataGridViewTextBoxColumn76.Width = 60
+        '
+        'DataGridViewTextBoxColumn77
+        '
+        Me.DataGridViewTextBoxColumn77.HeaderText = "小时"
+        Me.DataGridViewTextBoxColumn77.Name = "DataGridViewTextBoxColumn77"
+        Me.DataGridViewTextBoxColumn77.Width = 60
+        '
+        'DataGridViewTextBoxColumn78
+        '
+        Me.DataGridViewTextBoxColumn78.HeaderText = "分钟"
+        Me.DataGridViewTextBoxColumn78.Name = "DataGridViewTextBoxColumn78"
+        Me.DataGridViewTextBoxColumn78.Width = 60
+        '
+        'DataGridViewTextBoxColumn79
+        '
+        Me.DataGridViewTextBoxColumn79.HeaderText = "秒"
+        Me.DataGridViewTextBoxColumn79.Name = "DataGridViewTextBoxColumn79"
+        Me.DataGridViewTextBoxColumn79.Width = 60
+        '
+        'DataGridViewTextBoxColumn80
+        '
+        Me.DataGridViewTextBoxColumn80.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn80.HeaderText = "控制方式"
+        Me.DataGridViewTextBoxColumn80.Name = "DataGridViewTextBoxColumn80"
+        '
+        'TreeView3
+        '
+        Me.TreeView3.CheckBoxes = True
+        Me.TreeView3.LineColor = System.Drawing.Color.Empty
+        Me.TreeView3.Location = New System.Drawing.Point(12, 58)
+        Me.TreeView3.Name = "TreeView3"
+        Me.TreeView3.Size = New System.Drawing.Size(235, 426)
+        Me.TreeView3.TabIndex = 175
+        '
+        'GroupBox54
+        '
+        Me.GroupBox54.Controls.Add(Me.CheckBox68)
+        Me.GroupBox54.Controls.Add(Me.CheckBox69)
+        Me.GroupBox54.Controls.Add(Me.CheckBox70)
+        Me.GroupBox54.Controls.Add(Me.CheckBox71)
+        Me.GroupBox54.Controls.Add(Me.CheckBox72)
+        Me.GroupBox54.Controls.Add(Me.CheckBox73)
+        Me.GroupBox54.Controls.Add(Me.CheckBox74)
+        Me.GroupBox54.Location = New System.Drawing.Point(268, 234)
+        Me.GroupBox54.Name = "GroupBox54"
+        Me.GroupBox54.Size = New System.Drawing.Size(178, 152)
+        Me.GroupBox54.TabIndex = 102
+        Me.GroupBox54.TabStop = False
+        Me.GroupBox54.Text = "周设置"
+        '
+        'CheckBox68
+        '
+        Me.CheckBox68.AutoSize = True
+        Me.CheckBox68.Checked = True
+        Me.CheckBox68.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBox68.Location = New System.Drawing.Point(3, 130)
+        Me.CheckBox68.Name = "CheckBox68"
+        Me.CheckBox68.Size = New System.Drawing.Size(60, 16)
+        Me.CheckBox68.TabIndex = 6
+        Me.CheckBox68.Text = "星期日"
+        Me.CheckBox68.UseVisualStyleBackColor = True
+        '
+        'CheckBox69
+        '
+        Me.CheckBox69.AutoSize = True
+        Me.CheckBox69.Checked = True
+        Me.CheckBox69.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBox69.Location = New System.Drawing.Point(103, 94)
+        Me.CheckBox69.Name = "CheckBox69"
+        Me.CheckBox69.Size = New System.Drawing.Size(60, 16)
+        Me.CheckBox69.TabIndex = 5
+        Me.CheckBox69.Text = "星期六"
+        Me.CheckBox69.UseVisualStyleBackColor = True
+        '
+        'CheckBox70
+        '
+        Me.CheckBox70.AutoSize = True
+        Me.CheckBox70.Checked = True
+        Me.CheckBox70.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBox70.Location = New System.Drawing.Point(3, 94)
+        Me.CheckBox70.Name = "CheckBox70"
+        Me.CheckBox70.Size = New System.Drawing.Size(60, 16)
+        Me.CheckBox70.TabIndex = 4
+        Me.CheckBox70.Text = "星期五"
+        Me.CheckBox70.UseVisualStyleBackColor = True
+        '
+        'CheckBox71
+        '
+        Me.CheckBox71.AutoSize = True
+        Me.CheckBox71.Checked = True
+        Me.CheckBox71.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBox71.Location = New System.Drawing.Point(103, 58)
+        Me.CheckBox71.Name = "CheckBox71"
+        Me.CheckBox71.Size = New System.Drawing.Size(60, 16)
+        Me.CheckBox71.TabIndex = 3
+        Me.CheckBox71.Text = "星期四"
+        Me.CheckBox71.UseVisualStyleBackColor = True
+        '
+        'CheckBox72
+        '
+        Me.CheckBox72.AutoSize = True
+        Me.CheckBox72.Checked = True
+        Me.CheckBox72.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBox72.Location = New System.Drawing.Point(3, 58)
+        Me.CheckBox72.Name = "CheckBox72"
+        Me.CheckBox72.Size = New System.Drawing.Size(60, 16)
+        Me.CheckBox72.TabIndex = 2
+        Me.CheckBox72.Text = "星期三"
+        Me.CheckBox72.UseVisualStyleBackColor = True
+        '
+        'CheckBox73
+        '
+        Me.CheckBox73.AutoSize = True
+        Me.CheckBox73.Checked = True
+        Me.CheckBox73.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBox73.Location = New System.Drawing.Point(103, 22)
+        Me.CheckBox73.Name = "CheckBox73"
+        Me.CheckBox73.Size = New System.Drawing.Size(60, 16)
+        Me.CheckBox73.TabIndex = 1
+        Me.CheckBox73.Text = "星期二"
+        Me.CheckBox73.UseVisualStyleBackColor = True
+        '
+        'CheckBox74
+        '
+        Me.CheckBox74.AutoSize = True
+        Me.CheckBox74.Checked = True
+        Me.CheckBox74.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBox74.Location = New System.Drawing.Point(6, 22)
+        Me.CheckBox74.Name = "CheckBox74"
+        Me.CheckBox74.Size = New System.Drawing.Size(60, 16)
+        Me.CheckBox74.TabIndex = 0
+        Me.CheckBox74.Text = "星期一"
+        Me.CheckBox74.UseVisualStyleBackColor = True
+        '
+        'GroupBox55
+        '
+        Me.GroupBox55.Controls.Add(Me.RadioButton70)
+        Me.GroupBox55.Controls.Add(Me.RadioButton71)
+        Me.GroupBox55.Enabled = False
+        Me.GroupBox55.Location = New System.Drawing.Point(268, 54)
+        Me.GroupBox55.Name = "GroupBox55"
+        Me.GroupBox55.Size = New System.Drawing.Size(178, 58)
+        Me.GroupBox55.TabIndex = 101
+        Me.GroupBox55.TabStop = False
+        Me.GroupBox55.Text = "整体控制"
+        '
+        'RadioButton70
+        '
+        Me.RadioButton70.AutoSize = True
+        Me.RadioButton70.Location = New System.Drawing.Point(103, 20)
+        Me.RadioButton70.Name = "RadioButton70"
+        Me.RadioButton70.Size = New System.Drawing.Size(47, 16)
+        Me.RadioButton70.TabIndex = 85
+        Me.RadioButton70.Text = "终端"
 Me.RadioButton70.UseVisualStyleBackColor = true
 '
 'RadioButton71

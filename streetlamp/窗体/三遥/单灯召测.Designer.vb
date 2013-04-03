@@ -166,7 +166,7 @@ Partial Class 单灯召测
         'lamp_id_part
         '
         Me.lamp_id_part.DataPropertyName = "lamp_id_part"
-        Me.lamp_id_part.HeaderText = "路灯编号"
+        Me.lamp_id_part.HeaderText = "终端编号"
         Me.lamp_id_part.Name = "lamp_id_part"
         Me.lamp_id_part.ReadOnly = True
         Me.lamp_id_part.Visible = False

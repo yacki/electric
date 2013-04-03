@@ -3,9 +3,9 @@
 ''' </summary>
 ''' <remarks></remarks>
 
-Public Class 增加路灯
-    Public m_addtag As Integer  '增加路灯的标志
-    Private m_lampidline() As String '路灯编号行数组
+Public Class 增加终端
+    Public m_addtag As Integer  '增加终端的标志
+    Private m_lampidline() As String '终端编号行数组
     Dim m_control_box_name As String  '主控箱的名称
     Dim m_control_box_id As String '主控箱的编号
     Dim m_jiechuqi_id As String = "K1"  '接触器编号
@@ -37,7 +37,7 @@ Public Class 增加路灯
         rs = DBOperation.SelectSQL(conn, sql, msg)
         If rs.RecordCount > 0 Then
             Dim id As String
-            id = (Val(Mid(Trim(rs.Fields("lamp_id").Value), 7, LAMP_ID_LEN)) + 1).ToString  '提示编号为目前路灯编号中最大的加一
+            id = (Val(Mid(Trim(rs.Fields("lamp_id").Value), 7, LAMP_ID_LEN)) + 1).ToString  '提示编号为目前终端编号中最大的加一
             tb_lamp_id.Text = id
             i = 3 - id.Length
             While i > 0  '如果不足3位则用0补足
@@ -45,7 +45,7 @@ Public Class 增加路灯
                 i -= 1
             End While
         Else
-            tb_lamp_id.Text = "001" '如果是第一盏路灯，则使用001
+            tb_lamp_id.Text = "001" '如果是第一盏终端，则使用001
 
         End If
 
@@ -92,13 +92,13 @@ Public Class 增加路灯
             Exit Sub
         End If
 
-        If IsNumeric(tb_lamp_num.Text) = False Then   '如果输入的路灯个数不是数字
+        If IsNumeric(tb_lamp_num.Text) = False Then   '如果输入的终端个数不是数字
             MsgBox("终端数目必须是数字，请重新输入", , PROJECT_TITLE_STRING)
             tb_lamp_num.Focus()
-            Exit Sub   '光标定位在路灯个数的文本框
+            Exit Sub   '光标定位在终端个数的文本框
         End If
 
-        If System.Convert.ToInt32(tb_lamp_num.Text) + System.Convert.ToInt32(tb_lamp_id.Text) > LAMP_ID_MAX Then    '路灯的数目不可大于20000
+        If System.Convert.ToInt32(tb_lamp_num.Text) + System.Convert.ToInt32(tb_lamp_id.Text) > LAMP_ID_MAX Then    '终端的数目不可大于20000
             MsgBox("终端编号大于" & LAMP_ID_MAX & "，请重新输入", , PROJECT_TITLE_STRING)
             tb_lamp_num.Focus()
             Exit Sub
@@ -127,21 +127,21 @@ Public Class 增加路灯
             Exit Sub
         End If
 
-        Dim lamp_add_num As Integer  '增加路灯的起始编号
+        Dim lamp_add_num As Integer  '增加终端的起始编号
         Dim rs As ADODB.Recordset
         Dim msg As String
         Dim sql As String
-        Dim lamp_id_add_start As String  '新增路灯编号
-        Dim lamp_id_num As Integer  '路灯编号
+        Dim lamp_id_add_start As String  '新增终端编号
+        Dim lamp_id_num As Integer  '终端编号
         Dim control_box_id As String  '电控箱编号
         Dim lamp_type_id As String  '灯的类型编号
-        Dim pos_add_start, pos_add_end As System.Drawing.Point  '新增一串路灯的起点和终点坐标
+        Dim pos_add_start, pos_add_end As System.Drawing.Point  '新增一串终端的起点和终点坐标
         Dim stp_x, stp_y As Double    'x 轴方向和y轴方向的步长
         Dim i As Integer
         Dim conn As New ADODB.Connection
         Dim addNum As Integer  '每次加灯的个数d
         Dim map_id As Integer  '地图的编号
-        Dim lamp_id_beg As String  '记录起始的路灯编号
+        Dim lamp_id_beg As String  '记录起始的终端编号
 
 
         DBOperation.OpenConn(conn)
@@ -165,13 +165,13 @@ Public Class 增加路灯
 
         lamp_add_num = Val(StrConv(Trim(tb_lamp_num.Text), VbStrConv.Narrow)) '景观灯个数
 
-        '屏幕中的路灯起点坐标转换城地图中的相对坐标
+        '屏幕中的终端起点坐标转换城地图中的相对坐标
         pos_add_start.X = Val(tb_start_pos_x.Text - g_welcomewinobj.GroupBox1.Location.X - g_welcomewinobj.DesktopLocation.X - (Me.Width - Me.ClientSize.Width) - g_welcomewinobj.pb_map.Location.X - g_welcomewinobj.SplitContainer3.Panel1.Width)
         pos_add_start.Y = Val(tb_start_pos_y.Text - g_welcomewinobj.GroupBox1.Location.Y - g_welcomewinobj.DesktopLocation.Y - (Me.Height - Me.ClientSize.Height) - g_welcomewinobj.pb_map.Location.Y)
-        '屏幕中的路灯终点坐标转换成地图中的相对坐标
+        '屏幕中的终端终点坐标转换成地图中的相对坐标
 
 
-        '根据增加的路灯个数，计算出每两盏路灯之间距离
+        '根据增加的终端个数，计算出每两盏终端之间距离
         If Val(Trim(tb_lamp_num.Text) > 1) Then
             pos_add_end.X = Val(tb_end_pos_x.Text - g_welcomewinobj.GroupBox1.Location.X - g_welcomewinobj.DesktopLocation.X - (Me.Width - Me.ClientSize.Width) - g_welcomewinobj.pb_map.Location.X - g_welcomewinobj.SplitContainer3.Panel1.Width)
             pos_add_end.Y = Val(tb_end_pos_y.Text - g_welcomewinobj.GroupBox1.Location.Y - g_welcomewinobj.DesktopLocation.Y - (Me.Height - Me.ClientSize.Height) - g_welcomewinobj.pb_map.Location.Y)
@@ -192,7 +192,7 @@ Public Class 增加路灯
             Exit Sub
         End If
         If rs.RecordCount <= 0 Then
-            MsgBox("请匹配地图与所增加路灯的区域", , PROJECT_TITLE_STRING)
+            MsgBox("请匹配地图与所增加终端的区域", , PROJECT_TITLE_STRING)
             rs.Close()
             rs = Nothing
             conn.Close()
@@ -224,7 +224,7 @@ Public Class 增加路灯
                 GoTo finish
             End If
         Else
-            MsgBox("该主控箱还未添加路灯类型", , PROJECT_TITLE_STRING)
+            MsgBox("该主控箱还未添加终端类型", , PROJECT_TITLE_STRING)
             rs.Close()
             rs = Nothing
             conn.Close()
@@ -254,13 +254,13 @@ Public Class 增加路灯
 
         While i < lamp_add_num
             If i = 0 Then
-                lamp_id_num = Val(Mid(lamp_id_add_start, 7, LAMP_ID_LEN))   '新路灯编号为当前路灯编号
+                lamp_id_num = Val(Mid(lamp_id_add_start, 7, LAMP_ID_LEN))   '新终端编号为当前终端编号
                 If addNum = 4 Then
                     j += 1
                 End If
             Else
                 If addNum = 1 Or addNum = 2 Then
-                    lamp_id_num = Val(Mid(lamp_id_add_start, 7, LAMP_ID_LEN)) + addNum  '新路灯编号为当前路灯编号
+                    lamp_id_num = Val(Mid(lamp_id_add_start, 7, LAMP_ID_LEN)) + addNum  '新终端编号为当前终端编号
 
                 Else
                     If j < 3 Then
@@ -315,7 +315,7 @@ Public Class 增加路灯
 
                 Continue While
             End If
-            '增加路灯
+            '增加终端
             If Me.rb_yadd.Checked = True Then
                 sql = "insert into lamp_inf(lamp_id,control_box_id,pos_x,pos_y,lamp_kind,state,result,area_street_id" & _
                           ",total_num,div_time_id,map_id,date,lamp_type_id,current_l,presure_l,power,presure_end,jiechuqi_id,lamp_pointinfor) values(" & _
@@ -342,11 +342,11 @@ Public Class 增加路灯
         '增加操作记录
         Com_inf.Insert_Operation("增加终端节点：起始编号" & lamp_id_beg & "，个数：" & lamp_add_num)
 
-        Me.Lamp_streetTableAdapter.FillBy(Me.Street_add.lamp_street) '路灯列表
+        Me.Lamp_streetTableAdapter.FillBy(Me.Street_add.lamp_street) '终端列表
         g_lampdrawtag = True  '同步lamp_map
         g_lampmap.Clear(Color.Empty)  '重绘灯
         g_lampdrawtag = False '同步lamp_map
-        ' LoginForm1.Property_welcome_win_obj.Property_lamp_end = lamp_id_add_start  '将路灯范围的终点扩展到目前增加的路灯最终编号
+        ' LoginForm1.Property_welcome_win_obj.Property_lamp_end = lamp_id_add_start  '将终端范围的终点扩展到目前增加的终端最终编号
 
 finish:
         rs.Close()
@@ -469,13 +469,13 @@ finish:
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     ''' <remarks></remarks>
-    Private Sub 增加路灯_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    Private Sub 增加终端_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'TODO: 这行代码将数据加载到表“KaiguanDataSet.kaiguan_list”中。您可以根据需要移动或移除它。
         '  Me.Kaiguan_listTableAdapter.Fill(Me.KaiguanDataSet.kaiguan_list)
         'TODO: 这行代码将数据加载到表“EditDataSet.huilu_inf”中。您可以根据需要移动或移除它。
         ' Me.Huilu_infTableAdapter.Fill(Me.EditDataSet.huilu_inf)
         'TODO: 这行代码将数据加载到表“Street_add.lamp_street”中。您可以根据需要移动或移除它。
-        Me.Lamp_streetTableAdapter.FillBy(Me.Street_add.lamp_street) '路灯列表
+        Me.Lamp_streetTableAdapter.FillBy(Me.Street_add.lamp_street) '终端列表
         '设置各个窗体的图标
         Me.Icon = New Icon("图片\favicon.ico", 32, 32)
         m_addtag = 2
@@ -492,7 +492,7 @@ finish:
         lb_lamp_type_id_add.Visible = False
         lb_lamp_type_id_del.Visible = False
 
-        '底端工具栏中提示当前路灯个数
+        '底端工具栏中提示当前终端个数
         lamp_inf_text.Text = "当前共有：" & Me.dgv_old_lamp_list.RowCount & "个终端设备"
 
         '增加各个主控箱的名称，点击时显示其开关灯时间安排
@@ -516,7 +516,7 @@ finish:
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     ''' <remarks></remarks>
-    Private Sub 增加路灯_FormClosed(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles MyBase.FormClosed
+    Private Sub 增加终端_FormClosed(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles MyBase.FormClosed
         m_addtag = 0  '将add_tag变量清零
         g_windowclose = 1
     End Sub
@@ -661,7 +661,7 @@ finish:
         i = 0
 
         While i < dgv_old_lamp_list.RowCount
-            If dgv_old_lamp_list.Rows(i).Cells(0).Value = 1 Then  '如果路灯被勾选
+            If dgv_old_lamp_list.Rows(i).Cells(0).Value = 1 Then  '如果终端被勾选
 
                 rtb_delete_detail.AppendText(dgv_old_lamp_list.Rows(i).Cells("lamp_id_value").Value & "  ")
                 rtb_delete_detail.AppendText(dgv_old_lamp_list.Rows(i).Cells("control_box_name").Value & "  ")
@@ -691,9 +691,9 @@ finish:
                 Exit Sub
             End If
             '更新列表内容
-            Me.Lamp_streetTableAdapter.FillBy_city(Me.Street_add.lamp_street, Trim(cb_delete_city.Text)) '路灯列表
+            Me.Lamp_streetTableAdapter.FillBy_city(Me.Street_add.lamp_street, Trim(cb_delete_city.Text)) '终端列表
 
-            '底端工具栏中提示当前路灯个数
+            '底端工具栏中提示当前终端个数
             lamp_inf_text.Text = "城市:" & Trim(cb_delete_city.Text) & " " & "当前共有：" & Me.dgv_old_lamp_list.RowCount & "盏灯"
 
         End If
@@ -710,9 +710,9 @@ finish:
                 Exit Sub
             End If
             '更新列表内容
-            Me.Lamp_streetTableAdapter.FillBy_area(Me.Street_add.lamp_street, Trim(cb_delete_area.Text)) '路灯列表
+            Me.Lamp_streetTableAdapter.FillBy_area(Me.Street_add.lamp_street, Trim(cb_delete_area.Text)) '终端列表
 
-            '底端工具栏中提示当前路灯个数
+            '底端工具栏中提示当前终端个数
             lamp_inf_text.Text = "区域:" & Trim(cb_delete_area.Text) & " " & "当前共有：" & Me.dgv_old_lamp_list.RowCount & "盏灯"
 
         End If
@@ -735,9 +735,9 @@ finish:
                 Exit Sub
             End If
             '更新列表内容
-            Me.Lamp_streetTableAdapter.FillBy_street(Me.Street_add.lamp_street, Trim(cb_delete_street.Text)) '路灯列表
+            Me.Lamp_streetTableAdapter.FillBy_street(Me.Street_add.lamp_street, Trim(cb_delete_street.Text)) '终端列表
 
-            '底端工具栏中提示当前路灯个数
+            '底端工具栏中提示当前终端个数
             lamp_inf_text.Text = "街道:" & Trim(cb_delete_street.Text) & " " & "当前共有：" & Me.dgv_old_lamp_list.RowCount & "盏灯"
 
         End If
@@ -763,9 +763,9 @@ finish:
                 Exit Sub
             End If
             '更新列表内容
-            Me.Lamp_streetTableAdapter.FillBy_box_name(Me.Street_add.lamp_street, Trim(cb_delete_control_box_name.Text)) '路灯列表
+            Me.Lamp_streetTableAdapter.FillBy_box_name(Me.Street_add.lamp_street, Trim(cb_delete_control_box_name.Text)) '终端列表
 
-            '底端工具栏中提示当前路灯个数
+            '底端工具栏中提示当前终端个数
             lamp_inf_text.Text = "主控箱:" & Trim(cb_delete_control_box_name.Text) & " " & "当前共有：" & Me.dgv_old_lamp_list.RowCount & "盏灯"
 
         End If
@@ -797,9 +797,9 @@ finish:
                 Exit Sub
             End If
             '更新列表内容
-            Me.Lamp_streetTableAdapter.FillBy_type_string(Me.Street_add.lamp_street, Trim(cb_delete_control_box_name.Text), Trim(cb_delete_lamp_type.Text)) '路灯列表
+            Me.Lamp_streetTableAdapter.FillBy_type_string(Me.Street_add.lamp_street, Trim(cb_delete_control_box_name.Text), Trim(cb_delete_lamp_type.Text)) '终端列表
 
-            '底端工具栏中提示当前路灯个数
+            '底端工具栏中提示当前终端个数
             lamp_inf_text.Text = "主控箱:" & Trim(cb_delete_control_box_name.Text) & " " & Trim(cb_delete_lamp_type.Text) & "当前共有：" & Me.dgv_old_lamp_list.RowCount & "盏"
 
         End If
@@ -832,20 +832,20 @@ finish:
                 Exit Sub
             End If
             If cb_delete_lamp_id_start.Text = "" Then
-                MsgBox("请选择路灯的编号", , PROJECT_TITLE_STRING)
+                MsgBox("请选择终端的编号", , PROJECT_TITLE_STRING)
                 cb_delete_lamp_id_start.Focus()
                 Exit Sub
             End If
             '更新列表内容
             If Trim(cb_delete_lamp_id_end.Text) <> "" Then
-                Me.Lamp_streetTableAdapter.FillBy_lamp_id(Me.Street_add.lamp_street, Trim(cb_delete_control_box_name.Text), Trim(cb_delete_lamp_type.Text), Trim(lb_delete_lamp_id_start_start.Text) & Trim(cb_delete_lamp_id_start.Text), Trim(lb_delete_lamp_id_end_start.Text) & Trim(cb_delete_lamp_id_end.Text)) '路灯列表
+                Me.Lamp_streetTableAdapter.FillBy_lamp_id(Me.Street_add.lamp_street, Trim(cb_delete_control_box_name.Text), Trim(cb_delete_lamp_type.Text), Trim(lb_delete_lamp_id_start_start.Text) & Trim(cb_delete_lamp_id_start.Text), Trim(lb_delete_lamp_id_end_start.Text) & Trim(cb_delete_lamp_id_end.Text)) '终端列表
 
             Else
-                Me.Lamp_streetTableAdapter.FillBy_lamp_single(Me.Street_add.lamp_street, Trim(lb_delete_lamp_id_start_start.Text) & Trim(cb_delete_lamp_id_start.Text)) '路灯列表
+                Me.Lamp_streetTableAdapter.FillBy_lamp_single(Me.Street_add.lamp_street, Trim(lb_delete_lamp_id_start_start.Text) & Trim(cb_delete_lamp_id_start.Text)) '终端列表
 
             End If
 
-            '底端工具栏中提示当前路灯个数
+            '底端工具栏中提示当前终端个数
             lamp_inf_text.Text = "主控箱:" & Trim(cb_delete_control_box_name.Text) & " " & Trim(cb_delete_lamp_type.Text) & " " & Trim(cb_delete_lamp_id_start.Text) & "至" & Trim(cb_delete_lamp_id_end.Text) & "共有：" & Me.dgv_old_lamp_list.RowCount & "盏"
 
         End If
@@ -854,7 +854,7 @@ finish:
         'Dim row As Integer
         'row = 0
         'While row < old_lamp_list.Rows.Count
-        '    old_lamp_list.Rows(row).Cells("check").Value = 1  '勾选该区域的路灯
+        '    old_lamp_list.Rows(row).Cells("check").Value = 1  '勾选该区域的终端
         '    row += 1
         'End While
         '根据选择的查询对象范围进行勾选
@@ -862,7 +862,7 @@ finish:
         row = 0
         While row < dgv_old_lamp_list.Rows.Count
             If rb_check_all.Checked = True Then   '选择所有三个灯头
-                dgv_old_lamp_list.Rows(row).Cells("check").Value = 1  '勾选该区域的路灯
+                dgv_old_lamp_list.Rows(row).Cells("check").Value = 1  '勾选该区域的终端
             End If
 
             If rb_check_1.Checked = True Then    '选择删除灯杆上的1号灯头
@@ -944,7 +944,7 @@ finish:
                 End If
 
                 sql = "delete from lamp_inf where lamp_id='" & lamp_id_string & "'"
-                DBOperation.ExecuteSQL(conn, sql, msg)  '删除路灯
+                DBOperation.ExecuteSQL(conn, sql, msg)  '删除终端
 
                 '如有时段设置，一并删除
                 '1、经纬度
@@ -971,11 +971,11 @@ finish:
 
         End If
 
-        Me.Lamp_streetTableAdapter.FillBy(Me.Street_add.lamp_street)  '载入删除后的路灯列表
+        Me.Lamp_streetTableAdapter.FillBy(Me.Street_add.lamp_street)  '载入删除后的终端列表
         rtb_delete_detail.Clear()
         '刷新右侧列表
         g_welcomewinobj.SetControlBoxListDelegate(g_welcomewinobj.dgv_lamp_state_list, 0)
-        '底端工具栏中提示当前路灯个数
+        '底端工具栏中提示当前终端个数
         lamp_inf_text.Text = "当前共有：" & Me.dgv_old_lamp_list.RowCount & "盏灯"
 
 
@@ -1081,11 +1081,11 @@ finish:
         rs = DBOperation.SelectSQL(conn, sql, msg)
         If rs.RecordCount > 0 Then
 
-            id = (Val(Mid(Trim(rs.Fields("lamp_id").Value), 7, LAMP_ID_LEN)) + 1).ToString  '提示编号为目前路灯编号中最大的加一
-            ' id = (Val(Mid(Trim(rs.Fields("lamp_id").Value), 7, 3)) + 1).ToString  '提示编号为目前路灯编号中最大的加一
+            id = (Val(Mid(Trim(rs.Fields("lamp_id").Value), 7, LAMP_ID_LEN)) + 1).ToString  '提示编号为目前终端编号中最大的加一
+            ' id = (Val(Mid(Trim(rs.Fields("lamp_id").Value), 7, 3)) + 1).ToString  '提示编号为目前终端编号中最大的加一
         Else
             id = "1"
-            'lamp_id.Text = "0001" '如果是第一盏路灯，则使用001
+            'lamp_id.Text = "0001" '如果是第一盏终端，则使用001
         End If
         str = id
 
@@ -1415,7 +1415,7 @@ finish:
                 End If
 
             End If
-         
+
 
             '默认选择第一个接触器下的回路
             select_huiluid(1)
@@ -1557,7 +1557,7 @@ finish:
                 rs.Fields("current_alarmbot").Value = 0
                 rs.Update()
 
-             
+
             End If
 
             i += 1

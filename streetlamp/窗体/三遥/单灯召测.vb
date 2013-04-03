@@ -192,7 +192,7 @@
                                                     conn = Nothing
                                                 End If
                                                 If rs_return.RecordCount > 0 Then
-                                                    '  g_welcomewinobj.SetTextLabelDelegate("获取路灯数据.....", rtb_inf, "circle_string")
+                                                    '  g_welcomewinobj.SetTextLabelDelegate("获取终端数据.....", rtb_inf, "circle_string")
 
                                                     '查找当前数据库的所有灯的记录，按上传数据进行数据分析
 
@@ -223,7 +223,7 @@
                                                                 GoTo finish
                                                             End If
                                                             Com_inf.Explain_State_String(state)  '解析状态字符串的各个含义
-                                                            controllampobj.GetCompareState(Trim(rs_return.Fields("StatusContent").Value), rs_return.Fields("id").Value)  '获取路灯的运行状态
+                                                            controllampobj.GetCompareState(Trim(rs_return.Fields("StatusContent").Value), rs_return.Fields("id").Value)  '获取终端的运行状态
 
                                                         Else
                                                             If lamp_protocle_type = "2" Then
@@ -234,7 +234,7 @@
                                                                     GoTo finish
                                                                 End If
                                                                 Com_inf.Explain_State_String_AD2(state)  '解析状态字符串的各个含义
-                                                                controllampobj.GetCompareState_AD2(Trim(rs_return.Fields("StatusContent").Value), rs_return.Fields("id").Value)  '获取路灯的运行状态
+                                                                controllampobj.GetCompareState_AD2(Trim(rs_return.Fields("StatusContent").Value), rs_return.Fields("id").Value)  '获取终端的运行状态
                                                             Else
                                                                 If state.Length <> 10 Then
                                                                     '上传的状态长度与单灯的类型不符合
@@ -246,7 +246,7 @@
 
                                                                     '2012年5月24日增加五字节的单灯协议,单灯的格式为两字节路段号，两字节节点号，六个字节的单灯状态
                                                                     Com_inf.Explain_State_String_AD6(state, t) '解析状态字符串的各个含义
-                                                                    controllampobj.GetCompareState_AD6(Trim(rs_return.Fields("StatusContent").Value), rs_return.Fields("id").Value)  '获取路灯的运行状态
+                                                                    controllampobj.GetCompareState_AD6(Trim(rs_return.Fields("StatusContent").Value), rs_return.Fields("id").Value)  '获取终端的运行状态
                                                                     t += 1
                                                                     'short_id = Mid(g_lampidstring, 7, LAMP_ID_LEN) + 1
 
@@ -375,7 +375,7 @@ finish:
     '                    GoTo finish
     '                End If
     '                Com_inf.Explain_State_String(state)  '解析状态字符串的各个含义
-    '                controlboxobj.GetCompareState(Trim(rs_find_state.Fields("StatusContent").Value), rs_find_state.Fields("id").Value)  '获取路灯的运行状态
+    '                controlboxobj.GetCompareState(Trim(rs_find_state.Fields("StatusContent").Value), rs_find_state.Fields("id").Value)  '获取终端的运行状态
 
     '            Else
     '                If lamp_protocle_type = "2" Then
@@ -386,7 +386,7 @@ finish:
     '                        GoTo finish
     '                    End If
     '                    Com_inf.Explain_State_String_AD2(state)  '解析状态字符串的各个含义
-    '                    controlboxobj.GetCompareState_AD2(Trim(rs_find_state.Fields("StatusContent").Value), rs_find_state.Fields("id").Value)  '获取路灯的运行状态
+    '                    controlboxobj.GetCompareState_AD2(Trim(rs_find_state.Fields("StatusContent").Value), rs_find_state.Fields("id").Value)  '获取终端的运行状态
     '                Else
     '                    If state.Length <> 10 Then
     '                        '上传的状态长度与单灯的类型不符合
@@ -398,7 +398,7 @@ finish:
 
     '                        '2012年5月24日增加五字节的单灯协议,单灯的格式为两字节路段号，两字节节点号，六个字节的单灯状态
     '                        Com_inf.Explain_State_String_AD6(state, i) '解析状态字符串的各个含义
-    '                        controlboxobj.GetCompareState_AD6(Trim(rs_find_state.Fields("StatusContent").Value), rs_find_state.Fields("id").Value)  '获取路灯的运行状态
+    '                        controlboxobj.GetCompareState_AD6(Trim(rs_find_state.Fields("StatusContent").Value), rs_find_state.Fields("id").Value)  '获取终端的运行状态
 
 
 
@@ -443,7 +443,7 @@ finish:
             Dim stateobj As SetControlBoxList = New SetControlBoxList(AddressOf SetControlBoxListDelegate)
             Me.Invoke(stateobj, New Object() {Lamp_State, lampid})
         Else
-            '右边的路灯统计信息
+            '右边的终端统计信息
             Dim probleminf As String = ""
             Dim lampkind As String = ""
             Dim lampstate As String = ""  '灯的开关情况，div_time_id列>=8为开，<8的为关

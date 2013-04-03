@@ -91,13 +91,13 @@
     'End Sub
 
     '''' <summary>
-    '''' 设置控制路灯亮暗的参数，即用电流判断还是电阻判断，及判断值
+    '''' 设置控制终端亮暗的参数，即用电流判断还是电阻判断，及判断值
     '''' </summary>
     '''' <param name="sender"></param>
     '''' <param name="e"></param>
     '''' <remarks></remarks>
-    'Private Sub 路灯ToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles 路灯ToolStripMenuItem.Click
-    '    Dim control_obj As New 路灯开关控制参数
+    'Private Sub 终端ToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles 终端ToolStripMenuItem.Click
+    '    Dim control_obj As New 终端开关控制参数
     '    control_obj.Show()
     'End Sub
 
@@ -203,27 +203,27 @@
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     ''' <remarks></remarks>
-    Private Sub 编辑路灯ToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles 编辑路灯ToolStripMenuItem.Click
-        'If GetInstanceState("增加路灯") Then
+    Private Sub 编辑终端ToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles 编辑终端ToolStripMenuItem.Click
+        'If GetInstanceState("增加终端") Then
         '    Exit Sub
         'End If
-        '增加路灯.MdiParent = Me
-        m_addlampobj = New 增加路灯
+        '增加终端.MdiParent = Me
+        m_addlampobj = New 增加终端
         m_addlampobj.Show()
     End Sub
 
     ''' <summary>
-    ''' 编辑路灯颜色
+    ''' 编辑终端颜色
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     ''' <remarks></remarks>
-    Private Sub 编辑路灯颜色ToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles 编辑路灯颜色ToolStripMenuItem1.Click
-        'If GetInstanceState("路灯颜色编辑窗口") Then
+    Private Sub 编辑终端颜色ToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles 编辑终端颜色ToolStripMenuItem1.Click
+        'If GetInstanceState("终端颜色编辑窗口") Then
         '    Exit Sub
         'End If
-        '路灯颜色编辑窗口.MdiParent = Me
-        Dim edit_lamp_color As New 路灯颜色编辑窗口
+        '终端颜色编辑窗口.MdiParent = Me
+        Dim edit_lamp_color As New 终端颜色编辑窗口
         edit_lamp_color.ShowDialog()
     End Sub
 
@@ -451,27 +451,27 @@
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub ToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripMenuItem1.Click
-        'If GetInstanceState("路灯状态查询窗口") Then
+        'If GetInstanceState("终端状态查询窗口") Then
         '    Exit Sub
         'End If
-        '路灯状态查询窗口.MdiParent = Me
-        Dim lamp_window_obj As New 路灯状态查询窗口
+        '终端状态查询窗口.MdiParent = Me
+        Dim lamp_window_obj As New 终端状态查询窗口
         lamp_window_obj.ShowDialog()
     End Sub
 
     ''' <summary>
-    ''' 打开统计路灯运行状态的窗口
+    ''' 打开统计终端运行状态的窗口
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     ''' <remarks></remarks>
-    Private Sub 路灯亮暗信息统计ToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles 路灯亮暗信息统计ToolStripMenuItem.Click
-        '用户可以查询特定范围内路灯的亮暗信息
-        'If GetInstanceState("路灯亮暗信息统计") Then
+    Private Sub 终端亮暗信息统计ToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles 终端亮暗信息统计ToolStripMenuItem.Click
+        '用户可以查询特定范围内终端的亮暗信息
+        'If GetInstanceState("终端亮暗信息统计") Then
         '    Exit Sub
         'End If
-        '路灯亮暗信息统计.MdiParent = Me
-        Dim lamp_on_off As New 路灯亮暗信息统计
+        '终端亮暗信息统计.MdiParent = Me
+        Dim lamp_on_off As New 终端亮暗信息统计
         lamp_on_off.ShowDialog()
     End Sub
 
@@ -645,12 +645,12 @@
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub 设备日志ToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles 设备日志ToolStripMenuItem.Click
-        '用户可以查询特定范围内路灯的亮暗信息
-        'If GetInstanceState("路灯亮暗信息统计") Then
+        '用户可以查询特定范围内终端的亮暗信息
+        'If GetInstanceState("终端亮暗信息统计") Then
         '    Exit Sub
         'End If
-        '路灯亮暗信息统计.MdiParent = Me
-        Dim lamp_on_off As New 路灯亮暗信息统计
+        '终端亮暗信息统计.MdiParent = Me
+        Dim lamp_on_off As New 终端亮暗信息统计
         lamp_on_off.ShowDialog()
     End Sub
 #End Region
@@ -717,7 +717,7 @@
     End Sub
 
 #End Region
-   
+
 #Region "地图"
     ''' <summary>
     ''' 关于地图的操作，包括：删除地图，增加地图背景1，增加地图背景2
@@ -771,7 +771,7 @@
         pb_small_map.BackgroundImage = System.Drawing.Image.FromFile(smallmap_path) '载入鹰眼地图
         pb_map.Width = System.Drawing.Image.FromFile(map_path).Width  '设置map的宽
         pb_map.Height = System.Drawing.Image.FromFile(map_path).Height '设置map的高
-        m_lamp = New Bitmap(pb_map.Width, pb_map.Height)   '绘制路灯的bmp图
+        m_lamp = New Bitmap(pb_map.Width, pb_map.Height)   '绘制终端的bmp图
         g_lampmap.Clear(Color.Empty)
         g_lampmap = Graphics.FromImage(m_lamp)  '载入灯的图片
         g_mapsizevalue = pb_map.Size '地图的尺寸
@@ -1033,11 +1033,11 @@
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub ToolStripButton4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButton_setlamp.Click
-        If GetInstanceState("增加路灯") Then
+        If GetInstanceState("增加终端") Then
             Exit Sub
         End If
-        增加路灯.MdiParent = Me
-        m_addlampobj = New 增加路灯
+        增加终端.MdiParent = Me
+        m_addlampobj = New 增加终端
         m_addlampobj.Show()
     End Sub
 
@@ -1080,8 +1080,8 @@
     '''' <param name="e"></param>
     '''' <remarks></remarks>
     'Private Sub ToolStripButtonleft_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButtonleft.Click
-    '    '用户可以查询特定范围内路灯的亮暗信息
-    '    Dim lamp_on_off As New 路灯亮暗信息统计
+    '    '用户可以查询特定范围内终端的亮暗信息
+    '    Dim lamp_on_off As New 终端亮暗信息统计
     '    lamp_on_off.Show()
     'End Sub
 

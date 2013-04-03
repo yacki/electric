@@ -2040,7 +2040,7 @@ finish:
             '    lamp_type = 31  '主控箱节点类型
             '    type_string = rb_holidaylamptype_31.Text
             'Else
-            '    lamp_type = 0  '路灯类型
+            '    lamp_type = 0  '终端类型
             '    type_string = rb_holidaylamptype_0.Text
             'End If
 
@@ -2430,7 +2430,7 @@ finish:
                     i += 1
                 End While
             End If
-           
+
 
         Else
             '清除列表
@@ -3113,7 +3113,7 @@ next2:
                     End While
                     rs.MoveNext()
                 End While
-              
+
                 week_id += 1
             End While
 
@@ -3441,7 +3441,7 @@ finish:
     ''' </summary>
     ''' <remarks></remarks>
     Private Sub month_excel()
-    
+
         Dim i As Integer = 0
         Dim sql As String
         Dim msg As String
@@ -3449,7 +3449,7 @@ finish:
         Dim rs, rs_pianyi As New ADODB.Recordset
         Dim open_pianyi, close_pianyi As Integer
         Dim open_time, close_time As DateTime
-        Dim lamp_id As String '路灯编号
+        Dim lamp_id As String '终端编号
         Dim progress_percentage As Integer
         Dim rowIndex, colIndex As Integer
         System.Windows.Forms.Cursor.Current = System.Windows.Forms.Cursors.WaitCursor
@@ -3478,7 +3478,7 @@ finish:
         open_pianyi = 0
         close_pianyi = 0
         lamp_id = get_lampid(m_selectboxname)
-      
+
         msg = ""
         DBOperation.OpenConn(conn)
         sql = "select * from pianyi where lamp_id='" & lamp_id & "'"
