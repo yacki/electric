@@ -101,6 +101,8 @@
 #Region "委托"
 
     Public Sub SetControlBoxListDelegate(ByVal Lamp_State As Windows.Forms.DataGridView, ByVal find_condition As Integer)
+        dgv_lamp_state_list.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        dgv_lamp_state_list.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing
 
         If Lamp_State.InvokeRequired Then
             Dim stateobj As SetControlBoxList = New SetControlBoxList(AddressOf SetControlBoxListDelegate)
@@ -152,7 +154,8 @@
                 Else
                     lamp_pointinfor = ""
                 End If
-                Me.dgv_lamp_state_list.Rows(row).Cells("lamp_id_part").Value = Val(Mid(Me.dgv_lamp_state_list.Rows(row).Cells("lamp_id").Value, 1, 4)).ToString & "-" & Val(Mid(Me.dgv_lamp_state_list.Rows(row).Cells("lamp_id").Value, 5, 2)).ToString & "-" & Val(Mid(Me.dgv_lamp_state_list.Rows(row).Cells("lamp_id").Value, 7, 5)).ToString
+                'Me.dgv_lamp_state_list.Rows(row).Cells("lamp_id_part").Value = Val(Mid(Me.dgv_lamp_state_list.Rows(row).Cells("lamp_id").Value, 1, 4)).ToString & "-" & Val(Mid(Me.dgv_lamp_state_list.Rows(row).Cells("lamp_id").Value, 5, 2)).ToString & "-" & Val(Mid(Me.dgv_lamp_state_list.Rows(row).Cells("lamp_id").Value, 7, 5)).ToString
+                Me.dgv_lamp_state_list.Rows(row).Cells("lamp_id_part").Value = Me.dgv_lamp_state_list.Rows(row).Cells("lamp_id").Value
                 If lampkind = "3" Then
                     probleminf = m_controllampobj.get_probleminf(Me.dgv_lamp_state_list.Rows(row).Cells("state").Value)
                     If Me.dgv_lamp_state_list.Rows(row).Cells("div_time_id").Value = "0" Then
@@ -227,6 +230,9 @@
             '  Dim temp As DataGridView = Me.dgv_lamp_state_list
 
         End If
+
+        dgv_lamp_state_list.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        'dgv_lamp_state_list.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.EnableResizing
     End Sub
 
 

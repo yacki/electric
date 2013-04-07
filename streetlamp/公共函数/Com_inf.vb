@@ -1148,11 +1148,11 @@ finish2:
     ''' <param name="lamp_id">÷’∂À±‡∫≈</param>
     ''' <remarks></remarks>
     Public Sub Get_DengGan(ByVal lamp_id As String)
-        g_dengzhuid = (System.Convert.ToInt32(Mid(lamp_id, 7, LAMP_ID_LEN)) - 1) \ g_lampnum + 1
-        g_dengzhulampid = System.Convert.ToInt32(Mid(lamp_id, 7, LAMP_ID_LEN)) Mod g_lampnum
-        If g_dengzhulampid = 0 Then
-            g_dengzhulampid = g_lampnum
-        End If
+        'g_dengzhuid = (System.Convert.ToInt32(Mid(lamp_id, 7, LAMP_ID_LEN)) - 1) \ g_lampnum + 1
+        'g_dengzhulampid = System.Convert.ToInt32(Mid(lamp_id, 7, LAMP_ID_LEN)) Mod g_lampnum
+        'If g_dengzhulampid = 0 Then
+        'g_dengzhulampid = g_lampnum
+        'End If
     End Sub
 
     ''' <summary>
